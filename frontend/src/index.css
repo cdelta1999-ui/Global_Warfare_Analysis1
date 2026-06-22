@@ -1,24 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 :root {
-  --glass-bg: rgba(12, 14, 22, 0.65);
-  --glass-border: rgba(255, 255, 255, 0.06);
-  --glass-highlight: rgba(255, 255, 255, 0.08);
+  --glass-bg: rgba(15, 15, 20, 0.45);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-highlight: rgba(255, 255, 255, 0.1);
   --accent-cyan: #00f2fe;
   --accent-blue: #4facfe;
   --accent-amber: #f5a623;
   --accent-red: #ff4b4b;
   --accent-green: #34d399;
-  --text-primary: rgba(255, 255, 255, 0.92);
-  --text-secondary: rgba(136, 146, 176, 0.9);
-  --text-dim: rgba(136, 146, 176, 0.5);
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.8);
+  --text-dim: rgba(255, 255, 255, 0.5);
 
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   color-scheme: dark;
   color: var(--text-primary);
-  background-color: #06060a;
+  background: radial-gradient(circle at 50% -20%, #2a2a35, #08080a 70%);
+  background-attachment: fixed;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

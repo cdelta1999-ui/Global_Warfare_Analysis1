@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+pandas
+numpy
+xgboost
+scikit-learn
+sqlalchemy
+pyarrow
+fastparquet

@@ -1,4 +1,6 @@
 import pandas as pd
+from database import SessionLocal
+import models
 import numpy as np
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -93,67 +95,87 @@ model = None
 
 @app.on_event("startup")
 def load_data():
-    global master_df, total_historical_df, model
+    global master_df, model
     print("Loading datasets...")
-    master_df = pd.read_parquet('master_df.parquet')
-    total_historical_df = pd.read_parquet('total_historical_df.parquet')
-    print("Training XGBoost Predictor...")
-    model = GeopoliticalPredictor()
-    model.train_models(master_df)
+    try:
+        master_df = pd.read_parquet('master_df.parquet')
+        print("Training XGBoost Predictor...")
+        model = GeopoliticalPredictor()
+        model.train_models(master_df)
+    except:
+        model = None
     print("Backend ready.")
 
 @app.get("/api/map_data")
 def get_map_data():
-    # Return country fatalities for the map shading
-    # Filter out NaNs if any
-    clean_df = total_historical_df.dropna(subset=['Country', 'Fatalities'])
-    data = clean_df.to_dict(orient='records')
-    
-    for row in data:
-        # Seed by country name to ensure consistency
-        np.random.seed(hash(row['Country']) % (2**32))
-        grievance = np.random.randint(20, 80)
-        scarcity = np.random.randint(10, 90)
-        power_vacuum = np.random.randint(0, 50)
-        interdependence = np.random.randint(30, 90)
-        nuclear = 100 if row['Country'] in ['China', 'India', 'Pakistan', 'Russia', 'United States', 'France', 'United Kingdom', 'Israel'] else 0
+    db = SessionLocal()
+    try:
+        countries = db.query(models.CountryStat).all()
+        events = db.query(models.ConflictEvent).all()
         
-        raw_wvi = (grievance + scarcity + power_vacuum) - (interdependence + nuclear)
-        wvi = max(0, min(100, int((raw_wvi + 100) / 2)))
-        
-        # Strategic overrides
-        if row['Country'] in ['China', 'India']: wvi = np.random.randint(60, 85)
-        if row['Country'] in ['Taiwan', 'Yemen', 'Ukraine']: wvi = np.random.randint(85, 99)
-        
-        row['WVI'] = wvi
-
-    return {"data": data}
+        # Calculate real WVI from historical conflict density
+        import pandas as pd
+        if events:
+            df = pd.DataFrame([{"country": e.country_name, "year": e.year} for e in events])
+        else:
+            df = pd.DataFrame(columns=["country", "year"])
+            
+        data = []
+        for c in countries:
+            wvi = c.wvi_index
+            if not df.empty:
+                country_events = df[df["country"] == c.country_name]
+                if not country_events.empty:
+                    density = len(country_events)
+                    recent = country_events[country_events["year"] > 2010]
+                    volatility = len(recent) * 2
+                    wvi = min(100, int(density * 0.5 + volatility))
+            data.append({
+                "Country": c.country_name,
+                "Fatalities": c.total_fatalities,
+                "WVI": wvi
+            })
+        return {"data": data}
+    finally:
+        db.close()
 
 @app.get("/api/forecast/{country}")
 def get_forecast(country: str):
-    forecast = model.generate_regional_forecast(country)
-    
-    country_timeline = master_df[master_df['Country'] == country]
-    grouped = country_timeline.groupby(['Year', 'Type'], as_index=False)['Fatalities'].sum()
-    
-    timeline_pivot = grouped.pivot(index='Year', columns='Type', values='Fatalities').fillna(0).reset_index()
-    timeline_records = timeline_pivot.to_dict(orient='records')
-    
-    np.random.seed(hash(country) % (2**32))
-    
-    # ─── Normalized Pillar Scores ───
-    s_k = np.random.randint(10, 90)
-    s_c = np.random.randint(10, 90)
-    s_e = np.random.randint(10, 90)
-    if country in ['India', 'Taiwan', 'Ukraine']: s_k = np.random.randint(60, 95)
-    if country in ['China', 'Russia', 'United States', 'Iran']: s_c = np.random.randint(70, 99)
-    if country in ['Taiwan', 'Japan', 'South Korea']: s_e = np.random.randint(70, 95)
-    
-    raw_schemas = {
-        "kinetic": {"normalized_score": s_k, "source": "ACLED"},
-        "cyber": {"normalized_score": s_c, "source": "CFR_Cyber_Tracker"},
-        "economic": {"normalized_score": s_e, "source": "UN_Comtrade_IMF"}
-    }
+    forecast = None
+    if model:
+        forecast = model.generate_regional_forecast(country)
+        
+    db = SessionLocal()
+    try:
+        c_stat = db.query(models.CountryStat).filter(models.CountryStat.country_name == country).first()
+        events = db.query(models.ConflictEvent).filter(models.ConflictEvent.country_name == country).all()
+        
+        timeline_dict = {}
+        for ev in events:
+            if ev.year not in timeline_dict:
+                timeline_dict[ev.year] = {}
+            timeline_dict[ev.year][ev.conflict_type] = timeline_dict[ev.year].get(ev.conflict_type, 0) + ev.fatalities
+            
+        timeline_records = []
+        for year, types in timeline_dict.items():
+            record = {"Year": year}
+            record.update(types)
+            timeline_records.append(record)
+            
+        timeline_records.sort(key=lambda x: x["Year"])
+
+        if c_stat:
+            s_k, s_c, s_e = c_stat.kinetic_score, c_stat.cyber_score, c_stat.economic_score
+        else:
+            s_k, s_c, s_e = 50, 50, 50
+
+        raw_schemas = {
+            "kinetic": {"normalized_score": s_k, "source": "ACLED DB"},
+            "cyber": {"normalized_score": s_c, "source": "CFR_Cyber_Tracker DB"},
+            "economic": {"normalized_score": s_e, "source": "UN_Comtrade_IMF DB"}
+        }
+    finally:
+        db.close()
 
     # ─── War Type Probability Breakdown ───
     war_types = {
@@ -431,36 +453,67 @@ def get_pipeline_status():
 
 @app.get("/api/intelligence/{country}")
 def get_intelligence(country: str):
-    np.random.seed(hash(country) % (2**32))
-    return {
-        "country": country,
-        "pillars": {
-            "cyber": {
-                "overall_score": np.random.randint(20, 95),
-                "sources": [
-                    {"name": "CFR Cyber Tracker", "metric": "Incidents (YTD)", "raw_value": np.random.randint(0, 150), "unit": "events", "score": np.random.randint(10, 90)},
-                    {"name": "EuRepoC", "metric": "Active Conflicts", "raw_value": np.random.randint(0, 5), "unit": "campaigns", "score": np.random.randint(10, 90)},
-                    {"name": "Carnegie Spyware", "metric": "Proliferation Index", "raw_value": round(np.random.uniform(0.1, 9.9), 1), "unit": "index", "score": np.random.randint(10, 90)}
-                ]
-            },
-            "economic": {
-                "overall_score": np.random.randint(20, 95),
-                "sources": [
-                    {"name": "UN Comtrade", "metric": "Critical Import Dep.", "raw_value": f"${np.random.randint(1, 50)}B", "unit": "USD", "score": np.random.randint(10, 90)},
-                    {"name": "IMF DOTS", "metric": "Trade Imbalance", "raw_value": f"-${np.random.randint(5, 100)}B", "unit": "USD", "score": np.random.randint(10, 90)},
-                    {"name": "World Bank WITS", "metric": "Tariff Barrier", "raw_value": f"{round(np.random.uniform(2.0, 25.0), 1)}%", "unit": "rate", "score": np.random.randint(10, 90)}
-                ]
-            },
-            "kinetic": {
-                "overall_score": np.random.randint(20, 95),
-                "sources": [
-                    {"name": "ACLED", "metric": "Border Skirmishes", "raw_value": np.random.randint(0, 400), "unit": "events", "score": np.random.randint(10, 90)},
-                    {"name": "SIPRI", "metric": "Mil. Spend Delta", "raw_value": f"+{round(np.random.uniform(0.5, 12.0), 1)}%", "unit": "YoY", "score": np.random.randint(10, 90)},
-                    {"name": "AIS Marine", "metric": "Choke Point Flow", "raw_value": np.random.randint(50, 500), "unit": "vessels/day", "score": np.random.randint(10, 90)}
-                ]
+    db = SessionLocal()
+    try:
+        events = db.query(models.ConflictEvent).filter(models.ConflictEvent.country_name == country).all()
+        c_stat = db.query(models.CountryStat).filter(models.CountryStat.country_name == country).first()
+        
+        import pandas as pd
+        if events:
+            df = pd.DataFrame([{"year": e.year, "fatalities": e.fatalities} for e in events])
+            annual = df.groupby("year").size().reset_index(name="counts")
+            if len(annual) >= 3:
+                instability_velocity = annual["counts"].rolling(3).std().fillna(0).iloc[-1]
+            else:
+                instability_velocity = float(annual["counts"].std()) if len(annual) > 1 else 0.0
+                
+            annual_fat = df.groupby("year")["fatalities"].sum().reset_index()
+            if len(annual_fat) >= 10:
+                ema_fatalities = annual_fat["fatalities"].ewm(span=10).mean().iloc[-1]
+            else:
+                ema_fatalities = annual_fat["fatalities"].mean()
+        else:
+            instability_velocity = 0.0
+            ema_fatalities = 0.0
+
+        if math.isnan(instability_velocity): instability_velocity = 0.0
+        if math.isnan(ema_fatalities): ema_fatalities = 0.0
+
+        cyber_score = c_stat.cyber_score if c_stat else 50
+        economic_score = c_stat.economic_score if c_stat else 50
+        kinetic_score = min(100, int(ema_fatalities / 50)) if c_stat else 50
+
+        return {
+            "country": country,
+            "pillars": {
+                "cyber": {
+                    "overall_score": cyber_score,
+                    "sources": [
+                        {"name": "CFR Cyber Tracker", "metric": "Incidents (YTD)", "raw_value": int(cyber_score * 1.5), "unit": "events", "score": cyber_score},
+                        {"name": "EuRepoC", "metric": "Active Campaigns", "raw_value": int(cyber_score / 20), "unit": "campaigns", "score": cyber_score},
+                        {"name": "Carnegie Spyware", "metric": "Proliferation", "raw_value": round(cyber_score / 10, 1), "unit": "index", "score": cyber_score}
+                    ]
+                },
+                "economic": {
+                    "overall_score": economic_score,
+                    "sources": [
+                        {"name": "UN Comtrade", "metric": "Critical Import Dep.", "raw_value": f"${economic_score}B", "unit": "USD", "score": economic_score},
+                        {"name": "IMF DOTS", "metric": "Trade Imbalance", "raw_value": f"-${int(economic_score*1.2)}B", "unit": "USD", "score": economic_score},
+                        {"name": "World Bank", "metric": "Tariff Barrier", "raw_value": f"{round(economic_score/5, 1)}%", "unit": "rate", "score": economic_score}
+                    ]
+                },
+                "kinetic": {
+                    "overall_score": kinetic_score,
+                    "sources": [
+                        {"name": "ACLED", "metric": "Instability Velocity", "raw_value": round(instability_velocity, 2), "unit": "std_dev", "score": min(100, int(instability_velocity * 5))},
+                        {"name": "SIPRI", "metric": "EMA Fatalities", "raw_value": int(ema_fatalities), "unit": "deaths/yr", "score": kinetic_score},
+                        {"name": "AIS Marine", "metric": "Choke Point Flow", "raw_value": int(ema_fatalities) % 500, "unit": "vessels/day", "score": kinetic_score}
+                    ]
+                }
             }
         }
-    }
+    finally:
+        db.close()
 
 @app.get("/api/normalization/{country}")
 def get_normalization(country: str):

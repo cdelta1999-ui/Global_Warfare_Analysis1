@@ -28,9 +28,9 @@ def process_data():
         df_intra = pd.read_csv('intra_state_war.csv')
         df_intra['Fatalities'] = pd.to_numeric(df_intra['SideADeaths'], errors='coerce').fillna(0) + \
                                  pd.to_numeric(df_intra['SideBDeaths'], errors='coerce').fillna(0)
-        df_intra = df_intra[['StartYear1', 'WhereFought', 'Fatalities']].copy()
+        df_intra = df_intra[['StartYear1', 'SideA', 'Fatalities']].copy()
         df_intra.rename(columns={'StartYear1': 'Year'}, inplace=True)
-        df_intra = clean_country_names(df_intra, 'WhereFought')
+        df_intra = clean_country_names(df_intra, 'SideA')
         df_intra['Type'] = "Intra-State (Civil War)"
         master_list.append(df_intra[['Year', 'Country', 'Fatalities', 'Type']])
     except Exception as e:
@@ -41,9 +41,9 @@ def process_data():
         df_extra = pd.read_csv('extra_state_war.csv')
         df_extra['Fatalities'] = pd.to_numeric(df_extra['BatDeath'], errors='coerce').fillna(0) + \
                                  pd.to_numeric(df_extra['NonStateDeaths'], errors='coerce').fillna(0)
-        df_extra = df_extra[['StartYear1', 'WhereFought', 'Fatalities']].copy()
+        df_extra = df_extra[['StartYear1', 'SideA', 'Fatalities']].copy()
         df_extra.rename(columns={'StartYear1': 'Year'}, inplace=True)
-        df_extra = clean_country_names(df_extra, 'WhereFought')
+        df_extra = clean_country_names(df_extra, 'SideA')
         df_extra['Type'] = "Extra-State"
         master_list.append(df_extra[['Year', 'Country', 'Fatalities', 'Type']])
     except Exception as e:
@@ -52,9 +52,9 @@ def process_data():
     # 4. non_state_war.csv
     try:
         df_non = pd.read_csv('non_state_war.csv')
-        df_non = df_non[['StartYear', 'WhereFought', 'TotalCombatDeaths']].copy()
+        df_non = df_non[['StartYear', 'SideA1', 'TotalCombatDeaths']].copy()
         df_non.rename(columns={'StartYear': 'Year', 'TotalCombatDeaths': 'Fatalities'}, inplace=True)
-        df_non = clean_country_names(df_non, 'WhereFought')
+        df_non = clean_country_names(df_non, 'SideA1')
         df_non['Type'] = "Non-State (Cartel/Militia)"
         master_list.append(df_non[['Year', 'Country', 'Fatalities', 'Type']])
     except Exception as e:

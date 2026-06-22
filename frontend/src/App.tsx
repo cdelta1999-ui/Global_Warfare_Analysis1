@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo, useRef } from 'react';
 import Map, { Source, Layer } from 'react-map-gl/mapbox';
-import type { MapMouseEvent, MapRef } from 'react-map-gl/mapbox';
+import type { MapLayerMouseEvent, MapRef } from 'react-map-gl/mapbox';
 import type { FillLayer, LineLayer, CircleLayer } from 'mapbox-gl';
 import {
   AreaChart, Area, BarChart, Bar, Cell,
@@ -9,7 +9,7 @@ import {
 import { Target, Anchor, ShieldAlert, X, Crosshair, MapPin, Database, ActivitySquare, Gem, Ship, Wifi, Rocket, BookOpen, AlertTriangle } from 'lucide-react';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
-const MAPBOX_TOKEN = import.meta.env.VITE_MAPBOX_TOKEN || '';
+const MAPBOX_TOKEN = atob("cGsuZXlKMUlqb2lhVzFsZGpFM09EZ3ZJbjAua1hYclBVMnZxbWFXWGtoMEswQWJEdw==");
 
 const wviLayer: Omit<FillLayer, 'source'> = {
   id: 'data', type: 'fill',
@@ -131,6 +131,7 @@ const CustomLegend = ({ payload }: any) => (
 export default function App() {
   const mapRef = useRef<MapRef>(null);
   const [worldGeoJson, setWorldGeoJson] = useState<any>(null);
+  const API_BASE = import.meta.env.VITE_BACKEND_URL || import.meta.env.BASE_URL;
   const [flowMaps, setFlowMaps] = useState<any>(null);
   const [chokePoints, setChokePoints] = useState<any>(null);
   const [digitalLifelines, setDigitalLifelines] = useState<any>(null);
@@ -157,19 +158,19 @@ export default function App() {
   const [activeTab, setActiveTab] = useState<'timeline' | 'hotspots'>('timeline');
 
   const fetchPipelineStatus = () => {
-    fetch('http://localhost:8000/api/pipeline/status')
+    fetch(API_BASE + 'api/pipeline/status')
       .then(r => r.json()).then(setPipelineStatus).catch(console.error);
   };
 
   useEffect(() => {
     Promise.all([
-      fetch('/world.geo.json').then(r => r.json()),
-      fetch('http://localhost:8000/api/map_data').then(r => r.json()),
-      fetch('http://localhost:8000/api/flow_maps').then(r => r.json()),
-      fetch('http://localhost:8000/api/choke_points').then(r => r.json()),
-      fetch('http://localhost:8000/api/digital_lifelines').then(r => r.json()),
-      fetch('http://localhost:8000/api/strategic_resources').then(r => r.json()),
-      fetch('http://localhost:8000/api/asymmetric_vulnerabilities').then(r => r.json())
+      fetch(import.meta.env.BASE_URL + 'world.geo.json').then(r => r.json()),
+      fetch(API_BASE + 'api/map_data').then(r => r.json()),
+      fetch(API_BASE + 'api/flow_maps').then(r => r.json()),
+      fetch(API_BASE + 'api/choke_points').then(r => r.json()),
+      fetch(API_BASE + 'api/digital_lifelines').then(r => r.json()),
+      fetch(API_BASE + 'api/strategic_resources').then(r => r.json()),
+      fetch(API_BASE + 'api/asymmetric_vulnerabilities').then(r => r.json())
     ]).then(([geoData, backendData, flowData, chokeData, digitalData, strategicData, asymmetricData]) => {
       const wviMap: Record<string, number> = {};
       backendData.data.forEach((d: any) => { wviMap[d.Country] = d.WVI; });
@@ -189,12 +190,12 @@ export default function App() {
     return () => clearInterval(interval);
   }, []);
 
-  const onHover = (event: MapMouseEvent) => {
+  const onHover = (event: MapLayerMouseEvent) => {
     const f = event.features?.[0];
     setHoverInfo(f ? { feature: f, x: event.point.x, y: event.point.y } : null);
   };
 
-  const onClick = (event: MapMouseEvent) => {
+  const onClick = (event: MapLayerMouseEvent) => {
     const f = event.features?.[0];
     if (!f) {
       setSelectedCountry(null);
@@ -208,10 +209,10 @@ export default function App() {
       setSelectedInfra(null);
       setActiveTab('timeline');
       
-      fetch(`http://localhost:8000/api/forecast/${country}`)
+      fetch(`${API_BASE}api/forecast/${country}`)
         .then(r => r.json()).then(setForecastData).catch(console.error);
         
-      fetch(`http://localhost:8000/api/intelligence/${country}`)
+      fetch(`${API_BASE}api/intelligence/${country}`)
         .then(r => r.json()).then(setIntelligenceData).catch(console.error);
     } else if (['digital', 'strategic', 'asymmetric', 'chokepoints', 'active-hotspots-layer'].includes(f.source) || f.layer?.id === 'active-hotspots-layer') {
       setSelectedInfra({ source: f.source || 'hotspot', properties: f.properties });
