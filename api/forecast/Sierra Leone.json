@@ -1,1 +1,99 @@
-{"country": "Sierra Leone", "wound_vulnerability_index": 29, "escalation_risk": "MODERATE", "historical_timeline": [{"Year": 1991, "Intra-State (Civil War)": -18.0, "One-Sided Violence": 660.0, "Internationalized internal armed conflict": 100.0}, {"Year": 1992, "One-Sided Violence": 289.0, "Internationalized internal armed conflict": 100.0}, {"Year": 1993, "One-Sided Violence": 202.0, "Internationalized internal armed conflict": 100.0}, {"Year": 1994, "One-Sided Violence": 1436.0, "Internationalized internal armed conflict": 100.0}, {"Year": 1995, "One-Sided Violence": 1682.0, "Internationalized internal armed conflict": 1000.0}, {"Year": 1996, "One-Sided Violence": 350.0, "Internationalized internal armed conflict": 100.0}, {"Year": 1997, "One-Sided Violence": 470.0, "Internationalized internal armed conflict": 100.0}, {"Year": 1998, "Intra-State (Civil War)": -18.0, "One-Sided Violence": 84.0, "Internationalized internal armed conflict": 1000.0}, {"Year": 1999, "One-Sided Violence": 1021.0, "Internationalized internal armed conflict": 1000.0}, {"Year": 2000, "Internationalized internal armed conflict": 100.0}, {"Year": 2001, "Internal armed conflict": 100.0}], "predicted_conflict_vectors": [{"type": "Border Skirmish", "probability": 15}, {"type": "Proxy / Grey-Zone", "probability": 27}, {"type": "Naval Blockade", "probability": 24}, {"type": "Cyber / Digital", "probability": 42}, {"type": "Algorithmic / AI Strike", "probability": 21}, {"type": "Full Conventional", "probability": 3}], "ml_forecast_volume": 3}
+{
+  "country": "Sierra Leone",
+  "forecast": {
+    "wvi": 30,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1900,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1920,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1940,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1960,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1505,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1980,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1453,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2000,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2010,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2015,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2020,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 942,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Non-State (Cartel/Militia)": 0.2732,
+    "Border Skirmish": 0.2069,
+    "Proxy / Grey-Zone": 0.1567,
+    "Intra-State (Civil War)": 0.2444,
+    "Cyber / Digital": 0.1187
+  },
+  "future_hotspots": [],
+  "raw_schemas": {}
+}
