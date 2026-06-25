@@ -1,1 +1,99 @@
-{"country": "Colombia", "wound_vulnerability_index": 59, "escalation_risk": "ELEVATED", "historical_timeline": [{"Year": 1840, "Intra-State (Civil War)": -18.0}, {"Year": 1860, "Intra-State (Civil War)": -18.0}, {"Year": 1863, "Inter-State (Conventional)": 300.0}, {"Year": 1876, "Intra-State (Civil War)": 3870.0}, {"Year": 1884, "Intra-State (Civil War)": 1000.0}, {"Year": 1895, "Intra-State (Civil War)": 1200.0}, {"Year": 1899, "Intra-State (Civil War)": 100000.0}, {"Year": 1948, "Intra-State (Civil War)": 29800.0}, {"Year": 1951, "Inter-State (Conventional)": 140.0}, {"Year": 1964, "Internal armed conflict": 100.0}, {"Year": 1965, "Internal armed conflict": 100.0}, {"Year": 1966, "Internal armed conflict": 100.0}, {"Year": 1967, "Internal armed conflict": 100.0}, {"Year": 1968, "Internal armed conflict": 100.0}, {"Year": 1969, "Internal armed conflict": 100.0}, {"Year": 1970, "Internal armed conflict": 100.0}, {"Year": 1971, "Internal armed conflict": 100.0}, {"Year": 1972, "Internal armed conflict": 100.0}, {"Year": 1973, "Internal armed conflict": 100.0}, {"Year": 1974, "Internal armed conflict": 100.0}, {"Year": 1975, "Internal armed conflict": 100.0}, {"Year": 1976, "Internal armed conflict": 100.0}, {"Year": 1977, "Internal armed conflict": 100.0}, {"Year": 1978, "Internal armed conflict": 100.0}, {"Year": 1979, "Internal armed conflict": 100.0}, {"Year": 1980, "Internal armed conflict": 100.0}, {"Year": 1981, "Internal armed conflict": 100.0}, {"Year": 1982, "Internal armed conflict": 100.0}, {"Year": 1983, "Internal armed conflict": 100.0}, {"Year": 1984, "Internal armed conflict": 100.0}, {"Year": 1985, "Internal armed conflict": 1000.0}, {"Year": 1986, "Internal armed conflict": 100.0}, {"Year": 1987, "Internal armed conflict": 100.0}, {"Year": 1988, "Internal armed conflict": 100.0}, {"Year": 1989, "Intra-State (Civil War)": 0.0, "One-Sided Violence": 142.0, "Internal armed conflict": 100.0}, {"Year": 1990, "One-Sided Violence": 150.0, "Internal armed conflict": 100.0}, {"Year": 1991, "One-Sided Violence": 109.0, "Internal armed conflict": 100.0}, {"Year": 1992, "Internal armed conflict": 1000.0}, {"Year": 1993, "One-Sided Violence": 40.0, "Internal armed conflict": 100.0}, {"Year": 1994, "One-Sided Violence": 39.0, "Internal armed conflict": 1000.0}, {"Year": 1995, "One-Sided Violence": 99.0, "Internal armed conflict": 100.0}, {"Year": 1996, "One-Sided Violence": 198.0, "Internal armed conflict": 1000.0}, {"Year": 1997, "One-Sided Violence": 244.0, "Internal armed conflict": 100.0}, {"Year": 1998, "One-Sided Violence": 506.0, "Internal armed conflict": 100.0}, {"Year": 1999, "One-Sided Violence": 557.0, "Internal armed conflict": 1000.0}, {"Year": 2000, "One-Sided Violence": 1955.0, "Internal armed conflict": 1000.0}, {"Year": 2001, "One-Sided Violence": 1989.0, "Internal armed conflict": 1000.0}, {"Year": 2002, "One-Sided Violence": 866.0, "Internal armed conflict": 1000.0}, {"Year": 2003, "One-Sided Violence": 332.0, "Internal armed conflict": 1000.0}, {"Year": 2004, "One-Sided Violence": 272.0, "Internal armed conflict": 1000.0}, {"Year": 2005, "One-Sided Violence": 95.0, "Internal armed conflict": 1000.0}, {"Year": 2006, "One-Sided Violence": 59.0, "Internal armed conflict": 100.0}, {"Year": 2007, "Internal armed conflict": 100.0}, {"Year": 2008, "One-Sided Violence": 27.0, "Internal armed conflict": 100.0}, {"Year": 2009, "One-Sided Violence": 30.0, "Internal armed conflict": 100.0}, {"Year": 2010, "Internal armed conflict": 100.0}, {"Year": 2011, "Internal armed conflict": 100.0}, {"Year": 2012, "Internal armed conflict": 100.0}, {"Year": 2013, "Internal armed conflict": 100.0}, {"Year": 2014, "Internal armed conflict": 100.0}, {"Year": 2015, "Internal armed conflict": 100.0}, {"Year": 2016, "Internal armed conflict": 100.0}, {"Year": 2017, "One-Sided Violence": 114.0, "Internal armed conflict": 100.0}, {"Year": 2018, "One-Sided Violence": 50.0, "Internal armed conflict": 100.0}, {"Year": 2019, "Internal armed conflict": 100.0}, {"Year": 2020, "One-Sided Violence": 105.0, "Internal armed conflict": 100.0}, {"Year": 2021, "One-Sided Violence": 65.0, "Internal armed conflict": 100.0}, {"Year": 2022, "Internal armed conflict": 100.0}, {"Year": 2023, "Internal armed conflict": 100.0}, {"Year": 2024, "Internal armed conflict": 100.0}, {"Year": 2025, "Internal armed conflict": 100.0}], "predicted_conflict_vectors": [{"type": "Border Skirmish", "probability": 100}, {"type": "Proxy / Grey-Zone", "probability": 71}, {"type": "Naval Blockade", "probability": 32}, {"type": "Cyber / Digital", "probability": 43}, {"type": "Algorithmic / AI Strike", "probability": 21}, {"type": "Full Conventional", "probability": 30}], "ml_forecast_volume": 2}
+{
+  "country": "Colombia",
+  "forecast": {
+    "wvi": 60,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1820,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1825,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 10301,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1830,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1835,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 9601,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1840,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1855,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 7701,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1860,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1870,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 3000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Non-State (Cartel/Militia)": 0.5008,
+    "Proxy / Grey-Zone": 0.2301,
+    "Border Skirmish": 0.0641,
+    "Intra-State (Civil War)": 0.1948,
+    "Full Conventional": 0.0103
+  },
+  "future_hotspots": [
+    {
+      "region": "Colombia - Border Flashpoint",
+      "threat": "Proxy / Grey-Zone",
+      "probability": 0.23,
+      "lat": null,
+      "lng": null
+    }
+  ],
+  "raw_schemas": {}
+}
