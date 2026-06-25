@@ -676,6 +676,29 @@ export default function App() {
                 {warPredictionData.top_regions.map((region: any, idx: number) => {
                   const scoreColor = region.prediction_score >= 85 ? '#ff4b4b' : region.prediction_score >= 75 ? '#f5a623' : '#00f2fe';
                   const isExpanded = expandedRegion === idx;
+                  // Match region to conflict_regions GeoJSON for flyTo coords
+                  const matchedFeature = conflictRegionsGeoJson?.features?.find((f: any) => {
+                    const p = f.properties;
+                    const rName = (region.region || '').toLowerCase();
+                    return rName.includes(p.id?.replace(/-/g,' ')) || rName.includes((p.name||'').toLowerCase()) || (p.name||'').toLowerCase().includes(rName.split('—')[0].trim().toLowerCase());
+                  });
+                  const handleZoom = (e: React.MouseEvent) => {
+                    e.stopPropagation();
+                    setShowWarPrediction(false);
+                    if (matchedFeature) {
+                      const p = matchedFeature.properties;
+                      mapRef.current?.flyTo({ center: [p.center_lng, p.center_lat], zoom: p.fly_zoom ?? 3.5, pitch: 25, bearing: 0, duration: 2000 });
+                      setSelectedRegion(p);
+                    } else {
+                      // fallback: use key_countries[0] name-based lookup via WVI layer
+                      const coords: Record<string, [number,number]> = {
+                        'sub-saharan africa': [25, 5], 'latin america': [-60, -15], 'myanmar': [96, 19],
+                        'central asia': [68, 42], 'west africa': [0, 14],
+                      };
+                      const key = Object.keys(coords).find(k => (region.region||'').toLowerCase().includes(k));
+                      if (key) mapRef.current?.flyTo({ center: coords[key], zoom: 3.5, pitch: 20, bearing: 0, duration: 2000 });
+                    }
+                  };
                   return (
                     <div key={idx} style={{ background: 'rgba(255,255,255,0.02)', border: `1px solid ${isExpanded ? scoreColor + '40' : 'rgba(255,255,255,0.05)'}`, borderRadius: 12, overflow: 'hidden', transition: 'border-color 0.2s ease' }}>
                       {/* Region header */}
@@ -709,6 +732,11 @@ export default function App() {
                               </div>
                             ))}
                           </div>
+                          <button onClick={handleZoom} title="Zoom to region on globe"
+                            style={{ background: `${scoreColor}18`, border: `1px solid ${scoreColor}40`, borderRadius: 6, padding: '4px 8px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 4, color: scoreColor, flexShrink: 0 }}>
+                            <Globe size={12} />
+                            <span style={{ fontSize: '0.58rem', fontWeight: 700, letterSpacing: '0.06em' }}>ZOOM</span>
+                          </button>
                           {isExpanded ? <ChevronUp size={14} style={{ color: 'var(--text-dim)' }} /> : <ChevronDown size={14} style={{ color: 'var(--text-dim)' }} />}
                         </div>
                       </div>
@@ -809,7 +837,15 @@ export default function App() {
                       <div style={{ fontSize: '0.52rem', color: 'rgba(245,166,35,0.6)', letterSpacing: '0.1em' }}>RISK</div>
                     </div>
                     <div style={{ flex: 1, minWidth: 0 }}>
-                      <div style={{ fontWeight: 700, fontSize: '0.82rem', color: '#f5a623' }}>{fp.flashpoint}</div>
+                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8 }}>
+                        <div style={{ fontWeight: 700, fontSize: '0.82rem', color: '#f5a623' }}>{fp.flashpoint}</div>
+                        {fp.center_lng != null && (
+                          <button onClick={() => { setShowWarPrediction(false); mapRef.current?.flyTo({ center: [fp.center_lng, fp.center_lat], zoom: fp.fly_zoom ?? 3.5, pitch: 20, bearing: 0, duration: 2000 }); }}
+                            title="Zoom to flashpoint" style={{ background: 'rgba(245,166,35,0.15)', border: '1px solid rgba(245,166,35,0.35)', borderRadius: 6, padding: '3px 7px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 3, color: '#f5a623', flexShrink: 0 }}>
+                            <Globe size={11} /><span style={{ fontSize: '0.55rem', fontWeight: 700 }}>ZOOM</span>
+                          </button>
+                        )}
+                      </div>
                       <div style={{ fontSize: '0.65rem', color: 'var(--text-dim)', marginTop: 2, marginBottom: 6 }}>{fp.timeframe}</div>
                       <p style={{ margin: 0, fontSize: '0.68rem', color: 'rgba(255,255,255,0.6)', lineHeight: 1.6 }}>{fp.driver}</p>
                     </div>
