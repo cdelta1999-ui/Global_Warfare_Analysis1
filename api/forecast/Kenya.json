@@ -1,1 +1,107 @@
-{"country": "Kenya", "wound_vulnerability_index": 34, "escalation_risk": "MODERATE", "historical_timeline": [{"Year": 1952, "Extrasystemic armed conflict": 100.0}, {"Year": 1953, "Extrasystemic armed conflict": 1000.0}, {"Year": 1954, "Extrasystemic armed conflict": 1000.0}, {"Year": 1955, "Extrasystemic armed conflict": 1000.0}, {"Year": 1956, "Extrasystemic armed conflict": 1000.0}, {"Year": 1982, "Internal armed conflict": 100.0}, {"Year": 2002, "One-Sided Violence": 34.0}, {"Year": 2007, "One-Sided Violence": 134.0}, {"Year": 2008, "One-Sided Violence": 300.0}, {"Year": 2009, "One-Sided Violence": 37.0}, {"Year": 2011, "One-Sided Violence": 44.0}, {"Year": 2012, "One-Sided Violence": 112.0}, {"Year": 2013, "One-Sided Violence": 185.0}, {"Year": 2015, "One-Sided Violence": 212.0, "Internal armed conflict": 100.0}, {"Year": 2016, "One-Sided Violence": 109.0, "Internal armed conflict": 100.0}, {"Year": 2017, "One-Sided Violence": 167.0, "Internal armed conflict": 100.0}, {"Year": 2018, "One-Sided Violence": 135.0, "Internal armed conflict": 100.0}, {"Year": 2019, "One-Sided Violence": 117.0, "Internationalized internal armed conflict": 100.0}, {"Year": 2020, "One-Sided Violence": 98.0, "Internationalized internal armed conflict": 100.0}, {"Year": 2021, "One-Sided Violence": 87.0, "Internationalized internal armed conflict": 100.0}, {"Year": 2022, "Internal armed conflict": 100.0}, {"Year": 2023, "Internal armed conflict": 100.0}, {"Year": 2024, "Internal armed conflict": 100.0}, {"Year": 2025, "Internal armed conflict": 100.0}], "predicted_conflict_vectors": [{"type": "Border Skirmish", "probability": 76}, {"type": "Proxy / Grey-Zone", "probability": 41}, {"type": "Naval Blockade", "probability": 20}, {"type": "Cyber / Digital", "probability": 18}, {"type": "Algorithmic / AI Strike", "probability": 9}, {"type": "Full Conventional", "probability": 19}], "ml_forecast_volume": 2}
+{
+  "country": "Kenya",
+  "forecast": {
+    "wvi": 51,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1900,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1920,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1839,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1940,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 544,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1960,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 288,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1980,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 169,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2000,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 803,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2010,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2015,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2020,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 195,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Non-State (Cartel/Militia)": 0.3317,
+    "Border Skirmish": 0.1903,
+    "One-Sided Violence": 0.2512,
+    "Intra-State (Civil War)": 0.1441,
+    "Proxy / Grey-Zone": 0.0827
+  },
+  "future_hotspots": [
+    {
+      "region": "Kenya - Border Flashpoint",
+      "threat": "Border Skirmish",
+      "probability": 0.251,
+      "lat": null,
+      "lng": null
+    }
+  ],
+  "raw_schemas": {}
+}
