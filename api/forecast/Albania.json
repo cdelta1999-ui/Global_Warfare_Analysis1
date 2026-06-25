@@ -1,1 +1,99 @@
-{"country": "Albania", "wound_vulnerability_index": 24, "escalation_risk": "MODERATE", "historical_timeline": [{"Year": 1946, "Interstate armed conflict": 100.0}], "predicted_conflict_vectors": [{"type": "Border Skirmish", "probability": 0}, {"type": "Proxy / Grey-Zone", "probability": 8}, {"type": "Naval Blockade", "probability": 41}, {"type": "Cyber / Digital", "probability": 17}, {"type": "Algorithmic / AI Strike", "probability": 8}, {"type": "Full Conventional", "probability": 0}], "ml_forecast_volume": 1}
+{
+  "country": "Albania",
+  "forecast": {
+    "wvi": 30,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1900,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1920,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1940,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 658,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1960,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1980,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2000,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2010,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2015,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2020,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 607,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Non-State (Cartel/Militia)": 0.2732,
+    "Border Skirmish": 0.2069,
+    "Proxy / Grey-Zone": 0.1567,
+    "Intra-State (Civil War)": 0.2444,
+    "Cyber / Digital": 0.1187
+  },
+  "future_hotspots": [],
+  "raw_schemas": {}
+}
