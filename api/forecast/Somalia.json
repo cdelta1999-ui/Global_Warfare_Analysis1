@@ -1,1 +1,139 @@
-{"country": "Somalia", "wound_vulnerability_index": 49, "escalation_risk": "MODERATE", "historical_timeline": [{"Year": 1977, "Inter-State (Conventional)": 8000.0}, {"Year": 1982, "Internal armed conflict": 100.0}, {"Year": 1983, "Internal armed conflict": 100.0}, {"Year": 1984, "Internal armed conflict": 100.0}, {"Year": 1986, "Internal armed conflict": 100.0}, {"Year": 1987, "Internal armed conflict": 100.0}, {"Year": 1988, "Intra-State (Civil War)": -18.0, "Internal armed conflict": 1000.0}, {"Year": 1989, "One-Sided Violence": 688.0, "Internal armed conflict": 100.0}, {"Year": 1990, "Internal armed conflict": 1000.0}, {"Year": 1991, "Intra-State (Civil War)": -18.0, "One-Sided Violence": 450.0, "Internal armed conflict": 1000.0}, {"Year": 1992, "One-Sided Violence": 90.0, "Internal armed conflict": 1000.0}, {"Year": 1993, "Internal armed conflict": 100.0}, {"Year": 1994, "Internal armed conflict": 100.0}, {"Year": 1995, "Internal armed conflict": 100.0}, {"Year": 1996, "Internal armed conflict": 100.0}, {"Year": 1999, "One-Sided Violence": 37.0}, {"Year": 2001, "Internal armed conflict": 100.0}, {"Year": 2002, "Internal armed conflict": 100.0}, {"Year": 2006, "Intra-State (Civil War)": -18.0, "Internationalized internal armed conflict": 100.0}, {"Year": 2007, "Internationalized internal armed conflict": 1000.0}, {"Year": 2008, "One-Sided Violence": 43.0, "Internationalized internal armed conflict": 1000.0}, {"Year": 2009, "Internationalized internal armed conflict": 1000.0}, {"Year": 2010, "One-Sided Violence": 89.0, "Internationalized internal armed conflict": 1000.0}, {"Year": 2011, "One-Sided Violence": 36.0, "Internationalized internal armed conflict": 1000.0}, {"Year": 2012, "One-Sided Violence": 29.0, "Internationalized internal armed conflict": 1000.0}, {"Year": 2013, "Internationalized internal armed conflict": 100.0}, {"Year": 2014, "Internationalized internal armed conflict": 1000.0}, {"Year": 2015, "Internationalized internal armed conflict": 1000.0}, {"Year": 2016, "Internationalized internal armed conflict": 1000.0}, {"Year": 2017, "Internationalized internal armed conflict": 1000.0}, {"Year": 2018, "Internationalized internal armed conflict": 1000.0, "Internal armed conflict": 100.0}, {"Year": 2019, "Internationalized internal armed conflict": 1100.0}, {"Year": 2020, "Internationalized internal armed conflict": 1100.0}, {"Year": 2021, "Internationalized internal armed conflict": 1100.0}, {"Year": 2022, "Internationalized internal armed conflict": 1000.0}, {"Year": 2023, "Internationalized internal armed conflict": 1000.0}, {"Year": 2024, "Internationalized internal armed conflict": 1000.0}, {"Year": 2025, "Internationalized internal armed conflict": 1100.0}], "predicted_conflict_vectors": [{"type": "Border Skirmish", "probability": 84}, {"type": "Proxy / Grey-Zone", "probability": 51}, {"type": "Naval Blockade", "probability": 39}, {"type": "Cyber / Digital", "probability": 33}, {"type": "Algorithmic / AI Strike", "probability": 16}, {"type": "Full Conventional", "probability": 21}], "ml_forecast_volume": 4}
+{
+  "country": "Somalia",
+  "forecast": {
+    "wvi": 65,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1819,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 60000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1829,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1834,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 7050,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1849,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 10000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1854,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 2002,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1859,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 6001,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1864,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 36200,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1879,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1884,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 30001,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1889,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 4000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1959,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1974,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1999,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 1,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Non-State (Cartel/Militia)": 0.3301,
+    "Intra-State (Civil War)": 0.2954,
+    "One-Sided Violence": 0.2501,
+    "Proxy / Grey-Zone": 0.0973,
+    "Full Conventional": 0.0271
+  },
+  "future_hotspots": [
+    {
+      "region": "Somalia - Border Flashpoint",
+      "threat": "Intra-State (Civil War)",
+      "probability": 0.295,
+      "lat": null,
+      "lng": null
+    }
+  ],
+  "raw_schemas": {}
+}
