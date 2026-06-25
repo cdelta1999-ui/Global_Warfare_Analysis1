@@ -1,1 +1,92 @@
-{"country": "France", "pillars": {"kinetic": {"overall_score": 33, "sources": [{"name": "ACLED", "metric": "Instability Velocity", "raw_value": 0.58, "unit": "std_dev", "score": 33}, {"name": "SIPRI", "metric": "EMA Fatalities", "raw_value": 4484, "unit": "deaths/yr", "score": 33}, {"name": "AIS Marine", "metric": "Choke Point Flow", "raw_value": 4484, "unit": "vessels/day", "score": 33}], "raw_feed": {"source": "ACLED", "country_code": "FRA", "region": "Capital Region", "data_points": {"event_id": "ACLED-7926", "event_type": "Battles / Border Skirmishes", "actor_1": "Military Forces of France", "actor_2": "Unidentified Armed Group", "fatalities": 35261, "geo_coordinates": {"lat": 53.6586, "lng": -2.3202}}, "wvi_normalized_score": 33.0}}, "cyber": {"overall_score": 78, "sources": [{"name": "CFR Cyber Tracker", "metric": "Incidents (YTD)", "raw_value": 117, "unit": "events", "score": 78}, {"name": "EuRepoC", "metric": "Active Campaigns", "raw_value": 3, "unit": "campaigns", "score": 78}, {"name": "Carnegie Spyware", "metric": "Proliferation", "raw_value": 0.78, "unit": "index", "score": 78}], "raw_feed": {"source": "CFR_Cyber_Tracker", "target_country": "France", "suspected_attribution": "Unknown State Actor", "data_points": {"incident_type": "Cyber Espionage / Infrastructure Spoofing", "target_sector": "Energy Grid / Maritime Navigation", "severity_level": "High"}, "wvi_normalized_score": 78.0}}, "economic": {"overall_score": 50, "sources": [{"name": "UN Comtrade", "metric": "Critical Import Dep.", "raw_value": "$50B", "unit": "USD", "score": 50}, {"name": "IMF DOTS", "metric": "Trade Imbalance", "raw_value": "-$60B", "unit": "USD", "score": 50}, {"name": "World Bank", "metric": "Tariff Barrier", "raw_value": "10.0%", "unit": "rate", "score": 50}], "raw_feed": {"source": "UN_Comtrade_IMF", "reporting_country": "FRA", "partner_country": "Global Market", "data_points": {"commodity_code": "HS-8542", "commodity_description": "Electronic Integrated Circuits", "bilateral_trade_value_usd": 35433372376, "import_dependency_percentage": 24.1}, "wvi_normalized_score": 50.0}}}, "wvi_metadata": {"m_geo_multiplier": 1.0, "delta_socio_multiplier": 1.2, "boiling_point_triggered": false, "boiling_point_alert": null}}
+{
+  "country": "France",
+  "computed_wvi": 52,
+  "pillars": {
+    "cyber": {
+      "overall_score": 78,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 83,
+          "metric": "93 events (YTD)",
+          "raw_value": 93,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 68,
+          "metric": "3 campaigns",
+          "raw_value": 3,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 73,
+          "metric": "Active tracking",
+          "raw_value": 73,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 52,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 52,
+          "metric": "Dependency: 41%",
+          "raw_value": 41,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 44,
+          "metric": "Sanctions Exposure: 44/100",
+          "raw_value": 44,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 40,
+          "metric": "Trade Concentration: 40/100",
+          "raw_value": 40,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 48,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 48,
+          "metric": "384 events/yr",
+          "raw_value": 384,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 43,
+          "metric": "Fatalities: 5760/yr",
+          "raw_value": 5760,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 51,
+          "metric": "Military spend: 14.4% GDP",
+          "raw_value": 14.4,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 18,
+      "primary_drivers": [
+        "Sahel Jihadist Blowback",
+        "Domestic Islamist Radicalization",
+        "Nuclear Deterrent Posture"
+      ]
+    }
+  }
+}
