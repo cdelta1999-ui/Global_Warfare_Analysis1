@@ -735,6 +735,73 @@
       ],
       "lat": 26.0,
       "lng": -104.0
+    },
+    {
+      "rank": 12,
+      "region": "Iran — Nuclear Threshold · IRGC Escalation · Strait of Hormuz",
+      "prediction_score": 87,
+      "confidence": "VERY HIGH",
+      "trajectory": "CRITICAL / ESCALATING",
+      "timeframe": "0–18 months",
+      "key_countries": [
+        "Iran",
+        "Israel",
+        "United States",
+        "Saudi Arabia"
+      ],
+      "avg_wvi": 82,
+      "hven_scores": {
+        "H": 84,
+        "V": 89,
+        "E": 91,
+        "N": 74,
+        "R": 68
+      },
+      "conflict_type_distribution": {
+        "Proxy / Grey-Zone": 0.31,
+        "Asymmetric / Naval": 0.26,
+        "Conventional Strike Exchange": 0.22,
+        "Cyber / Digital": 0.13,
+        "Nuclear Escalation": 0.08
+      },
+      "behavioral_patterns": [
+        {
+          "pattern": "Asymmetric Escalation Below Threshold",
+          "intensity": "CRITICAL",
+          "description": "Iran's strategic doctrine under sanctions pressure is to escalate asymmetrically — proxies, cable cuts, tanker seizures, drone attacks — just below the threshold that triggers direct US or Israeli conventional response. The IRGCN operates in the 34km-wide Strait of Hormuz with explicit authorization to interdict shipping and sever cables as a deterrence signaling mechanism.",
+          "historical_precedent": "Iran tanker war 1987-1988; Houthi Red Sea interdiction campaign 2023-2025 as IRGC proxy proof-of-concept"
+        },
+        {
+          "pattern": "Nuclear Threshold Leverage",
+          "intensity": "CRITICAL",
+          "description": "Iran at ~60% uranium enrichment is deliberately maintaining ambiguity about crossing 90% weapons-grade threshold. This ambiguity maximizes diplomatic leverage while compressing Israel's pre-emptive strike window. Each month of delay reduces Israeli operational certainty. The closing window creates use-it-or-lose-it pressure on Israel by mid-2026.",
+          "historical_precedent": "North Korean nuclear development 1994-2006 — managed ambiguity as strategic leverage"
+        },
+        {
+          "pattern": "Multi-Proxy Simultaneous Activation",
+          "intensity": "HIGH",
+          "description": "Iran's axis of resistance — Hezbollah (Lebanon), Hamas (Gaza), Houthis (Yemen), PMF (Iraq), Islamic Jihad (Gaza) — creates a multi-front simultaneity capability that compresses Israeli and US decision timelines. Activating all proxies simultaneously exceeds adversary response bandwidth.",
+          "historical_precedent": "Oct 7 2023 surprise attack; 2006 Lebanon War two-front activation"
+        }
+      ],
+      "reasoning": "Iran represents the highest near-term escalation risk globally. The combination of nuclear program advancement (60%+ enrichment, IAEA access blocked), IRGCN Strait of Hormuz capability, Houthi proxy validation of cable/shipping interdiction, and direct Israel-Iran ballistic missile exchanges (Apr 2024, Oct 2024) has eliminated the pre-existing deterrence equilibrium. A 2026 Iranian nuclear threshold crossing represents the highest-probability trigger for a direct US-Israel kinetic campaign against Iranian soil — with unpredictable escalation dynamics across all proxy theaters simultaneously.",
+      "trigger_factors": [
+        "Iran uranium enrichment crossing 90% weapons-grade threshold",
+        "Israeli pre-emptive air campaign on Iranian nuclear facilities (Natanz, Fordow)",
+        "IRGCN seizure or sinking of US/allied naval vessel in Strait of Hormuz",
+        "Hezbollah large-scale precision missile salvo on Tel Aviv population centers",
+        "Iran-Russia strategic weapons transfer crossing US red lines"
+      ],
+      "escalation_pathway": "Nuclear threshold crossing → Israeli air campaign → IRGC full-spectrum retaliation → US carrier group engagement → Strait of Hormuz closure → global energy crisis cascade",
+      "indicators_to_watch": [
+        "IAEA Iran enrichment level reports",
+        "Strait of Hormuz tanker passage disruption events",
+        "Israeli Air Force readiness posture",
+        "Iran IRGCN naval exercise frequency",
+        "Houthi Red Sea attack cadence"
+      ],
+      "lat": 32.0,
+      "lng": 53.0
     }
   ],
   "behavioral_archetypes": [
@@ -902,6 +969,168 @@
       "reasoning": "The United States is not at risk of interstate war but represents a novel threat category: superpower internal fragmentation. The combination of institutional erosion, armed non-state actor proliferation, and an unprecedented political polarization index creates an instability profile more resembling late-Weimar Germany than post-WWII democratic stability. The cyber threat surface — 16 critical infrastructure sectors, most privately owned — creates vulnerabilities exploitable by both foreign adversaries and domestic actors. WVI=56 reflects this mixed profile: high cyber risk (85), moderate economic vulnerability (60), relatively low kinetic war risk (50), but fragmentation score remains underweighted.",
       "lat": 38.0,
       "lng": -98.5
+    },
+    {
+      "flashpoint": "Saudi Arabia — Houthi Missile Barrage · Vision 2030 Disruption · Succession Risk",
+      "risk_score": 64,
+      "confidence": "HIGH",
+      "timeframe": "12–36 months",
+      "layer_type": "flashpoint",
+      "driver": "Saudi Arabia faces a triangulated threat: (1) Houthi missile and drone attacks on Riyadh, Aramco infrastructure, and Red Sea ports — demonstrated capability with 2019 Abqaiq attack taking 5% of global oil supply offline for 6 weeks; (2) Vision 2030 diversification requires 15+ years of stability — any sustained conflict aborts the economic transformation; (3) King Salman's age and MBS's consolidation of power without established succession mechanism creates an internal power vacuum risk that regional adversaries (Iran, Qatar Muslim Brotherhood networks) will exploit.",
+      "conflict_type_distribution": {
+        "Proxy / Houthi Missile": 0.4,
+        "Iran Sponsored Asymmetric": 0.3,
+        "Internal Political Instability": 0.18,
+        "Economic Warfare": 0.12
+      },
+      "hven_scores": {
+        "H": 62,
+        "V": 71,
+        "E": 68,
+        "N": 75,
+        "R": 58
+      },
+      "key_countries": [
+        "Saudi Arabia",
+        "Iran",
+        "Yemen",
+        "United States",
+        "UAE"
+      ],
+      "trigger_factors": [
+        "Houthi precision strike destroying major Aramco processing facility",
+        "King Salman death triggering MBS succession crisis",
+        "Iran-Saudi normalization collapse reigniting proxy war",
+        "US withdrawal of security umbrella under MAGA foreign policy shift",
+        "Houthi Red Sea blockade cutting Saudi oil export routes"
+      ],
+      "escalation_pathway": "Houthi infrastructure strike → Aramco output collapse → oil price shock → Saudi direct military response in Yemen → Iran proxy full activation → regional war",
+      "behavioral_patterns": [
+        {
+          "pattern": "Rentier State Vulnerability Under Attack",
+          "intensity": "HIGH",
+          "description": "Saudi Arabia's social contract (oil wealth = citizen compliance) is contingent on uninterrupted Aramco production. A sustained Houthi campaign degrading output by 20%+ triggers domestic political pressure on MBS that external threats alone cannot create.",
+          "historical_precedent": "2019 Abqaiq attack — proof of concept for Aramco vulnerability"
+        }
+      ],
+      "indicators_to_watch": [
+        "Houthi missile attack frequency on Saudi territory",
+        "Aramco production volume vs. capacity",
+        "Saudi-Iran diplomatic contact frequency",
+        "US 5th Fleet readiness posture in Bahrain",
+        "King Salman health reports"
+      ],
+      "reasoning": "Saudi Arabia is the linchpin of Middle East stability — its oil infrastructure, religious authority (Mecca/Medina), and US security partnership make it the highest-value target for Iranian regional hegemony. The 2023 Saudi-Iran normalization reduced but did not eliminate the proxy war threat. Vision 2030 economic transformation is contingent on 15+ years of stability that the current threat environment cannot guarantee.",
+      "lat": 24.7,
+      "lng": 46.7
+    },
+    {
+      "flashpoint": "Singapore — Malacca Strait Chokepoint · South China Sea Spillover",
+      "risk_score": 54,
+      "confidence": "MEDIUM-HIGH",
+      "timeframe": "18–60 months",
+      "layer_type": "flashpoint",
+      "driver": "The Strait of Malacca carries 40% of global trade and 80% of China's energy imports — making it simultaneously China's most critical supply artery and its most exploitable strategic vulnerability. Singapore's port (world's 2nd busiest) controls this chokepoint. US Navy 7th Fleet and Singapore's strategic partnership means any China-US Taiwan escalation instantly makes Malacca a flashpoint. China's response to Malacca blockade risk: building pipelines through Myanmar (Kyaukphyu port), funding Kra Canal proposals, and cultivating Thailand for overland bypass. A Taiwan Strait war would trigger immediate Malacca interdiction scenarios.",
+      "conflict_type_distribution": {
+        "Naval Interdiction / Blockade": 0.38,
+        "Cyber / Port Infrastructure": 0.28,
+        "Economic Coercion": 0.22,
+        "Conventional Maritime": 0.12
+      },
+      "hven_scores": {
+        "H": 45,
+        "V": 58,
+        "E": 62,
+        "N": 71,
+        "R": 65
+      },
+      "key_countries": [
+        "Singapore",
+        "China",
+        "United States",
+        "Malaysia",
+        "Indonesia"
+      ],
+      "trigger_factors": [
+        "Taiwan Strait military conflict triggering US Malacca blockade of Chinese shipping",
+        "China naval vessel incident in Singapore territorial waters",
+        "Cyber attack on Singapore port management systems (PSA International)",
+        "South China Sea incident drawing ASEAN states into confrontation",
+        "China pressure on Malaysia/Indonesia to deny US naval access"
+      ],
+      "escalation_pathway": "Taiwan conflict → US declares Malacca interdiction → China activates Myanmar pipeline bypass → Singapore sovereignty pressure → ASEAN fractures along China/US alignment lines",
+      "behavioral_patterns": [
+        {
+          "pattern": "Chokepoint Leverage Dynamics",
+          "intensity": "HIGH",
+          "description": "Malacca is China's 'Malacca Dilemma' — dependence on a narrow passage controlled by a US-aligned city-state. China has spent 20 years building bypass infrastructure (BRI pipelines, ports) to reduce this vulnerability. Until the bypasses are complete, Malacca remains a coercive lever for the US in any Taiwan scenario.",
+          "historical_precedent": "British control of Suez Canal as leverage against Egypt 1956; US oil embargo on Japan 1941"
+        }
+      ],
+      "indicators_to_watch": [
+        "US-Singapore Enhanced Defence Cooperation Agreement status",
+        "China-Malaysia maritime boundary disputes",
+        "PSA port cyber security incidents",
+        "Taiwan Strait military exercise frequency",
+        "Kra Canal project funding activity"
+      ],
+      "reasoning": "Singapore is not a conflict zone — it is a conflict consequence zone. Its strategic importance means that any great-power confrontation in the Indo-Pacific automatically creates a Malacca interdiction scenario. Singapore's defence posture (world's highest per-capita defence spending proportionally, F-35 acquisition, Five Power Defence Arrangements) reflects acute awareness of this vulnerability.",
+      "lat": 1.3,
+      "lng": 103.8
+    },
+    {
+      "flashpoint": "Thailand — Political Instability · Myanmar Refugee Crisis · Kra Canal Geopolitics",
+      "risk_score": 48,
+      "confidence": "MEDIUM",
+      "timeframe": "24–72 months",
+      "layer_type": "flashpoint",
+      "driver": "Thailand sits at the intersection of three converging pressures: (1) Chronic political instability — 13 coups since 1932, with the Constitutional Court dissolving the leading political party (Move Forward/People's Party) in 2024, returning military-aligned governance; (2) Myanmar civil war spillover — 200,000+ refugees crossing into Thailand, with Karen/Kachin armed groups operating across the border and Thai border towns experiencing carryover violence; (3) The Kra Canal project — a proposed $28B canal cutting across southern Thailand that would bypass Malacca, eliminating Singapore's strategic advantage. China is the primary backer; US and Singapore oppose it. Thailand's government is the deciding actor for the most consequential strategic infrastructure project in Asia.",
+      "conflict_type_distribution": {
+        "Domestic Political Violence": 0.35,
+        "Myanmar Spillover / Refugee Crisis": 0.3,
+        "Geopolitical Proxy Competition": 0.25,
+        "Economic Instability": 0.1
+      },
+      "hven_scores": {
+        "H": 58,
+        "V": 52,
+        "E": 44,
+        "N": 67,
+        "R": 42
+      },
+      "key_countries": [
+        "Thailand",
+        "Myanmar",
+        "China",
+        "United States",
+        "Singapore"
+      ],
+      "trigger_factors": [
+        "Thai military coup dissolving elected government amid Myanmar crisis",
+        "Karen/Kachin armed groups cross-border attack into Thai territory",
+        "Kra Canal construction approval creating US-China proxy competition in Thailand",
+        "Myanmar junta collapse creating ungoverned space on Thai border",
+        "Thai-Cambodian border dispute reignition"
+      ],
+      "escalation_pathway": "Myanmar state collapse → mass refugee influx → Thai military coup citing security crisis → China Kra Canal leverage → US-Thailand alliance fracture → ASEAN strategic vacuum",
+      "behavioral_patterns": [
+        {
+          "pattern": "Coup-Protest-Coup Cycle",
+          "intensity": "MEDIUM",
+          "description": "Thailand has been trapped in a recurring cycle: popular elections produce reformist governments, military dissolves them via court or coup, protests follow, repeat. Each cycle deepens institutional delegitimization. The 2024 Move Forward dissolution removed the most popular political movement from Thailand's democratic space.",
+          "historical_precedent": "Thai political cycles 1973, 1991, 2006, 2014, 2019, 2024"
+        }
+      ],
+      "indicators_to_watch": [
+        "Thai political party dissolution rulings",
+        "Myanmar refugee numbers in Thailand",
+        "Kra Canal feasibility study progress",
+        "Thai-China Belt and Road investment volumes",
+        "Karen/Kachin cross-border incident frequency"
+      ],
+      "reasoning": "Thailand is a sleeper risk — structurally significant but chronically underreported. The combination of political fragility, Myanmar spillover, and the Kra Canal geopolitical competition makes it a potential pivot point for ASEAN's strategic alignment. A Chinese-backed Kra Canal that bypasses Malacca would fundamentally alter Indo-Pacific trade architecture and Singapore's economic viability.",
+      "lat": 15.9,
+      "lng": 100.9
     }
   ],
   "global_risk_trajectory": {
