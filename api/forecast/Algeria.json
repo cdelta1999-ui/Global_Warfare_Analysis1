@@ -1,1 +1,35 @@
-{"country": "Algeria", "wound_vulnerability_index": 48, "escalation_risk": "MODERATE", "historical_timeline": [{"Year": 1954, "Extrasystemic armed conflict": 100.0}, {"Year": 1955, "Extrasystemic armed conflict": 1000.0}, {"Year": 1956, "Extrasystemic armed conflict": 1000.0}, {"Year": 1957, "Extrasystemic armed conflict": 1000.0}, {"Year": 1958, "Extrasystemic armed conflict": 1000.0}, {"Year": 1959, "Extrasystemic armed conflict": 1000.0}, {"Year": 1960, "Extrasystemic armed conflict": 1000.0}, {"Year": 1961, "Extrasystemic armed conflict": 1000.0}, {"Year": 1962, "Intra-State (Civil War)": 1500.0, "Extrasystemic armed conflict": 100.0}, {"Year": 1963, "Interstate armed conflict": 100.0}, {"Year": 1991, "Internal armed conflict": 100.0}, {"Year": 1992, "Intra-State (Civil War)": -18.0, "Internal armed conflict": 100.0}, {"Year": 1993, "One-Sided Violence": 26.0, "Internal armed conflict": 100.0}, {"Year": 1994, "Internal armed conflict": 1000.0}, {"Year": 1995, "Internal armed conflict": 1000.0}, {"Year": 1996, "Internal armed conflict": 1000.0}, {"Year": 1997, "One-Sided Violence": 355.0, "Internal armed conflict": 1000.0}, {"Year": 1998, "One-Sided Violence": 109.0, "Internal armed conflict": 1000.0}, {"Year": 1999, "One-Sided Violence": 125.0, "Internal armed conflict": 1000.0}, {"Year": 2000, "One-Sided Violence": 244.0, "Internal armed conflict": 100.0}, {"Year": 2001, "One-Sided Violence": 32.0, "Internal armed conflict": 100.0}, {"Year": 2002, "One-Sided Violence": 510.0, "Internal armed conflict": 100.0}, {"Year": 2003, "One-Sided Violence": 34.0, "Internal armed conflict": 100.0}, {"Year": 2004, "One-Sided Violence": 87.0, "Internationalized internal armed conflict": 100.0}, {"Year": 2005, "Internal armed conflict": 100.0}, {"Year": 2006, "One-Sided Violence": 37.0, "Internal armed conflict": 100.0}, {"Year": 2007, "One-Sided Violence": 27.0, "Internal armed conflict": 100.0}, {"Year": 2008, "Internal armed conflict": 100.0}, {"Year": 2009, "One-Sided Violence": 38.0, "Internal armed conflict": 100.0}, {"Year": 2010, "Internal armed conflict": 100.0}, {"Year": 2011, "Internal armed conflict": 100.0}, {"Year": 2012, "Internal armed conflict": 100.0}, {"Year": 2013, "One-Sided Violence": 26.0, "Internal armed conflict": 100.0}, {"Year": 2014, "Internal armed conflict": 100.0}, {"Year": 2015, "Internal armed conflict": 200.0}, {"Year": 2016, "Internal armed conflict": 100.0}, {"Year": 2017, "Internal armed conflict": 100.0}, {"Year": 2018, "Internal armed conflict": 100.0}, {"Year": 2020, "Internal armed conflict": 100.0}], "predicted_conflict_vectors": [{"type": "Border Skirmish", "probability": 58}, {"type": "Proxy / Grey-Zone", "probability": 42}, {"type": "Naval Blockade", "probability": 48}, {"type": "Cyber / Digital", "probability": 36}, {"type": "Algorithmic / AI Strike", "probability": 18}, {"type": "Full Conventional", "probability": 14}], "ml_forecast_volume": 2}
+{
+  "country": "Algeria",
+  "forecast": {
+    "wvi": 30,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1976,
+      "Inter-State (Conventional)": 500,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Non-State (Cartel/Militia)": 0.2732,
+    "Border Skirmish": 0.2069,
+    "Proxy / Grey-Zone": 0.1567,
+    "Intra-State (Civil War)": 0.2444,
+    "Cyber / Digital": 0.1187
+  },
+  "future_hotspots": [],
+  "raw_schemas": {}
+}
