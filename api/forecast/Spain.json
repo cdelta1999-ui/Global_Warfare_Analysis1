@@ -1,1 +1,99 @@
-{"country": "Spain", "wound_vulnerability_index": 26, "escalation_risk": "MODERATE", "historical_timeline": [{"Year": 1817, "Extra-State": 9840.0}, {"Year": 1821, "Intra-State (Civil War)": -18.0, "Extra-State": 1500.0}, {"Year": 1823, "Inter-State (Conventional)": 600.0}, {"Year": 1824, "Extra-State": 2400.0}, {"Year": 1829, "Extra-State": 1835.0}, {"Year": 1834, "Intra-State (Civil War)": 125000.0}, {"Year": 1847, "Intra-State (Civil War)": 10000.0}, {"Year": 1859, "Inter-State (Conventional)": 4000.0}, {"Year": 1863, "Extra-State": 32000.0}, {"Year": 1865, "Inter-State (Conventional)": 300.0}, {"Year": 1868, "Intra-State (Civil War)": -18.0, "Extra-State": 150000.0}, {"Year": 1872, "Intra-State (Civil War)": 50000.0}, {"Year": 1874, "Intra-State (Civil War)": -18.0}, {"Year": 1893, "Extra-State": 2500.0}, {"Year": 1895, "Extra-State": 79000.0}, {"Year": 1896, "Extra-State": 8000.0}, {"Year": 1898, "Inter-State (Conventional)": 775.0}, {"Year": 1909, "Inter-State (Conventional)": 2000.0}, {"Year": 1913, "Extra-State": -17.0}, {"Year": 1921, "Extra-State": 60000.0}, {"Year": 1934, "Intra-State (Civil War)": 1335.0}, {"Year": 1936, "Intra-State (Civil War)": 460000.0}, {"Year": 1957, "Inter-State (Conventional)": 122.0}, {"Year": 1978, "Internal armed conflict": 100.0}, {"Year": 1979, "Internal armed conflict": 100.0}, {"Year": 1980, "Internal armed conflict": 100.0}, {"Year": 1981, "Internal armed conflict": 100.0}, {"Year": 1982, "Internal armed conflict": 100.0}, {"Year": 1985, "Internal armed conflict": 100.0}, {"Year": 1986, "Internal armed conflict": 100.0}, {"Year": 1987, "Internal armed conflict": 100.0}, {"Year": 1991, "Internal armed conflict": 100.0}, {"Year": 2004, "Extra-State": 3.0, "One-Sided Violence": 191.0}], "predicted_conflict_vectors": [{"type": "Border Skirmish", "probability": 22}, {"type": "Proxy / Grey-Zone", "probability": 19}, {"type": "Naval Blockade", "probability": 32}, {"type": "Cyber / Digital", "probability": 20}, {"type": "Algorithmic / AI Strike", "probability": 10}, {"type": "Full Conventional", "probability": 5}], "ml_forecast_volume": 3}
+{
+  "country": "Spain",
+  "forecast": {
+    "wvi": 30,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1817,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 6700,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1822,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 2000,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1827,
+      "Inter-State (Conventional)": 1700,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1862,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 28000,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1867,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 100000,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1892,
+      "Inter-State (Conventional)": 1000,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 63000,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1912,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 1,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1917,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 50000,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2004,
+      "Inter-State (Conventional)": 11,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Non-State (Cartel/Militia)": 0.2732,
+    "Border Skirmish": 0.2069,
+    "Proxy / Grey-Zone": 0.1567,
+    "Intra-State (Civil War)": 0.2444,
+    "Cyber / Digital": 0.1187
+  },
+  "future_hotspots": [],
+  "raw_schemas": {}
+}
