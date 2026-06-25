@@ -6,7 +6,7 @@ import {
   AreaChart, Area, BarChart, Bar, Cell,
   XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, Legend as RechartsLegend,
 } from 'recharts';
-import { Target, Anchor, ShieldAlert, X, Crosshair, MapPin, Database, ActivitySquare, Gem, Ship, Wifi, Rocket, BookOpen, AlertTriangle } from 'lucide-react';
+import { Target, Anchor, ShieldAlert, X, Crosshair, MapPin, Database, ActivitySquare, Gem, Ship, Wifi, Rocket, BookOpen, AlertTriangle, BrainCircuit, TrendingUp, Globe, ChevronDown, ChevronUp } from 'lucide-react';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
 const MAPBOX_TOKEN = atob("cGsuZXlKMUlqb2lhVzFsZGpFM09EZ3ZJbjAua1hYclBVMnZxbWFXWGtoMEswQWJEdw==");
@@ -241,6 +241,9 @@ export default function App() {
   const [pipelineStatus, setPipelineStatus] = useState<any>(null);
   const [activeTab, setActiveTab] = useState<'timeline' | 'hotspots'>('timeline');
   const [displayTimeline, setDisplayTimeline] = useState<any[]>([]);
+  const [showWarPrediction, setShowWarPrediction] = useState(false);
+  const [warPredictionData, setWarPredictionData] = useState<any>(null);
+  const [expandedRegion, setExpandedRegion] = useState<number | null>(null);
 
   // Lazy-load timeline: show last 10 years first, then full history
   useEffect(() => {
@@ -282,6 +285,9 @@ export default function App() {
 
     fetchPipelineStatus();
     const interval = setInterval(fetchPipelineStatus, 30000);
+
+    fetch(API_BASE + `api/war_prediction${EXT}`).then(r => r.json()).then(setWarPredictionData).catch(console.error);
+
     return () => clearInterval(interval);
   }, []);
 
@@ -375,6 +381,12 @@ export default function App() {
         <BookOpen size={16} /> Strategic Doctrine
       </button>
 
+      {/* ─── War Prediction Button ─── */}
+      <button className="strategic-doctrine-btn" onClick={() => setShowWarPrediction(true)}
+        style={{ top: 72, borderColor: 'rgba(167,139,250,0.3)', color: '#a78bfa', boxShadow: '0 4px 20px rgba(167,139,250,0.15)' }}>
+        <BrainCircuit size={16} /> War Prediction AI
+      </button>
+
       {/* ─── Live Database Toggle ─── */}
       <button className="live-database-btn" onClick={() => setShowPipeline(!showPipeline)}>
         <div className="live-dot" /> LIVE DATABASE
@@ -429,6 +441,251 @@ export default function App() {
               <h3 style={{ color: '#ff4b4b' }}>D. The Digital Financial Gateway: The Marseille-Mumbai Fiber Route</h3>
               <p><strong>The Target:</strong> The specific maritime route carrying the SEA-ME-WE (South East Asia–Middle East–Western Europe) subsea cable network.</p>
               <p><strong>The Wounding Strategy:</strong> As nations rapidly digitize their financial ecosystems (like India's UPI or digital sovereign currencies), they become hyper-reliant on real-time server handshakes across continents. A coordinated "grey-zone" disruption in the highly congested Mediterranean or Arabian Sea segments of this route wouldn't kill anyone, but it would freeze international digital payments, paralyzing gig economies and stock markets for hours or days.</p>
+            </div>
+          </div>
+        </>
+      )}
+
+      {/* ─── War Prediction AI Modal ─── */}
+      {showWarPrediction && warPredictionData && (
+        <>
+          <div className="doctrine-backdrop" onClick={() => setShowWarPrediction(false)} />
+          <div className="glass-panel doctrine-modal fade-in" style={{ width: '88vw', maxWidth: 1100, height: '85vh' }}>
+            {/* Header */}
+            <div style={{ padding: '20px 24px', borderBottom: '1px solid rgba(255,255,255,0.08)', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+              <div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                  <BrainCircuit size={20} style={{ color: '#a78bfa' }} />
+                  <h2 style={{ margin: 0, fontSize: '1.2rem', color: '#a78bfa' }} className="glow-text">War Prediction AI · HVEN-R Model v2.1</h2>
+                </div>
+                <p style={{ margin: '6px 0 0', fontSize: '0.72rem', color: 'var(--text-secondary)', letterSpacing: '0.08em' }}>
+                  Historical · Volatility · Escalation · Neighbor · Resource — Multi-dimensional Conflict Forecast
+                </p>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+                {/* Global Risk Index */}
+                <div style={{ textAlign: 'center', background: 'rgba(255,75,75,0.08)', border: '1px solid rgba(255,75,75,0.2)', borderRadius: 10, padding: '8px 16px' }}>
+                  <div style={{ fontSize: '1.6rem', fontWeight: 900, color: '#ff4b4b', fontFamily: "'JetBrains Mono', monospace" }}>{warPredictionData.global_war_risk_index}</div>
+                  <div style={{ fontSize: '0.6rem', color: 'rgba(255,75,75,0.7)', letterSpacing: '0.1em', marginTop: 2 }}>GLOBAL RISK INDEX</div>
+                  <div style={{ fontSize: '0.62rem', color: '#f5a623', marginTop: 2, fontWeight: 700 }}>{warPredictionData.trajectory}</div>
+                </div>
+                {/* Stats */}
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+                  <div style={{ fontSize: '0.68rem', color: 'var(--text-secondary)' }}>
+                    <span style={{ color: '#ff4b4b', fontWeight: 700 }}>{warPredictionData.active_wars}</span> active wars
+                  </div>
+                  <div style={{ fontSize: '0.68rem', color: 'var(--text-secondary)' }}>
+                    <span style={{ color: '#f5a623', fontWeight: 700 }}>{warPredictionData.countries_in_conflict}</span> countries in conflict
+                  </div>
+                  <div style={{ fontSize: '0.68rem', color: 'var(--text-secondary)' }}>
+                    <span style={{ color: '#a78bfa', fontWeight: 700 }}>{warPredictionData.displaced_persons_millions}M</span> displaced
+                  </div>
+                </div>
+                <button onClick={() => setShowWarPrediction(false)} style={{ background: 'none', border: 'none', color: 'var(--text-secondary)', cursor: 'pointer', padding: 4 }}><X size={20} /></button>
+              </div>
+            </div>
+
+            <div style={{ display: 'flex', flex: 1, overflow: 'hidden' }}>
+              {/* Left: Ranked regions */}
+              <div style={{ flex: 1, overflowY: 'auto', padding: '16px 20px', display: 'flex', flexDirection: 'column', gap: 10 }}>
+                <div style={{ fontSize: '0.68rem', color: 'var(--text-secondary)', letterSpacing: '0.15em', marginBottom: 4 }}>TOP FUTURE WAR-PRONE REGIONS</div>
+                {warPredictionData.top_regions.map((region: any, idx: number) => {
+                  const scoreColor = region.prediction_score >= 85 ? '#ff4b4b' : region.prediction_score >= 75 ? '#f5a623' : '#00f2fe';
+                  const isExpanded = expandedRegion === idx;
+                  return (
+                    <div key={idx} style={{ background: 'rgba(255,255,255,0.02)', border: `1px solid ${isExpanded ? scoreColor + '40' : 'rgba(255,255,255,0.05)'}`, borderRadius: 12, overflow: 'hidden', transition: 'border-color 0.2s ease' }}>
+                      {/* Region header */}
+                      <div style={{ padding: '12px 16px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 12 }}
+                        onClick={() => setExpandedRegion(isExpanded ? null : idx)}>
+                        {/* Rank */}
+                        <div style={{ width: 28, height: 28, borderRadius: '50%', background: `${scoreColor}20`, border: `2px solid ${scoreColor}`, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                          <span style={{ fontSize: '0.7rem', fontWeight: 900, color: scoreColor }}>{region.rank}</span>
+                        </div>
+                        {/* Name + trajectory */}
+                        <div style={{ flex: 1, minWidth: 0 }}>
+                          <div style={{ fontWeight: 700, fontSize: '0.88rem', color: 'var(--text-primary)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{region.region}</div>
+                          <div style={{ fontSize: '0.65rem', color: 'var(--text-dim)', marginTop: 2 }}>{region.timeframe}</div>
+                        </div>
+                        {/* Score + badge */}
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexShrink: 0 }}>
+                          <div style={{ fontSize: '0.62rem', fontWeight: 700, color: scoreColor, background: `${scoreColor}15`, padding: '2px 8px', borderRadius: 4, letterSpacing: '0.08em' }}>{region.trajectory}</div>
+                          <div style={{ textAlign: 'center' }}>
+                            <div style={{ fontSize: '1.3rem', fontWeight: 900, color: scoreColor, fontFamily: "'JetBrains Mono', monospace", lineHeight: 1 }}>{region.prediction_score}</div>
+                            <div style={{ fontSize: '0.55rem', color: 'var(--text-dim)', letterSpacing: '0.1em' }}>RISK</div>
+                          </div>
+                          {/* HVEN mini bars */}
+                          <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+                            {Object.entries(region.hven_scores).map(([k, v]: any) => (
+                              <div key={k} style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
+                                <span style={{ fontSize: '0.52rem', color: 'var(--text-dim)', width: 12 }}>{k}</span>
+                                <div style={{ width: 50, height: 3, background: 'rgba(255,255,255,0.06)', borderRadius: 2 }}>
+                                  <div style={{ height: '100%', width: `${v}%`, background: scoreColor, borderRadius: 2, opacity: 0.7 }} />
+                                </div>
+                                <span style={{ fontSize: '0.52rem', color: 'var(--text-dim)', width: 18 }}>{v}</span>
+                              </div>
+                            ))}
+                          </div>
+                          {isExpanded ? <ChevronUp size={14} style={{ color: 'var(--text-dim)' }} /> : <ChevronDown size={14} style={{ color: 'var(--text-dim)' }} />}
+                        </div>
+                      </div>
+
+                      {/* Expanded detail */}
+                      {isExpanded && (
+                        <div style={{ padding: '0 16px 16px 16px', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+                          {/* Key countries */}
+                          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 5, marginTop: 12 }}>
+                            {region.key_countries.map((c: string, i: number) => (
+                              <span key={i} style={{ fontSize: '0.65rem', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 4, padding: '2px 8px', color: 'var(--text-secondary)' }}>{c}</span>
+                            ))}
+                          </div>
+
+                          {/* Conflict type distribution */}
+                          <div style={{ marginTop: 12 }}>
+                            <div style={{ fontSize: '0.6rem', color: 'var(--text-dim)', letterSpacing: '0.1em', marginBottom: 6 }}>PREDICTED CONFLICT TYPE DISTRIBUTION</div>
+                            {Object.entries(region.conflict_type_distribution).map(([type, prob]: any) => (
+                              <div key={type} style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4 }}>
+                                <span style={{ fontSize: '0.62rem', color: 'var(--text-secondary)', width: 150, flexShrink: 0 }}>{type}</span>
+                                <div style={{ flex: 1, height: 4, background: 'rgba(255,255,255,0.05)', borderRadius: 2 }}>
+                                  <div style={{ height: '100%', width: `${prob * 100}%`, background: WAR_COLORS[type] || scoreColor, borderRadius: 2, opacity: 0.8 }} />
+                                </div>
+                                <span style={{ fontSize: '0.62rem', color: 'var(--text-dim)', width: 32, textAlign: 'right' }}>{Math.round(prob * 100)}%</span>
+                              </div>
+                            ))}
+                          </div>
+
+                          {/* Behavioral patterns */}
+                          <div style={{ marginTop: 12 }}>
+                            <div style={{ fontSize: '0.6rem', color: 'var(--text-dim)', letterSpacing: '0.1em', marginBottom: 8 }}>BEHAVIORAL PATTERN ANALYSIS</div>
+                            {region.behavioral_patterns.map((bp: any, i: number) => {
+                              const intColor = bp.intensity === 'CRITICAL' ? '#ff4b4b' : bp.intensity === 'HIGH' ? '#f5a623' : '#34d399';
+                              return (
+                                <div key={i} style={{ background: `${intColor}08`, border: `1px solid ${intColor}20`, borderRadius: 8, padding: '10px 12px', marginBottom: 8 }}>
+                                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 5 }}>
+                                    <span style={{ fontSize: '0.72rem', fontWeight: 700, color: intColor }}>{bp.pattern}</span>
+                                    <span style={{ fontSize: '0.58rem', color: intColor, background: `${intColor}20`, padding: '1px 6px', borderRadius: 3, letterSpacing: '0.08em' }}>{bp.intensity}</span>
+                                  </div>
+                                  <p style={{ margin: 0, fontSize: '0.68rem', color: 'rgba(255,255,255,0.65)', lineHeight: 1.6 }}>{bp.description}</p>
+                                  {bp.historical_precedent && (
+                                    <div style={{ marginTop: 6, fontSize: '0.62rem', color: 'var(--text-dim)', fontStyle: 'italic' }}>
+                                      Precedent: {bp.historical_precedent}
+                                    </div>
+                                  )}
+                                </div>
+                              );
+                            })}
+                          </div>
+
+                          {/* LLM Reasoning */}
+                          <div style={{ marginTop: 12, background: 'rgba(167,139,250,0.05)', border: '1px solid rgba(167,139,250,0.15)', borderRadius: 8, padding: '12px 14px' }}>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 8 }}>
+                              <BrainCircuit size={13} style={{ color: '#a78bfa' }} />
+                              <span style={{ fontSize: '0.65rem', fontWeight: 700, color: '#a78bfa', letterSpacing: '0.1em' }}>AI REASONING CHAIN</span>
+                            </div>
+                            <p style={{ margin: 0, fontSize: '0.7rem', color: 'rgba(255,255,255,0.7)', lineHeight: 1.7 }}>{region.reasoning}</p>
+                          </div>
+
+                          {/* Trigger factors */}
+                          <div style={{ marginTop: 12 }}>
+                            <div style={{ fontSize: '0.6rem', color: 'var(--text-dim)', letterSpacing: '0.1em', marginBottom: 6 }}>CRITICAL TRIGGER FACTORS</div>
+                            {region.trigger_factors.map((tf: string, i: number) => (
+                              <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 8, marginBottom: 5 }}>
+                                <div style={{ width: 5, height: 5, borderRadius: '50%', background: '#ff4b4b', flexShrink: 0, marginTop: 5 }} />
+                                <span style={{ fontSize: '0.68rem', color: 'rgba(255,120,120,0.85)' }}>{tf}</span>
+                              </div>
+                            ))}
+                          </div>
+
+                          {/* Escalation pathway */}
+                          <div style={{ marginTop: 10, background: 'rgba(255,75,75,0.05)', border: '1px solid rgba(255,75,75,0.15)', borderRadius: 6, padding: '8px 12px' }}>
+                            <span style={{ fontSize: '0.62rem', color: '#ff4b4b', fontWeight: 700, letterSpacing: '0.08em' }}>ESCALATION PATHWAY: </span>
+                            <span style={{ fontSize: '0.68rem', color: 'rgba(255,255,255,0.6)' }}>{region.escalation_pathway}</span>
+                          </div>
+
+                          {/* Indicators to watch */}
+                          <div style={{ marginTop: 10 }}>
+                            <div style={{ fontSize: '0.6rem', color: 'var(--text-dim)', letterSpacing: '0.1em', marginBottom: 5 }}>INDICATORS TO MONITOR</div>
+                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 5 }}>
+                              {region.indicators_to_watch.map((ind: string, i: number) => (
+                                <span key={i} style={{ fontSize: '0.62rem', background: 'rgba(0,242,254,0.06)', border: '1px solid rgba(0,242,254,0.15)', borderRadius: 4, padding: '2px 8px', color: 'rgba(0,242,254,0.8)' }}>{ind}</span>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+
+                {/* Emerging Flashpoints */}
+                <div style={{ fontSize: '0.68rem', color: 'var(--text-secondary)', letterSpacing: '0.15em', marginTop: 8, marginBottom: 4 }}>EMERGING FLASHPOINTS (WATCH LIST)</div>
+                {warPredictionData.emerging_flashpoints.map((fp: any, idx: number) => (
+                  <div key={idx} style={{ background: 'rgba(245,166,35,0.04)', border: '1px solid rgba(245,166,35,0.15)', borderRadius: 10, padding: '12px 16px', display: 'flex', alignItems: 'flex-start', gap: 12 }}>
+                    <div style={{ textAlign: 'center', flexShrink: 0 }}>
+                      <div style={{ fontSize: '1.1rem', fontWeight: 900, color: '#f5a623', fontFamily: "'JetBrains Mono', monospace" }}>{fp.risk_score}</div>
+                      <div style={{ fontSize: '0.52rem', color: 'rgba(245,166,35,0.6)', letterSpacing: '0.1em' }}>RISK</div>
+                    </div>
+                    <div style={{ flex: 1, minWidth: 0 }}>
+                      <div style={{ fontWeight: 700, fontSize: '0.82rem', color: '#f5a623' }}>{fp.flashpoint}</div>
+                      <div style={{ fontSize: '0.65rem', color: 'var(--text-dim)', marginTop: 2, marginBottom: 6 }}>{fp.timeframe}</div>
+                      <p style={{ margin: 0, fontSize: '0.68rem', color: 'rgba(255,255,255,0.6)', lineHeight: 1.6 }}>{fp.driver}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Right: Behavioral Archetypes + Methodology */}
+              <div style={{ width: 320, flexShrink: 0, borderLeft: '1px solid rgba(255,255,255,0.06)', overflowY: 'auto', padding: '16px 16px' }}>
+                <div style={{ fontSize: '0.68rem', color: 'var(--text-secondary)', letterSpacing: '0.15em', marginBottom: 10 }}>BEHAVIORAL ARCHETYPES</div>
+                {warPredictionData.behavioral_archetypes.map((arch: any, i: number) => (
+                  <div key={i} style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: 10, padding: '12px 14px', marginBottom: 10 }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 }}>
+                      <span style={{ fontSize: '0.72rem', fontWeight: 700, color: '#a78bfa' }}>{arch.archetype}</span>
+                      <span style={{ fontSize: '0.6rem', color: '#f5a623', fontWeight: 700 }}>×{arch.probability_amplifier}</span>
+                    </div>
+                    <p style={{ margin: '0 0 8px', fontSize: '0.67rem', color: 'rgba(255,255,255,0.6)', lineHeight: 1.6 }}>{arch.description}</p>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4 }}>
+                      {arch.affected_regions.map((r: string, j: number) => (
+                        <span key={j} style={{ fontSize: '0.58rem', background: 'rgba(167,139,250,0.1)', border: '1px solid rgba(167,139,250,0.2)', borderRadius: 3, padding: '1px 6px', color: 'rgba(167,139,250,0.8)' }}>{r}</span>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+
+                {/* Global trajectory */}
+                <div style={{ marginTop: 16 }}>
+                  <div style={{ fontSize: '0.68rem', color: 'var(--text-secondary)', letterSpacing: '0.15em', marginBottom: 10 }}>GLOBAL RISK TRAJECTORY (5-YEAR)</div>
+                  <div style={{ display: 'flex', alignItems: 'flex-end', gap: 6, height: 80 }}>
+                    {Object.entries(warPredictionData.global_risk_trajectory).map(([yr, val]: any) => {
+                      const barH = (val / 100) * 72;
+                      const barColor = val >= 75 ? '#ff4b4b' : val >= 65 ? '#f5a623' : '#34d399';
+                      return (
+                        <div key={yr} style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 3 }}>
+                          <span style={{ fontSize: '0.58rem', color: barColor, fontWeight: 700 }}>{val}</span>
+                          <div style={{ width: '100%', background: `${barColor}20`, borderRadius: 3 }}>
+                            <div style={{ height: barH, background: `linear-gradient(180deg, ${barColor}, ${barColor}88)`, borderRadius: 3 }} />
+                          </div>
+                          <span style={{ fontSize: '0.55rem', color: 'var(--text-dim)' }}>{yr}</span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                {/* Methodology */}
+                <div style={{ marginTop: 16, background: 'rgba(0,0,0,0.3)', borderRadius: 10, padding: '12px 14px' }}>
+                  <div style={{ fontSize: '0.68rem', color: 'var(--text-secondary)', letterSpacing: '0.15em', marginBottom: 8 }}>METHODOLOGY</div>
+                  <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '0.7rem', color: '#a78bfa', marginBottom: 8 }}>{warPredictionData.methodology.formula}</div>
+                  {Object.entries(warPredictionData.methodology.components).map(([k, v]: any) => (
+                    <div key={k} style={{ marginBottom: 5 }}>
+                      <span style={{ fontSize: '0.65rem', fontWeight: 700, color: '#f5a623', fontFamily: "'JetBrains Mono', monospace" }}>{k}: </span>
+                      <span style={{ fontSize: '0.63rem', color: 'rgba(255,255,255,0.55)' }}>{v}</span>
+                    </div>
+                  ))}
+                  <div style={{ marginTop: 10, fontSize: '0.6rem', color: 'var(--text-dim)', lineHeight: 1.6, borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: 8 }}>
+                    Sources: {warPredictionData.sources.join(' · ')}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </>
