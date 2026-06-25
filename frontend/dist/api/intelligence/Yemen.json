@@ -1,0 +1,92 @@
+{
+  "country": "Yemen",
+  "computed_wvi": 69,
+  "pillars": {
+    "cyber": {
+      "overall_score": 20,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 25,
+          "metric": "24 events (YTD)",
+          "raw_value": 24,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 10,
+          "metric": "1 campaigns",
+          "raw_value": 1,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 15,
+          "metric": "Active tracking",
+          "raw_value": 15,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 95,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 95,
+          "metric": "Dependency: 76%",
+          "raw_value": 76,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 87,
+          "metric": "Sanctions Exposure: 87/100",
+          "raw_value": 87,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 83,
+          "metric": "Trade Concentration: 83/100",
+          "raw_value": 83,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 90,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 90,
+          "metric": "720 events/yr",
+          "raw_value": 720,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 85,
+          "metric": "Fatalities: 10800/yr",
+          "raw_value": 10800,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 93,
+          "metric": "Military spend: 27.0% GDP",
+          "raw_value": 27.0,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 54,
+      "primary_drivers": [
+        "Saudi-Houthi War (Active)",
+        "Humanitarian Catastrophe",
+        "Al-Qaeda in Arabian Peninsula"
+      ]
+    }
+  }
+}
