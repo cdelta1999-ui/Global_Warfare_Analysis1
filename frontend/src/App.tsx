@@ -178,7 +178,7 @@ interface MapViewProps {
   showShipping: boolean; showPatrols: boolean; showChokePoints: boolean; showDigital: boolean; showStrategic: boolean; showAsymmetric: boolean;
   showConflictRegions: boolean; conflictRegionsGeoJson: any;
   activeHotspotGeoJson: any; selectedCountry: string | null;
-  onHoverChange: (info: any) => void; onCountryClick: (c: string) => void; onInfraClick: (i: any) => void; onClear: () => void;
+  onHoverChange: (info: any) => void; onCountryClick: (c: string, lng: number, lat: number) => void; onInfraClick: (i: any) => void; onClear: () => void;
   mapRef: React.RefObject<MapRef>;
 }
 
@@ -194,10 +194,11 @@ const MapView = memo(({ worldGeoJson, flowMaps, chokePoints, digitalLifelines, s
   const handleClick = useCallback((event: MapLayerMouseEvent) => {
     const f = event.features?.[0];
     if (!f) { onClear(); return; }
+    const { lng, lat } = event.lngLat;
     if (f.source === 'data' && f.properties?.name) {
-      onCountryClick(f.properties.name);
+      onCountryClick(f.properties.name, lng, lat);
     } else {
-      onInfraClick({ source: f.source || 'hotspot', properties: f.properties });
+      onInfraClick({ source: f.source || 'hotspot', properties: f.properties, lng, lat });
     }
   }, [onCountryClick, onInfraClick, onClear]);
 
@@ -332,27 +333,37 @@ export default function App() {
 
   const onHoverChange = useCallback((info: any) => setHoverInfo(info), []);
 
-  const onCountryClick = useCallback((country: string) => {
+  const onCountryClick = useCallback((country: string, lng: number, lat: number) => {
     setSelectedCountry(country);
     setSelectedInfra(null);
+    setSelectedRegion(null);
     setActiveTab('timeline');
+    mapRef.current?.flyTo({ center: [lng, lat], zoom: 4.5, pitch: 35, bearing: 8, duration: 1800 });
     fetch(`${API_BASE}api/forecast/${encodeURIComponent(country)}${EXT}`)
       .then(r => r.json()).then(setForecastData).catch(console.error);
     fetch(`${API_BASE}api/intelligence/${encodeURIComponent(country)}${EXT}`)
       .then(r => r.json()).then(setIntelligenceData).catch(console.error);
-  }, [API_BASE, EXT]);
+  }, [API_BASE, EXT, mapRef]);
 
   const onInfraClick = useCallback((infra: any) => {
     if (infra.source === 'conflict-regions') {
-      setSelectedRegion(infra.properties);
+      const p = infra.properties;
+      setSelectedRegion(p);
       setSelectedCountry(null);
       setSelectedInfra(null);
+      const cLng = typeof p.center_lng === 'number' ? p.center_lng : (infra.lng ?? 20);
+      const cLat = typeof p.center_lat === 'number' ? p.center_lat : (infra.lat ?? 15);
+      const zoom = typeof p.fly_zoom === 'number' ? p.fly_zoom : 3.5;
+      mapRef.current?.flyTo({ center: [cLng, cLat], zoom, pitch: 25, bearing: 0, duration: 2000 });
     } else {
       setSelectedInfra(infra);
       setSelectedCountry(null);
       setSelectedRegion(null);
+      if (infra.lng != null && infra.lat != null) {
+        mapRef.current?.flyTo({ center: [infra.lng, infra.lat], zoom: 5, pitch: 30, duration: 1500 });
+      }
     }
-  }, []);
+  }, [mapRef]);
 
   const onClear = useCallback(() => {
     setSelectedCountry(null);
@@ -360,9 +371,16 @@ export default function App() {
     setSelectedRegion(null);
   }, []);
 
+  const resetGlobe = useCallback(() => {
+    setSelectedCountry(null);
+    setSelectedInfra(null);
+    setSelectedRegion(null);
+    mapRef.current?.flyTo({ center: [20, 15], zoom: 1.8, pitch: 0, bearing: 0, duration: 2000 });
+  }, [mapRef]);
+
   const handleHotspotClick = (lng: number | null, lat: number | null) => {
     if (lng != null && lat != null) {
-      mapRef.current?.flyTo({ center: [lng, lat], zoom: 5, duration: 1500 });
+      mapRef.current?.flyTo({ center: [lng, lat], zoom: 5.5, pitch: 40, bearing: -10, duration: 1800 });
     }
   };
 
@@ -443,6 +461,12 @@ export default function App() {
             <Info size={14} style={{ color: '#00f2fe', flexShrink: 0 }} />
             <span>Metrics Guide</span>
           </button>
+          {(selectedCountry || selectedRegion || selectedInfra) && (
+            <button className="toolbar-btn" onClick={resetGlobe} style={{ borderColor: 'rgba(255,255,255,0.15)', marginTop: 4 }}>
+              <Globe size={14} style={{ color: 'rgba(255,255,255,0.5)', flexShrink: 0 }} />
+              <span style={{ color: 'rgba(255,255,255,0.5)' }}>Reset Globe</span>
+            </button>
+          )}
         </div>
       </div>
 
