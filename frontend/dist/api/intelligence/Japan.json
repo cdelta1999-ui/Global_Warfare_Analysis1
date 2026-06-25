@@ -1,0 +1,91 @@
+{
+  "country": "Japan",
+  "computed_wvi": 50,
+  "pillars": {
+    "cyber": {
+      "overall_score": 78,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 83,
+          "metric": "93 events (YTD)",
+          "raw_value": 93,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 68,
+          "metric": "3 campaigns",
+          "raw_value": 3,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 73,
+          "metric": "Active tracking",
+          "raw_value": 73,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 52,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 52,
+          "metric": "Dependency: 41%",
+          "raw_value": 41,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 44,
+          "metric": "Sanctions Exposure: 44/100",
+          "raw_value": 44,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 40,
+          "metric": "Trade Concentration: 40/100",
+          "raw_value": 40,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 45,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 45,
+          "metric": "360 events/yr",
+          "raw_value": 360,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 40,
+          "metric": "Fatalities: 5400/yr",
+          "raw_value": 5400,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 48,
+          "metric": "Military spend: 13.5% GDP",
+          "raw_value": 13.5,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 9,
+      "primary_drivers": [
+        "Senkaku/Diaoyu Island Dispute",
+        "North Korea Missile Overflight"
+      ]
+    }
+  }
+}
