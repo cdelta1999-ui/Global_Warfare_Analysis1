@@ -1,1 +1,67 @@
-{"country": "Australia", "wound_vulnerability_index": 23, "escalation_risk": "MODERATE", "historical_timeline": [{"Year": 1939, "Inter-State (Conventional)": 33826.0}, {"Year": 1950, "Inter-State (Conventional)": 291.0}, {"Year": 1965, "Inter-State (Conventional)": 494.0}, {"Year": 1992, "Intra-State (Civil War)": -17.0}, {"Year": 2001, "Inter-State (Conventional)": 0.0, "Extra-State": -2.0}, {"Year": 2003, "Inter-State (Conventional)": 0.0, "Extra-State": -7.0, "Interstate armed conflict": 1000.0}], "predicted_conflict_vectors": [{"type": "Border Skirmish", "probability": 4}, {"type": "Proxy / Grey-Zone", "probability": 10}, {"type": "Naval Blockade", "probability": 38}, {"type": "Cyber / Digital", "probability": 16}, {"type": "Algorithmic / AI Strike", "probability": 8}, {"type": "Full Conventional", "probability": 1}], "ml_forecast_volume": 4}
+{
+  "country": "Australia",
+  "forecast": {
+    "wvi": 49,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1818,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 10000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1863,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1883,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 10000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2001,
+      "Inter-State (Conventional)": 6,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2003,
+      "Inter-State (Conventional)": 1,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Naval Blockade": 0.3058,
+    "Cyber / Digital": 0.4268,
+    "Border Skirmish": 0.0806,
+    "Proxy / Grey-Zone": 0.157,
+    "Full Conventional": 0.0297
+  },
+  "future_hotspots": [],
+  "raw_schemas": {}
+}
