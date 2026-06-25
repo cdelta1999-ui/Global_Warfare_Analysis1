@@ -1,1 +1,107 @@
-{"country": "Thailand", "wound_vulnerability_index": 36, "escalation_risk": "MODERATE", "historical_timeline": [{"Year": 1821, "Non-State (Cartel/Militia)": -9.0}, {"Year": 1831, "Non-State (Cartel/Militia)": -9.0}, {"Year": 1940, "Inter-State (Conventional)": 700.0}, {"Year": 1951, "Inter-State (Conventional)": 114.0, "Internal armed conflict": 100.0}, {"Year": 1967, "Inter-State (Conventional)": 351.0}, {"Year": 1970, "Inter-State (Conventional)": -9.0}, {"Year": 1972, "Intra-State (Civil War)": 2200.0}, {"Year": 1974, "Internal armed conflict": 100.0}, {"Year": 1975, "Internal armed conflict": 100.0}, {"Year": 1976, "Internal armed conflict": 100.0}, {"Year": 1977, "Internal armed conflict": 100.0}, {"Year": 1978, "Internal armed conflict": 100.0}, {"Year": 1979, "Internal armed conflict": 100.0}, {"Year": 1980, "Internal armed conflict": 100.0}, {"Year": 1981, "Internal armed conflict": 100.0}, {"Year": 1982, "Internal armed conflict": 100.0}, {"Year": 2003, "Internal armed conflict": 100.0}, {"Year": 2004, "One-Sided Violence": 146.0, "Internal armed conflict": 100.0}, {"Year": 2005, "One-Sided Violence": 286.0, "Internal armed conflict": 100.0}, {"Year": 2006, "One-Sided Violence": 329.0, "Internal armed conflict": 100.0}, {"Year": 2007, "One-Sided Violence": 320.0, "Internal armed conflict": 100.0}, {"Year": 2008, "One-Sided Violence": 180.0, "Internal armed conflict": 100.0}, {"Year": 2009, "One-Sided Violence": 120.0, "Internal armed conflict": 100.0}, {"Year": 2010, "One-Sided Violence": 136.0, "Internal armed conflict": 100.0}, {"Year": 2011, "One-Sided Violence": 115.0, "Internal armed conflict": 100.0}, {"Year": 2012, "One-Sided Violence": 113.0, "Internal armed conflict": 100.0}, {"Year": 2013, "One-Sided Violence": 60.0, "Internal armed conflict": 100.0}, {"Year": 2014, "One-Sided Violence": 32.0, "Internal armed conflict": 100.0}, {"Year": 2015, "One-Sided Violence": 27.0, "Internal armed conflict": 100.0}, {"Year": 2016, "Internal armed conflict": 100.0}, {"Year": 2017, "Internal armed conflict": 100.0}, {"Year": 2018, "One-Sided Violence": 25.0, "Internal armed conflict": 100.0}, {"Year": 2019, "Internal armed conflict": 100.0}, {"Year": 2020, "Internal armed conflict": 100.0}, {"Year": 2021, "Internal armed conflict": 100.0}, {"Year": 2022, "Internal armed conflict": 100.0}, {"Year": 2023, "Internal armed conflict": 100.0}, {"Year": 2024, "Internal armed conflict": 100.0}, {"Year": 2025, "Internal armed conflict": 100.0}], "predicted_conflict_vectors": [{"type": "Border Skirmish", "probability": 81}, {"type": "Proxy / Grey-Zone", "probability": 43}, {"type": "Naval Blockade", "probability": 22}, {"type": "Cyber / Digital", "probability": 19}, {"type": "Algorithmic / AI Strike", "probability": 9}, {"type": "Full Conventional", "probability": 20}], "ml_forecast_volume": 2}
+{
+  "country": "Thailand",
+  "forecast": {
+    "wvi": 30,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1819,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 2,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1824,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 31001,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1829,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 2,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1834,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1839,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1844,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1849,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 2001,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1854,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 4,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1944,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 4002,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1975,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 3000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Non-State (Cartel/Militia)": 0.2732,
+    "Border Skirmish": 0.2069,
+    "Proxy / Grey-Zone": 0.1567,
+    "Intra-State (Civil War)": 0.2444,
+    "Cyber / Digital": 0.1187
+  },
+  "future_hotspots": [],
+  "raw_schemas": {}
+}
