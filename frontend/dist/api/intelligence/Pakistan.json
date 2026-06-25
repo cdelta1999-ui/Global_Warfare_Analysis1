@@ -1,0 +1,92 @@
+{
+  "country": "Pakistan",
+  "computed_wvi": 68,
+  "pillars": {
+    "cyber": {
+      "overall_score": 55,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 60,
+          "metric": "66 events (YTD)",
+          "raw_value": 66,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 45,
+          "metric": "2 campaigns",
+          "raw_value": 2,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 50,
+          "metric": "Active tracking",
+          "raw_value": 50,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 78,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 78,
+          "metric": "Dependency: 62%",
+          "raw_value": 62,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 70,
+          "metric": "Sanctions Exposure: 70/100",
+          "raw_value": 70,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 66,
+          "metric": "Trade Concentration: 66/100",
+          "raw_value": 66,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 82,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 82,
+          "metric": "656 events/yr",
+          "raw_value": 656,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 77,
+          "metric": "Fatalities: 9840/yr",
+          "raw_value": 9840,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 85,
+          "metric": "Military spend: 24.6% GDP",
+          "raw_value": 24.6,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 42,
+      "primary_drivers": [
+        "TTP Insurgency",
+        "India-Pakistan LOC Skirmishes",
+        "Baloch Separatism"
+      ]
+    }
+  }
+}
