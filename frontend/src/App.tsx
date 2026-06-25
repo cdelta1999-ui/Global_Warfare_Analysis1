@@ -128,10 +128,33 @@ const CustomLegend = ({ payload }: any) => (
   </div>
 );
 
+// SVG ring component – fills based on score (0-100)
+const WVIRing = ({ score, color }: { score: number; color: string }) => {
+  const r = 42;
+  const circ = 2 * Math.PI * r;
+  const filled = (score / 100) * circ;
+  return (
+    <svg width="100" height="100" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r={r} fill="none" stroke="rgba(255,255,255,0.06)" strokeWidth="6" />
+      <circle cx="50" cy="50" r={r} fill="none" stroke={color} strokeWidth="6"
+        strokeLinecap="round"
+        strokeDasharray={`${filled} ${circ - filled}`}
+        strokeDashoffset={circ * 0.25}
+        style={{ transition: 'stroke-dasharray 0.8s ease', filter: `drop-shadow(0 0 6px ${color})` }}
+      />
+      <text x="50" y="50" dominantBaseline="central" textAnchor="middle"
+        fill={color} fontSize="22" fontWeight="800" fontFamily="'JetBrains Mono', monospace">
+        {score}
+      </text>
+    </svg>
+  );
+};
+
 export default function App() {
   const mapRef = useRef<MapRef>(null);
   const [worldGeoJson, setWorldGeoJson] = useState<any>(null);
-  const API_BASE = import.meta.env.VITE_BACKEND_URL || import.meta.env.BASE_URL;
+  const API_BASE = import.meta.env.VITE_BACKEND_URL ? import.meta.env.VITE_BACKEND_URL : import.meta.env.BASE_URL;
+  const EXT = import.meta.env.VITE_BACKEND_URL ? '' : '.json';
   const [flowMaps, setFlowMaps] = useState<any>(null);
   const [chokePoints, setChokePoints] = useState<any>(null);
   const [digitalLifelines, setDigitalLifelines] = useState<any>(null);
@@ -158,19 +181,21 @@ export default function App() {
   const [activeTab, setActiveTab] = useState<'timeline' | 'hotspots'>('timeline');
 
   const fetchPipelineStatus = () => {
-    fetch(API_BASE + 'api/pipeline/status')
-      .then(r => r.json()).then(setPipelineStatus).catch(console.error);
+    const url = import.meta.env.VITE_BACKEND_URL
+      ? API_BASE + 'api/pipeline/status'
+      : API_BASE + 'api/pipeline_status.json';
+    fetch(url).then(r => r.json()).then(setPipelineStatus).catch(console.error);
   };
 
   useEffect(() => {
     Promise.all([
       fetch(import.meta.env.BASE_URL + 'world.geo.json').then(r => r.json()),
-      fetch(API_BASE + 'api/map_data').then(r => r.json()),
-      fetch(API_BASE + 'api/flow_maps').then(r => r.json()),
-      fetch(API_BASE + 'api/choke_points').then(r => r.json()),
-      fetch(API_BASE + 'api/digital_lifelines').then(r => r.json()),
-      fetch(API_BASE + 'api/strategic_resources').then(r => r.json()),
-      fetch(API_BASE + 'api/asymmetric_vulnerabilities').then(r => r.json())
+      fetch(API_BASE + `api/map_data${EXT}`).then(r => r.json()),
+      fetch(API_BASE + `api/flow_maps${EXT}`).then(r => r.json()),
+      fetch(API_BASE + `api/choke_points${EXT}`).then(r => r.json()),
+      fetch(API_BASE + `api/digital_lifelines${EXT}`).then(r => r.json()),
+      fetch(API_BASE + `api/strategic_resources${EXT}`).then(r => r.json()),
+      fetch(API_BASE + `api/asymmetric_vulnerabilities${EXT}`).then(r => r.json())
     ]).then(([geoData, backendData, flowData, chokeData, digitalData, strategicData, asymmetricData]) => {
       const wviMap: Record<string, number> = {};
       backendData.data.forEach((d: any) => { wviMap[d.Country] = d.WVI; });
@@ -209,10 +234,10 @@ export default function App() {
       setSelectedInfra(null);
       setActiveTab('timeline');
       
-      fetch(`${API_BASE}api/forecast/${country}`)
+      fetch(`${API_BASE}api/forecast/${encodeURIComponent(country)}${EXT}`)
         .then(r => r.json()).then(setForecastData).catch(console.error);
-        
-      fetch(`${API_BASE}api/intelligence/${country}`)
+
+      fetch(`${API_BASE}api/intelligence/${encodeURIComponent(country)}${EXT}`)
         .then(r => r.json()).then(setIntelligenceData).catch(console.error);
     } else if (['digital', 'strategic', 'asymmetric', 'chokepoints', 'active-hotspots-layer'].includes(f.source) || f.layer?.id === 'active-hotspots-layer') {
       setSelectedInfra({ source: f.source || 'hotspot', properties: f.properties });
@@ -227,9 +252,15 @@ export default function App() {
   };
 
   const reactiveWVI = useMemo(() => {
-    if (!intelligenceData?.pillars) return 0;
-    const { cyber, economic, kinetic } = intelligenceData.pillars;
-    return Math.min(100, Math.round((cyber.overall_score + economic.overall_score + kinetic.overall_score) / 3));
+    if (!intelligenceData) return 0;
+    if (intelligenceData.computed_wvi != null) return intelligenceData.computed_wvi;
+    if (!intelligenceData.pillars) return 0;
+    const { cyber, economic, kinetic, fragmentation } = intelligenceData.pillars;
+    const C = cyber?.overall_score ?? 0;
+    const E = economic?.overall_score ?? 0;
+    const K = kinetic?.overall_score ?? 0;
+    const F = fragmentation?.score ?? 0;
+    return Math.min(100, Math.round(0.25 * C + 0.30 * E + 0.30 * K + 0.15 * F));
   }, [intelligenceData]);
 
   const warTypeBarData = useMemo(() => {
@@ -549,8 +580,11 @@ export default function App() {
               <Target size={16} style={{ color: 'var(--accent-cyan)' }} />
               <span style={{ fontWeight: 700, fontSize: '1.05rem' }}>{selectedCountry}</span>
             </div>
-            <div className="wvi-score-ring" style={{ color: wviColor }}>{reactiveWVI}</div>
-            <span className="label-text" style={{ marginTop: 12 }}>Computed WVI</span>
+            <WVIRing score={reactiveWVI} color={wviColor} />
+            <span className="label-text" style={{ marginTop: 8 }}>Computed WVI</span>
+            <span style={{ fontSize: '0.68rem', color: wviColor, marginTop: 4, fontWeight: 600, letterSpacing: '0.05em' }}>
+              {reactiveWVI > 75 ? 'CRITICAL' : reactiveWVI > 50 ? 'ELEVATED' : 'STABLE'}
+            </span>
           </div>
 
           <div className="divider-v" />
@@ -561,26 +595,41 @@ export default function App() {
               <ActivitySquare size={11} style={{ display: 'inline', verticalAlign: 'middle', marginRight: 4 }} /> Intelligence Telemetry
             </div>
             <div style={{ flex: 1, overflowY: 'auto', paddingRight: 4, display: 'flex', flexDirection: 'column', gap: 12 }}>
-              {Object.entries(intelligenceData.pillars).map(([pillar, data]: any) => (
-                <div key={pillar}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 4 }}>
-                    <span style={{ fontSize: '0.7rem', fontWeight: 600, color: PILLAR_COLORS[pillar], textTransform: 'uppercase' }}>{pillar} Pillar</span>
-                    <span className="metric-value" style={{ fontSize: '0.75rem', color: 'var(--text-primary)' }}>{data.overall_score}/100</span>
+              {Object.entries(intelligenceData.pillars)
+                .filter(([pillar]) => pillar !== 'fragmentation')
+                .map(([pillar, data]: any) => (
+                  <div key={pillar}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 4 }}>
+                      <span style={{ fontSize: '0.7rem', fontWeight: 600, color: PILLAR_COLORS[pillar] || '#8892b0', textTransform: 'uppercase' }}>{pillar} Pillar</span>
+                      <span className="metric-value" style={{ fontSize: '0.75rem', color: 'var(--text-primary)' }}>{data.overall_score}/100</span>
+                    </div>
+                    {(data.sources || []).map((src: any, i: number) => (
+                      <div key={i} className="intel-card">
+                        <div className="intel-header">
+                          <span className="intel-source">{src.name}</span>
+                          <span className="intel-score" style={{ color: PILLAR_COLORS[pillar] || '#8892b0' }}>{src.score}</span>
+                        </div>
+                        <div className="intel-metric">
+                          <span>{src.metric}</span>
+                          <span className="metric-value">{src.raw_value} <span style={{ color: 'var(--text-dim)', fontSize: '0.6rem' }}>{src.unit}</span></span>
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                  {data.sources.map((src: any, i: number) => (
-                    <div key={i} className="intel-card">
-                      <div className="intel-header">
-                        <span className="intel-source">{src.name}</span>
-                        <span className="intel-score" style={{ color: PILLAR_COLORS[pillar] }}>{src.score}</span>
-                      </div>
-                      <div className="intel-metric">
-                        <span>{src.metric}</span>
-                        <span className="metric-value">{src.raw_value} <span style={{ color: 'var(--text-dim)', fontSize: '0.6rem' }}>{src.unit}</span></span>
-                      </div>
+                ))}
+              {intelligenceData.pillars?.fragmentation && (
+                <div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 4 }}>
+                    <span style={{ fontSize: '0.7rem', fontWeight: 600, color: '#a78bfa', textTransform: 'uppercase' }}>Fragmentation</span>
+                    <span className="metric-value" style={{ fontSize: '0.75rem', color: 'var(--text-primary)' }}>{intelligenceData.pillars.fragmentation.score}/100</span>
+                  </div>
+                  {(intelligenceData.pillars.fragmentation.primary_drivers || []).map((d: string, i: number) => (
+                    <div key={i} className="intel-card" style={{ borderLeft: '2px solid rgba(167,139,250,0.4)' }}>
+                      <span style={{ fontSize: '0.72rem', color: 'rgba(167,139,250,0.9)' }}>{d}</span>
                     </div>
                   ))}
                 </div>
-              ))}
+              )}
             </div>
           </div>
 
@@ -642,9 +691,14 @@ export default function App() {
                     <Tooltip contentStyle={{ background: 'rgba(12,14,22,0.92)', backdropFilter: 'blur(16px)', border: '1px solid rgba(255,255,255,0.06)', borderRadius: 10, fontSize: '0.78rem' }} itemStyle={{ fontSize: '0.75rem' }} labelStyle={{ color: '#00f2fe', fontWeight: 700, marginBottom: 4 }} />
                     <RechartsLegend content={<CustomLegend />} />
                     <Area type="monotone" dataKey="Intra-State (Civil War)" stroke="#ff4b4b" strokeWidth={2} fill="url(#gCivil)" />
+                    <Area type="monotone" dataKey="Internal armed conflict" stroke="#ff6b6b" strokeWidth={2} fill="url(#gCivil)" />
+                    <Area type="monotone" dataKey="Full Conventional" stroke="#ff4b4b" strokeWidth={2} fill="url(#gCivil)" />
                     <Area type="monotone" dataKey="Non-State (Cartel/Militia)" stroke="#00f2fe" strokeWidth={2} fill="url(#gNonState)" />
+                    <Area type="monotone" dataKey="Proxy / Grey-Zone" stroke="#a78bfa" strokeWidth={2} fill="url(#gNonState)" />
                     <Area type="monotone" dataKey="Inter-State (Conventional)" stroke="#f5a623" strokeWidth={2} fill="url(#gInter)" />
+                    <Area type="monotone" dataKey="Interstate armed conflict" stroke="#f5a623" strokeWidth={2} fill="url(#gInter)" />
                     <Area type="monotone" dataKey="One-Sided Violence" stroke="#34d399" strokeWidth={2} fill="url(#gOneSided)" />
+                    <Area type="monotone" dataKey="Border Skirmish" stroke="#34d399" strokeWidth={2} fill="url(#gOneSided)" />
                   </AreaChart>
                 </ResponsiveContainer>
               </div>
