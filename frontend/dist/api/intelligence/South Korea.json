@@ -1,0 +1,91 @@
+{
+  "country": "South Korea",
+  "computed_wvi": 56,
+  "pillars": {
+    "cyber": {
+      "overall_score": 75,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 80,
+          "metric": "90 events (YTD)",
+          "raw_value": 90,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 65,
+          "metric": "3 campaigns",
+          "raw_value": 3,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 70,
+          "metric": "Active tracking",
+          "raw_value": 70,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 55,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 55,
+          "metric": "Dependency: 44%",
+          "raw_value": 44,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 47,
+          "metric": "Sanctions Exposure: 47/100",
+          "raw_value": 47,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 43,
+          "metric": "Trade Concentration: 43/100",
+          "raw_value": 43,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 60,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 60,
+          "metric": "480 events/yr",
+          "raw_value": 480,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 55,
+          "metric": "Fatalities: 7200/yr",
+          "raw_value": 7200,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 63,
+          "metric": "Military spend: 18.0% GDP",
+          "raw_value": 18.0,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 18,
+      "primary_drivers": [
+        "North Korea Nuclear Threat",
+        "DPRK Cyberattacks"
+      ]
+    }
+  }
+}
