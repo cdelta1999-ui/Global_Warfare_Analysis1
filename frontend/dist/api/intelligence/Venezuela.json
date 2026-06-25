@@ -1,0 +1,92 @@
+{
+  "country": "Venezuela",
+  "computed_wvi": 60,
+  "pillars": {
+    "cyber": {
+      "overall_score": 40,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 45,
+          "metric": "48 events (YTD)",
+          "raw_value": 48,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 30,
+          "metric": "2 campaigns",
+          "raw_value": 2,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 35,
+          "metric": "Active tracking",
+          "raw_value": 35,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 90,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 90,
+          "metric": "Dependency: 72%",
+          "raw_value": 72,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 82,
+          "metric": "Sanctions Exposure: 82/100",
+          "raw_value": 82,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 78,
+          "metric": "Trade Concentration: 78/100",
+          "raw_value": 78,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 55,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 55,
+          "metric": "440 events/yr",
+          "raw_value": 440,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 50,
+          "metric": "Fatalities: 6600/yr",
+          "raw_value": 6600,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 58,
+          "metric": "Military spend: 16.5% GDP",
+          "raw_value": 16.5,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 40,
+      "primary_drivers": [
+        "Economic Collapse-Driven Instability",
+        "FARC Presence",
+        "Maduro Regime Crackdown"
+      ]
+    }
+  }
+}
