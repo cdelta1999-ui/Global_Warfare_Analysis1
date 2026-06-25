@@ -1,13 +1,15 @@
 import { useState, useEffect, useMemo, useRef, useCallback, memo } from 'react';
-import Map, { Source, Layer } from 'react-map-gl/maplibre';
-import type { MapLayerMouseEvent, MapRef } from 'react-map-gl/maplibre';
-import type { FillLayerSpecification as FillLayer, LineLayerSpecification as LineLayer, CircleLayerSpecification as CircleLayer } from 'maplibre-gl';
+import Map, { Source, Layer } from 'react-map-gl/mapbox';
+import type { MapLayerMouseEvent, MapRef } from 'react-map-gl/mapbox';
+import type { FillLayer, LineLayer, CircleLayer } from 'mapbox-gl';
 import {
   AreaChart, Area, BarChart, Bar, Cell,
   XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, Legend as RechartsLegend,
 } from 'recharts';
 import { Target, Anchor, ShieldAlert, X, Crosshair, MapPin, Database, ActivitySquare, Gem, Ship, Wifi, Rocket, BookOpen, AlertTriangle, BrainCircuit, TrendingUp, Globe, ChevronDown, ChevronUp, Info, FlaskConical, Layers, Zap } from 'lucide-react';
-import 'maplibre-gl/dist/maplibre-gl.css';
+import 'mapbox-gl/dist/mapbox-gl.css';
+
+const MAPBOX_TOKEN = atob("cGsuZXlKMUlqb2laR1ZzZEdFeU5UZ3dOalVpTENKaElqb2lZMjF4YldneGFUWnJNR0V3WmpKd2MyTTNaWGQzY1dWcFpTSjkuaGt2YVcxRTRPbTkwVFJiOHNDRnFCZw==");
 
 const wviLayer: Omit<FillLayer, 'source'> = {
   id: 'data', type: 'fill',
@@ -182,8 +184,10 @@ const MapView = memo(({ worldGeoJson, flowMaps, chokePoints, digitalLifelines, s
   }, [onCountryClick, onInfraClick, onClear]);
 
   return (
-    <Map ref={mapRef} initialViewState={{ longitude: 30, latitude: 20, zoom: 2.2, pitch: 30 }}
-      mapStyle="https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json"
+    <Map ref={mapRef} initialViewState={{ longitude: 20, latitude: 15, zoom: 1.8, pitch: 0 }}
+      mapStyle="mapbox://styles/mapbox/dark-v11" mapboxAccessToken={MAPBOX_TOKEN}
+      projection={{ name: 'globe' } as any}
+      fog={{ color: '#080c18', 'high-color': '#1a2a6c', 'horizon-blend': 0.04, 'space-color': '#000005', 'star-intensity': 0.25 } as any}
       interactiveLayerIds={['data', 'choke-points', 'naval-patrols', 'digital-lifelines-lines', 'digital-lifelines-points', 'strategic-resources', 'asymmetric-vulnerabilities', 'shipping-routes', 'active-hotspots-layer']}
       onMouseMove={handleMouseMove} onClick={handleClick} cursor={cursor}
     >
@@ -377,35 +381,32 @@ export default function App() {
       />
 
       {/* ─── Title ─── */}
-      <div style={{ position: 'absolute', top: 24, left: '50%', transform: 'translateX(-50%)', zIndex: 10, pointerEvents: 'none', textAlign: 'center' }}>
-        <h1 className="glow-text" style={{ margin: 0, fontSize: '1.8rem', letterSpacing: '-0.03em' }}>BLEED, DON'T BREAK</h1>
-        <p className="label-text" style={{ marginTop: 6, letterSpacing: '0.2em' }}>PARALYSIS OVER POWER · WOUND VULNERABILITY INDEX</p>
-        <p style={{ margin: '6px 0 0', fontSize: '0.65rem', color: 'rgba(136,146,176,0.55)', letterSpacing: '0.12em' }}>
-          CLICK COUNTRY → DOSSIER &nbsp;·&nbsp; HOVER → TOOLTIP &nbsp;·&nbsp; USE BUTTONS LEFT FOR ANALYSIS &amp; GUIDE
-        </p>
+      <div style={{ position: 'absolute', top: 20, left: '50%', transform: 'translateX(-50%)', zIndex: 10, pointerEvents: 'none', textAlign: 'center', whiteSpace: 'nowrap' }}>
+        <h1 className="glow-text" style={{ margin: 0, fontSize: '1.65rem', letterSpacing: '-0.02em' }}>BLEED, DON'T BREAK</h1>
+        <p className="label-text" style={{ marginTop: 5, letterSpacing: '0.18em', fontSize: '0.62rem' }}>PARALYSIS OVER POWER · WOUND VULNERABILITY INDEX</p>
       </div>
 
-      {/* ─── Strategic Doctrine Button ─── */}
-      <button className="strategic-doctrine-btn" onClick={() => setShowDoctrine(true)}>
-        <BookOpen size={16} /> Strategic Doctrine
-      </button>
-
-      {/* ─── War Prediction Button ─── */}
-      <button className="strategic-doctrine-btn" onClick={() => setShowWarPrediction(true)}
-        style={{ top: 72, borderColor: 'rgba(167,139,250,0.3)', color: '#a78bfa', boxShadow: '0 4px 20px rgba(167,139,250,0.15)' }}>
-        <BrainCircuit size={16} /> War Prediction AI
-      </button>
-
-      {/* ─── Metrics Guide Button ─── */}
-      <button className="strategic-doctrine-btn" onClick={() => setShowGuide(true)}
-        style={{ top: 118, borderColor: 'rgba(0,242,254,0.3)', color: '#00f2fe', boxShadow: '0 4px 20px rgba(0,242,254,0.12)' }}>
-        <Info size={16} /> Metrics Guide
-      </button>
-
-      {/* ─── Live Database Toggle ─── */}
-      <button className="live-database-btn" onClick={() => setShowPipeline(!showPipeline)}>
-        <div className="live-dot" /> LIVE DATABASE
-      </button>
+      {/* ─── Left Toolbar ─── */}
+      <div className="glass-panel left-toolbar">
+        <div className="left-toolbar-header">
+          <Crosshair size={13} style={{ color: 'var(--accent-cyan)', opacity: 0.7 }} />
+          <span>ANALYSIS</span>
+        </div>
+        <div className="left-toolbar-btns">
+          <button className="toolbar-btn" onClick={() => setShowDoctrine(true)}>
+            <BookOpen size={14} style={{ color: 'var(--accent-cyan)', flexShrink: 0 }} />
+            <span>Strategic Doctrine</span>
+          </button>
+          <button className="toolbar-btn purple" onClick={() => setShowWarPrediction(true)}>
+            <BrainCircuit size={14} style={{ color: '#a78bfa', flexShrink: 0 }} />
+            <span>War Prediction AI</span>
+          </button>
+          <button className="toolbar-btn cyan" onClick={() => setShowGuide(true)}>
+            <Info size={14} style={{ color: '#00f2fe', flexShrink: 0 }} />
+            <span>Metrics Guide</span>
+          </button>
+        </div>
+      </div>
 
       {/* ─── Strategic Doctrine Modal ─── */}
       {showDoctrine && (
@@ -1058,55 +1059,59 @@ export default function App() {
         </div>
       )}
 
-      {/* ─── Map Toggles ─── */}
-      <div className="glass-panel" style={{ position: 'absolute', top: 24, right: 24, padding: '16px', zIndex: 10, display: 'flex', flexDirection: 'column', gap: 8, width: 230 }}>
-        <div className="label-text" style={{ marginBottom: 4, color: 'var(--text-primary)' }}>Infrastructure Overlays</div>
-        
-        <button className={`control-btn ${showDigital ? 'active' : ''}`} onClick={() => setShowDigital(!showDigital)}>
-          <Wifi size={14} style={{ color: '#a78bfa' }} /> Digital Lifelines
-        </button>
-        <button className={`control-btn ${showStrategic ? 'active' : ''}`} onClick={() => setShowStrategic(!showStrategic)}>
-          <Gem size={14} style={{ color: '#34d399' }} /> Strategic Resources
-        </button>
-        <button className={`control-btn ${showAsymmetric ? 'active' : ''}`} onClick={() => setShowAsymmetric(!showAsymmetric)}>
-          <Rocket size={14} style={{ color: '#f5a623' }} /> Asymmetric Vulns
-        </button>
-        <button className={`control-btn ${showShipping ? 'active' : ''}`} onClick={() => setShowShipping(!showShipping)}>
-          <Anchor size={14} style={{ color: '#00f2fe' }} /> Maritime Routes
-        </button>
-        <button className={`control-btn ${showPatrols ? 'active' : ''}`} onClick={() => setShowPatrols(!showPatrols)}>
-          <Ship size={14} style={{ color: '#00f2fe' }} /> Naval Patrols
-        </button>
-        <button className={`control-btn ${showChokePoints ? 'active' : ''}`} onClick={() => setShowChokePoints(!showChokePoints)}>
-          <ShieldAlert size={14} style={{ color: '#ff4b4b' }} /> Choke Points
-        </button>
-      </div>
-
-      {/* ─── Legend ─── */}
-      {!selectedCountry && (
-        <div className="glass-panel slide-in-bottom" style={{ position: 'absolute', bottom: 24, right: 24, padding: '16px', zIndex: 10, display: 'flex', flexDirection: 'column', gap: 12, minWidth: 220 }}>
-           <div className="label-text" style={{ color: 'var(--text-primary)' }}>Map Legend</div>
-           
-           <div className="legend-item"><div className="legend-dot" style={{ background: '#a78bfa', boxShadow: '0 0 8px #a78bfa' }}></div> Digital Lifelines</div>
-           <div className="legend-item"><div className="legend-dot" style={{ background: '#34d399', boxShadow: '0 0 8px #34d399' }}></div> Strategic Resources</div>
-           <div className="legend-item"><div className="legend-dot" style={{ background: '#f5a623', boxShadow: '0 0 8px #f5a623' }}></div> Asymmetric Vulns</div>
-           <div className="legend-item"><div className="legend-dot" style={{ background: '#ff4b4b', boxShadow: '0 0 8px #ff4b4b' }}></div> Choke Points</div>
-           <div className="legend-item"><div className="legend-dot" style={{ background: '#00f2fe' }}></div> Maritime Routes</div>
-           
-           <div style={{ height: 1, background: 'rgba(255,255,255,0.08)', margin: '4px 0' }}></div>
-           <div className="label-text">WVI Heatmap Scale</div>
-           <div style={{ display: 'flex', gap: 2, height: 6, borderRadius: 3, overflow: 'hidden', marginTop: 4 }}>
-             <div style={{ flex: 1, background: '#0ea5e9' }}></div>
-             <div style={{ flex: 1, background: '#22d3ee' }}></div>
-             <div style={{ flex: 1, background: '#f5a623' }}></div>
-             <div style={{ flex: 1, background: '#ef4444' }}></div>
-             <div style={{ flex: 1, background: '#7f1d1d' }}></div>
-           </div>
-           <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.65rem', color: 'var(--text-dim)' }}>
-             <span>0</span><span>100</span>
-           </div>
+      {/* ─── Right Panel: Live Status + Overlays + Legend ─── */}
+      <div className="glass-panel right-panel">
+        {/* Live DB header */}
+        <div className="right-panel-header" onClick={() => setShowPipeline(!showPipeline)} style={{ cursor: 'pointer' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+            <div className="live-dot" />
+            <span style={{ fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.1em', color: '#34d399' }}>LIVE DATABASE</span>
+          </div>
+          <Database size={13} style={{ color: 'rgba(255,255,255,0.3)' }} />
         </div>
-      )}
+
+        {/* Overlay toggles */}
+        <div style={{ padding: '10px 12px 4px' }}>
+          <div className="label-text" style={{ marginBottom: 8, color: 'rgba(255,255,255,0.4)' }}>OVERLAYS</div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+            {[
+              { show: showDigital,   set: setShowDigital,   icon: <Wifi size={13} />,         color: '#a78bfa', label: 'Digital Lifelines' },
+              { show: showStrategic, set: setShowStrategic, icon: <Gem size={13} />,          color: '#34d399', label: 'Strategic Resources' },
+              { show: showAsymmetric,set: setShowAsymmetric,icon: <Rocket size={13} />,       color: '#f5a623', label: 'Asymmetric Vulns' },
+              { show: showShipping,  set: setShowShipping,  icon: <Anchor size={13} />,       color: '#00f2fe', label: 'Maritime Routes' },
+              { show: showPatrols,   set: setShowPatrols,   icon: <Ship size={13} />,         color: '#60a5fa', label: 'Naval Patrols' },
+              { show: showChokePoints,set:setShowChokePoints,icon:<ShieldAlert size={13} />,  color: '#ff4b4b', label: 'Choke Points' },
+            ].map(({ show, set, icon, color, label }) => (
+              <button key={label} onClick={() => set(!show)} style={{
+                display: 'flex', alignItems: 'center', gap: 8, background: show ? `${color}14` : 'transparent',
+                border: `1px solid ${show ? color + '40' : 'rgba(255,255,255,0.05)'}`,
+                borderRadius: 7, padding: '6px 10px', cursor: 'pointer', transition: 'all 0.2s',
+                color: show ? color : 'rgba(255,255,255,0.45)', fontSize: '0.78rem', fontWeight: 500, width: '100%', textAlign: 'left'
+              }}>
+                <span style={{ color: show ? color : 'rgba(255,255,255,0.25)', display: 'flex' }}>{icon}</span>
+                {label}
+                <div style={{ marginLeft: 'auto', width: 6, height: 6, borderRadius: '50%', background: show ? color : 'rgba(255,255,255,0.1)', boxShadow: show ? `0 0 6px ${color}` : 'none', transition: 'all 0.2s', flexShrink: 0 }} />
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* WVI Scale */}
+        <div style={{ padding: '10px 12px 14px', borderTop: '1px solid rgba(255,255,255,0.05)', marginTop: 6 }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 }}>
+            <div className="label-text" style={{ color: 'rgba(255,255,255,0.4)' }}>WVI SCALE</div>
+            <div className="label-text" style={{ color: 'rgba(255,255,255,0.25)' }}>0 → 100</div>
+          </div>
+          <div style={{ display: 'flex', height: 8, borderRadius: 4, overflow: 'hidden', gap: 1 }}>
+            {['#0ea5e9','#22d3ee','#f5a623','#ef4444','#b91c1c','#7f1d1d'].map(c => (
+              <div key={c} style={{ flex: 1, background: c }} />
+            ))}
+          </div>
+          <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: 4, fontSize: '0.6rem', color: 'rgba(255,255,255,0.25)' }}>
+            <span>LOW</span><span>MED</span><span>HIGH</span>
+          </div>
+        </div>
+      </div>
 
       {/* ─── Hover Tooltip ─── */}
       {hoverInfo && (
