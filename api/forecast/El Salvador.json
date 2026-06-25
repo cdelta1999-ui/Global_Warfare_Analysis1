@@ -1,1 +1,99 @@
-{"country": "El Salvador", "wound_vulnerability_index": 23, "escalation_risk": "MODERATE", "historical_timeline": [{"Year": 1876, "Inter-State (Conventional)": 2000.0}, {"Year": 1885, "Inter-State (Conventional)": 200.0}, {"Year": 1906, "Inter-State (Conventional)": 300.0}, {"Year": 1907, "Inter-State (Conventional)": 300.0}, {"Year": 1932, "Intra-State (Civil War)": 2600.0}, {"Year": 1969, "Inter-State (Conventional)": 700.0, "Interstate armed conflict": 1000.0}, {"Year": 1972, "Internal armed conflict": 100.0}, {"Year": 1979, "Intra-State (Civil War)": -18.0, "Internal armed conflict": 100.0}, {"Year": 1980, "Internal armed conflict": 100.0}, {"Year": 1981, "Internal armed conflict": 1000.0}, {"Year": 1982, "Internal armed conflict": 1000.0}, {"Year": 1983, "Internal armed conflict": 1000.0}, {"Year": 1984, "Internal armed conflict": 1000.0}, {"Year": 1985, "Internal armed conflict": 1000.0}, {"Year": 1986, "Internal armed conflict": 1000.0}, {"Year": 1987, "Internal armed conflict": 1000.0}, {"Year": 1988, "Internal armed conflict": 1000.0}, {"Year": 1989, "Internal armed conflict": 1000.0}, {"Year": 1990, "Internal armed conflict": 100.0}, {"Year": 1991, "Internal armed conflict": 100.0}], "predicted_conflict_vectors": [{"type": "Border Skirmish", "probability": 13}, {"type": "Proxy / Grey-Zone", "probability": 20}, {"type": "Naval Blockade", "probability": 23}, {"type": "Cyber / Digital", "probability": 30}, {"type": "Algorithmic / AI Strike", "probability": 15}, {"type": "Full Conventional", "probability": 3}], "ml_forecast_volume": 3}
+{
+  "country": "El Salvador",
+  "forecast": {
+    "wvi": 30,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1900,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1920,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1940,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1960,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1980,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1370,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2000,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 889,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2010,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2015,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2020,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1744,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Non-State (Cartel/Militia)": 0.2732,
+    "Border Skirmish": 0.2069,
+    "Proxy / Grey-Zone": 0.1567,
+    "Intra-State (Civil War)": 0.2444,
+    "Cyber / Digital": 0.1187
+  },
+  "future_hotspots": [],
+  "raw_schemas": {}
+}
