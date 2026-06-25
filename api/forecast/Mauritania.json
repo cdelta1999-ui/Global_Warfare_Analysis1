@@ -1,1 +1,35 @@
-{"country": "Mauritania", "wound_vulnerability_index": 31, "escalation_risk": "MODERATE", "historical_timeline": [{"Year": 1957, "Extrasystemic armed conflict": 200.0}, {"Year": 1958, "Extrasystemic armed conflict": 200.0}, {"Year": 1975, "Extra-State": 1992.0, "Internal armed conflict": 100.0}, {"Year": 1976, "Internal armed conflict": 100.0}, {"Year": 1977, "Internal armed conflict": 100.0}, {"Year": 1978, "Internal armed conflict": 100.0}, {"Year": 1989, "One-Sided Violence": 28.0}, {"Year": 1990, "One-Sided Violence": 29.0}, {"Year": 2010, "Internationalized internal armed conflict": 100.0}], "predicted_conflict_vectors": [{"type": "Border Skirmish", "probability": 7}, {"type": "Proxy / Grey-Zone", "probability": 22}, {"type": "Naval Blockade", "probability": 36}, {"type": "Cyber / Digital", "probability": 39}, {"type": "Algorithmic / AI Strike", "probability": 19}, {"type": "Full Conventional", "probability": 1}], "ml_forecast_volume": 2}
+{
+  "country": "Mauritania",
+  "forecast": {
+    "wvi": 30,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1975,
+      "Inter-State (Conventional)": 2000,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Non-State (Cartel/Militia)": 0.2732,
+    "Border Skirmish": 0.2069,
+    "Proxy / Grey-Zone": 0.1567,
+    "Intra-State (Civil War)": 0.2444,
+    "Cyber / Digital": 0.1187
+  },
+  "future_hotspots": [],
+  "raw_schemas": {}
+}
