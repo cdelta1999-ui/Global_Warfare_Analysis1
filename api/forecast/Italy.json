@@ -1,1 +1,75 @@
-{"country": "Italy", "wound_vulnerability_index": 26, "escalation_risk": "MODERATE", "historical_timeline": [{"Year": 1848, "Inter-State (Conventional)": 3400.0}, {"Year": 1855, "Inter-State (Conventional)": 2200.0}, {"Year": 1866, "Inter-State (Conventional)": 4000.0}, {"Year": 1887, "Extra-State": 1400.0}, {"Year": 1893, "Extra-State": 5270.0}, {"Year": 1895, "Extra-State": 16000.0}, {"Year": 1911, "Inter-State (Conventional)": 6000.0}, {"Year": 1915, "Inter-State (Conventional)": 650000.0}, {"Year": 1923, "Extra-State": 40000.0}, {"Year": 1935, "Inter-State (Conventional)": 4000.0}, {"Year": 1940, "Inter-State (Conventional)": 174500.0}, {"Year": 1943, "Inter-State (Conventional)": 52400.0}, {"Year": 1991, "Inter-State (Conventional)": 0.0}, {"Year": 1992, "Intra-State (Civil War)": -17.0}, {"Year": 1999, "Inter-State (Conventional)": 0.0}, {"Year": 2004, "Extra-State": 25.0}], "predicted_conflict_vectors": [{"type": "Border Skirmish", "probability": 9}, {"type": "Proxy / Grey-Zone", "probability": 22}, {"type": "Naval Blockade", "probability": 16}, {"type": "Cyber / Digital", "probability": 37}, {"type": "Algorithmic / AI Strike", "probability": 18}, {"type": "Full Conventional", "probability": 2}], "ml_forecast_volume": 2}
+{
+  "country": "Italy",
+  "forecast": {
+    "wvi": 30,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1860,
+      "Inter-State (Conventional)": 4500,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1885,
+      "Inter-State (Conventional)": 1000,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1890,
+      "Inter-State (Conventional)": 270,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1895,
+      "Inter-State (Conventional)": 9000,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1920,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 5000,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2004,
+      "Inter-State (Conventional)": 33,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Non-State (Cartel/Militia)": 0.2732,
+    "Border Skirmish": 0.2069,
+    "Proxy / Grey-Zone": 0.1567,
+    "Intra-State (Civil War)": 0.2444,
+    "Cyber / Digital": 0.1187
+  },
+  "future_hotspots": [],
+  "raw_schemas": {}
+}
