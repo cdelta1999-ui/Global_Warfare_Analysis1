@@ -1,1 +1,35 @@
-{"country": "Belgium", "wound_vulnerability_index": 22, "escalation_risk": "MODERATE", "historical_timeline": [{"Year": 1892, "Extra-State": 20000.0}, {"Year": 1914, "Inter-State (Conventional)": 13716.0}, {"Year": 1940, "Inter-State (Conventional)": 9600.0}, {"Year": 1951, "Inter-State (Conventional)": 97.0}, {"Year": 1964, "Intra-State (Civil War)": -4.0}, {"Year": 1978, "Intra-State (Civil War)": -17.0}], "predicted_conflict_vectors": [{"type": "Border Skirmish", "probability": 3}, {"type": "Proxy / Grey-Zone", "probability": 7}, {"type": "Naval Blockade", "probability": 40}, {"type": "Cyber / Digital", "probability": 12}, {"type": "Algorithmic / AI Strike", "probability": 6}, {"type": "Full Conventional", "probability": 0}], "ml_forecast_volume": 2}
+{
+  "country": "Belgium",
+  "forecast": {
+    "wvi": 30,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1892,
+      "Inter-State (Conventional)": 7000,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Non-State (Cartel/Militia)": 0.2732,
+    "Border Skirmish": 0.2069,
+    "Proxy / Grey-Zone": 0.1567,
+    "Intra-State (Civil War)": 0.2444,
+    "Cyber / Digital": 0.1187
+  },
+  "future_hotspots": [],
+  "raw_schemas": {}
+}
