@@ -1,15 +1,13 @@
 import { useState, useEffect, useMemo, useRef, useCallback, memo } from 'react';
-import Map, { Source, Layer } from 'react-map-gl/mapbox';
-import type { MapLayerMouseEvent, MapRef } from 'react-map-gl/mapbox';
-import type { FillLayer, LineLayer, CircleLayer } from 'mapbox-gl';
+import Map, { Source, Layer } from 'react-map-gl/maplibre';
+import type { MapLayerMouseEvent, MapRef } from 'react-map-gl/maplibre';
+import type { FillLayerSpecification as FillLayer, LineLayerSpecification as LineLayer, CircleLayerSpecification as CircleLayer } from 'maplibre-gl';
 import {
   AreaChart, Area, BarChart, Bar, Cell,
   XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, Legend as RechartsLegend,
 } from 'recharts';
 import { Target, Anchor, ShieldAlert, X, Crosshair, MapPin, Database, ActivitySquare, Gem, Ship, Wifi, Rocket, BookOpen, AlertTriangle, BrainCircuit, TrendingUp, Globe, ChevronDown, ChevronUp, Info, FlaskConical, Layers, Zap } from 'lucide-react';
-import 'mapbox-gl/dist/mapbox-gl.css';
-
-const MAPBOX_TOKEN = atob("cGsuZXlKMUlqb2lhVzFsZGpFM09EZ3ZJbjAua1hYclBVMnZxbWFXWGtoMEswQWJEdw==");
+import 'maplibre-gl/dist/maplibre-gl.css';
 
 const wviLayer: Omit<FillLayer, 'source'> = {
   id: 'data', type: 'fill',
@@ -185,7 +183,7 @@ const MapView = memo(({ worldGeoJson, flowMaps, chokePoints, digitalLifelines, s
 
   return (
     <Map ref={mapRef} initialViewState={{ longitude: 30, latitude: 20, zoom: 2.2, pitch: 30 }}
-      mapStyle="mapbox://styles/mapbox/dark-v11" mapboxAccessToken={MAPBOX_TOKEN}
+      mapStyle="https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json"
       interactiveLayerIds={['data', 'choke-points', 'naval-patrols', 'digital-lifelines-lines', 'digital-lifelines-points', 'strategic-resources', 'asymmetric-vulnerabilities', 'shipping-routes', 'active-hotspots-layer']}
       onMouseMove={handleMouseMove} onClick={handleClick} cursor={cursor}
     >
