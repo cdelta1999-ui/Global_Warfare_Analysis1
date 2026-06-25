@@ -1,1 +1,99 @@
-{"country": "Tajikistan", "wound_vulnerability_index": 27, "escalation_risk": "MODERATE", "historical_timeline": [{"Year": 1992, "One-Sided Violence": 96.0, "Internationalized internal armed conflict": 1000.0}, {"Year": 1993, "Internationalized internal armed conflict": 1000.0}, {"Year": 1994, "Internationalized internal armed conflict": 100.0}, {"Year": 1995, "Internationalized internal armed conflict": 100.0}, {"Year": 1996, "Internationalized internal armed conflict": 1000.0}, {"Year": 1997, "Internal armed conflict": 100.0}, {"Year": 1998, "Internal armed conflict": 100.0}, {"Year": 2000, "Internal armed conflict": 100.0}, {"Year": 2010, "Internal armed conflict": 100.0}, {"Year": 2011, "Internal armed conflict": 100.0}, {"Year": 2018, "Internal armed conflict": 100.0}, {"Year": 2019, "Internal armed conflict": 100.0}], "predicted_conflict_vectors": [{"type": "Border Skirmish", "probability": 15}, {"type": "Proxy / Grey-Zone", "probability": 24}, {"type": "Naval Blockade", "probability": 25}, {"type": "Cyber / Digital", "probability": 36}, {"type": "Algorithmic / AI Strike", "probability": 18}, {"type": "Full Conventional", "probability": 3}], "ml_forecast_volume": 2}
+{
+  "country": "Tajikistan",
+  "forecast": {
+    "wvi": 30,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1900,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1920,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1940,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1529,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1960,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1980,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2000,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1622,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2010,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2015,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2020,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Non-State (Cartel/Militia)": 0.2732,
+    "Border Skirmish": 0.2069,
+    "Proxy / Grey-Zone": 0.1567,
+    "Intra-State (Civil War)": 0.2444,
+    "Cyber / Digital": 0.1187
+  },
+  "future_hotspots": [],
+  "raw_schemas": {}
+}
