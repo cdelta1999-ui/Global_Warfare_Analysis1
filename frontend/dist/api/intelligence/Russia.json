@@ -1,0 +1,91 @@
+{
+  "country": "Russia",
+  "computed_wvi": 79,
+  "pillars": {
+    "cyber": {
+      "overall_score": 90,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 95,
+          "metric": "108 events (YTD)",
+          "raw_value": 108,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 80,
+          "metric": "4 campaigns",
+          "raw_value": 4,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 85,
+          "metric": "Active tracking",
+          "raw_value": 85,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 82,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 82,
+          "metric": "Dependency: 65%",
+          "raw_value": 65,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 74,
+          "metric": "Sanctions Exposure: 74/100",
+          "raw_value": 74,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 70,
+          "metric": "Trade Concentration: 70/100",
+          "raw_value": 70,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 88,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 88,
+          "metric": "704 events/yr",
+          "raw_value": 704,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 83,
+          "metric": "Fatalities: 10560/yr",
+          "raw_value": 10560,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 91,
+          "metric": "Military spend: 26.4% GDP",
+          "raw_value": 26.4,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 36,
+      "primary_drivers": [
+        "Ukraine Conflict (Active)",
+        "NATO Expansion Friction"
+      ]
+    }
+  }
+}
