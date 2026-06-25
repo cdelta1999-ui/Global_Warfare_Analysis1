@@ -1,0 +1,92 @@
+{
+  "country": "Iraq",
+  "computed_wvi": 62,
+  "pillars": {
+    "cyber": {
+      "overall_score": 30,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 35,
+          "metric": "36 events (YTD)",
+          "raw_value": 36,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 20,
+          "metric": "1 campaigns",
+          "raw_value": 1,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 25,
+          "metric": "Active tracking",
+          "raw_value": 25,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 80,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 80,
+          "metric": "Dependency: 64%",
+          "raw_value": 64,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 72,
+          "metric": "Sanctions Exposure: 72/100",
+          "raw_value": 72,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 68,
+          "metric": "Trade Concentration: 68/100",
+          "raw_value": 68,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 78,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 78,
+          "metric": "624 events/yr",
+          "raw_value": 624,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 73,
+          "metric": "Fatalities: 9360/yr",
+          "raw_value": 9360,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 81,
+          "metric": "Military spend: 23.4% GDP",
+          "raw_value": 23.4,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 44,
+      "primary_drivers": [
+        "ISIS Remnants",
+        "Iran-Backed PMF Factions",
+        "US Forces Targeted"
+      ]
+    }
+  }
+}
