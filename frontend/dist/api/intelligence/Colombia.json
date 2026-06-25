@@ -1,0 +1,92 @@
+{
+  "country": "Colombia",
+  "computed_wvi": 60,
+  "pillars": {
+    "cyber": {
+      "overall_score": 50,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 55,
+          "metric": "60 events (YTD)",
+          "raw_value": 60,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 40,
+          "metric": "2 campaigns",
+          "raw_value": 2,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 45,
+          "metric": "Active tracking",
+          "raw_value": 45,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 65,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 65,
+          "metric": "Dependency: 52%",
+          "raw_value": 52,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 57,
+          "metric": "Sanctions Exposure: 57/100",
+          "raw_value": 57,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 53,
+          "metric": "Trade Concentration: 53/100",
+          "raw_value": 53,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 70,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 70,
+          "metric": "560 events/yr",
+          "raw_value": 560,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 65,
+          "metric": "Fatalities: 8400/yr",
+          "raw_value": 8400,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 73,
+          "metric": "Military spend: 21.0% GDP",
+          "raw_value": 21.0,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 44,
+      "primary_drivers": [
+        "FARC Dissident Groups",
+        "ELN Insurgency",
+        "Narco-Trafficking Corridors"
+      ]
+    }
+  }
+}
