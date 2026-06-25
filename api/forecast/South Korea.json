@@ -1,1 +1,43 @@
-{"country": "South Korea", "wound_vulnerability_index": 27, "escalation_risk": "MODERATE", "historical_timeline": [{"Year": 1950, "Inter-State (Conventional)": 113248.0}, {"Year": 1965, "Inter-State (Conventional)": 4687.0}], "predicted_conflict_vectors": [{"type": "Border Skirmish", "probability": 1}, {"type": "Proxy / Grey-Zone", "probability": 15}, {"type": "Naval Blockade", "probability": 37}, {"type": "Cyber / Digital", "probability": 30}, {"type": "Algorithmic / AI Strike", "probability": 15}, {"type": "Full Conventional", "probability": 0}], "ml_forecast_volume": 2}
+{
+  "country": "South Korea",
+  "forecast": {
+    "wvi": 56,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 2004,
+      "Inter-State (Conventional)": 1,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Border Skirmish": 0.296,
+    "Cyber / Digital": 0.3497,
+    "Naval Blockade": 0.152,
+    "Full Conventional": 0.1151,
+    "Proxy / Grey-Zone": 0.0872
+  },
+  "future_hotspots": [
+    {
+      "region": "South Korea - Border Flashpoint",
+      "threat": "Cyber / Digital",
+      "probability": 0.296,
+      "lat": null,
+      "lng": null
+    }
+  ],
+  "raw_schemas": {}
+}
