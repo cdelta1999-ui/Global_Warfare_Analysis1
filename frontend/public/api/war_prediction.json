@@ -676,6 +676,65 @@
       ],
       "lat": 15.0,
       "lng": 2.0
+    },
+    {
+      "rank": 11,
+      "region": "North America — Cartel Wars · US Internal Fragmentation · USMCA Stress",
+      "prediction_score": 62,
+      "confidence": "MEDIUM-HIGH",
+      "trajectory": "RISING",
+      "timeframe": "12–60 months",
+      "key_countries": [
+        "United States",
+        "Mexico",
+        "Canada"
+      ],
+      "avg_wvi": 54,
+      "hven_scores": {
+        "H": 48,
+        "V": 68,
+        "E": 55,
+        "N": 42,
+        "R": 51
+      },
+      "conflict_type_distribution": {
+        "Transnational Crime / Cartel": 0.35,
+        "Domestic Political Violence": 0.28,
+        "Cyber / Digital": 0.22,
+        "Economic / Trade War": 0.15
+      },
+      "behavioral_patterns": [
+        {
+          "pattern": "Cartel State Capture",
+          "intensity": "CRITICAL",
+          "description": "Mexican cartels (Sinaloa, CJNG) have achieved partial state capture in 15+ of 32 Mexican states. Cartel governance — providing security, employment, and parallel justice — substitutes for absent state functions. This is not criminality but an emerging parallel sovereignty challenge to the Mexican state.",
+          "historical_precedent": "Colombia Medellín Cartel 1980s-1993; modern ISIS caliphate governance model"
+        },
+        {
+          "pattern": "US-Mexico Sovereignty Friction",
+          "intensity": "HIGH",
+          "description": "US designation of cartels as Foreign Terrorist Organizations (2025) creates legal basis for unilateral US military operations inside Mexico. Mexican sovereignty rejection of US kinetic action creates bilateral crisis framework with potential for direct confrontation over cartel elimination operations.",
+          "historical_precedent": "US-Mexico Punitive Expedition 1916-1917 (Pancho Villa); Colombia Plan Colombia"
+        }
+      ],
+      "reasoning": "North America presents a composite threat profile rarely modeled as a single zone. US domestic fragmentation (WVI 56, Cyber 85) combines with Mexican cartel state-capture (partial sovereignty loss in 50% of territory) and Canadian resource/indigenous sovereignty disputes to create a trilateral instability cluster. The US-Mexico boundary is the world's most crossed — 400M+ legal crossings annually — making it the premier transnational crime and asymmetric threat corridor in the Western Hemisphere. Cartel FTO designation 2025 represents a militarization threshold with unpredictable escalation dynamics.",
+      "trigger_factors": [
+        "US unilateral drone strike on cartel leadership inside Mexico — sovereignty crisis",
+        "Cartel-linked cyber attack on US southern border power/water infrastructure",
+        "Major US electoral dispute triggering federal-state authority breakdown",
+        "Canada-US trade war escalation under USMCA renegotiation 2026",
+        "Cartel seizure of major Mexican port city (Manzanillo, Lázaro Cárdenas)"
+      ],
+      "escalation_pathway": "Cartel FTO designation → US special forces incursions → Mexico bilateral crisis → USMCA collapse → North American economic shock → domestic political instability feedback loop",
+      "indicators_to_watch": [
+        "Mexican cartel territorial control percentage",
+        "US-Mexico joint security cooperation status",
+        "Fentanyl seizure volume trends (supply disruption indicator)",
+        "US domestic militia incident frequency",
+        "USMCA renegotiation timeline"
+      ],
+      "lat": 26.0,
+      "lng": -104.0
     }
   ],
   "behavioral_archetypes": [
@@ -787,6 +846,62 @@
       "driver": "Algeria broke diplomatic relations with Morocco in 2021. Polisario Front SADR (supported by Algeria) vs. Moroccan annexation claim. 70% of world's phosphate reserves (global agricultural dependency) located in disputed territory. Gas pipeline politics adding economic pressure.",
       "lat": 24.0,
       "lng": -13.0
+    },
+    {
+      "flashpoint": "United States — Internal Fragmentation & Democratic Erosion",
+      "risk_score": 58,
+      "confidence": "HIGH",
+      "timeframe": "12–48 months",
+      "layer_type": "flashpoint",
+      "driver": "The United States faces its highest internal fragmentation index since the Civil War era. Political polarization (Pew Research: 90%+ partisan divergence), militia proliferation (900+ active groups per SPLC), erosion of federal institutional trust (<20% approval), combined with a 2024-2026 electoral dispute cycle create structural domestic instability risk. The Jan 6 2021 attack demonstrated that democratic norm breakdown can produce kinetic political violence at the institutional core. Debt ceiling brinkmanship and federal agency weaponization are compounding systemic fragility.",
+      "conflict_type_distribution": {
+        "Domestic Political Violence": 0.38,
+        "Cyber / Infrastructure": 0.28,
+        "Economic / Fiscal Crisis": 0.21,
+        "State-Federal Sovereignty Dispute": 0.13
+      },
+      "hven_scores": {
+        "H": 55,
+        "V": 72,
+        "E": 61,
+        "N": 38,
+        "R": 45
+      },
+      "key_countries": [
+        "United States"
+      ],
+      "trigger_factors": [
+        "2026/2028 federal election result disputed; state-level certification refusals",
+        "Major cyber attack on power grid or financial infrastructure attributed to China/Russia",
+        "Supreme Court ruling delegitimizing federal authority triggers state nullification cascade",
+        "Debt ceiling breach causing US sovereign default — unprecedented financial shock",
+        "Domestic terrorist attack on federal infrastructure inspiring copycat campaign"
+      ],
+      "escalation_pathway": "Political violence incidents → state militia activation → federal-state sovereignty crisis → partial breakdown of federal authority in 2-5 states → constitutional crisis requiring military adjudication",
+      "behavioral_patterns": [
+        {
+          "pattern": "Democratic Norm Erosion Spiral",
+          "intensity": "HIGH",
+          "description": "Each successful norm violation by political actors lowers the threshold for the next violation. Institutions that lack legal enforcement mechanisms (Senate norms, executive order limits, electoral certification) erode rapidly once actors stop self-enforcing. Spiral accelerates non-linearly.",
+          "historical_precedent": "Weimar Germany 1929-1933; Yugoslavia 1989-1991 federal dissolution"
+        },
+        {
+          "pattern": "Militia Proliferation / Non-State Armed Group Growth",
+          "intensity": "MEDIUM",
+          "description": "900+ active militia groups represent decentralized armed actor proliferation inside a nuclear-armed state. Low probability of organized insurrection, but high probability of politically motivated mass casualty events increasing in frequency.",
+          "historical_precedent": "Northern Ireland Troubles 1969-1998; pre-civil war Spain 1934-1936"
+        }
+      ],
+      "indicators_to_watch": [
+        "SPLC active militia count trends",
+        "Federal agency funding/authorization disputes",
+        "State-level election law changes",
+        "US Treasury auction demand (debt crisis proxy)",
+        "Domestic terrorism incident frequency (FBI data)"
+      ],
+      "reasoning": "The United States is not at risk of interstate war but represents a novel threat category: superpower internal fragmentation. The combination of institutional erosion, armed non-state actor proliferation, and an unprecedented political polarization index creates an instability profile more resembling late-Weimar Germany than post-WWII democratic stability. The cyber threat surface — 16 critical infrastructure sectors, most privately owned — creates vulnerabilities exploitable by both foreign adversaries and domestic actors. WVI=56 reflects this mixed profile: high cyber risk (85), moderate economic vulnerability (60), relatively low kinetic war risk (50), but fragmentation score remains underweighted.",
+      "lat": 38.0,
+      "lng": -98.5
     }
   ],
   "global_risk_trajectory": {

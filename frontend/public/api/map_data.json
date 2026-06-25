@@ -1406,12 +1406,12 @@
     },
     {
       "Country": "United States of America",
-      "WVI": 56,
-      "TopThreat": "Cyber / Digital",
-      "Cyber": 85,
-      "Economic": 60,
-      "Kinetic": 50,
-      "Fragmentation": 15
+      "WVI": 58,
+      "TopThreat": "Cyber + Democratic Fragmentation",
+      "Cyber": 88,
+      "Economic": 65,
+      "Kinetic": 45,
+      "Fragmentation": 72
     },
     {
       "Country": "Uruguay",
