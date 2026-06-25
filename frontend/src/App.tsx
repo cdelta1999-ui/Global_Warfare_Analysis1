@@ -15,8 +15,14 @@ const wviLayer: Omit<FillLayer, 'source'> = {
   id: 'data', type: 'fill',
   paint: {
     'fill-color': ['interpolate', ['linear'], ['get', 'WVI'],
-      0, 'rgba(0,0,0,0)', 30, '#1a1a4e', 50, '#f5a623', 75, '#ff4b4b', 100, '#b90000'],
-    'fill-opacity': 0.55
+      0,  'rgba(0,0,0,0)',
+      20, '#0ea5e9',
+      40, '#22d3ee',
+      55, '#f5a623',
+      70, '#ef4444',
+      85, '#b91c1c',
+      100,'#7f1d1d'],
+    'fill-opacity': 0.72
   }
 };
 
@@ -1092,10 +1098,11 @@ export default function App() {
            <div style={{ height: 1, background: 'rgba(255,255,255,0.08)', margin: '4px 0' }}></div>
            <div className="label-text">WVI Heatmap Scale</div>
            <div style={{ display: 'flex', gap: 2, height: 6, borderRadius: 3, overflow: 'hidden', marginTop: 4 }}>
-             <div style={{ flex: 1, background: '#1a1a4e' }}></div>
+             <div style={{ flex: 1, background: '#0ea5e9' }}></div>
+             <div style={{ flex: 1, background: '#22d3ee' }}></div>
              <div style={{ flex: 1, background: '#f5a623' }}></div>
-             <div style={{ flex: 1, background: '#ff4b4b' }}></div>
-             <div style={{ flex: 1, background: '#b90000' }}></div>
+             <div style={{ flex: 1, background: '#ef4444' }}></div>
+             <div style={{ flex: 1, background: '#7f1d1d' }}></div>
            </div>
            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.65rem', color: 'var(--text-dim)' }}>
              <span>0</span><span>100</span>
