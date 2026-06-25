@@ -1,0 +1,92 @@
+{
+  "country": "North Korea",
+  "computed_wvi": 76,
+  "pillars": {
+    "cyber": {
+      "overall_score": 80,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 85,
+          "metric": "96 events (YTD)",
+          "raw_value": 96,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 70,
+          "metric": "4 campaigns",
+          "raw_value": 4,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 75,
+          "metric": "Active tracking",
+          "raw_value": 75,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 90,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 90,
+          "metric": "Dependency: 72%",
+          "raw_value": 72,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 82,
+          "metric": "Sanctions Exposure: 82/100",
+          "raw_value": 82,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 78,
+          "metric": "Trade Concentration: 78/100",
+          "raw_value": 78,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 85,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 85,
+          "metric": "680 events/yr",
+          "raw_value": 680,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 80,
+          "metric": "Fatalities: 10200/yr",
+          "raw_value": 10200,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 88,
+          "metric": "Military spend: 25.5% GDP",
+          "raw_value": 25.5,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 24,
+      "primary_drivers": [
+        "Nuclear Weapons Program",
+        "ICBM Development",
+        "Seoul Artillery Range"
+      ]
+    }
+  }
+}
