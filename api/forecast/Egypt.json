@@ -1,1 +1,91 @@
-{"country": "Egypt", "wound_vulnerability_index": 86, "escalation_risk": "CRITICAL", "historical_timeline": [{"Year": 1824, "Intra-State (Civil War)": -18.0}, {"Year": 1831, "Intra-State (Civil War)": -9.0}, {"Year": 1869, "Extra-State": 1491.0}, {"Year": 1875, "Extra-State": 8800.0}, {"Year": 1878, "Extra-State": 3991.0}, {"Year": 1881, "Extra-State": 4992.0}, {"Year": 1882, "Inter-State (Conventional)": 10000.0}, {"Year": 1948, "Inter-State (Conventional)": 2000.0, "Interstate armed conflict": 1000.0}, {"Year": 1949, "Interstate armed conflict": 100.0}, {"Year": 1951, "Interstate armed conflict": 100.0}, {"Year": 1952, "Interstate armed conflict": 100.0}, {"Year": 1956, "Inter-State (Conventional)": 3000.0, "Interstate armed conflict": 1000.0}, {"Year": 1967, "Inter-State (Conventional)": 10000.0, "Interstate armed conflict": 1000.0}, {"Year": 1969, "Inter-State (Conventional)": 5000.0, "Interstate armed conflict": 100.0}, {"Year": 1970, "Interstate armed conflict": 100.0}, {"Year": 1973, "Inter-State (Conventional)": 7700.0, "Interstate armed conflict": 1000.0}, {"Year": 1991, "Inter-State (Conventional)": 14.0}, {"Year": 1993, "Internal armed conflict": 100.0}, {"Year": 1994, "Internal armed conflict": 100.0}, {"Year": 1995, "One-Sided Violence": 40.0, "Internal armed conflict": 100.0}, {"Year": 1996, "One-Sided Violence": 64.0, "Internal armed conflict": 100.0}, {"Year": 1997, "One-Sided Violence": 77.0, "Internal armed conflict": 100.0}, {"Year": 1998, "Internal armed conflict": 100.0}, {"Year": 2004, "One-Sided Violence": 34.0}, {"Year": 2005, "One-Sided Violence": 124.0}, {"Year": 2014, "Internal armed conflict": 100.0}, {"Year": 2015, "Internal armed conflict": 100.0}, {"Year": 2016, "Internal armed conflict": 100.0}, {"Year": 2017, "Internal armed conflict": 200.0}, {"Year": 2018, "Internal armed conflict": 200.0}, {"Year": 2019, "Internal armed conflict": 200.0}, {"Year": 2020, "Internal armed conflict": 100.0}, {"Year": 2021, "Internal armed conflict": 100.0}, {"Year": 2022, "Internal armed conflict": 100.0}], "predicted_conflict_vectors": [{"type": "Border Skirmish", "probability": 56}, {"type": "Proxy / Grey-Zone", "probability": 31}, {"type": "Naval Blockade", "probability": 53}, {"type": "Cyber / Digital", "probability": 16}, {"type": "Algorithmic / AI Strike", "probability": 8}, {"type": "Full Conventional", "probability": 14}], "ml_forecast_volume": 2}
+{
+  "country": "Egypt",
+  "forecast": {
+    "wvi": 57,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1869,
+      "Inter-State (Conventional)": 1,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1874,
+      "Inter-State (Conventional)": 4251,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1879,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1000,
+      "Non-State (Cartel/Militia)": 5000,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1919,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1924,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1944,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1886,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1968,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 5000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Border Skirmish": 0.317,
+    "Non-State (Cartel/Militia)": 0.2401,
+    "Proxy / Grey-Zone": 0.1819,
+    "Full Conventional": 0.0791,
+    "Cyber / Digital": 0.1819
+  },
+  "future_hotspots": [
+    {
+      "region": "Egypt - Border Flashpoint",
+      "threat": "Non-State (Cartel/Militia)",
+      "probability": 0.24,
+      "lat": null,
+      "lng": null
+    }
+  ],
+  "raw_schemas": {}
+}
