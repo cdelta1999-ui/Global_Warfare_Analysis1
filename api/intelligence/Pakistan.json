@@ -1,1 +1,92 @@
-{"country": "Pakistan", "pillars": {"kinetic": {"overall_score": 100, "sources": [{"name": "ACLED", "metric": "Instability Velocity", "raw_value": 0.58, "unit": "std_dev", "score": 100}, {"name": "SIPRI", "metric": "EMA Fatalities", "raw_value": 713, "unit": "deaths/yr", "score": 100}, {"name": "AIS Marine", "metric": "Choke Point Flow", "raw_value": 713, "unit": "vessels/day", "score": 100}], "raw_feed": {"source": "ACLED", "country_code": "PAK", "region": "Capital Region", "data_points": {"event_id": "ACLED-4742", "event_type": "Battles / Border Skirmishes", "actor_1": "Military Forces of Pakistan", "actor_2": "Unidentified Armed Group", "fatalities": 521, "geo_coordinates": {"lat": -19.4717, "lng": 136.0408}}, "wvi_normalized_score": 100.0}}, "cyber": {"overall_score": 10, "sources": [{"name": "CFR Cyber Tracker", "metric": "Incidents (YTD)", "raw_value": 15, "unit": "events", "score": 10}, {"name": "EuRepoC", "metric": "Active Campaigns", "raw_value": 0, "unit": "campaigns", "score": 10}, {"name": "Carnegie Spyware", "metric": "Proliferation", "raw_value": 0.1, "unit": "index", "score": 10}], "raw_feed": {"source": "CFR_Cyber_Tracker", "target_country": "Pakistan", "suspected_attribution": "Unknown State Actor", "data_points": {"incident_type": "Cyber Espionage / Infrastructure Spoofing", "target_sector": "Energy Grid / Maritime Navigation", "severity_level": "Medium"}, "wvi_normalized_score": 10.0}}, "economic": {"overall_score": 43, "sources": [{"name": "UN Comtrade", "metric": "Critical Import Dep.", "raw_value": "$43B", "unit": "USD", "score": 43}, {"name": "IMF DOTS", "metric": "Trade Imbalance", "raw_value": "-$51B", "unit": "USD", "score": 43}, {"name": "World Bank", "metric": "Tariff Barrier", "raw_value": "8.6%", "unit": "rate", "score": 43}], "raw_feed": {"source": "UN_Comtrade_IMF", "reporting_country": "PAK", "partner_country": "Global Market", "data_points": {"commodity_code": "HS-8542", "commodity_description": "Electronic Integrated Circuits", "bilateral_trade_value_usd": 15058182195, "import_dependency_percentage": 25.5}, "wvi_normalized_score": 43.0}}}, "wvi_metadata": {"m_geo_multiplier": 1.0, "delta_socio_multiplier": 1.0, "boiling_point_triggered": false, "boiling_point_alert": null}}
+{
+  "country": "Pakistan",
+  "computed_wvi": 68,
+  "pillars": {
+    "cyber": {
+      "overall_score": 55,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 60,
+          "metric": "66 events (YTD)",
+          "raw_value": 66,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 45,
+          "metric": "2 campaigns",
+          "raw_value": 2,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 50,
+          "metric": "Active tracking",
+          "raw_value": 50,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 78,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 78,
+          "metric": "Dependency: 62%",
+          "raw_value": 62,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 70,
+          "metric": "Sanctions Exposure: 70/100",
+          "raw_value": 70,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 66,
+          "metric": "Trade Concentration: 66/100",
+          "raw_value": 66,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 82,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 82,
+          "metric": "656 events/yr",
+          "raw_value": 656,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 77,
+          "metric": "Fatalities: 9840/yr",
+          "raw_value": 9840,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 85,
+          "metric": "Military spend: 24.6% GDP",
+          "raw_value": 24.6,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 42,
+      "primary_drivers": [
+        "TTP Insurgency",
+        "India-Pakistan LOC Skirmishes",
+        "Baloch Separatism"
+      ]
+    }
+  }
+}
