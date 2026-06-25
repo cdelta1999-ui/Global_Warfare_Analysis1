@@ -1,1 +1,92 @@
-{"country": "Central African Republic", "pillars": {"kinetic": {"overall_score": 100, "sources": [{"name": "ACLED", "metric": "Instability Velocity", "raw_value": 0.58, "unit": "std_dev", "score": 100}, {"name": "SIPRI", "metric": "EMA Fatalities", "raw_value": 304, "unit": "deaths/yr", "score": 100}, {"name": "AIS Marine", "metric": "Choke Point Flow", "raw_value": 304, "unit": "vessels/day", "score": 100}], "raw_feed": {"source": "ACLED", "country_code": "CEN", "region": "Capital Region", "data_points": {"event_id": "ACLED-3336", "event_type": "Battles / Border Skirmishes", "actor_1": "Military Forces of Central African Republic", "actor_2": "Unidentified Armed Group", "fatalities": 181, "geo_coordinates": {"lat": -69.5811, "lng": 53.8997}}, "wvi_normalized_score": 100.0}}, "cyber": {"overall_score": 42, "sources": [{"name": "CFR Cyber Tracker", "metric": "Incidents (YTD)", "raw_value": 63, "unit": "events", "score": 42}, {"name": "EuRepoC", "metric": "Active Campaigns", "raw_value": 0, "unit": "campaigns", "score": 42}, {"name": "Carnegie Spyware", "metric": "Proliferation", "raw_value": 0.42, "unit": "index", "score": 42}], "raw_feed": {"source": "CFR_Cyber_Tracker", "target_country": "Central African Republic", "suspected_attribution": "Unknown State Actor", "data_points": {"incident_type": "Cyber Espionage / Infrastructure Spoofing", "target_sector": "Energy Grid / Maritime Navigation", "severity_level": "Medium"}, "wvi_normalized_score": 42.0}}, "economic": {"overall_score": 58, "sources": [{"name": "UN Comtrade", "metric": "Critical Import Dep.", "raw_value": "$58B", "unit": "USD", "score": 58}, {"name": "IMF DOTS", "metric": "Trade Imbalance", "raw_value": "-$69B", "unit": "USD", "score": 58}, {"name": "World Bank", "metric": "Tariff Barrier", "raw_value": "11.6%", "unit": "rate", "score": 58}], "raw_feed": {"source": "UN_Comtrade_IMF", "reporting_country": "CEN", "partner_country": "Global Market", "data_points": {"commodity_code": "HS-8542", "commodity_description": "Electronic Integrated Circuits", "bilateral_trade_value_usd": 19944089193, "import_dependency_percentage": 27.7}, "wvi_normalized_score": 58.0}}}, "wvi_metadata": {"m_geo_multiplier": 1.0, "delta_socio_multiplier": 1.0, "boiling_point_triggered": false, "boiling_point_alert": null}}
+{
+  "country": "Central African Republic",
+  "computed_wvi": 62,
+  "pillars": {
+    "cyber": {
+      "overall_score": 15,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 20,
+          "metric": "18 events (YTD)",
+          "raw_value": 18,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 5,
+          "metric": "1 campaigns",
+          "raw_value": 1,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 10,
+          "metric": "Active tracking",
+          "raw_value": 10,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 88,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 88,
+          "metric": "Dependency: 70%",
+          "raw_value": 70,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 80,
+          "metric": "Sanctions Exposure: 80/100",
+          "raw_value": 80,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 76,
+          "metric": "Trade Concentration: 76/100",
+          "raw_value": 76,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 80,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 80,
+          "metric": "640 events/yr",
+          "raw_value": 640,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 75,
+          "metric": "Fatalities: 9600/yr",
+          "raw_value": 9600,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 83,
+          "metric": "Military spend: 24.0% GDP",
+          "raw_value": 24.0,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 53,
+      "primary_drivers": [
+        "Wagner Group Atrocities",
+        "Multiple Armed Factions",
+        "Predatory State"
+      ]
+    }
+  }
+}
