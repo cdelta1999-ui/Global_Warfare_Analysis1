@@ -1,0 +1,250 @@
+{
+  "type": "FeatureCollection",
+  "generated_at": "2026-06-25T00:00:00Z",
+  "model": "HVEN-R v2.1 + Historical Conflict Density Analysis",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "middle-east",
+        "rank": 1,
+        "name": "Middle East",
+        "subtitle": "Gaza · Lebanon · Iran Axis",
+        "color": "#ef4444",
+        "prediction_score": 91,
+        "confidence": "VERY HIGH",
+        "trajectory": "CRITICAL / ESCALATING",
+        "timeframe": "0–18 months",
+        "key_countries": ["Israel", "Iran", "Lebanon", "Syria", "Yemen"],
+        "avg_wvi": 79,
+        "historical_conflicts": 28,
+        "current_active_wars": 4,
+        "top_conflict_type": "Full Conventional + Proxy",
+        "primary_threat": "Iran nuclear escalation; Hezbollah-Hamas proxy network activation",
+        "escalation_pathway": "Iranian nuclear threshold breach → Israeli preemptive strike → Hezbollah full activation → regional war",
+        "conflict_cycle_years": 12.4,
+        "prediction_summary": "Highest-risk region globally. Four simultaneous active conflicts with direct superpower involvement. Iran's nuclear program approaching weapons-grade threshold while proxy networks in Gaza, Lebanon, Yemen, and Iraq are fully activated. Historical conflict density (28 recorded major wars) combined with current active states indicates near-term escalation probability above 90%."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[24, 11], [65, 11], [65, 43], [24, 43], [24, 11]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "eastern-europe",
+        "rank": 2,
+        "name": "Eastern Europe",
+        "subtitle": "Russia–Ukraine · Baltic · Black Sea",
+        "color": "#f97316",
+        "prediction_score": 84,
+        "confidence": "HIGH",
+        "trajectory": "ACTIVE / DETERIORATING",
+        "timeframe": "Active + 12–36 months",
+        "key_countries": ["Russia", "Ukraine", "Belarus", "Moldova", "Estonia", "Latvia", "Lithuania"],
+        "avg_wvi": 68,
+        "historical_conflicts": 22,
+        "current_active_wars": 2,
+        "top_conflict_type": "Full Conventional + Hybrid Warfare",
+        "primary_threat": "Russia-Ukraine escalation to NATO Article 5; Baltic state destabilization",
+        "escalation_pathway": "Ukrainian collapse → Russian advance to NATO border → Article 5 invocation → NATO-Russia direct conflict",
+        "conflict_cycle_years": 8.1,
+        "prediction_summary": "Ongoing full-scale conventional war since 2022 — largest European conflict since WWII. Historical pattern shows 22 major conflicts in region over 600 years with average cycle of 8.1 years. Current Russian military doctrine, demographic pressure, and NATO eastern expansion create conditions for prolonged conflict or dangerous escalation. Baltic states face hybrid warfare threat regardless of Ukrainian outcome."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[20, 43], [55, 43], [55, 62], [20, 62], [20, 43]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "south-asia",
+        "rank": 3,
+        "name": "South Asia",
+        "subtitle": "India–Pakistan · Kashmir · Nuclear Flashpoint",
+        "color": "#f59e0b",
+        "prediction_score": 76,
+        "confidence": "HIGH",
+        "trajectory": "ELEVATED / VOLATILE",
+        "timeframe": "12–48 months",
+        "key_countries": ["India", "Pakistan", "Afghanistan", "Bangladesh"],
+        "avg_wvi": 62,
+        "historical_conflicts": 14,
+        "current_active_wars": 1,
+        "top_conflict_type": "Nuclear-Armed Border Conflict + Insurgency",
+        "primary_threat": "India-Pakistan nuclear exchange over Kashmir; Afghan Taliban destabilization",
+        "escalation_pathway": "Cross-border terrorist attack → Indian military response → Pakistani nuclear signaling → crisis escalation",
+        "conflict_cycle_years": 15.2,
+        "prediction_summary": "World's most dangerous nuclear standoff. India and Pakistan have fought 4 wars since 1947 with the most recent near-miss in 2019 (Balakot airstrikes). Both nations maintain first-use doctrines under certain conditions. Climate stress (Indus water shortages), demographic pressure, and nationalist governments increase risk. Historical analysis shows 14 major conflicts with a 15-year average cycle — current cycle is overdue."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[60, 5], [97, 5], [97, 38], [60, 38], [60, 5]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "east-asia",
+        "rank": 4,
+        "name": "East Asia",
+        "subtitle": "Taiwan Strait · South China Sea · Korea",
+        "color": "#eab308",
+        "prediction_score": 72,
+        "confidence": "MEDIUM-HIGH",
+        "trajectory": "ELEVATED / BUILDING",
+        "timeframe": "24–60 months",
+        "key_countries": ["China", "Taiwan", "USA", "Japan", "South Korea", "North Korea"],
+        "avg_wvi": 58,
+        "historical_conflicts": 11,
+        "current_active_wars": 1,
+        "top_conflict_type": "Naval Blockade + Conventional + Nuclear",
+        "primary_threat": "Chinese invasion/blockade of Taiwan; North Korean nuclear provocation",
+        "escalation_pathway": "Chinese naval blockade of Taiwan → US carrier group response → miscalculation → naval engagement → escalation ladder",
+        "conflict_cycle_years": 9.3,
+        "prediction_summary": "Taiwan Strait represents the most consequential potential conflict for global stability. Chinese military modernization targets 2027 capability threshold for Taiwan operations. South China Sea territorial disputes involve simultaneous claims by 6 nations. North Korea's expanding nuclear-ICBM arsenal creates independent escalation risk. Historical conflict density analysis shows increasing regional militarization since 2015."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[100, 5], [145, 5], [145, 45], [100, 45], [100, 5]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sahel-africa",
+        "rank": 5,
+        "name": "Sahel & West Africa",
+        "subtitle": "Mali · Burkina Faso · Niger · Nigeria",
+        "color": "#a78bfa",
+        "prediction_score": 68,
+        "confidence": "MEDIUM-HIGH",
+        "trajectory": "DETERIORATING / SPREADING",
+        "timeframe": "0–24 months",
+        "key_countries": ["Mali", "Burkina Faso", "Niger", "Nigeria", "Chad", "Cameroon"],
+        "avg_wvi": 71,
+        "historical_conflicts": 18,
+        "current_active_wars": 3,
+        "top_conflict_type": "Insurgency + Terrorism + State Fragility",
+        "primary_threat": "Jihadist corridor from Sahel to coastal West Africa; coup contagion",
+        "escalation_pathway": "Junta governments expel Western forces → Russian Wagner expansion → jihadist territorial gains → coastal state destabilization",
+        "conflict_cycle_years": 6.8,
+        "prediction_summary": "Fastest-deteriorating conflict zone globally. Three military coups in 18 months (Mali 2021, Burkina Faso 2022, Niger 2023) have dismantled Western counter-terrorism frameworks. JNIM and ISGS jihadist groups now control territory larger than France combined. Russia's Wagner PMC (now Africa Corps) has replaced French forces, accelerating instability. Historical analysis shows shortest conflict cycles globally at 6.8 years average."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-18, 3], [25, 3], [25, 25], [-18, 25], [-18, 3]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "horn-of-africa",
+        "rank": 6,
+        "name": "Horn of Africa",
+        "subtitle": "Ethiopia · Somalia · Sudan · Red Sea",
+        "color": "#06b6d4",
+        "prediction_score": 63,
+        "confidence": "MEDIUM",
+        "trajectory": "VOLATILE / FRAGMENTED",
+        "timeframe": "6–30 months",
+        "key_countries": ["Ethiopia", "Somalia", "Sudan", "Eritrea", "Djibouti"],
+        "avg_wvi": 67,
+        "historical_conflicts": 9,
+        "current_active_wars": 1,
+        "top_conflict_type": "Civil War + Naval Interdiction",
+        "primary_threat": "Ethiopian federal fragmentation; Somali Al-Shabaab expansion; Houthi Red Sea threat",
+        "escalation_pathway": "Ethiopian civil war reignition → Eritrean involvement → regional fragmentation → Horn-wide conflict",
+        "conflict_cycle_years": 11.5,
+        "prediction_summary": "Post-Tigray Ethiopia remains fragile with Amhara/Oromo tensions unresolved. Sudan's 2023 civil war (SAF vs RSF) has displaced 12 million people — second largest displacement crisis globally. Houthi attacks on Red Sea shipping directly link Horn dynamics to the Middle East conflict system. Somalia's Al-Shabaab controls significant territory despite 2 decades of international intervention."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[32, -5], [52, -5], [52, 20], [32, 20], [32, -5]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "north-africa",
+        "rank": 7,
+        "name": "North Africa",
+        "subtitle": "Libya · Sudan · Algeria · Sahara",
+        "color": "#34d399",
+        "prediction_score": 58,
+        "confidence": "MEDIUM",
+        "trajectory": "STABLE-LOW / PROXY RISK",
+        "timeframe": "12–48 months",
+        "key_countries": ["Libya", "Sudan", "Algeria", "Egypt", "Tunisia"],
+        "avg_wvi": 56,
+        "historical_conflicts": 12,
+        "current_active_wars": 2,
+        "top_conflict_type": "Proxy War + Civil Fragmentation",
+        "primary_threat": "Libyan proxy competition (Turkey/UAE/Russia); Sudan spillover; Sahel corridor",
+        "escalation_pathway": "Libyan eastern-western faction clash → Turkey-UAE direct proxy conflict → Egyptian involvement → North African regional war",
+        "conflict_cycle_years": 7.2,
+        "prediction_summary": "Libya remains the key battleground for Turkish-UAE-Russian proxy competition, serving as a gateway between the Sahel and the Mediterranean. Sudan's humanitarian collapse is spreading instability to Egypt and Chad. Algeria's energy dependence and succession uncertainty present longer-term risk. Historical conflict density shows 12 major wars with significant colonial-era legacy shaping current power vacuums."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-5, 20], [37, 20], [37, 37], [-5, 37], [-5, 20]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "southeast-asia",
+        "rank": 8,
+        "name": "Southeast Asia",
+        "subtitle": "Myanmar · South China Sea · Mekong",
+        "color": "#3b82f6",
+        "prediction_score": 54,
+        "confidence": "MEDIUM",
+        "trajectory": "MODERATE / COMPOUND",
+        "timeframe": "12–60 months",
+        "key_countries": ["Myanmar", "Philippines", "Vietnam", "Malaysia", "Thailand"],
+        "avg_wvi": 51,
+        "historical_conflicts": 16,
+        "current_active_wars": 1,
+        "top_conflict_type": "Civil War + Maritime Dispute",
+        "primary_threat": "Myanmar junta collapse → regional refugee crisis; South China Sea Chinese assertiveness",
+        "escalation_pathway": "Myanmar state collapse → regional refugee crisis → Thai/Indian border tensions → Chinese intervention",
+        "conflict_cycle_years": 18.7,
+        "prediction_summary": "Myanmar's civil war entered a critical junta-losing phase in 2024 as resistance forces captured multiple regional capitals. Chinese assertiveness in the South China Sea — particularly around Scarborough Shoal and Second Thomas Shoal — creates repeated Philippines-China naval confrontations. The region's long conflict cycles (18.7 year average) suggest structural resilience, but compound pressures from climate change, supply chain competition, and Chinese expansion are building."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[92, -10], [140, -10], [140, 28], [92, 28], [92, -10]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "central-asia",
+        "rank": 9,
+        "name": "Central Asia",
+        "subtitle": "Afghanistan · Caucasus · Steppe",
+        "color": "#818cf8",
+        "prediction_score": 49,
+        "confidence": "MEDIUM-LOW",
+        "trajectory": "WATCHLIST / LATENT",
+        "timeframe": "24–72 months",
+        "key_countries": ["Afghanistan", "Tajikistan", "Uzbekistan", "Kyrgyzstan", "Azerbaijan", "Georgia"],
+        "avg_wvi": 53,
+        "historical_conflicts": 10,
+        "current_active_wars": 0,
+        "top_conflict_type": "State Fragility + Border Disputes",
+        "primary_threat": "Afghan Taliban instability spillover; Tajik-Kyrgyz border disputes",
+        "escalation_pathway": "Afghan economic collapse → refugee/militant spillover into Central Asian states → regional destabilization",
+        "conflict_cycle_years": 14.3,
+        "prediction_summary": "Post-2021 Afghanistan under Taliban rule faces economic collapse (80% GDP drop) creating conditions for renewed insurgency or state failure. Tajikistan-Kyrgyzstan border clashes escalated to full combat in 2022. Historical analysis of 10 major conflicts shows the region has served as a battleground for external power competition (Russia, China, USA) across 2,000 years, a pattern that continues with China's BRI corridor politics."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[52, 30], [88, 30], [88, 55], [52, 55], [52, 30]]]
+      }
+    }
+  ]
+}
