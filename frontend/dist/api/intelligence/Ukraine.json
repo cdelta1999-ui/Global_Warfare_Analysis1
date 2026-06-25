@@ -1,0 +1,91 @@
+{
+  "country": "Ukraine",
+  "computed_wvi": 81,
+  "pillars": {
+    "cyber": {
+      "overall_score": 70,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 75,
+          "metric": "84 events (YTD)",
+          "raw_value": 84,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 60,
+          "metric": "3 campaigns",
+          "raw_value": 3,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 65,
+          "metric": "Active tracking",
+          "raw_value": 65,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 90,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 90,
+          "metric": "Dependency: 72%",
+          "raw_value": 72,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 82,
+          "metric": "Sanctions Exposure: 82/100",
+          "raw_value": 82,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 78,
+          "metric": "Trade Concentration: 78/100",
+          "raw_value": 78,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 95,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 95,
+          "metric": "760 events/yr",
+          "raw_value": 760,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 90,
+          "metric": "Fatalities: 11400/yr",
+          "raw_value": 11400,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 98,
+          "metric": "Military spend: 28.5% GDP",
+          "raw_value": 28.5,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 55,
+      "primary_drivers": [
+        "Russia Full-Scale Invasion (Active)",
+        "Eastern Front Grinding War"
+      ]
+    }
+  }
+}
