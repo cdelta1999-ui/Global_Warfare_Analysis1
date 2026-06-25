@@ -1,1 +1,114 @@
-{"country": "Russia", "wound_vulnerability_index": 98, "escalation_risk": "CRITICAL", "historical_timeline": [{"Year": 1818, "Intra-State (Civil War)": 11000.0}, {"Year": 1826, "Extra-State": 7000.0}, {"Year": 1828, "Inter-State (Conventional)": 50000.0}, {"Year": 1830, "Intra-State (Civil War)": 1500.0}, {"Year": 1831, "Intra-State (Civil War)": 35000.0}, {"Year": 1834, "Intra-State (Civil War)": -18.0}, {"Year": 1836, "Intra-State (Civil War)": 14991.0}, {"Year": 1846, "Extra-State": -17.0}, {"Year": 1849, "Intra-State (Civil War)": 14492.0}, {"Year": 1853, "Inter-State (Conventional)": 100000.0}, {"Year": 1863, "Intra-State (Civil War)": 16500.0}, {"Year": 1864, "Extra-State": 1620.0}, {"Year": 1866, "Extra-State": 1100.0}, {"Year": 1871, "Intra-State (Civil War)": -17.0}, {"Year": 1875, "Extra-State": 4900.0}, {"Year": 1877, "Inter-State (Conventional)": 120000.0}, {"Year": 1878, "Extra-State": 10000.0}, {"Year": 1885, "Extra-State": 991.0}, {"Year": 1900, "Inter-State (Conventional)": 544.0}, {"Year": 1904, "Inter-State (Conventional)": 71453.0}, {"Year": 1905, "Intra-State (Civil War)": 1491.0}, {"Year": 1909, "Intra-State (Civil War)": 92.0}, {"Year": 1914, "Inter-State (Conventional)": 1700000.0}, {"Year": 1916, "Intra-State (Civil War)": 1350.0}, {"Year": 1918, "Inter-State (Conventional)": 16000.0}, {"Year": 1919, "Inter-State (Conventional)": 60000.0}, {"Year": 1946, "Internal armed conflict": 2200.0}, {"Year": 1947, "Internal armed conflict": 2100.0}, {"Year": 1948, "Internal armed conflict": 1200.0}, {"Year": 1949, "Internal armed conflict": 100.0}, {"Year": 1950, "Internal armed conflict": 100.0}, {"Year": 1979, "Intra-State (Civil War)": 1992.0}, {"Year": 1990, "Internal armed conflict": 200.0}, {"Year": 1991, "One-Sided Violence": 33.0, "Internal armed conflict": 100.0}, {"Year": 1993, "Intra-State (Civil War)": -17.0, "Internal armed conflict": 100.0}, {"Year": 1994, "Intra-State (Civil War)": 10000.0, "Internal armed conflict": 100.0}, {"Year": 1995, "Internal armed conflict": 1000.0}, {"Year": 1996, "One-Sided Violence": 42.0, "Internal armed conflict": 1000.0}, {"Year": 1999, "Intra-State (Civil War)": 20000.0, "One-Sided Violence": 343.0, "Internal armed conflict": 1100.0}, {"Year": 2000, "One-Sided Violence": 1411.0, "Internal armed conflict": 1000.0}, {"Year": 2001, "One-Sided Violence": 188.0, "Internal armed conflict": 100.0}, {"Year": 2002, "One-Sided Violence": 205.0, "Internal armed conflict": 1000.0}, {"Year": 2003, "One-Sided Violence": 59.0, "Internal armed conflict": 100.0}, {"Year": 2004, "One-Sided Violence": 149.0, "Internal armed conflict": 1000.0}, {"Year": 2005, "Internal armed conflict": 100.0}, {"Year": 2006, "Internal armed conflict": 100.0}, {"Year": 2007, "Internal armed conflict": 200.0}, {"Year": 2008, "Internal armed conflict": 100.0}, {"Year": 2009, "Internal armed conflict": 100.0}, {"Year": 2010, "One-Sided Violence": 58.0, "Internal armed conflict": 100.0}, {"Year": 2011, "One-Sided Violence": 40.0, "Internal armed conflict": 100.0}, {"Year": 2012, "Internal armed conflict": 100.0}, {"Year": 2013, "One-Sided Violence": 40.0, "Internal armed conflict": 100.0}, {"Year": 2014, "Internal armed conflict": 100.0}, {"Year": 2015, "Internal armed conflict": 200.0}, {"Year": 2016, "Internal armed conflict": 100.0}, {"Year": 2017, "Internal armed conflict": 100.0}, {"Year": 2018, "Internal armed conflict": 100.0}, {"Year": 2019, "Internal armed conflict": 100.0}, {"Year": 2020, "Internal armed conflict": 100.0}, {"Year": 2022, "Interstate armed conflict": 1000.0}, {"Year": 2023, "Internal armed conflict": 100.0, "Interstate armed conflict": 1000.0}, {"Year": 2024, "Internal armed conflict": 200.0, "Interstate armed conflict": 1000.0}, {"Year": 2025, "Interstate armed conflict": 1000.0}], "predicted_conflict_vectors": [{"type": "Border Skirmish", "probability": 100}, {"type": "Proxy / Grey-Zone", "probability": 80}, {"type": "Naval Blockade", "probability": 32}, {"type": "Cyber / Digital", "probability": 73}, {"type": "Algorithmic / AI Strike", "probability": 36}, {"type": "Full Conventional", "probability": 26}], "ml_forecast_volume": 5}
+{
+  "country": "Russia",
+  "forecast": {
+    "wvi": 79,
+    "trend": "Rising",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1826,
+      "Inter-State (Conventional)": 5000,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1846,
+      "Inter-State (Conventional)": 1,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1861,
+      "Inter-State (Conventional)": 120,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1866,
+      "Inter-State (Conventional)": 100,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1871,
+      "Inter-State (Conventional)": 100,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1876,
+      "Inter-State (Conventional)": 2000,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1881,
+      "Inter-State (Conventional)": 1000,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1921,
+      "Inter-State (Conventional)": 1,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1980,
+      "Inter-State (Conventional)": 40000,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Full Conventional": 0.32,
+    "Proxy / Grey-Zone": 0.2424,
+    "Cyber / Digital": 0.2864,
+    "Border Skirmish": 0.1054,
+    "Naval Blockade": 0.0458
+  },
+  "future_hotspots": [
+    {
+      "region": "Russia - High-Risk Zone",
+      "threat": "Full Conventional",
+      "probability": 0.32,
+      "lat": null,
+      "lng": null
+    },
+    {
+      "region": "Russia - Border Flashpoint",
+      "threat": "Proxy / Grey-Zone",
+      "probability": 0.286,
+      "lat": null,
+      "lng": null
+    }
+  ],
+  "raw_schemas": {}
+}
