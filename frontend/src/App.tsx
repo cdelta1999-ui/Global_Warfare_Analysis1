@@ -417,13 +417,13 @@ export default function App() {
   const [asymmetricVuln, setAsymmetricVuln] = useState<any>(null);
   
   // Toggles
-  const [showShipping, setShowShipping] = useState(true);
+  const [showShipping, setShowShipping] = useState(false);
   const [showPatrols, setShowPatrols] = useState(false);
-  const [showChokePoints, setShowChokePoints] = useState(true);
-  const [showDigital, setShowDigital] = useState(true);
-  const [showStrategic, setShowStrategic] = useState(true);
-  const [showAsymmetric, setShowAsymmetric] = useState(true);
-  const [showConflictRegions, setShowConflictRegions] = useState(true);
+  const [showChokePoints, setShowChokePoints] = useState(false);
+  const [showDigital, setShowDigital] = useState(false);
+  const [showStrategic, setShowStrategic] = useState(false);
+  const [showAsymmetric, setShowAsymmetric] = useState(false);
+  const [showConflictRegions, setShowConflictRegions] = useState(false);
   const [conflictRegionsGeoJson, setConflictRegionsGeoJson] = useState<any>(null);
   const [selectedRegion, setSelectedRegion] = useState<any>(null);
 
@@ -443,15 +443,16 @@ export default function App() {
   const [expandedRegion, setExpandedRegion] = useState<number | null>(null);
   const [showGuide, setShowGuide] = useState(false);
   const [guideTab, setGuideTab] = useState<'quickstart' | 'wvi' | 'hven' | 'conflict' | 'overlays'>('quickstart');
-  const [showBrainPredictions, setShowBrainPredictions] = useState(true);
+  const [showBrainPredictions, setShowBrainPredictions] = useState(false);
   const [brainPredictionsData, setBrainPredictionsData] = useState<any>(null);
   const [showBrainPanel, setShowBrainPanel] = useState(false);
-  const [showBorderDisputes, setShowBorderDisputes] = useState(true);
+  const [showBorderDisputes, setShowBorderDisputes] = useState(false);
   const [borderDisputesData, setBorderDisputesData] = useState<any>(null);
-  const [showMinerals, setShowMinerals] = useState(true);
+  const [showMinerals, setShowMinerals] = useState(false);
   const [mineralsData, setMineralsData] = useState<any>(null);
-  const [showWarRegions, setShowWarRegions] = useState(true);
+  const [showWarRegions, setShowWarRegions] = useState(false);
   const [selectedWarRegion, setSelectedWarRegion] = useState<any>(null);
+  const [showWelcome, setShowWelcome] = useState(true);
 
   // Lazy-load timeline: show last 10 years first, then full history
   useEffect(() => {
@@ -716,6 +717,108 @@ export default function App() {
         <p className="label-text" style={{ marginTop: 5, letterSpacing: '0.18em', fontSize: '0.62rem' }}>PARALYSIS OVER POWER · WOUND VULNERABILITY INDEX</p>
       </div>
 
+      {/* ─── Welcome / Onboarding Overlay ─── */}
+      {showWelcome && (
+        <>
+          <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.82)', backdropFilter: 'blur(14px)', zIndex: 200 }} onClick={() => setShowWelcome(false)} />
+          <div className="glass-panel fade-in" style={{
+            position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%,-50%)',
+            zIndex: 201, width: '92vw', maxWidth: 860, maxHeight: '88vh',
+            display: 'flex', flexDirection: 'column', overflow: 'hidden', borderRadius: 20,
+            border: '1px solid rgba(0,242,254,0.2)', boxShadow: '0 0 60px rgba(0,242,254,0.08)'
+          }}>
+            {/* Header */}
+            <div style={{ padding: '24px 28px', borderBottom: '1px solid rgba(255,255,255,0.06)', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexShrink: 0 }}>
+              <div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 6 }}>
+                  <Globe size={20} style={{ color: 'var(--accent-cyan)' }} />
+                  <h2 style={{ margin: 0, fontSize: '1.25rem', color: 'var(--accent-cyan)', letterSpacing: '-0.01em' }} className="glow-text">Global Warfare Analysis Dashboard</h2>
+                </div>
+                <p style={{ margin: 0, fontSize: '0.72rem', color: 'rgba(255,255,255,0.45)', letterSpacing: '0.1em' }}>STRATEGIC INTELLIGENCE · PREDICTIVE THREAT PLATFORM · HVEN-R v2.1</p>
+              </div>
+              <button onClick={() => setShowWelcome(false)} style={{ background: 'none', border: 'none', color: 'rgba(255,255,255,0.4)', cursor: 'pointer', padding: 4 }}><X size={20} /></button>
+            </div>
+
+            {/* Content */}
+            <div style={{ overflowY: 'auto', padding: '24px 28px', display: 'flex', flexDirection: 'column', gap: 20 }}>
+              {/* Intro */}
+              <p style={{ margin: 0, fontSize: '0.82rem', color: 'rgba(255,255,255,0.7)', lineHeight: 1.8 }}>
+                This platform maps <strong style={{ color: 'white' }}>active conflicts, supply chain chokepoints, predictive warzones, and asymmetric vulnerabilities</strong> across the globe using the HVEN-R multi-dimensional conflict model and Cederman-Pengl academic conflict wave data. All layers start <strong style={{ color: 'var(--accent-cyan)' }}>off by default</strong> — activate each one using the overlay toggles on the right panel.
+              </p>
+
+              {/* Layer guide grid */}
+              <div>
+                <div style={{ fontSize: '0.62rem', color: 'rgba(255,255,255,0.35)', letterSpacing: '0.15em', marginBottom: 12 }}>AVAILABLE INTELLIGENCE LAYERS</div>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
+                  {[
+                    { icon: '🌍', color: '#ef4444', label: 'Conflict Regions', desc: 'Active war zones and conflict areas from ACLED/Uppsala data. Click a region for full dossier.' },
+                    { icon: '⚡', color: '#f97316', label: 'Predicted Threats', desc: 'Brain-predicted threat zones from asymmetric vulnerability analysis. Black Swan events.' },
+                    { icon: '🔴', color: '#ff4b4b', label: 'War Prediction Zones', desc: 'HVEN-R model predictions: 10 top conflict regions + 4 emerging flashpoints. Click to analyse.' },
+                    { icon: '⚠️', color: '#ef4444', label: 'Border Skirmishes', desc: '10 most dangerous active borders globally with warfare types, nuclear risk, and casualty data.' },
+                    { icon: '💎', color: '#34d399', label: 'Critical Minerals', desc: 'Strategic mineral chokepoints — cobalt, lithium, REEs. Control these = control modern warfare.' },
+                    { icon: '🌐', color: '#a78bfa', label: 'Digital Lifelines', desc: 'Subsea cable routes carrying 97% of global internet. Severing these = economic paralysis.' },
+                    { icon: '⚓', color: '#00f2fe', label: 'Maritime Routes', desc: 'High-volume shipping lanes — energy, food, and goods transit corridors.' },
+                    { icon: '🛡️', color: '#ff4b4b', label: 'Choke Points', desc: 'Strategic naval chokepoints: Hormuz, Malacca, Suez, Bab-el-Mandeb.' },
+                    { icon: '💎', color: '#34d399', label: 'Strategic Resources', desc: 'Critical resource nodes — energy infrastructure, agricultural supply chains.' },
+                    { icon: '🎯', color: '#f5a623', label: 'Asymmetric Vulns', desc: 'Non-conventional attack vectors: cyber, economic warfare, proxy strategies.' },
+                    { icon: '🚢', color: '#60a5fa', label: 'Naval Patrols', desc: 'Active naval patrol zones and fleet deployment areas.' },
+                  ].map(({ icon, color, label, desc }) => (
+                    <div key={label} style={{ background: `${color}08`, border: `1px solid ${color}20`, borderRadius: 10, padding: '12px 14px', display: 'flex', gap: 10 }}>
+                      <span style={{ fontSize: '1.1rem', flexShrink: 0, lineHeight: 1 }}>{icon}</span>
+                      <div>
+                        <div style={{ fontSize: '0.73rem', fontWeight: 700, color, marginBottom: 3 }}>{label}</div>
+                        <div style={{ fontSize: '0.64rem', color: 'rgba(255,255,255,0.5)', lineHeight: 1.5 }}>{desc}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Interaction guide */}
+              <div style={{ background: 'rgba(0,242,254,0.04)', border: '1px solid rgba(0,242,254,0.15)', borderRadius: 12, padding: '16px 18px' }}>
+                <div style={{ fontSize: '0.62rem', color: 'rgba(0,242,254,0.6)', letterSpacing: '0.15em', marginBottom: 10 }}>HOW TO USE</div>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8 }}>
+                  {[
+                    { action: 'Click any country', result: 'Open full intelligence dossier with cyber, economic & kinetic threat scores' },
+                    { action: 'Click a war prediction zone', result: 'View HVEN-R scores, behavioral patterns, trigger factors, and escalation pathway' },
+                    { action: 'Click a border line', result: 'See conflict type, nuclear risk, casualties, and warfare type breakdown' },
+                    { action: 'Click a mineral marker', result: 'See strategic importance, global supply share, and wounding strategy analysis' },
+                    { action: 'Click a cable node', result: 'Assess digital infrastructure vulnerability and interdiction scenarios' },
+                    { action: 'War Prediction AI button', result: 'Open the full HVEN-R model methodology and behavioral archetypes analysis' },
+                  ].map(({ action, result }) => (
+                    <div key={action} style={{ display: 'flex', gap: 8 }}>
+                      <div style={{ width: 5, height: 5, borderRadius: '50%', background: 'var(--accent-cyan)', flexShrink: 0, marginTop: 5 }} />
+                      <div>
+                        <div style={{ fontSize: '0.68rem', fontWeight: 700, color: 'rgba(255,255,255,0.75)', marginBottom: 1 }}>{action}</div>
+                        <div style={{ fontSize: '0.62rem', color: 'rgba(255,255,255,0.45)', lineHeight: 1.5 }}>{result}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* CTA */}
+              <div style={{ display: 'flex', gap: 12, justifyContent: 'flex-end', paddingTop: 4 }}>
+                <button onClick={() => { setShowWelcome(false); setShowWarPrediction(true); }} style={{
+                  background: 'rgba(167,139,250,0.1)', border: '1px solid rgba(167,139,250,0.3)',
+                  borderRadius: 10, padding: '10px 20px', cursor: 'pointer', color: '#a78bfa',
+                  fontSize: '0.8rem', fontWeight: 600, display: 'flex', alignItems: 'center', gap: 8
+                }}>
+                  <BrainCircuit size={15} /> Open War Prediction AI
+                </button>
+                <button onClick={() => setShowWelcome(false)} style={{
+                  background: 'rgba(0,242,254,0.1)', border: '1px solid rgba(0,242,254,0.3)',
+                  borderRadius: 10, padding: '10px 24px', cursor: 'pointer', color: 'var(--accent-cyan)',
+                  fontSize: '0.8rem', fontWeight: 700
+                }}>
+                  Enter Dashboard →
+                </button>
+              </div>
+            </div>
+          </div>
+        </>
+      )}
+
       {/* ─── Left Toolbar ─── */}
       <div className="glass-panel left-toolbar">
         <div className="left-toolbar-header">
@@ -891,13 +994,30 @@ export default function App() {
               {/* Right: Behavioral Archetypes + Global Trajectory */}
               <div style={{ width: 340, flexShrink: 0, borderLeft: '1px solid rgba(255,255,255,0.06)', overflowY: 'auto', padding: '16px 16px' }}>
                 <div style={{ fontSize: '0.68rem', color: 'var(--text-secondary)', letterSpacing: '0.15em', marginBottom: 10 }}>BEHAVIORAL ARCHETYPES</div>
+                {/* God Mode Synthesis */}
+                {warPredictionData.god_mode_synthesis && (
+                  <div style={{ background: 'rgba(255,75,75,0.05)', border: '1px solid rgba(255,75,75,0.2)', borderRadius: 10, padding: '12px 14px', marginBottom: 12 }}>
+                    <div style={{ fontSize: '0.6rem', color: '#ff4b4b', letterSpacing: '0.12em', fontWeight: 700, marginBottom: 8 }}>EXPERT SYNTHESIS — CASCADE RISK</div>
+                    <p style={{ margin: '0 0 10px', fontSize: '0.66rem', color: 'rgba(255,200,200,0.8)', lineHeight: 1.65 }}>{warPredictionData.god_mode_synthesis.expert_assessment}</p>
+                    {warPredictionData.god_mode_synthesis.strategic_windows?.map((w: any, i: number) => (
+                      <div key={i} style={{ display: 'flex', gap: 8, marginBottom: 4 }}>
+                        <span style={{ fontSize: '0.6rem', color: '#f5a623', fontWeight: 700, flexShrink: 0, minWidth: 80 }}>{w.window}</span>
+                        <span style={{ fontSize: '0.6rem', color: 'rgba(255,255,255,0.5)', lineHeight: 1.5 }}>{w.highest_risk}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
                 {warPredictionData.behavioral_archetypes?.map((arch: any, i: number) => (
                   <div key={i} style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: 10, padding: '12px 14px', marginBottom: 10 }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 }}>
                       <span style={{ fontSize: '0.72rem', fontWeight: 700, color: '#a78bfa' }}>{arch.archetype}</span>
                       <span style={{ fontSize: '0.6rem', color: '#f5a623', fontWeight: 700 }}>×{arch.probability_amplifier}</span>
                     </div>
-                    <p style={{ margin: '0 0 8px', fontSize: '0.67rem', color: 'rgba(255,255,255,0.6)', lineHeight: 1.6 }}>{arch.description}</p>
+                    <p style={{ margin: '0 0 6px', fontSize: '0.67rem', color: 'rgba(255,255,255,0.6)', lineHeight: 1.6 }}>{arch.description}</p>
+                    {arch.historical_parallel && (
+                      <div style={{ fontSize: '0.6rem', color: 'rgba(255,255,255,0.35)', fontStyle: 'italic', marginBottom: 6 }}>Precedent: {arch.historical_parallel}</div>
+                    )}
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4 }}>
                       {arch.affected_regions?.map((r: string, j: number) => (
                         <span key={j} style={{ fontSize: '0.58rem', background: 'rgba(167,139,250,0.1)', border: '1px solid rgba(167,139,250,0.2)', borderRadius: 3, padding: '1px 6px', color: 'rgba(167,139,250,0.8)' }}>{r}</span>
