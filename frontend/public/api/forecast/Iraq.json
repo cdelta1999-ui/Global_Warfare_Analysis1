@@ -1,1 +1,83 @@
-{"forecast": {"predicted_attack_type": "Proxy / Grey-Zone", "predictability_score": "56.0%", "danger_risk_status": "CRITICAL: Accelerating Infiltration", "forecasted_event_volume": 498}, "timeline": [{"Year": 1980, "Inter-State (Conventional)": 100000}, {"Year": 1986, "Inter-State (Conventional)": 150000}, {"Year": 1991, "Inter-State (Conventional)": 50000}, {"Year": 2003, "Inter-State (Conventional)": 10000}, {"Year": 2006, "Intra-State (Civil War)": 30000}, {"Year": 2014, "Proxy / Grey-Zone": 25000}, {"Year": 2017, "Proxy / Grey-Zone": 10000}, {"Year": 2022, "Intra-State (Civil War)": 1500}], "raw_schemas": {"kinetic": {"normalized_score": 88, "source": "ACLED DB"}, "cyber": {"normalized_score": 40, "source": "CFR_Cyber_Tracker DB"}, "economic": {"normalized_score": 82, "source": "UN_Comtrade_IMF DB"}}, "war_type_probabilities": {"Proxy / Grey-Zone": 0.56, "Border Skirmish": 0.228, "Full Conventional": 0.138, "Cyber / Digital": 0.051, "Naval Blockade": 0.024}, "future_hotspots": [{"region": "National Digital Infrastructure", "lat": null, "lng": null, "threat": "Cyber Severance", "probability": 0.4}, {"region": "Financial Sector Gateway", "lat": null, "lng": null, "threat": "Financial Paralysis", "probability": 0.82}, {"region": "Border / Periphery Zones", "lat": null, "lng": null, "threat": "Proxy / Grey-Zone", "probability": 0.88}]}
+{
+  "country": "Iraq",
+  "forecast": {
+    "wvi": 62,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1883,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1918,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1923,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1943,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1886,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1968,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 5000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2004,
+      "Inter-State (Conventional)": 10800,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Intra-State (Civil War)": 0.3663,
+    "Non-State (Cartel/Militia)": 0.2775,
+    "Proxy / Grey-Zone": 0.2349,
+    "Border Skirmish": 0.0913,
+    "Full Conventional": 0.0301
+  },
+  "future_hotspots": [
+    {
+      "region": "Iraq - Border Flashpoint",
+      "threat": "Non-State (Cartel/Militia)",
+      "probability": 0.278,
+      "lat": null,
+      "lng": null
+    }
+  ],
+  "raw_schemas": {}
+}

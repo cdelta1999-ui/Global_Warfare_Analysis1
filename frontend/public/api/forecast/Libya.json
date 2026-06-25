@@ -1,1 +1,107 @@
-{"forecast": {"predicted_attack_type": "Proxy / Grey-Zone", "predictability_score": "47.7%", "danger_risk_status": "CRITICAL: Accelerating Infiltration", "forecasted_event_volume": 364}, "timeline": [{"Year": 1969, "Intra-State (Civil War)": 500}, {"Year": 2011, "Intra-State (Civil War)": 25000}, {"Year": 2014, "Intra-State (Civil War)": 5000}, {"Year": 2019, "Intra-State (Civil War)": 3000}, {"Year": 2022, "Proxy / Grey-Zone": 800}], "raw_schemas": {"kinetic": {"normalized_score": 87, "source": "ACLED DB"}, "cyber": {"normalized_score": 22, "source": "CFR_Cyber_Tracker DB"}, "economic": {"normalized_score": 80, "source": "UN_Comtrade_IMF DB"}}, "war_type_probabilities": {"Proxy / Grey-Zone": 0.477, "Full Conventional": 0.249, "Border Skirmish": 0.204, "Cyber / Digital": 0.031, "Naval Blockade": 0.039}, "future_hotspots": [{"region": "National Digital Infrastructure", "lat": null, "lng": null, "threat": "Cyber Severance", "probability": 0.22}, {"region": "Financial Sector Gateway", "lat": null, "lng": null, "threat": "Financial Paralysis", "probability": 0.8}, {"region": "Border / Periphery Zones", "lat": null, "lng": null, "threat": "Proxy / Grey-Zone", "probability": 0.87}]}
+{
+  "country": "Libya",
+  "forecast": {
+    "wvi": 63,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1900,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1920,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 689,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1940,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1960,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1980,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2000,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2010,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2015,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2020,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1646,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1683,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Intra-State (Civil War)": 0.3665,
+    "Proxy / Grey-Zone": 0.2626,
+    "Non-State (Cartel/Militia)": 0.2103,
+    "Full Conventional": 0.1021,
+    "Border Skirmish": 0.0586
+  },
+  "future_hotspots": [
+    {
+      "region": "Libya - Border Flashpoint",
+      "threat": "Proxy / Grey-Zone",
+      "probability": 0.263,
+      "lat": null,
+      "lng": null
+    }
+  ],
+  "raw_schemas": {}
+}

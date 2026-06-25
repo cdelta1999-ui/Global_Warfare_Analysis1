@@ -1,1 +1,139 @@
-{"forecast": {"predicted_attack_type": "Cyber / Digital", "predictability_score": "50.6%", "danger_risk_status": "STABLE: Baseline Activity", "forecasted_event_volume": 35}, "timeline": [{"Year": 1950, "Inter-State (Conventional)": 35000}, {"Year": 1960, "Inter-State (Conventional)": 50000}, {"Year": 1975, "Inter-State (Conventional)": 58000}, {"Year": 1991, "Inter-State (Conventional)": 1500}, {"Year": 2001, "Inter-State (Conventional)": 2000}, {"Year": 2003, "Inter-State (Conventional)": 4500}, {"Year": 2010, "Proxy / Grey-Zone": 1500}, {"Year": 2020, "Cyber / Digital": 0}, {"Year": 2023, "Cyber / Digital": 0}], "raw_schemas": {"kinetic": {"normalized_score": 45, "source": "ACLED DB"}, "cyber": {"normalized_score": 78, "source": "CFR_Cyber_Tracker DB"}, "economic": {"normalized_score": 42, "source": "UN_Comtrade_IMF DB"}}, "war_type_probabilities": {"Cyber / Digital": 0.506, "Proxy / Grey-Zone": 0.339, "Naval Blockade": 0.069, "Border Skirmish": 0.053, "Full Conventional": 0.032}, "future_hotspots": [{"region": "Guam (Anderson AFB)", "lat": 13.58, "lng": 144.9, "threat": "Aerospace Corridor Denial", "probability": 0.82}, {"region": "Hawaii Undersea Cables", "lat": 21.3, "lng": -157.8, "threat": "Data Severance", "probability": 0.86}, {"region": "Panama Canal (Proxy Threat)", "lat": 9.1, "lng": -79.9, "threat": "Shipping Blockade", "probability": 0.75}]}
+{
+  "country": "United States of America",
+  "forecast": {
+    "wvi": 56,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1820,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1825,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 10301,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1830,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1835,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 9601,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1840,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1855,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 7701,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1860,
+      "Inter-State (Conventional)": 5,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1870,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 3000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1895,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 4500,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1910,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 50,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1915,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 98,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2001,
+      "Inter-State (Conventional)": 552,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2003,
+      "Inter-State (Conventional)": 3985,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Proxy / Grey-Zone": 0.3,
+    "Cyber / Digital": 0.5229,
+    "Naval Blockade": 0.1304,
+    "Border Skirmish": 0.0325,
+    "Full Conventional": 0.0141
+  },
+  "future_hotspots": [
+    {
+      "region": "United States of America - Border Flashpoint",
+      "threat": "Cyber / Digital",
+      "probability": 0.3,
+      "lat": null,
+      "lng": null
+    }
+  ],
+  "raw_schemas": {}
+}

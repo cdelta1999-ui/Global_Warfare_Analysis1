@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, useRef } from 'react';
+import { useState, useEffect, useMemo, useRef, useCallback, memo } from 'react';
 import Map, { Source, Layer } from 'react-map-gl/mapbox';
 import type { MapLayerMouseEvent, MapRef } from 'react-map-gl/mapbox';
 import type { FillLayer, LineLayer, CircleLayer } from 'mapbox-gl';
@@ -150,6 +150,67 @@ const WVIRing = ({ score, color }: { score: number; color: string }) => {
   );
 };
 
+interface MapViewProps {
+  worldGeoJson: any; flowMaps: any; chokePoints: any; digitalLifelines: any; strategicResources: any; asymmetricVuln: any;
+  showShipping: boolean; showPatrols: boolean; showChokePoints: boolean; showDigital: boolean; showStrategic: boolean; showAsymmetric: boolean;
+  activeHotspotGeoJson: any; selectedCountry: string | null;
+  onHoverChange: (info: any) => void; onCountryClick: (c: string) => void; onInfraClick: (i: any) => void; onClear: () => void;
+  mapRef: React.RefObject<MapRef>;
+}
+
+const MapView = memo(({ worldGeoJson, flowMaps, chokePoints, digitalLifelines, strategicResources, asymmetricVuln, showShipping, showPatrols, showChokePoints, showDigital, showStrategic, showAsymmetric, activeHotspotGeoJson, selectedCountry, onHoverChange, onCountryClick, onInfraClick, onClear, mapRef }: MapViewProps) => {
+  const [cursor, setCursor] = useState('grab');
+
+  const handleMouseMove = useCallback((event: MapLayerMouseEvent) => {
+    const f = event.features?.[0];
+    setCursor(f ? 'pointer' : 'grab');
+    onHoverChange(f ? { feature: f, x: event.point.x, y: event.point.y } : null);
+  }, [onHoverChange]);
+
+  const handleClick = useCallback((event: MapLayerMouseEvent) => {
+    const f = event.features?.[0];
+    if (!f) { onClear(); return; }
+    if (f.source === 'data' && f.properties?.name) {
+      onCountryClick(f.properties.name);
+    } else {
+      onInfraClick({ source: f.source || 'hotspot', properties: f.properties });
+    }
+  }, [onCountryClick, onInfraClick, onClear]);
+
+  return (
+    <Map ref={mapRef} initialViewState={{ longitude: 30, latitude: 20, zoom: 2.2, pitch: 30 }}
+      mapStyle="mapbox://styles/mapbox/dark-v11" mapboxAccessToken={MAPBOX_TOKEN}
+      interactiveLayerIds={['data', 'choke-points', 'naval-patrols', 'digital-lifelines-lines', 'digital-lifelines-points', 'strategic-resources', 'asymmetric-vulnerabilities', 'shipping-routes', 'active-hotspots-layer']}
+      onMouseMove={handleMouseMove} onClick={handleClick} cursor={cursor}
+    >
+      {worldGeoJson && <Source id="data" type="geojson" data={worldGeoJson}><Layer {...wviLayer} /></Source>}
+      {showShipping && flowMaps?.shipping_routes && <Source id="shipping" type="geojson" data={flowMaps.shipping_routes}><Layer {...shippingRouteLayer} /></Source>}
+      {showPatrols && flowMaps?.naval_patrols && <Source id="patrols" type="geojson" data={flowMaps.naval_patrols}><Layer {...navalPatrolLayer} /></Source>}
+      {showChokePoints && chokePoints && <Source id="chokepoints" type="geojson" data={chokePoints}><Layer {...chokePointLayer} /></Source>}
+      {showDigital && digitalLifelines && (
+        <Source id="digital" type="geojson" data={digitalLifelines}>
+          <Layer {...digitalLifelineLineLayer} /><Layer {...digitalLifelinePointLayer} />
+        </Source>
+      )}
+      {showStrategic && strategicResources && <Source id="strategic" type="geojson" data={strategicResources}><Layer {...strategicResourceLayer} /></Source>}
+      {showAsymmetric && asymmetricVuln && <Source id="asymmetric" type="geojson" data={asymmetricVuln}><Layer {...asymmetricLayer} /></Source>}
+      {selectedCountry && activeHotspotGeoJson && (
+        <Source id="active-hotspots-source" type="geojson" data={activeHotspotGeoJson}>
+          <Layer {...activeHotspotLayer} />
+        </Source>
+      )}
+    </Map>
+  );
+}, (p, n) =>
+  p.worldGeoJson === n.worldGeoJson && p.flowMaps === n.flowMaps && p.chokePoints === n.chokePoints &&
+  p.digitalLifelines === n.digitalLifelines && p.strategicResources === n.strategicResources &&
+  p.asymmetricVuln === n.asymmetricVuln && p.showShipping === n.showShipping && p.showPatrols === n.showPatrols &&
+  p.showChokePoints === n.showChokePoints && p.showDigital === n.showDigital && p.showStrategic === n.showStrategic &&
+  p.showAsymmetric === n.showAsymmetric && p.activeHotspotGeoJson === n.activeHotspotGeoJson &&
+  p.selectedCountry === n.selectedCountry && p.onHoverChange === n.onHoverChange &&
+  p.onCountryClick === n.onCountryClick && p.onInfraClick === n.onInfraClick && p.onClear === n.onClear
+);
+
 export default function App() {
   const mapRef = useRef<MapRef>(null);
   const [worldGeoJson, setWorldGeoJson] = useState<any>(null);
@@ -179,6 +240,15 @@ export default function App() {
   const [intelligenceData, setIntelligenceData] = useState<any>(null);
   const [pipelineStatus, setPipelineStatus] = useState<any>(null);
   const [activeTab, setActiveTab] = useState<'timeline' | 'hotspots'>('timeline');
+  const [displayTimeline, setDisplayTimeline] = useState<any[]>([]);
+
+  // Lazy-load timeline: show last 10 years first, then full history
+  useEffect(() => {
+    if (!forecastData?.timeline?.length) { setDisplayTimeline([]); return; }
+    setDisplayTimeline(forecastData.timeline.slice(-10));
+    const t = setTimeout(() => setDisplayTimeline(forecastData.timeline), 300);
+    return () => clearTimeout(t);
+  }, [forecastData]);
 
   const fetchPipelineStatus = () => {
     const url = import.meta.env.VITE_BACKEND_URL
@@ -215,35 +285,27 @@ export default function App() {
     return () => clearInterval(interval);
   }, []);
 
-  const onHover = (event: MapLayerMouseEvent) => {
-    const f = event.features?.[0];
-    setHoverInfo(f ? { feature: f, x: event.point.x, y: event.point.y } : null);
-  };
+  const onHoverChange = useCallback((info: any) => setHoverInfo(info), []);
 
-  const onClick = (event: MapLayerMouseEvent) => {
-    const f = event.features?.[0];
-    if (!f) {
-      setSelectedCountry(null);
-      setSelectedInfra(null);
-      return;
-    }
+  const onCountryClick = useCallback((country: string) => {
+    setSelectedCountry(country);
+    setSelectedInfra(null);
+    setActiveTab('timeline');
+    fetch(`${API_BASE}api/forecast/${encodeURIComponent(country)}${EXT}`)
+      .then(r => r.json()).then(setForecastData).catch(console.error);
+    fetch(`${API_BASE}api/intelligence/${encodeURIComponent(country)}${EXT}`)
+      .then(r => r.json()).then(setIntelligenceData).catch(console.error);
+  }, [API_BASE, EXT]);
 
-    if (f.source === 'data' && f.properties?.name) {
-      const country = f.properties.name;
-      setSelectedCountry(country);
-      setSelectedInfra(null);
-      setActiveTab('timeline');
-      
-      fetch(`${API_BASE}api/forecast/${encodeURIComponent(country)}${EXT}`)
-        .then(r => r.json()).then(setForecastData).catch(console.error);
+  const onInfraClick = useCallback((infra: any) => {
+    setSelectedInfra(infra);
+    setSelectedCountry(null);
+  }, []);
 
-      fetch(`${API_BASE}api/intelligence/${encodeURIComponent(country)}${EXT}`)
-        .then(r => r.json()).then(setIntelligenceData).catch(console.error);
-    } else if (['digital', 'strategic', 'asymmetric', 'chokepoints', 'active-hotspots-layer'].includes(f.source) || f.layer?.id === 'active-hotspots-layer') {
-      setSelectedInfra({ source: f.source || 'hotspot', properties: f.properties });
-      setSelectedCountry(null);
-    }
-  };
+  const onClear = useCallback(() => {
+    setSelectedCountry(null);
+    setSelectedInfra(null);
+  }, []);
 
   const handleHotspotClick = (lng: number | null, lat: number | null) => {
     if (lng != null && lat != null) {
@@ -291,38 +353,16 @@ export default function App() {
   return (
     <div style={{ width: '100vw', height: '100vh', position: 'relative', overflow: 'hidden' }}>
 
-      {/* ─── Map ─── */}
-      <Map
-        ref={mapRef}
-        initialViewState={{ longitude: 30, latitude: 20, zoom: 2.2, pitch: 30 }}
-        mapStyle="mapbox://styles/mapbox/dark-v11"
-        mapboxAccessToken={MAPBOX_TOKEN}
-        interactiveLayerIds={['data', 'choke-points', 'naval-patrols', 'digital-lifelines-lines', 'digital-lifelines-points', 'strategic-resources', 'asymmetric-vulnerabilities', 'shipping-routes', 'active-hotspots-layer']}
-        onMouseMove={onHover} onClick={onClick}
-        cursor={hoverInfo ? 'pointer' : 'grab'}
-      >
-        {worldGeoJson && <Source id="data" type="geojson" data={worldGeoJson}><Layer {...wviLayer} /></Source>}
-        
-        {showShipping && flowMaps?.shipping_routes && <Source id="shipping" type="geojson" data={flowMaps.shipping_routes}><Layer {...shippingRouteLayer} /></Source>}
-        {showPatrols && flowMaps?.naval_patrols && <Source id="patrols" type="geojson" data={flowMaps.naval_patrols}><Layer {...navalPatrolLayer} /></Source>}
-        {showChokePoints && chokePoints && <Source id="chokepoints" type="geojson" data={chokePoints}><Layer {...chokePointLayer} /></Source>}
-        
-        {showDigital && digitalLifelines && (
-          <Source id="digital" type="geojson" data={digitalLifelines}>
-            <Layer {...digitalLifelineLineLayer} />
-            <Layer {...digitalLifelinePointLayer} />
-          </Source>
-        )}
-        {showStrategic && strategicResources && <Source id="strategic" type="geojson" data={strategicResources}><Layer {...strategicResourceLayer} /></Source>}
-        {showAsymmetric && asymmetricVuln && <Source id="asymmetric" type="geojson" data={asymmetricVuln}><Layer {...asymmetricLayer} /></Source>}
-        
-        {/* Dynamic Hotspots for Selected Country */}
-        {selectedCountry && activeHotspotGeoJson && (
-          <Source id="active-hotspots-source" type="geojson" data={activeHotspotGeoJson}>
-            <Layer {...activeHotspotLayer} />
-          </Source>
-        )}
-      </Map>
+      {/* ─── Map (memoized – only re-renders on map-relevant state changes) ─── */}
+      <MapView
+        mapRef={mapRef}
+        worldGeoJson={worldGeoJson} flowMaps={flowMaps} chokePoints={chokePoints}
+        digitalLifelines={digitalLifelines} strategicResources={strategicResources} asymmetricVuln={asymmetricVuln}
+        showShipping={showShipping} showPatrols={showPatrols} showChokePoints={showChokePoints}
+        showDigital={showDigital} showStrategic={showStrategic} showAsymmetric={showAsymmetric}
+        activeHotspotGeoJson={activeHotspotGeoJson} selectedCountry={selectedCountry}
+        onHoverChange={onHoverChange} onCountryClick={onCountryClick} onInfraClick={onInfraClick} onClear={onClear}
+      />
 
       {/* ─── Title ─── */}
       <div style={{ position: 'absolute', top: 24, left: '50%', transform: 'translateX(-50%)', zIndex: 10, pointerEvents: 'none', textAlign: 'center' }}>
@@ -574,8 +614,8 @@ export default function App() {
       {/* ─── Country Dashboard ─── */}
       {selectedCountry && forecastData && intelligenceData && (
         <div className="glass-panel slide-in-bottom" style={{ position: 'absolute', bottom: 20, left: '2%', right: '2%', display: 'flex', gap: 0, height: '45vh', zIndex: 20, overflow: 'hidden' }}>
-          {/* Col 1 */}
-          <div style={{ flex: '0 0 220px', padding: '20px 18px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+          {/* Col 1 – WVI + Fragmentation */}
+          <div style={{ flex: '0 0 220px', padding: '20px 18px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 16 }}>
               <Target size={16} style={{ color: 'var(--accent-cyan)' }} />
               <span style={{ fontWeight: 700, fontSize: '1.05rem' }}>{selectedCountry}</span>
@@ -585,6 +625,27 @@ export default function App() {
             <span style={{ fontSize: '0.68rem', color: wviColor, marginTop: 4, fontWeight: 600, letterSpacing: '0.05em' }}>
               {reactiveWVI > 75 ? 'CRITICAL' : reactiveWVI > 50 ? 'ELEVATED' : 'STABLE'}
             </span>
+
+            {/* Fragmentation sub-score */}
+            {intelligenceData.pillars?.fragmentation && (() => {
+              const frag = intelligenceData.pillars.fragmentation;
+              return (
+                <div style={{ width: '100%', marginTop: 14, borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: 12 }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 }}>
+                    <span style={{ fontSize: '0.65rem', fontWeight: 700, color: '#ff4b4b', letterSpacing: '0.12em' }}>FRAGMENTATION</span>
+                    <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#ff4b4b' }}>{frag.score}/100</span>
+                  </div>
+                  <div style={{ height: 4, background: 'rgba(255,75,75,0.15)', borderRadius: 2, marginBottom: 8 }}>
+                    <div style={{ height: '100%', width: `${frag.score}%`, background: 'linear-gradient(90deg, rgba(255,75,75,0.6), #ff4b4b)', borderRadius: 2, transition: 'width 0.8s ease' }} />
+                  </div>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+                    {(frag.primary_drivers || []).map((d: string, i: number) => (
+                      <div key={i} style={{ fontSize: '0.67rem', color: 'rgba(255,120,120,0.85)', paddingLeft: 7, borderLeft: '2px solid rgba(255,75,75,0.45)' }}>{d}</div>
+                    ))}
+                  </div>
+                </div>
+              );
+            })()}
           </div>
 
           <div className="divider-v" />
@@ -617,19 +678,6 @@ export default function App() {
                     ))}
                   </div>
                 ))}
-              {intelligenceData.pillars?.fragmentation && (
-                <div>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 4 }}>
-                    <span style={{ fontSize: '0.7rem', fontWeight: 600, color: '#a78bfa', textTransform: 'uppercase' }}>Fragmentation</span>
-                    <span className="metric-value" style={{ fontSize: '0.75rem', color: 'var(--text-primary)' }}>{intelligenceData.pillars.fragmentation.score}/100</span>
-                  </div>
-                  {(intelligenceData.pillars.fragmentation.primary_drivers || []).map((d: string, i: number) => (
-                    <div key={i} className="intel-card" style={{ borderLeft: '2px solid rgba(167,139,250,0.4)' }}>
-                      <span style={{ fontSize: '0.72rem', color: 'rgba(167,139,250,0.9)' }}>{d}</span>
-                    </div>
-                  ))}
-                </div>
-              )}
             </div>
           </div>
 
@@ -678,7 +726,7 @@ export default function App() {
             {activeTab === 'timeline' && (
               <div style={{ flex: 1, minHeight: 0 }}>
                 <ResponsiveContainer width="100%" height="100%">
-                  <AreaChart data={forecastData.timeline} margin={{ top: 5, right: 10, left: -10, bottom: 0 }}>
+                  <AreaChart data={displayTimeline} margin={{ top: 5, right: 10, left: -10, bottom: 0 }}>
                     <defs>
                       <linearGradient id="gCivil" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#ff4b4b" stopOpacity={0.35} /><stop offset="100%" stopColor="#ff4b4b" stopOpacity={0} /></linearGradient>
                       <linearGradient id="gNonState" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#00f2fe" stopOpacity={0.35} /><stop offset="100%" stopColor="#00f2fe" stopOpacity={0} /></linearGradient>

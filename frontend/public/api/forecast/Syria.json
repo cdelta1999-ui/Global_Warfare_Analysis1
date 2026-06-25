@@ -1,1 +1,82 @@
-{"forecast": {"predicted_attack_type": "Proxy / Grey-Zone", "predictability_score": "46.1%", "danger_risk_status": "CRITICAL: Accelerating Infiltration", "forecasted_event_volume": 243}, "timeline": [{"Year": 2011, "Intra-State (Civil War)": 5000}, {"Year": 2012, "Intra-State (Civil War)": 30000}, {"Year": 2013, "Intra-State (Civil War)": 70000}, {"Year": 2014, "Intra-State (Civil War)": 75000}, {"Year": 2015, "Intra-State (Civil War)": 50000}, {"Year": 2016, "Intra-State (Civil War)": 40000}, {"Year": 2017, "Intra-State (Civil War)": 25000}, {"Year": 2018, "Intra-State (Civil War)": 15000}, {"Year": 2019, "Intra-State (Civil War)": 12000}, {"Year": 2020, "Intra-State (Civil War)": 5000}, {"Year": 2023, "Proxy / Grey-Zone": 2000}], "raw_schemas": {"kinetic": {"normalized_score": 95, "source": "ACLED DB"}, "cyber": {"normalized_score": 55, "source": "CFR_Cyber_Tracker DB"}, "economic": {"normalized_score": 90, "source": "UN_Comtrade_IMF DB"}}, "war_type_probabilities": {"Proxy / Grey-Zone": 0.461, "Cyber / Digital": 0.062, "Naval Blockade": 0.014, "Border Skirmish": 0.103, "Full Conventional": 0.359}, "future_hotspots": [{"region": "National Digital Infrastructure", "lat": null, "lng": null, "threat": "Cyber Severance", "probability": 0.55}, {"region": "Financial Sector Gateway", "lat": null, "lng": null, "threat": "Financial Paralysis", "probability": 0.9}, {"region": "Border / Periphery Zones", "lat": null, "lng": null, "threat": "Proxy / Grey-Zone", "probability": 0.95}]}
+{
+  "country": "Syria",
+  "forecast": {
+    "wvi": 73,
+    "trend": "Rising",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1883,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1918,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1923,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1943,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1886,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1968,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 5000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Full Conventional": 0.2758,
+    "Intra-State (Civil War)": 0.3641,
+    "Proxy / Grey-Zone": 0.2468,
+    "Border Skirmish": 0.0908,
+    "Cyber / Digital": 0.0226
+  },
+  "future_hotspots": [
+    {
+      "region": "Syria - High-Risk Zone",
+      "threat": "Full Conventional",
+      "probability": 0.364,
+      "lat": null,
+      "lng": null
+    },
+    {
+      "region": "Syria - Border Flashpoint",
+      "threat": "Intra-State (Civil War)",
+      "probability": 0.276,
+      "lat": null,
+      "lng": null
+    }
+  ],
+  "raw_schemas": {}
+}

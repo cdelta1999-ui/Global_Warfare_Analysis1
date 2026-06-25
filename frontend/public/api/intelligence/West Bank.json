@@ -1,1 +1,92 @@
-{"country": "West Bank", "computed_wvi": 77, "pillars": {"cyber": {"overall_score": 42, "sources": [{"name": "CFR Cyber Tracker", "metric": "Incidents (YTD)", "raw_value": 63, "unit": "events", "score": 44}, {"name": "EuRepoC", "metric": "Active Campaigns", "raw_value": 2, "unit": "campaigns", "score": 39}, {"name": "Carnegie Spyware", "metric": "Proliferation Index", "raw_value": 4.2, "unit": "index", "score": 48}]}, "economic": {"overall_score": 88, "sources": [{"name": "UN Comtrade", "metric": "Critical Import Dep.", "raw_value": 70.4, "unit": "%", "score": 91}, {"name": "IMF DOTS", "metric": "Trade Vulnerability", "raw_value": 52.8, "unit": "index", "score": 81}, {"name": "World Bank WITS", "metric": "Export Concentration", "raw_value": 35.2, "unit": "HHI", "score": 87}]}, "kinetic": {"overall_score": 90, "sources": [{"name": "ACLED", "metric": "Events (5yr)", "raw_value": 2250, "unit": "events", "score": 86}, {"name": "UCDP", "metric": "Conflict Intensity", "raw_value": 3.0, "unit": "index", "score": 85}, {"name": "SIPRI", "metric": "Military Expenditure", "raw_value": 18.0, "unit": "% GDP", "score": 88}]}, "fragmentation": {"score": 87, "primary_drivers": ["Israeli-Palestinian Conflict", "Hamas/PIJ Operations"]}}}
+{
+  "country": "West Bank",
+  "computed_wvi": 79,
+  "pillars": {
+    "cyber": {
+      "overall_score": 55,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 60,
+          "metric": "66 events (YTD)",
+          "raw_value": 66,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 45,
+          "metric": "2 campaigns",
+          "raw_value": 2,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 50,
+          "metric": "Active tracking",
+          "raw_value": 50,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 92,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 92,
+          "metric": "Dependency: 73%",
+          "raw_value": 73,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 84,
+          "metric": "Sanctions Exposure: 84/100",
+          "raw_value": 84,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 80,
+          "metric": "Trade Concentration: 80/100",
+          "raw_value": 80,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 95,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 95,
+          "metric": "760 events/yr",
+          "raw_value": 760,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 90,
+          "metric": "Fatalities: 11400/yr",
+          "raw_value": 11400,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 98,
+          "metric": "Military spend: 28.5% GDP",
+          "raw_value": 28.5,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 59,
+      "primary_drivers": [
+        "Israel-Hamas War (Active)",
+        "Highest Aerial Bombardment Intensity",
+        "Civilian Casualty Crisis"
+      ]
+    }
+  }
+}

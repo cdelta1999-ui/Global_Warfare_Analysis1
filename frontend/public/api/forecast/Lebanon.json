@@ -1,1 +1,75 @@
-{"forecast": {"predicted_attack_type": "Proxy / Grey-Zone", "predictability_score": "51.7%", "danger_risk_status": "ELEVATED: Upward Trend", "forecasted_event_volume": 124}, "timeline": [{"Year": 1960, "Intra-State (Civil War)": 35}, {"Year": 1975, "Proxy / Grey-Zone": 31}, {"Year": 1985, "Proxy / Grey-Zone": 76}, {"Year": 1990, "Intra-State (Civil War)": 21}, {"Year": 1995, "Internal armed conflict": 17}, {"Year": 2005, "Internal armed conflict": 34}, {"Year": 2015, "Internal armed conflict": 79}], "raw_schemas": {"kinetic": {"normalized_score": 65, "source": "ACLED DB"}, "cyber": {"normalized_score": 45, "source": "CFR_Cyber_Tracker DB"}, "economic": {"normalized_score": 80, "source": "UN_Comtrade_IMF DB"}}, "war_type_probabilities": {"Proxy / Grey-Zone": 0.517, "Cyber / Digital": 0.094, "Border Skirmish": 0.221, "Naval Blockade": 0.063, "Full Conventional": 0.104}, "future_hotspots": [{"region": "National Digital Infrastructure", "lat": null, "lng": null, "threat": "Cyber Severance", "probability": 0.45}, {"region": "Financial Sector Gateway", "lat": null, "lng": null, "threat": "Financial Paralysis", "probability": 0.8}, {"region": "Border / Periphery Zones", "lat": null, "lng": null, "threat": "Proxy / Grey-Zone", "probability": 0.65}]}
+{
+  "country": "Lebanon",
+  "forecast": {
+    "wvi": 63,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1883,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1918,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1923,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1943,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1886,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1968,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 5000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Proxy / Grey-Zone": 0.4088,
+    "Border Skirmish": 0.3273,
+    "Full Conventional": 0.1204,
+    "Intra-State (Civil War)": 0.0912,
+    "Cyber / Digital": 0.0523
+  },
+  "future_hotspots": [
+    {
+      "region": "Lebanon - Border Flashpoint",
+      "threat": "Border Skirmish",
+      "probability": 0.327,
+      "lat": null,
+      "lng": null
+    }
+  ],
+  "raw_schemas": {}
+}

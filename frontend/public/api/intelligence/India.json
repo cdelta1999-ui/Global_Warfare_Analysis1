@@ -1,1 +1,91 @@
-{"country": "India", "computed_wvi": 69, "pillars": {"cyber": {"overall_score": 72, "sources": [{"name": "CFR Cyber Tracker", "metric": "Incidents (YTD)", "raw_value": 108, "unit": "events", "score": 67}, {"name": "EuRepoC", "metric": "Active Campaigns", "raw_value": 3, "unit": "campaigns", "score": 73}, {"name": "Carnegie Spyware", "metric": "Proliferation Index", "raw_value": 7.2, "unit": "index", "score": 72}]}, "economic": {"overall_score": 68, "sources": [{"name": "UN Comtrade", "metric": "Critical Import Dep.", "raw_value": 54.4, "unit": "%", "score": 69}, {"name": "IMF DOTS", "metric": "Trade Vulnerability", "raw_value": 40.8, "unit": "index", "score": 62}, {"name": "World Bank WITS", "metric": "Export Concentration", "raw_value": 27.2, "unit": "HHI", "score": 73}]}, "kinetic": {"overall_score": 80, "sources": [{"name": "ACLED", "metric": "Events (5yr)", "raw_value": 2000, "unit": "events", "score": 83}, {"name": "UCDP", "metric": "Conflict Intensity", "raw_value": 2.67, "unit": "index", "score": 87}, {"name": "SIPRI", "metric": "Military Expenditure", "raw_value": 16.0, "unit": "% GDP", "score": 79}]}, "fragmentation": {"score": 42, "primary_drivers": ["Naxalite Insurgency", "Border Tensions (China, Pakistan)"]}}}
+{
+  "country": "India",
+  "computed_wvi": 67,
+  "pillars": {
+    "cyber": {
+      "overall_score": 72,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 77,
+          "metric": "86 events (YTD)",
+          "raw_value": 86,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 62,
+          "metric": "3 campaigns",
+          "raw_value": 3,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 67,
+          "metric": "Active tracking",
+          "raw_value": 67,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 68,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 68,
+          "metric": "Dependency: 54%",
+          "raw_value": 54,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 60,
+          "metric": "Sanctions Exposure: 60/100",
+          "raw_value": 60,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 56,
+          "metric": "Trade Concentration: 56/100",
+          "raw_value": 56,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 80,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 80,
+          "metric": "640 events/yr",
+          "raw_value": 640,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 75,
+          "metric": "Fatalities: 9600/yr",
+          "raw_value": 9600,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 83,
+          "metric": "Military spend: 24.0% GDP",
+          "raw_value": 24.0,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 33,
+      "primary_drivers": [
+        "Naxalite Insurgency",
+        "Border Tensions (China, Pakistan)"
+      ]
+    }
+  }
+}

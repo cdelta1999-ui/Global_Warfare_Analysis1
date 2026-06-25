@@ -1,1 +1,92 @@
-{"country": "Venezuela", "computed_wvi": 63, "pillars": {"cyber": {"overall_score": 35, "sources": [{"name": "CFR Cyber Tracker", "metric": "Incidents (YTD)", "raw_value": 52, "unit": "events", "score": 39}, {"name": "EuRepoC", "metric": "Active Campaigns", "raw_value": 1, "unit": "campaigns", "score": 38}, {"name": "Carnegie Spyware", "metric": "Proliferation Index", "raw_value": 3.5, "unit": "index", "score": 29}]}, "economic": {"overall_score": 80, "sources": [{"name": "UN Comtrade", "metric": "Critical Import Dep.", "raw_value": 64.0, "unit": "%", "score": 75}, {"name": "IMF DOTS", "metric": "Trade Vulnerability", "raw_value": 48.0, "unit": "index", "score": 87}, {"name": "World Bank WITS", "metric": "Export Concentration", "raw_value": 32.0, "unit": "HHI", "score": 85}]}, "kinetic": {"overall_score": 68, "sources": [{"name": "ACLED", "metric": "Events (5yr)", "raw_value": 1700, "unit": "events", "score": 68}, {"name": "UCDP", "metric": "Conflict Intensity", "raw_value": 2.27, "unit": "index", "score": 62}, {"name": "SIPRI", "metric": "Military Expenditure", "raw_value": 13.6, "unit": "% GDP", "score": 71}]}, "fragmentation": {"score": 65, "primary_drivers": ["Maduro Regime Fragmentation", "Guerrilla Groups"]}}}
+{
+  "country": "Venezuela",
+  "computed_wvi": 60,
+  "pillars": {
+    "cyber": {
+      "overall_score": 40,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 45,
+          "metric": "48 events (YTD)",
+          "raw_value": 48,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 30,
+          "metric": "2 campaigns",
+          "raw_value": 2,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 35,
+          "metric": "Active tracking",
+          "raw_value": 35,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 90,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 90,
+          "metric": "Dependency: 72%",
+          "raw_value": 72,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 82,
+          "metric": "Sanctions Exposure: 82/100",
+          "raw_value": 82,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 78,
+          "metric": "Trade Concentration: 78/100",
+          "raw_value": 78,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 55,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 55,
+          "metric": "440 events/yr",
+          "raw_value": 440,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 50,
+          "metric": "Fatalities: 6600/yr",
+          "raw_value": 6600,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 58,
+          "metric": "Military spend: 16.5% GDP",
+          "raw_value": 16.5,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 40,
+      "primary_drivers": [
+        "Economic Collapse-Driven Instability",
+        "FARC Presence",
+        "Maduro Regime Crackdown"
+      ]
+    }
+  }
+}

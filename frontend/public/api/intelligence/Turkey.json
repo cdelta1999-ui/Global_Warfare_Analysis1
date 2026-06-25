@@ -1,1 +1,92 @@
-{"country": "Turkey", "computed_wvi": 60, "pillars": {"cyber": {"overall_score": 58, "sources": [{"name": "CFR Cyber Tracker", "metric": "Incidents (YTD)", "raw_value": 87, "unit": "events", "score": 55}, {"name": "EuRepoC", "metric": "Active Campaigns", "raw_value": 2, "unit": "campaigns", "score": 55}, {"name": "Carnegie Spyware", "metric": "Proliferation Index", "raw_value": 5.8, "unit": "index", "score": 62}]}, "economic": {"overall_score": 62, "sources": [{"name": "UN Comtrade", "metric": "Critical Import Dep.", "raw_value": 49.6, "unit": "%", "score": 61}, {"name": "IMF DOTS", "metric": "Trade Vulnerability", "raw_value": 37.2, "unit": "index", "score": 59}, {"name": "World Bank WITS", "metric": "Export Concentration", "raw_value": 24.8, "unit": "HHI", "score": 63}]}, "kinetic": {"overall_score": 65, "sources": [{"name": "ACLED", "metric": "Events (5yr)", "raw_value": 1625, "unit": "events", "score": 69}, {"name": "UCDP", "metric": "Conflict Intensity", "raw_value": 2.17, "unit": "index", "score": 63}, {"name": "SIPRI", "metric": "Military Expenditure", "raw_value": 13.0, "unit": "% GDP", "score": 61}]}, "fragmentation": {"score": 52, "primary_drivers": ["Kurdish PKK Conflict", "NATO-Russia Tension"]}}}
+{
+  "country": "Turkey",
+  "computed_wvi": 64,
+  "pillars": {
+    "cyber": {
+      "overall_score": 65,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 70,
+          "metric": "78 events (YTD)",
+          "raw_value": 78,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 55,
+          "metric": "3 campaigns",
+          "raw_value": 3,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 60,
+          "metric": "Active tracking",
+          "raw_value": 60,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 70,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 70,
+          "metric": "Dependency: 56%",
+          "raw_value": 56,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 62,
+          "metric": "Sanctions Exposure: 62/100",
+          "raw_value": 62,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 58,
+          "metric": "Trade Concentration: 58/100",
+          "raw_value": 58,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 72,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 72,
+          "metric": "576 events/yr",
+          "raw_value": 576,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 67,
+          "metric": "Fatalities: 8640/yr",
+          "raw_value": 8640,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 75,
+          "metric": "Military spend: 21.6% GDP",
+          "raw_value": 21.6,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 33,
+      "primary_drivers": [
+        "PKK Insurgency",
+        "Syria Border Operations",
+        "NATO-Russia Friction Point"
+      ]
+    }
+  }
+}

@@ -1,1 +1,139 @@
-{"forecast": {"predicted_attack_type": "Proxy / Grey-Zone", "predictability_score": "48.2%", "danger_risk_status": "CRITICAL: Accelerating Infiltration", "forecasted_event_volume": 499}, "timeline": [{"Year": 1967, "Intra-State (Civil War)": 1000000}, {"Year": 2009, "Proxy / Grey-Zone": 5000}, {"Year": 2014, "Proxy / Grey-Zone": 12000}, {"Year": 2018, "Proxy / Grey-Zone": 8000}, {"Year": 2022, "Proxy / Grey-Zone": 6000}, {"Year": 2023, "Proxy / Grey-Zone": 5000}], "raw_schemas": {"kinetic": {"normalized_score": 86, "source": "ACLED DB"}, "cyber": {"normalized_score": 30, "source": "CFR_Cyber_Tracker DB"}, "economic": {"normalized_score": 75, "source": "UN_Comtrade_IMF DB"}}, "war_type_probabilities": {"Proxy / Grey-Zone": 0.482, "Border Skirmish": 0.34, "Full Conventional": 0.108, "Cyber / Digital": 0.04, "Naval Blockade": 0.031}, "future_hotspots": [{"region": "National Digital Infrastructure", "lat": null, "lng": null, "threat": "Cyber Severance", "probability": 0.3}, {"region": "Financial Sector Gateway", "lat": null, "lng": null, "threat": "Financial Paralysis", "probability": 0.75}, {"region": "Border / Periphery Zones", "lat": null, "lng": null, "threat": "Proxy / Grey-Zone", "probability": 0.86}]}
+{
+  "country": "Nigeria",
+  "forecast": {
+    "wvi": 64,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1819,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 60000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1829,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1834,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 7050,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1849,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 10000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1854,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 2002,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1859,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 6001,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1864,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 36200,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1879,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1884,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 30001,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1889,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 4000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1959,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1974,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1999,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 1,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Non-State (Cartel/Militia)": 0.4186,
+    "Border Skirmish": 0.1819,
+    "Intra-State (Civil War)": 0.2837,
+    "Proxy / Grey-Zone": 0.1044,
+    "Full Conventional": 0.0113
+  },
+  "future_hotspots": [
+    {
+      "region": "Nigeria - Border Flashpoint",
+      "threat": "Border Skirmish",
+      "probability": 0.284,
+      "lat": null,
+      "lng": null
+    }
+  ],
+  "raw_schemas": {}
+}

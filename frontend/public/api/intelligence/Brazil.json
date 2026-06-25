@@ -1,1 +1,92 @@
-{"country": "Brazil", "computed_wvi": 54, "pillars": {"cyber": {"overall_score": 45, "sources": [{"name": "CFR Cyber Tracker", "metric": "Incidents (YTD)", "raw_value": 67, "unit": "events", "score": 47}, {"name": "EuRepoC", "metric": "Active Campaigns", "raw_value": 2, "unit": "campaigns", "score": 44}, {"name": "Carnegie Spyware", "metric": "Proliferation Index", "raw_value": 4.5, "unit": "index", "score": 46}]}, "economic": {"overall_score": 60, "sources": [{"name": "UN Comtrade", "metric": "Critical Import Dep.", "raw_value": 48.0, "unit": "%", "score": 63}, {"name": "IMF DOTS", "metric": "Trade Vulnerability", "raw_value": 36.0, "unit": "index", "score": 56}, {"name": "World Bank WITS", "metric": "Export Concentration", "raw_value": 24.0, "unit": "HHI", "score": 60}]}, "kinetic": {"overall_score": 55, "sources": [{"name": "ACLED", "metric": "Events (5yr)", "raw_value": 1375, "unit": "events", "score": 53}, {"name": "UCDP", "metric": "Conflict Intensity", "raw_value": 1.83, "unit": "index", "score": 62}, {"name": "SIPRI", "metric": "Military Expenditure", "raw_value": 11.0, "unit": "% GDP", "score": 59}]}, "fragmentation": {"score": 55, "primary_drivers": ["Organized Crime Violence", "Amazon Deforestation Conflict"]}}}
+{
+  "country": "Brazil",
+  "computed_wvi": 59,
+  "pillars": {
+    "cyber": {
+      "overall_score": 60,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 65,
+          "metric": "72 events (YTD)",
+          "raw_value": 72,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 50,
+          "metric": "3 campaigns",
+          "raw_value": 3,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 55,
+          "metric": "Active tracking",
+          "raw_value": 55,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 68,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 68,
+          "metric": "Dependency: 54%",
+          "raw_value": 54,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 60,
+          "metric": "Sanctions Exposure: 60/100",
+          "raw_value": 60,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 56,
+          "metric": "Trade Concentration: 56/100",
+          "raw_value": 56,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 58,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 58,
+          "metric": "464 events/yr",
+          "raw_value": 464,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 53,
+          "metric": "Fatalities: 6960/yr",
+          "raw_value": 6960,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 61,
+          "metric": "Military spend: 17.4% GDP",
+          "raw_value": 17.4,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 39,
+      "primary_drivers": [
+        "Organized Crime / Cartel Wars",
+        "Amazon Deforestation Conflict",
+        "Political Polarization"
+      ]
+    }
+  }
+}

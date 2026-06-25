@@ -1,1 +1,91 @@
-{"country": "Sri Lanka", "computed_wvi": 48, "pillars": {"cyber": {"overall_score": 30, "sources": [{"name": "CFR Cyber Tracker", "metric": "Incidents (YTD)", "raw_value": 45, "unit": "events", "score": 35}, {"name": "EuRepoC", "metric": "Active Campaigns", "raw_value": 1, "unit": "campaigns", "score": 23}, {"name": "Carnegie Spyware", "metric": "Proliferation Index", "raw_value": 3.0, "unit": "index", "score": 29}]}, "economic": {"overall_score": 62, "sources": [{"name": "UN Comtrade", "metric": "Critical Import Dep.", "raw_value": 49.6, "unit": "%", "score": 65}, {"name": "IMF DOTS", "metric": "Trade Vulnerability", "raw_value": 37.2, "unit": "index", "score": 67}, {"name": "World Bank WITS", "metric": "Export Concentration", "raw_value": 24.8, "unit": "HHI", "score": 61}]}, "kinetic": {"overall_score": 48, "sources": [{"name": "ACLED", "metric": "Events (5yr)", "raw_value": 1200, "unit": "events", "score": 43}, {"name": "UCDP", "metric": "Conflict Intensity", "raw_value": 1.6, "unit": "index", "score": 54}, {"name": "SIPRI", "metric": "Military Expenditure", "raw_value": 9.6, "unit": "% GDP", "score": 48}]}, "fragmentation": {"score": 50, "primary_drivers": ["Post-War Tamil Fragmentation", "Economic Crisis"]}}}
+{
+  "country": "Sri Lanka",
+  "computed_wvi": 30,
+  "pillars": {
+    "cyber": {
+      "overall_score": 22,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 27,
+          "metric": "26 events (YTD)",
+          "raw_value": 26,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 12,
+          "metric": "1 campaigns",
+          "raw_value": 1,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 17,
+          "metric": "Active tracking",
+          "raw_value": 17,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 42,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 42,
+          "metric": "Dependency: 33%",
+          "raw_value": 33,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 34,
+          "metric": "Sanctions Exposure: 34/100",
+          "raw_value": 34,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 30,
+          "metric": "Trade Concentration: 30/100",
+          "raw_value": 30,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 30,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 30,
+          "metric": "240 events/yr",
+          "raw_value": 240,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 25,
+          "metric": "Fatalities: 3600/yr",
+          "raw_value": 3600,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 33,
+          "metric": "Military spend: 9.0% GDP",
+          "raw_value": 9.0,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 17,
+      "primary_drivers": [
+        "Regional Instability",
+        "Governance Fragility"
+      ]
+    }
+  }
+}

@@ -1,1 +1,114 @@
-{"forecast": {"predicted_attack_type": "Proxy / Grey-Zone", "predictability_score": "46.4%", "danger_risk_status": "CRITICAL: Accelerating Infiltration", "forecasted_event_volume": 442}, "timeline": [{"Year": 1975, "Proxy / Grey-Zone": 101}, {"Year": 1980, "Proxy / Grey-Zone": 19}, {"Year": 1990, "Internal armed conflict": 25}, {"Year": 1995, "Proxy / Grey-Zone": 41}, {"Year": 2020, "Border Skirmish": 31}], "raw_schemas": {"kinetic": {"normalized_score": 90, "source": "ACLED DB"}, "cyber": {"normalized_score": 42, "source": "CFR_Cyber_Tracker DB"}, "economic": {"normalized_score": 88, "source": "UN_Comtrade_IMF DB"}}, "war_type_probabilities": {"Proxy / Grey-Zone": 0.464, "Border Skirmish": 0.361, "Full Conventional": 0.103, "Cyber / Digital": 0.049, "Naval Blockade": 0.023}, "future_hotspots": [{"region": "National Digital Infrastructure", "lat": null, "lng": null, "threat": "Cyber Severance", "probability": 0.42}, {"region": "Financial Sector Gateway", "lat": null, "lng": null, "threat": "Financial Paralysis", "probability": 0.88}, {"region": "Border / Periphery Zones", "lat": null, "lng": null, "threat": "Proxy / Grey-Zone", "probability": 0.9}]}
+{
+  "country": "West Bank",
+  "forecast": {
+    "wvi": 79,
+    "trend": "Rising",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1900,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 483,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1920,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1940,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1747,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1960,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1980,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2000,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1967,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2010,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2015,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 227,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2020,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 106,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Full Conventional": 0.3068,
+    "Border Skirmish": 0.2597,
+    "One-Sided Violence": 0.2198,
+    "Proxy / Grey-Zone": 0.149,
+    "Cyber / Digital": 0.0648
+  },
+  "future_hotspots": [
+    {
+      "region": "West Bank - High-Risk Zone",
+      "threat": "Full Conventional",
+      "probability": 0.307,
+      "lat": null,
+      "lng": null
+    },
+    {
+      "region": "West Bank - Border Flashpoint",
+      "threat": "Border Skirmish",
+      "probability": 0.26,
+      "lat": null,
+      "lng": null
+    }
+  ],
+  "raw_schemas": {}
+}

@@ -1,1 +1,139 @@
-{"forecast": {"predicted_attack_type": "Proxy / Grey-Zone", "predictability_score": "43.5%", "danger_risk_status": "CRITICAL: Accelerating Infiltration", "forecasted_event_volume": 358}, "timeline": [{"Year": 1970, "Proxy / Grey-Zone": 23}, {"Year": 1985, "Border Skirmish": 51}, {"Year": 1995, "Border Skirmish": 99}, {"Year": 2000, "Proxy / Grey-Zone": 24}, {"Year": 2005, "Proxy / Grey-Zone": 102}], "raw_schemas": {"kinetic": {"normalized_score": 85, "source": "ACLED DB"}, "cyber": {"normalized_score": 15, "source": "CFR_Cyber_Tracker DB"}, "economic": {"normalized_score": 82, "source": "UN_Comtrade_IMF DB"}}, "war_type_probabilities": {"Proxy / Grey-Zone": 0.435, "Border Skirmish": 0.375, "Full Conventional": 0.16, "Cyber / Digital": 0.017, "Naval Blockade": 0.013}, "future_hotspots": [{"region": "Kasumbalesa Transport Corridor", "lat": -12.37, "lng": 27.8, "threat": "Resource Corridor Paralysis", "probability": 0.87}]}
+{
+  "country": "Democratic Republic of the Congo",
+  "forecast": {
+    "wvi": 63,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1819,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 60000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1829,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1834,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 7050,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1849,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 10000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1854,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 2002,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1859,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 6001,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1864,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 36200,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1879,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1884,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 30001,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1889,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 4000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1959,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1974,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1999,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 1,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Intra-State (Civil War)": 0.3059,
+    "Non-State (Cartel/Militia)": 0.2737,
+    "One-Sided Violence": 0.2317,
+    "Proxy / Grey-Zone": 0.1125,
+    "Border Skirmish": 0.0763
+  },
+  "future_hotspots": [
+    {
+      "region": "Democratic Republic of the Congo - Border Flashpoint",
+      "threat": "Non-State (Cartel/Militia)",
+      "probability": 0.274,
+      "lat": null,
+      "lng": null
+    }
+  ],
+  "raw_schemas": {}
+}

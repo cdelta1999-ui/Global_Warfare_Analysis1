@@ -1,1 +1,92 @@
-{"country": "Ecuador", "computed_wvi": 57, "pillars": {"cyber": {"overall_score": 30, "sources": [{"name": "CFR Cyber Tracker", "metric": "Incidents (YTD)", "raw_value": 45, "unit": "events", "score": 30}, {"name": "EuRepoC", "metric": "Active Campaigns", "raw_value": 1, "unit": "campaigns", "score": 38}, {"name": "Carnegie Spyware", "metric": "Proliferation Index", "raw_value": 3.0, "unit": "index", "score": 28}]}, "economic": {"overall_score": 65, "sources": [{"name": "UN Comtrade", "metric": "Critical Import Dep.", "raw_value": 52.0, "unit": "%", "score": 61}, {"name": "IMF DOTS", "metric": "Trade Vulnerability", "raw_value": 39.0, "unit": "index", "score": 70}, {"name": "World Bank WITS", "metric": "Export Concentration", "raw_value": 26.0, "unit": "HHI", "score": 60}]}, "kinetic": {"overall_score": 68, "sources": [{"name": "ACLED", "metric": "Events (5yr)", "raw_value": 1700, "unit": "events", "score": 69}, {"name": "UCDP", "metric": "Conflict Intensity", "raw_value": 2.27, "unit": "index", "score": 70}, {"name": "SIPRI", "metric": "Military Expenditure", "raw_value": 13.6, "unit": "% GDP", "score": 66}]}, "fragmentation": {"score": 65, "primary_drivers": ["Criminal Gang Violence", "50+ Armed Groups"]}}}
+{
+  "country": "Ecuador",
+  "computed_wvi": 59,
+  "pillars": {
+    "cyber": {
+      "overall_score": 40,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 45,
+          "metric": "48 events (YTD)",
+          "raw_value": 48,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 30,
+          "metric": "2 campaigns",
+          "raw_value": 2,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 35,
+          "metric": "Active tracking",
+          "raw_value": 35,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 75,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 75,
+          "metric": "Dependency: 60%",
+          "raw_value": 60,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 67,
+          "metric": "Sanctions Exposure: 67/100",
+          "raw_value": 67,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 63,
+          "metric": "Trade Concentration: 63/100",
+          "raw_value": 63,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 65,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 65,
+          "metric": "520 events/yr",
+          "raw_value": 520,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 60,
+          "metric": "Fatalities: 7800/yr",
+          "raw_value": 7800,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 68,
+          "metric": "Military spend: 19.5% GDP",
+          "raw_value": 19.5,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 47,
+      "primary_drivers": [
+        "50+ Armed Groups Operating",
+        "Cartel Escalation",
+        "State Capacity Erosion"
+      ]
+    }
+  }
+}

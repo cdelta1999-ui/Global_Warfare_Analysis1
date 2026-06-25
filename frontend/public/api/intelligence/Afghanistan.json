@@ -1,1 +1,92 @@
-{"country": "Afghanistan", "computed_wvi": 73, "pillars": {"cyber": {"overall_score": 15, "sources": [{"name": "CFR Cyber Tracker", "metric": "Incidents (YTD)", "raw_value": 22, "unit": "events", "score": 18}, {"name": "EuRepoC", "metric": "Active Campaigns", "raw_value": 0, "unit": "campaigns", "score": 10}, {"name": "Carnegie Spyware", "metric": "Proliferation Index", "raw_value": 1.5, "unit": "index", "score": 9}]}, "economic": {"overall_score": 88, "sources": [{"name": "UN Comtrade", "metric": "Critical Import Dep.", "raw_value": 70.4, "unit": "%", "score": 93}, {"name": "IMF DOTS", "metric": "Trade Vulnerability", "raw_value": 52.8, "unit": "index", "score": 80}, {"name": "World Bank WITS", "metric": "Export Concentration", "raw_value": 35.2, "unit": "HHI", "score": 83}]}, "kinetic": {"overall_score": 97, "sources": [{"name": "ACLED", "metric": "Events (5yr)", "raw_value": 2425, "unit": "events", "score": 95}, {"name": "UCDP", "metric": "Conflict Intensity", "raw_value": 3.23, "unit": "index", "score": 92}, {"name": "SIPRI", "metric": "Military Expenditure", "raw_value": 19.4, "unit": "% GDP", "score": 99}]}, "fragmentation": {"score": 92, "primary_drivers": ["Taliban Governance Collapse", "ISIS-K"]}}}
+{
+  "country": "Afghanistan",
+  "computed_wvi": 65,
+  "pillars": {
+    "cyber": {
+      "overall_score": 20,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 25,
+          "metric": "24 events (YTD)",
+          "raw_value": 24,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 10,
+          "metric": "1 campaigns",
+          "raw_value": 1,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 15,
+          "metric": "Active tracking",
+          "raw_value": 15,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 88,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 88,
+          "metric": "Dependency: 70%",
+          "raw_value": 70,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 80,
+          "metric": "Sanctions Exposure: 80/100",
+          "raw_value": 80,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 76,
+          "metric": "Trade Concentration: 76/100",
+          "raw_value": 76,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 85,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 85,
+          "metric": "680 events/yr",
+          "raw_value": 680,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 80,
+          "metric": "Fatalities: 10200/yr",
+          "raw_value": 10200,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 88,
+          "metric": "Military spend: 25.5% GDP",
+          "raw_value": 25.5,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 52,
+      "primary_drivers": [
+        "Taliban Rule Instability",
+        "ISIS-K Attacks",
+        "Pakistan Border Tension"
+      ]
+    }
+  }
+}

@@ -1,1 +1,92 @@
-{"country": "Australia", "computed_wvi": 36, "pillars": {"cyber": {"overall_score": 62, "sources": [{"name": "CFR Cyber Tracker", "metric": "Incidents (YTD)", "raw_value": 93, "unit": "events", "score": 67}, {"name": "EuRepoC", "metric": "Active Campaigns", "raw_value": 3, "unit": "campaigns", "score": 63}, {"name": "Carnegie Spyware", "metric": "Proliferation Index", "raw_value": 6.2, "unit": "index", "score": 59}]}, "economic": {"overall_score": 32, "sources": [{"name": "UN Comtrade", "metric": "Critical Import Dep.", "raw_value": 25.6, "unit": "%", "score": 30}, {"name": "IMF DOTS", "metric": "Trade Vulnerability", "raw_value": 19.2, "unit": "index", "score": 28}, {"name": "World Bank WITS", "metric": "Export Concentration", "raw_value": 12.8, "unit": "HHI", "score": 26}]}, "kinetic": {"overall_score": 25, "sources": [{"name": "ACLED", "metric": "Events (5yr)", "raw_value": 625, "unit": "events", "score": 20}, {"name": "UCDP", "metric": "Conflict Intensity", "raw_value": 0.83, "unit": "index", "score": 21}, {"name": "SIPRI", "metric": "Military Expenditure", "raw_value": 5.0, "unit": "% GDP", "score": 28}]}, "fragmentation": {"score": 20, "primary_drivers": ["China Influence Ops", "Pacific Island Competition"]}}}
+{
+  "country": "Australia",
+  "computed_wvi": 49,
+  "pillars": {
+    "cyber": {
+      "overall_score": 75,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 80,
+          "metric": "90 events (YTD)",
+          "raw_value": 90,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 65,
+          "metric": "3 campaigns",
+          "raw_value": 3,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 70,
+          "metric": "Active tracking",
+          "raw_value": 70,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 50,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 50,
+          "metric": "Dependency: 40%",
+          "raw_value": 40,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 42,
+          "metric": "Sanctions Exposure: 42/100",
+          "raw_value": 42,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 38,
+          "metric": "Trade Concentration: 38/100",
+          "raw_value": 38,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 45,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 45,
+          "metric": "360 events/yr",
+          "raw_value": 360,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 40,
+          "metric": "Fatalities: 5400/yr",
+          "raw_value": 5400,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 48,
+          "metric": "Military spend: 13.5% GDP",
+          "raw_value": 13.5,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 9,
+      "primary_drivers": [
+        "China Coercion (Trade/Cyber)",
+        "Pacific Island Competition",
+        "AUKUS Nuclear Submarine Program"
+      ]
+    }
+  }
+}

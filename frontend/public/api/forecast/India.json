@@ -1,1 +1,116 @@
-{"forecast": {"predicted_attack_type": "Border Skirmish", "predictability_score": "47.5%", "danger_risk_status": "CRITICAL: Accelerating Infiltration", "forecasted_event_volume": 278}, "timeline": [{"Year": 1947, "Inter-State (Conventional)": 2500}, {"Year": 1948, "Interstate armed conflict": 1000, "Internal armed conflict": 1000}, {"Year": 1965, "Inter-State (Conventional)": 6000}, {"Year": 1971, "Inter-State (Conventional)": 12000}, {"Year": 1984, "Intra-State (Civil War)": 500}, {"Year": 1999, "Inter-State (Conventional)": 1500}, {"Year": 2016, "Internal armed conflict": 200}, {"Year": 2020, "Border Skirmish": 20}, {"Year": 2023, "Internal armed conflict": 150}], "raw_schemas": {"kinetic": {"normalized_score": 80, "source": "ACLED DB"}, "cyber": {"normalized_score": 72, "source": "CFR_Cyber_Tracker DB"}, "economic": {"normalized_score": 68, "source": "UN_Comtrade_IMF DB"}}, "war_type_probabilities": {"Border Skirmish": 0.475, "Proxy / Grey-Zone": 0.248, "Naval Blockade": 0.05, "Cyber / Digital": 0.203, "Full Conventional": 0.024}, "future_hotspots": [{"region": "SEA-ME-WE Landing (Mumbai)", "lat": 18.92, "lng": 72.82, "threat": "Digital Subversion", "probability": 0.88}, {"region": "Siliguri Corridor", "lat": 26.71, "lng": 88.43, "threat": "Continental Choke Point", "probability": 0.82}, {"region": "Andaman & Nicobar", "lat": 11.68, "lng": 92.73, "threat": "Naval Interdiction", "probability": 0.65}]}
+{
+  "country": "India",
+  "forecast": {
+    "wvi": 67,
+    "trend": "Rising",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1819,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 2,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1824,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 31001,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1829,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 2,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1834,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1839,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1844,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1849,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 2001,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1854,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 4,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1944,
+      "Inter-State (Conventional)": 10,
+      "Intra-State (Civil War)": 4002,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1975,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 3000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Border Skirmish": 0.527,
+    "Proxy / Grey-Zone": 0.2559,
+    "Naval Blockade": 0.0433,
+    "Cyber / Digital": 0.1468,
+    "Algorithmic / AI Strike": 0.0142,
+    "Full Conventional": 0.0127
+  },
+  "future_hotspots": [
+    {
+      "region": "India - Border Flashpoint",
+      "threat": "Proxy / Grey-Zone",
+      "probability": 0.256,
+      "lat": null,
+      "lng": null
+    }
+  ],
+  "raw_schemas": {}
+}

@@ -1,1 +1,91 @@
-{"country": "Ukraine", "computed_wvi": 85, "pillars": {"cyber": {"overall_score": 72, "sources": [{"name": "CFR Cyber Tracker", "metric": "Incidents (YTD)", "raw_value": 108, "unit": "events", "score": 67}, {"name": "EuRepoC", "metric": "Active Campaigns", "raw_value": 3, "unit": "campaigns", "score": 80}, {"name": "Carnegie Spyware", "metric": "Proliferation Index", "raw_value": 7.2, "unit": "index", "score": 70}]}, "economic": {"overall_score": 88, "sources": [{"name": "UN Comtrade", "metric": "Critical Import Dep.", "raw_value": 70.4, "unit": "%", "score": 92}, {"name": "IMF DOTS", "metric": "Trade Vulnerability", "raw_value": 52.8, "unit": "index", "score": 90}, {"name": "World Bank WITS", "metric": "Export Concentration", "raw_value": 35.2, "unit": "HHI", "score": 90}]}, "kinetic": {"overall_score": 95, "sources": [{"name": "ACLED", "metric": "Events (5yr)", "raw_value": 2375, "unit": "events", "score": 98}, {"name": "UCDP", "metric": "Conflict Intensity", "raw_value": 3.17, "unit": "index", "score": 88}, {"name": "SIPRI", "metric": "Military Expenditure", "raw_value": 19.0, "unit": "% GDP", "score": 94}]}, "fragmentation": {"score": 82, "primary_drivers": ["Russian Conventional Invasion", "Proxy War Dynamics"]}}}
+{
+  "country": "Ukraine",
+  "computed_wvi": 81,
+  "pillars": {
+    "cyber": {
+      "overall_score": 70,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 75,
+          "metric": "84 events (YTD)",
+          "raw_value": 84,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 60,
+          "metric": "3 campaigns",
+          "raw_value": 3,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 65,
+          "metric": "Active tracking",
+          "raw_value": 65,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 90,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 90,
+          "metric": "Dependency: 72%",
+          "raw_value": 72,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 82,
+          "metric": "Sanctions Exposure: 82/100",
+          "raw_value": 82,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 78,
+          "metric": "Trade Concentration: 78/100",
+          "raw_value": 78,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 95,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 95,
+          "metric": "760 events/yr",
+          "raw_value": 760,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 90,
+          "metric": "Fatalities: 11400/yr",
+          "raw_value": 11400,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 98,
+          "metric": "Military spend: 28.5% GDP",
+          "raw_value": 28.5,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 55,
+      "primary_drivers": [
+        "Russia Full-Scale Invasion (Active)",
+        "Eastern Front Grinding War"
+      ]
+    }
+  }
+}

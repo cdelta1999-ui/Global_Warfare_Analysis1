@@ -1,1 +1,92 @@
-{"country": "Ethiopia", "computed_wvi": 67, "pillars": {"cyber": {"overall_score": 20, "sources": [{"name": "CFR Cyber Tracker", "metric": "Incidents (YTD)", "raw_value": 30, "unit": "events", "score": 21}, {"name": "EuRepoC", "metric": "Active Campaigns", "raw_value": 1, "unit": "campaigns", "score": 16}, {"name": "Carnegie Spyware", "metric": "Proliferation Index", "raw_value": 2.0, "unit": "index", "score": 18}]}, "economic": {"overall_score": 78, "sources": [{"name": "UN Comtrade", "metric": "Critical Import Dep.", "raw_value": 62.4, "unit": "%", "score": 78}, {"name": "IMF DOTS", "metric": "Trade Vulnerability", "raw_value": 46.8, "unit": "index", "score": 82}, {"name": "World Bank WITS", "metric": "Export Concentration", "raw_value": 31.2, "unit": "HHI", "score": 77}]}, "kinetic": {"overall_score": 88, "sources": [{"name": "ACLED", "metric": "Events (5yr)", "raw_value": 2200, "unit": "events", "score": 83}, {"name": "UCDP", "metric": "Conflict Intensity", "raw_value": 2.93, "unit": "index", "score": 87}, {"name": "SIPRI", "metric": "Military Expenditure", "raw_value": 17.6, "unit": "% GDP", "score": 84}]}, "fragmentation": {"score": 82, "primary_drivers": ["Tigray War", "Oromo Liberation Army"]}}}
+{
+  "country": "Ethiopia",
+  "computed_wvi": 63,
+  "pillars": {
+    "cyber": {
+      "overall_score": 35,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 40,
+          "metric": "42 events (YTD)",
+          "raw_value": 42,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 25,
+          "metric": "1 campaigns",
+          "raw_value": 1,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 30,
+          "metric": "Active tracking",
+          "raw_value": 30,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 75,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 75,
+          "metric": "Dependency: 60%",
+          "raw_value": 60,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 67,
+          "metric": "Sanctions Exposure: 67/100",
+          "raw_value": 67,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 63,
+          "metric": "Trade Concentration: 63/100",
+          "raw_value": 63,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 82,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 82,
+          "metric": "656 events/yr",
+          "raw_value": 656,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 77,
+          "metric": "Fatalities: 9840/yr",
+          "raw_value": 9840,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 85,
+          "metric": "Military spend: 24.6% GDP",
+          "raw_value": 24.6,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 49,
+      "primary_drivers": [
+        "Tigray Conflict Aftermath",
+        "Amhara Fano Militia",
+        "Oromo Liberation Army"
+      ]
+    }
+  }
+}

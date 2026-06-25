@@ -1,1 +1,147 @@
-{"forecast": {"predicted_attack_type": "Proxy / Grey-Zone", "predictability_score": "36.3%", "danger_risk_status": "ELEVATED: Upward Trend", "forecasted_event_volume": 53}, "timeline": [{"Year": 1974, "Inter-State (Conventional)": 3000}, {"Year": 1984, "Intra-State (Civil War)": 5000}, {"Year": 1990, "Intra-State (Civil War)": 8000}, {"Year": 2000, "Intra-State (Civil War)": 3000}, {"Year": 2016, "Intra-State (Civil War)": 1000}, {"Year": 2022, "Proxy / Grey-Zone": 500}], "raw_schemas": {"kinetic": {"normalized_score": 65, "source": "ACLED DB"}, "cyber": {"normalized_score": 58, "source": "CFR_Cyber_Tracker DB"}, "economic": {"normalized_score": 62, "source": "UN_Comtrade_IMF DB"}}, "war_type_probabilities": {"Proxy / Grey-Zone": 0.363, "Border Skirmish": 0.283, "Cyber / Digital": 0.171, "Naval Blockade": 0.134, "Full Conventional": 0.049}, "future_hotspots": [{"region": "The Bosphorus Strait", "lat": 41.0, "lng": 29.0, "threat": "Naval Blockade", "probability": 0.85}, {"region": "Incirlik Air Base", "lat": 37.0, "lng": 35.4, "threat": "Aerospace Corridor Denial", "probability": 0.65}]}
+{
+  "country": "Turkey",
+  "forecast": {
+    "wvi": 64,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1816,
+      "Inter-State (Conventional)": 17500,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1821,
+      "Inter-State (Conventional)": 1000,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1831,
+      "Inter-State (Conventional)": 1,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1851,
+      "Inter-State (Conventional)": 1,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1856,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 1700,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1866,
+      "Inter-State (Conventional)": 4000,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1876,
+      "Inter-State (Conventional)": 1,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1881,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1916,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1921,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1946,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1886,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1968,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 5000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1991,
+      "Inter-State (Conventional)": 300,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1997,
+      "Inter-State (Conventional)": 100,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Border Skirmish": 0.3725,
+    "Proxy / Grey-Zone": 0.3333,
+    "Full Conventional": 0.0929,
+    "Cyber / Digital": 0.1226,
+    "Naval Blockade": 0.0786
+  },
+  "future_hotspots": [
+    {
+      "region": "Turkey - Border Flashpoint",
+      "threat": "Proxy / Grey-Zone",
+      "probability": 0.333,
+      "lat": null,
+      "lng": null
+    }
+  ],
+  "raw_schemas": {}
+}

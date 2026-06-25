@@ -1,1 +1,92 @@
-{"country": "Indonesia", "computed_wvi": 47, "pillars": {"cyber": {"overall_score": 38, "sources": [{"name": "CFR Cyber Tracker", "metric": "Incidents (YTD)", "raw_value": 57, "unit": "events", "score": 40}, {"name": "EuRepoC", "metric": "Active Campaigns", "raw_value": 1, "unit": "campaigns", "score": 40}, {"name": "Carnegie Spyware", "metric": "Proliferation Index", "raw_value": 3.8, "unit": "index", "score": 34}]}, "economic": {"overall_score": 52, "sources": [{"name": "UN Comtrade", "metric": "Critical Import Dep.", "raw_value": 41.6, "unit": "%", "score": 53}, {"name": "IMF DOTS", "metric": "Trade Vulnerability", "raw_value": 31.2, "unit": "index", "score": 54}, {"name": "World Bank WITS", "metric": "Export Concentration", "raw_value": 20.8, "unit": "HHI", "score": 50}]}, "kinetic": {"overall_score": 50, "sources": [{"name": "ACLED", "metric": "Events (5yr)", "raw_value": 1250, "unit": "events", "score": 55}, {"name": "UCDP", "metric": "Conflict Intensity", "raw_value": 1.67, "unit": "index", "score": 50}, {"name": "SIPRI", "metric": "Military Expenditure", "raw_value": 10.0, "unit": "% GDP", "score": 49}]}, "fragmentation": {"score": 48, "primary_drivers": ["West Papua Separatism", "Radical Islamist Groups"]}}}
+{
+  "country": "Indonesia",
+  "computed_wvi": 53,
+  "pillars": {
+    "cyber": {
+      "overall_score": 55,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 60,
+          "metric": "66 events (YTD)",
+          "raw_value": 66,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 45,
+          "metric": "2 campaigns",
+          "raw_value": 2,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 50,
+          "metric": "Active tracking",
+          "raw_value": 50,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 58,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 58,
+          "metric": "Dependency: 46%",
+          "raw_value": 46,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 50,
+          "metric": "Sanctions Exposure: 50/100",
+          "raw_value": 50,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 46,
+          "metric": "Trade Concentration: 46/100",
+          "raw_value": 46,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 55,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 55,
+          "metric": "440 events/yr",
+          "raw_value": 440,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 50,
+          "metric": "Fatalities: 6600/yr",
+          "raw_value": 6600,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 58,
+          "metric": "Military spend: 16.5% GDP",
+          "raw_value": 16.5,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 33,
+      "primary_drivers": [
+        "Papua Separatism",
+        "Radical Islamic Networks",
+        "South China Sea Overlap"
+      ]
+    }
+  }
+}

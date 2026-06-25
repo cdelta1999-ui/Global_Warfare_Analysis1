@@ -1,1 +1,139 @@
-{"forecast": {"predicted_attack_type": "Full Conventional", "predictability_score": "44.1%", "danger_risk_status": "CRITICAL: Accelerating Infiltration", "forecasted_event_volume": 470}, "timeline": [{"Year": 1983, "Intra-State (Civil War)": 150000}, {"Year": 1990, "Intra-State (Civil War)": 100000}, {"Year": 2003, "Intra-State (Civil War)": 200000}, {"Year": 2011, "Intra-State (Civil War)": 50000}, {"Year": 2023, "Full Conventional": 10000}, {"Year": 2024, "Full Conventional": 15000}], "raw_schemas": {"kinetic": {"normalized_score": 92, "source": "ACLED DB"}, "cyber": {"normalized_score": 20, "source": "CFR_Cyber_Tracker DB"}, "economic": {"normalized_score": 82, "source": "UN_Comtrade_IMF DB"}}, "war_type_probabilities": {"Full Conventional": 0.441, "Proxy / Grey-Zone": 0.295, "Border Skirmish": 0.23, "Cyber / Digital": 0.019, "Naval Blockade": 0.015}, "future_hotspots": [{"region": "National Digital Infrastructure", "lat": null, "lng": null, "threat": "Cyber Severance", "probability": 0.2}, {"region": "Financial Sector Gateway", "lat": null, "lng": null, "threat": "Financial Paralysis", "probability": 0.82}, {"region": "Border / Periphery Zones", "lat": null, "lng": null, "threat": "Proxy / Grey-Zone", "probability": 0.92}]}
+{
+  "country": "Sudan",
+  "forecast": {
+    "wvi": 67,
+    "trend": "Rising",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1819,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 60000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1829,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1834,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 7050,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1849,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 10000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1854,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 2002,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1859,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 6001,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1864,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 36200,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1879,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1884,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 30001,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1889,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 4000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1959,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1974,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1999,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 1,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Full Conventional": 0.2722,
+    "Intra-State (Civil War)": 0.3399,
+    "One-Sided Violence": 0.2304,
+    "Proxy / Grey-Zone": 0.1001,
+    "Border Skirmish": 0.0574
+  },
+  "future_hotspots": [
+    {
+      "region": "Sudan - Border Flashpoint",
+      "threat": "Intra-State (Civil War)",
+      "probability": 0.272,
+      "lat": null,
+      "lng": null
+    }
+  ],
+  "raw_schemas": {}
+}

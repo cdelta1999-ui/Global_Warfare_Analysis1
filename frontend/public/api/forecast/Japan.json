@@ -1,1 +1,43 @@
-{"forecast": {"predicted_attack_type": "Cyber / Digital", "predictability_score": "43.7%", "danger_risk_status": "STABLE: Baseline Activity", "forecasted_event_volume": 48}, "timeline": [{"Year": 1960, "Internal armed conflict": 10}, {"Year": 1970, "Proxy / Grey-Zone": 10}, {"Year": 2020, "Internal armed conflict": 46}], "raw_schemas": {"kinetic": {"normalized_score": 32, "source": "ACLED DB"}, "cyber": {"normalized_score": 72, "source": "CFR_Cyber_Tracker DB"}, "economic": {"normalized_score": 38, "source": "UN_Comtrade_IMF DB"}}, "war_type_probabilities": {"Cyber / Digital": 0.437, "Naval Blockade": 0.308, "Proxy / Grey-Zone": 0.132, "Border Skirmish": 0.088, "Full Conventional": 0.036}, "future_hotspots": [{"region": "Senkaku Islands", "lat": 25.7, "lng": 123.4, "threat": "Proxy / Grey-Zone", "probability": 0.88}, {"region": "Miyako Strait", "lat": 24.7, "lng": 125.3, "threat": "Naval Blockade", "probability": 0.83}]}
+{
+  "country": "Japan",
+  "forecast": {
+    "wvi": 50,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1895,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 4800,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1905,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 136,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Cyber / Digital": 0.3937,
+    "Naval Blockade": 0.3153,
+    "Border Skirmish": 0.116,
+    "Proxy / Grey-Zone": 0.1531,
+    "Full Conventional": 0.0219
+  },
+  "future_hotspots": [],
+  "raw_schemas": {}
+}

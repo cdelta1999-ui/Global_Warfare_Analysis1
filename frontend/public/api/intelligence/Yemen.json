@@ -1,1 +1,92 @@
-{"country": "Yemen", "computed_wvi": 75, "pillars": {"cyber": {"overall_score": 20, "sources": [{"name": "CFR Cyber Tracker", "metric": "Incidents (YTD)", "raw_value": 30, "unit": "events", "score": 25}, {"name": "EuRepoC", "metric": "Active Campaigns", "raw_value": 1, "unit": "campaigns", "score": 15}, {"name": "Carnegie Spyware", "metric": "Proliferation Index", "raw_value": 2.0, "unit": "index", "score": 25}]}, "economic": {"overall_score": 92, "sources": [{"name": "UN Comtrade", "metric": "Critical Import Dep.", "raw_value": 73.6, "unit": "%", "score": 88}, {"name": "IMF DOTS", "metric": "Trade Vulnerability", "raw_value": 55.2, "unit": "index", "score": 86}, {"name": "World Bank WITS", "metric": "Export Concentration", "raw_value": 36.8, "unit": "HHI", "score": 95}]}, "kinetic": {"overall_score": 96, "sources": [{"name": "ACLED", "metric": "Events (5yr)", "raw_value": 2400, "unit": "events", "score": 93}, {"name": "UCDP", "metric": "Conflict Intensity", "raw_value": 3.2, "unit": "index", "score": 95}, {"name": "SIPRI", "metric": "Military Expenditure", "raw_value": 19.2, "unit": "% GDP", "score": 94}]}, "fragmentation": {"score": 90, "primary_drivers": ["Houthi Insurgency", "Saudi-Led Coalition Blockade"]}}}
+{
+  "country": "Yemen",
+  "computed_wvi": 69,
+  "pillars": {
+    "cyber": {
+      "overall_score": 20,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 25,
+          "metric": "24 events (YTD)",
+          "raw_value": 24,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 10,
+          "metric": "1 campaigns",
+          "raw_value": 1,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 15,
+          "metric": "Active tracking",
+          "raw_value": 15,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 95,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 95,
+          "metric": "Dependency: 76%",
+          "raw_value": 76,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 87,
+          "metric": "Sanctions Exposure: 87/100",
+          "raw_value": 87,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 83,
+          "metric": "Trade Concentration: 83/100",
+          "raw_value": 83,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 90,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 90,
+          "metric": "720 events/yr",
+          "raw_value": 720,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 85,
+          "metric": "Fatalities: 10800/yr",
+          "raw_value": 10800,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 93,
+          "metric": "Military spend: 27.0% GDP",
+          "raw_value": 27.0,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 54,
+      "primary_drivers": [
+        "Saudi-Houthi War (Active)",
+        "Humanitarian Catastrophe",
+        "Al-Qaeda in Arabian Peninsula"
+      ]
+    }
+  }
+}

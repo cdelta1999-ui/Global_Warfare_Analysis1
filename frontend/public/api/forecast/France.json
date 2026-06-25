@@ -1,1 +1,219 @@
-{"forecast": {"predicted_attack_type": "Cyber / Digital", "predictability_score": "49.9%", "danger_risk_status": "STABLE: Baseline Activity", "forecasted_event_volume": 31}, "timeline": [{"Year": 1960, "Intra-State (Civil War)": 34}, {"Year": 2015, "Intra-State (Civil War)": 46}], "raw_schemas": {"kinetic": {"normalized_score": 32, "source": "ACLED DB"}, "cyber": {"normalized_score": 65, "source": "CFR_Cyber_Tracker DB"}, "economic": {"normalized_score": 35, "source": "UN_Comtrade_IMF DB"}}, "war_type_probabilities": {"Cyber / Digital": 0.499, "Proxy / Grey-Zone": 0.303, "Border Skirmish": 0.068, "Naval Blockade": 0.096, "Full Conventional": 0.035}, "future_hotspots": [{"region": "Marseille Fiber Hub", "lat": 43.3, "lng": 5.4, "threat": "Financial Paralysis", "probability": 0.72}, {"region": "Kourou Spaceport (Fr. Guiana)", "lat": 5.23, "lng": -52.76, "threat": "Aerospace Corridor Denial", "probability": 0.65}]}
+{
+  "country": "France",
+  "forecast": {
+    "wvi": 52,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1830,
+      "Inter-State (Conventional)": 600,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1835,
+      "Inter-State (Conventional)": 15000,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1840,
+      "Inter-State (Conventional)": 200,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1845,
+      "Inter-State (Conventional)": 600,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1850,
+      "Inter-State (Conventional)": 100,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1855,
+      "Inter-State (Conventional)": 1600,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 1000,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1860,
+      "Inter-State (Conventional)": 6,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1870,
+      "Inter-State (Conventional)": 400,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 2686,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1880,
+      "Inter-State (Conventional)": 8300,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1885,
+      "Inter-State (Conventional)": 1000,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1890,
+      "Inter-State (Conventional)": 6380,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1895,
+      "Inter-State (Conventional)": 125,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1905,
+      "Inter-State (Conventional)": 4150,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1910,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 1100,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1920,
+      "Inter-State (Conventional)": 3500,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1925,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 14000,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1930,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 1,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1945,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 95500,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1952,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 2000,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1953,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 2000,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1954,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 18000,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1957,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 1000,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2001,
+      "Inter-State (Conventional)": 12,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Cyber / Digital": 0.4303,
+    "Proxy / Grey-Zone": 0.326,
+    "Non-State (Cartel/Militia)": 0.1073,
+    "Border Skirmish": 0.0551,
+    "Naval Blockade": 0.0813
+  },
+  "future_hotspots": [
+    {
+      "region": "France - Border Flashpoint",
+      "threat": "Proxy / Grey-Zone",
+      "probability": 0.326,
+      "lat": null,
+      "lng": null
+    }
+  ],
+  "raw_schemas": {}
+}

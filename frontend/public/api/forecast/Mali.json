@@ -1,1 +1,107 @@
-{"forecast": {"predicted_attack_type": "Proxy / Grey-Zone", "predictability_score": "47.1%", "danger_risk_status": "CRITICAL: Accelerating Infiltration", "forecasted_event_volume": 261}, "timeline": [{"Year": 1975, "Border Skirmish": 36}, {"Year": 1980, "Intra-State (Civil War)": 63}, {"Year": 1985, "Border Skirmish": 113}, {"Year": 1995, "Proxy / Grey-Zone": 125}, {"Year": 2000, "Internal armed conflict": 79}, {"Year": 2020, "Intra-State (Civil War)": 98}], "raw_schemas": {"kinetic": {"normalized_score": 91, "source": "ACLED DB"}, "cyber": {"normalized_score": 15, "source": "CFR_Cyber_Tracker DB"}, "economic": {"normalized_score": 80, "source": "UN_Comtrade_IMF DB"}}, "war_type_probabilities": {"Proxy / Grey-Zone": 0.471, "Border Skirmish": 0.367, "Full Conventional": 0.135, "Cyber / Digital": 0.018, "Naval Blockade": 0.009}, "future_hotspots": [{"region": "National Digital Infrastructure", "lat": null, "lng": null, "threat": "Cyber Severance", "probability": 0.15}, {"region": "Financial Sector Gateway", "lat": null, "lng": null, "threat": "Financial Paralysis", "probability": 0.8}, {"region": "Border / Periphery Zones", "lat": null, "lng": null, "threat": "Proxy / Grey-Zone", "probability": 0.91}]}
+{
+  "country": "Mali",
+  "forecast": {
+    "wvi": 59,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1900,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1296,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1920,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1940,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1960,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1980,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 346,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2000,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 589,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2010,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1873,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2015,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 383,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2020,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Non-State (Cartel/Militia)": 0.3216,
+    "Intra-State (Civil War)": 0.2436,
+    "Proxy / Grey-Zone": 0.1562,
+    "One-Sided Violence": 0.218,
+    "Border Skirmish": 0.0607
+  },
+  "future_hotspots": [
+    {
+      "region": "Mali - Border Flashpoint",
+      "threat": "Intra-State (Civil War)",
+      "probability": 0.244,
+      "lat": null,
+      "lng": null
+    }
+  ],
+  "raw_schemas": {}
+}

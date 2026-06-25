@@ -1,1 +1,91 @@
-{"country": "United States of America", "computed_wvi": 51, "pillars": {"cyber": {"overall_score": 78, "sources": [{"name": "CFR Cyber Tracker", "metric": "Incidents (YTD)", "raw_value": 117, "unit": "events", "score": 74}, {"name": "EuRepoC", "metric": "Active Campaigns", "raw_value": 3, "unit": "campaigns", "score": 80}, {"name": "Carnegie Spyware", "metric": "Proliferation Index", "raw_value": 7.8, "unit": "index", "score": 80}]}, "economic": {"overall_score": 42, "sources": [{"name": "UN Comtrade", "metric": "Critical Import Dep.", "raw_value": 33.6, "unit": "%", "score": 47}, {"name": "IMF DOTS", "metric": "Trade Vulnerability", "raw_value": 25.2, "unit": "index", "score": 36}, {"name": "World Bank WITS", "metric": "Export Concentration", "raw_value": 16.8, "unit": "HHI", "score": 48}]}, "kinetic": {"overall_score": 45, "sources": [{"name": "ACLED", "metric": "Events (5yr)", "raw_value": 1125, "unit": "events", "score": 44}, {"name": "UCDP", "metric": "Conflict Intensity", "raw_value": 1.5, "unit": "index", "score": 46}, {"name": "SIPRI", "metric": "Military Expenditure", "raw_value": 9.0, "unit": "% GDP", "score": 48}]}, "fragmentation": {"score": 38, "primary_drivers": ["Internal Political Polarization", "Proxy Interventions"]}}}
+{
+  "country": "United States of America",
+  "computed_wvi": 56,
+  "pillars": {
+    "cyber": {
+      "overall_score": 85,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 90,
+          "metric": "102 events (YTD)",
+          "raw_value": 102,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 75,
+          "metric": "4 campaigns",
+          "raw_value": 4,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 80,
+          "metric": "Active tracking",
+          "raw_value": 80,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 60,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 60,
+          "metric": "Dependency: 48%",
+          "raw_value": 48,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 52,
+          "metric": "Sanctions Exposure: 52/100",
+          "raw_value": 52,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 48,
+          "metric": "Trade Concentration: 48/100",
+          "raw_value": 48,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 50,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 50,
+          "metric": "400 events/yr",
+          "raw_value": 400,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 45,
+          "metric": "Fatalities: 6000/yr",
+          "raw_value": 6000,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 53,
+          "metric": "Military spend: 15.0% GDP",
+          "raw_value": 15.0,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 15,
+      "primary_drivers": [
+        "Political Polarization",
+        "Electoral Interference Risk"
+      ]
+    }
+  }
+}

@@ -1,1 +1,91 @@
-{"country": "China", "computed_wvi": 67, "pillars": {"cyber": {"overall_score": 88, "sources": [{"name": "CFR Cyber Tracker", "metric": "Incidents (YTD)", "raw_value": 132, "unit": "events", "score": 89}, {"name": "EuRepoC", "metric": "Active Campaigns", "raw_value": 4, "unit": "campaigns", "score": 81}, {"name": "Carnegie Spyware", "metric": "Proliferation Index", "raw_value": 8.8, "unit": "index", "score": 86}]}, "economic": {"overall_score": 65, "sources": [{"name": "UN Comtrade", "metric": "Critical Import Dep.", "raw_value": 52.0, "unit": "%", "score": 69}, {"name": "IMF DOTS", "metric": "Trade Vulnerability", "raw_value": 39.0, "unit": "index", "score": 66}, {"name": "World Bank WITS", "metric": "Export Concentration", "raw_value": 26.0, "unit": "HHI", "score": 64}]}, "kinetic": {"overall_score": 62, "sources": [{"name": "ACLED", "metric": "Events (5yr)", "raw_value": 1550, "unit": "events", "score": 58}, {"name": "UCDP", "metric": "Conflict Intensity", "raw_value": 2.07, "unit": "index", "score": 64}, {"name": "SIPRI", "metric": "Military Expenditure", "raw_value": 12.4, "unit": "% GDP", "score": 66}]}, "fragmentation": {"score": 48, "primary_drivers": ["Taiwan Strait", "South China Sea", "Rare Earth Leverage"]}}}
+{
+  "country": "China",
+  "computed_wvi": 71,
+  "pillars": {
+    "cyber": {
+      "overall_score": 88,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 93,
+          "metric": "105 events (YTD)",
+          "raw_value": 105,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 78,
+          "metric": "4 campaigns",
+          "raw_value": 4,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 83,
+          "metric": "Active tracking",
+          "raw_value": 83,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 75,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 75,
+          "metric": "Dependency: 60%",
+          "raw_value": 60,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 67,
+          "metric": "Sanctions Exposure: 67/100",
+          "raw_value": 67,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 63,
+          "metric": "Trade Concentration: 63/100",
+          "raw_value": 63,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 78,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 78,
+          "metric": "624 events/yr",
+          "raw_value": 624,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 73,
+          "metric": "Fatalities: 9360/yr",
+          "raw_value": 9360,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 81,
+          "metric": "Military spend: 23.4% GDP",
+          "raw_value": 23.4,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 18,
+      "primary_drivers": [
+        "Taiwan Strait Tension",
+        "South China Sea Disputes"
+      ]
+    }
+  }
+}

@@ -1,1 +1,115 @@
-{"forecast": {"predicted_attack_type": "Border Skirmish", "predictability_score": "43.1%", "danger_risk_status": "CRITICAL: Accelerating Infiltration", "forecasted_event_volume": 212}, "timeline": [{"Year": 1947, "Inter-State (Conventional)": 3000}, {"Year": 1965, "Inter-State (Conventional)": 8000}, {"Year": 1971, "Inter-State (Conventional)": 50000}, {"Year": 1999, "Inter-State (Conventional)": 1500}, {"Year": 2007, "Intra-State (Civil War)": 5000}, {"Year": 2010, "Intra-State (Civil War)": 4000}, {"Year": 2015, "Intra-State (Civil War)": 3000}, {"Year": 2022, "Intra-State (Civil War)": 2000}], "raw_schemas": {"kinetic": {"normalized_score": 85, "source": "ACLED DB"}, "cyber": {"normalized_score": 55, "source": "CFR_Cyber_Tracker DB"}, "economic": {"normalized_score": 72, "source": "UN_Comtrade_IMF DB"}}, "war_type_probabilities": {"Proxy / Grey-Zone": 0.319, "Border Skirmish": 0.431, "Cyber / Digital": 0.083, "Full Conventional": 0.136, "Naval Blockade": 0.03}, "future_hotspots": [{"region": "Gwadar Port (CPEC)", "lat": 25.1, "lng": 62.3, "threat": "Asymmetric Supply Disruption", "probability": 0.85}, {"region": "Line of Control (Kashmir)", "lat": 34.5, "lng": 74.0, "threat": "Border Skirmish", "probability": 0.89}]}
+{
+  "country": "Pakistan",
+  "forecast": {
+    "wvi": 68,
+    "trend": "Rising",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1819,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 2,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1824,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 31001,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1829,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 2,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1834,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1839,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1844,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1849,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 2001,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1854,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 4,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1944,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 4002,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1975,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 3000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Border Skirmish": 0.4701,
+    "Proxy / Grey-Zone": 0.3368,
+    "Full Conventional": 0.0992,
+    "Cyber / Digital": 0.0752,
+    "Naval Blockade": 0.0187
+  },
+  "future_hotspots": [
+    {
+      "region": "Pakistan - Border Flashpoint",
+      "threat": "Proxy / Grey-Zone",
+      "probability": 0.337,
+      "lat": null,
+      "lng": null
+    }
+  ],
+  "raw_schemas": {}
+}

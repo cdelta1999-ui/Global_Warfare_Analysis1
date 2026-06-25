@@ -1,1 +1,92 @@
-{"country": "Haiti", "computed_wvi": 67, "pillars": {"cyber": {"overall_score": 10, "sources": [{"name": "CFR Cyber Tracker", "metric": "Incidents (YTD)", "raw_value": 15, "unit": "events", "score": 15}, {"name": "EuRepoC", "metric": "Active Campaigns", "raw_value": 0, "unit": "campaigns", "score": 3}, {"name": "Carnegie Spyware", "metric": "Proliferation Index", "raw_value": 1.0, "unit": "index", "score": 12}]}, "economic": {"overall_score": 88, "sources": [{"name": "UN Comtrade", "metric": "Critical Import Dep.", "raw_value": 70.4, "unit": "%", "score": 83}, {"name": "IMF DOTS", "metric": "Trade Vulnerability", "raw_value": 52.8, "unit": "index", "score": 82}, {"name": "World Bank WITS", "metric": "Export Concentration", "raw_value": 35.2, "unit": "HHI", "score": 92}]}, "kinetic": {"overall_score": 85, "sources": [{"name": "ACLED", "metric": "Events (5yr)", "raw_value": 2125, "unit": "events", "score": 80}, {"name": "UCDP", "metric": "Conflict Intensity", "raw_value": 2.83, "unit": "index", "score": 90}, {"name": "SIPRI", "metric": "Military Expenditure", "raw_value": 17.0, "unit": "% GDP", "score": 81}]}, "fragmentation": {"score": 85, "primary_drivers": ["Gang Paramilitaries", "State Collapse"]}}}
+{
+  "country": "Haiti",
+  "computed_wvi": 62,
+  "pillars": {
+    "cyber": {
+      "overall_score": 15,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 20,
+          "metric": "18 events (YTD)",
+          "raw_value": 18,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 5,
+          "metric": "1 campaigns",
+          "raw_value": 1,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 10,
+          "metric": "Active tracking",
+          "raw_value": 10,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 95,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 95,
+          "metric": "Dependency: 76%",
+          "raw_value": 76,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 87,
+          "metric": "Sanctions Exposure: 87/100",
+          "raw_value": 87,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 83,
+          "metric": "Trade Concentration: 83/100",
+          "raw_value": 83,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 72,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 72,
+          "metric": "576 events/yr",
+          "raw_value": 576,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 67,
+          "metric": "Fatalities: 8640/yr",
+          "raw_value": 8640,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 75,
+          "metric": "Military spend: 21.6% GDP",
+          "raw_value": 21.6,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 55,
+      "primary_drivers": [
+        "Gang Paramilitaries (80%+ Territory)",
+        "Total State Collapse",
+        "Famine Risk"
+      ]
+    }
+  }
+}

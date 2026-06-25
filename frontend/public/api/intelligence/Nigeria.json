@@ -1,1 +1,91 @@
-{"country": "Nigeria", "computed_wvi": 68, "pillars": {"cyber": {"overall_score": 30, "sources": [{"name": "CFR Cyber Tracker", "metric": "Incidents (YTD)", "raw_value": 45, "unit": "events", "score": 28}, {"name": "EuRepoC", "metric": "Active Campaigns", "raw_value": 1, "unit": "campaigns", "score": 28}, {"name": "Carnegie Spyware", "metric": "Proliferation Index", "raw_value": 3.0, "unit": "index", "score": 33}]}, "economic": {"overall_score": 75, "sources": [{"name": "UN Comtrade", "metric": "Critical Import Dep.", "raw_value": 60.0, "unit": "%", "score": 74}, {"name": "IMF DOTS", "metric": "Trade Vulnerability", "raw_value": 45.0, "unit": "index", "score": 78}, {"name": "World Bank WITS", "metric": "Export Concentration", "raw_value": 30.0, "unit": "HHI", "score": 79}]}, "kinetic": {"overall_score": 86, "sources": [{"name": "ACLED", "metric": "Events (5yr)", "raw_value": 2150, "unit": "events", "score": 83}, {"name": "UCDP", "metric": "Conflict Intensity", "raw_value": 2.87, "unit": "index", "score": 90}, {"name": "SIPRI", "metric": "Military Expenditure", "raw_value": 17.2, "unit": "% GDP", "score": 84}]}, "fragmentation": {"score": 80, "primary_drivers": ["Boko Haram/ISWAP", "Fulani-Mossi Communal Violence"]}}}
+{
+  "country": "Nigeria",
+  "computed_wvi": 64,
+  "pillars": {
+    "cyber": {
+      "overall_score": 45,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 50,
+          "metric": "54 events (YTD)",
+          "raw_value": 54,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 35,
+          "metric": "2 campaigns",
+          "raw_value": 2,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 40,
+          "metric": "Active tracking",
+          "raw_value": 40,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 72,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 72,
+          "metric": "Dependency: 57%",
+          "raw_value": 57,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 64,
+          "metric": "Sanctions Exposure: 64/100",
+          "raw_value": 64,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 60,
+          "metric": "Trade Concentration: 60/100",
+          "raw_value": 60,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 80,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 80,
+          "metric": "640 events/yr",
+          "raw_value": 640,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 75,
+          "metric": "Fatalities: 9600/yr",
+          "raw_value": 9600,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 83,
+          "metric": "Military spend: 24.0% GDP",
+          "raw_value": 24.0,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 47,
+      "primary_drivers": [
+        "Boko Haram/ISWAP Insurgency",
+        "Fulani-Mossi Communal Violence"
+      ]
+    }
+  }
+}

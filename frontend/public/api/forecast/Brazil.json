@@ -1,1 +1,99 @@
-{"forecast": {"predicted_attack_type": "Proxy / Grey-Zone", "predictability_score": "43.5%", "danger_risk_status": "ELEVATED: Upward Trend", "forecasted_event_volume": 163}, "timeline": [{"Year": 1965, "Internal armed conflict": 47}, {"Year": 1980, "Border Skirmish": 80}, {"Year": 1990, "Intra-State (Civil War)": 10}, {"Year": 1995, "Proxy / Grey-Zone": 81}, {"Year": 2005, "Intra-State (Civil War)": 69}, {"Year": 2015, "Intra-State (Civil War)": 59}], "raw_schemas": {"kinetic": {"normalized_score": 55, "source": "ACLED DB"}, "cyber": {"normalized_score": 45, "source": "CFR_Cyber_Tracker DB"}, "economic": {"normalized_score": 60, "source": "UN_Comtrade_IMF DB"}}, "war_type_probabilities": {"Proxy / Grey-Zone": 0.435, "Border Skirmish": 0.206, "Full Conventional": 0.097, "Cyber / Digital": 0.186, "Naval Blockade": 0.076}, "future_hotspots": [{"region": "Fortaleza Subsea Node", "lat": -3.73, "lng": -38.52, "threat": "Data Severance", "probability": 0.78}]}
+{
+  "country": "Brazil",
+  "forecast": {
+    "wvi": 59,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1820,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1825,
+      "Inter-State (Conventional)": 4000,
+      "Intra-State (Civil War)": 10301,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1830,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1835,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 9601,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1840,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1855,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 7701,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1860,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1870,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 3000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Non-State (Cartel/Militia)": 0.6828,
+    "Border Skirmish": 0.0662,
+    "Proxy / Grey-Zone": 0.0874,
+    "Cyber / Digital": 0.1524,
+    "Full Conventional": 0.0112
+  },
+  "future_hotspots": [
+    {
+      "region": "Brazil - Border Flashpoint",
+      "threat": "Border Skirmish",
+      "probability": 0.152,
+      "lat": null,
+      "lng": null
+    }
+  ],
+  "raw_schemas": {}
+}

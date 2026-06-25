@@ -1,1 +1,92 @@
-{"country": "Egypt", "computed_wvi": 59, "pillars": {"cyber": {"overall_score": 40, "sources": [{"name": "CFR Cyber Tracker", "metric": "Incidents (YTD)", "raw_value": 60, "unit": "events", "score": 35}, {"name": "EuRepoC", "metric": "Active Campaigns", "raw_value": 2, "unit": "campaigns", "score": 36}, {"name": "Carnegie Spyware", "metric": "Proliferation Index", "raw_value": 4.0, "unit": "index", "score": 35}]}, "economic": {"overall_score": 72, "sources": [{"name": "UN Comtrade", "metric": "Critical Import Dep.", "raw_value": 57.6, "unit": "%", "score": 70}, {"name": "IMF DOTS", "metric": "Trade Vulnerability", "raw_value": 43.2, "unit": "index", "score": 75}, {"name": "World Bank WITS", "metric": "Export Concentration", "raw_value": 28.8, "unit": "HHI", "score": 71}]}, "kinetic": {"overall_score": 65, "sources": [{"name": "ACLED", "metric": "Events (5yr)", "raw_value": 1625, "unit": "events", "score": 66}, {"name": "UCDP", "metric": "Conflict Intensity", "raw_value": 2.17, "unit": "index", "score": 67}, {"name": "SIPRI", "metric": "Military Expenditure", "raw_value": 13.0, "unit": "% GDP", "score": 61}]}, "fragmentation": {"score": 55, "primary_drivers": ["Sinai Insurgency", "Grand Ethiopian Renaissance Dam"]}}}
+{
+  "country": "Egypt",
+  "computed_wvi": 57,
+  "pillars": {
+    "cyber": {
+      "overall_score": 58,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 63,
+          "metric": "69 events (YTD)",
+          "raw_value": 69,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 48,
+          "metric": "2 campaigns",
+          "raw_value": 2,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 53,
+          "metric": "Active tracking",
+          "raw_value": 53,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 65,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 65,
+          "metric": "Dependency: 52%",
+          "raw_value": 52,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 57,
+          "metric": "Sanctions Exposure: 57/100",
+          "raw_value": 57,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 53,
+          "metric": "Trade Concentration: 53/100",
+          "raw_value": 53,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 62,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 62,
+          "metric": "496 events/yr",
+          "raw_value": 496,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 57,
+          "metric": "Fatalities: 7440/yr",
+          "raw_value": 7440,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 65,
+          "metric": "Military spend: 18.6% GDP",
+          "raw_value": 18.6,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 30,
+      "primary_drivers": [
+        "Sinai Insurgency",
+        "Libya Border Instability",
+        "Ethiopia Dam Dispute"
+      ]
+    }
+  }
+}

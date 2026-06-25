@@ -1,1 +1,75 @@
-{"forecast": {"predicted_attack_type": "Proxy / Grey-Zone", "predictability_score": "45.0%", "danger_risk_status": "ELEVATED: Upward Trend", "forecasted_event_volume": 133}, "timeline": [{"Year": 1980, "Inter-State (Conventional)": 150000}, {"Year": 1985, "Inter-State (Conventional)": 200000}, {"Year": 1988, "Inter-State (Conventional)": 100000}, {"Year": 1990, "Proxy / Grey-Zone": 1000}, {"Year": 2019, "Proxy / Grey-Zone": 2000}, {"Year": 2023, "Proxy / Grey-Zone": 3000}], "raw_schemas": {"kinetic": {"normalized_score": 75, "source": "ACLED DB"}, "cyber": {"normalized_score": 70, "source": "CFR_Cyber_Tracker DB"}, "economic": {"normalized_score": 82, "source": "UN_Comtrade_IMF DB"}}, "war_type_probabilities": {"Proxy / Grey-Zone": 0.45, "Naval Blockade": 0.273, "Cyber / Digital": 0.166, "Border Skirmish": 0.091, "Full Conventional": 0.02}, "future_hotspots": [{"region": "Strait of Hormuz", "lat": 26.5, "lng": 56.4, "threat": "Shipping Blockade", "probability": 0.94}, {"region": "Natanz Nuclear Facility", "lat": 33.7, "lng": 51.7, "threat": "Cyber Severance", "probability": 0.89}, {"region": "Bandar Abbas Port", "lat": 27.1, "lng": 56.2, "threat": "Naval Blockade", "probability": 0.77}]}
+{
+  "country": "Iran",
+  "forecast": {
+    "wvi": 69,
+    "trend": "Rising",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1883,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1918,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1923,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1943,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1886,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1968,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 5000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Proxy / Grey-Zone": 0.4741,
+    "Cyber / Digital": 0.1949,
+    "Naval Blockade": 0.2303,
+    "Border Skirmish": 0.0758,
+    "Full Conventional": 0.025
+  },
+  "future_hotspots": [
+    {
+      "region": "Iran - Border Flashpoint",
+      "threat": "Cyber / Digital",
+      "probability": 0.23,
+      "lat": null,
+      "lng": null
+    }
+  ],
+  "raw_schemas": {}
+}

@@ -1,1 +1,114 @@
-{"forecast": {"predicted_attack_type": "Cyber / Digital", "predictability_score": "36.4%", "danger_risk_status": "CRITICAL: Accelerating Infiltration", "forecasted_event_volume": 318}, "timeline": [{"Year": 1994, "Intra-State (Civil War)": 14000}, {"Year": 1999, "Intra-State (Civil War)": 25000}, {"Year": 2008, "Inter-State (Conventional)": 850}, {"Year": 2014, "Proxy / Grey-Zone": 5000}, {"Year": 2022, "Full Conventional": 80000}, {"Year": 2023, "Full Conventional": 120000}, {"Year": 2024, "Full Conventional": 95000}], "raw_schemas": {"kinetic": {"normalized_score": 80, "source": "ACLED DB"}, "cyber": {"normalized_score": 88, "source": "CFR_Cyber_Tracker DB"}, "economic": {"normalized_score": 75, "source": "UN_Comtrade_IMF DB"}}, "war_type_probabilities": {"Cyber / Digital": 0.364, "Proxy / Grey-Zone": 0.313, "Border Skirmish": 0.163, "Naval Blockade": 0.09, "Full Conventional": 0.07}, "future_hotspots": [{"region": "The Suwalki Gap", "lat": 54.1, "lng": 23.1, "threat": "Continental Choke Point", "probability": 0.91}, {"region": "Arctic Northern Sea Route", "lat": 73.0, "lng": 70.0, "threat": "Naval Blockade", "probability": 0.85}, {"region": "Novorossiysk Oil Terminal", "lat": 44.7, "lng": 37.8, "threat": "Economic Coercion Target", "probability": 0.88}]}
+{
+  "country": "Russia",
+  "forecast": {
+    "wvi": 79,
+    "trend": "Rising",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1826,
+      "Inter-State (Conventional)": 5000,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1846,
+      "Inter-State (Conventional)": 1,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1861,
+      "Inter-State (Conventional)": 120,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1866,
+      "Inter-State (Conventional)": 100,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1871,
+      "Inter-State (Conventional)": 100,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1876,
+      "Inter-State (Conventional)": 2000,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1881,
+      "Inter-State (Conventional)": 1000,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1921,
+      "Inter-State (Conventional)": 1,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1980,
+      "Inter-State (Conventional)": 40000,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Full Conventional": 0.32,
+    "Proxy / Grey-Zone": 0.2424,
+    "Cyber / Digital": 0.2864,
+    "Border Skirmish": 0.1054,
+    "Naval Blockade": 0.0458
+  },
+  "future_hotspots": [
+    {
+      "region": "Russia - High-Risk Zone",
+      "threat": "Full Conventional",
+      "probability": 0.32,
+      "lat": null,
+      "lng": null
+    },
+    {
+      "region": "Russia - Border Flashpoint",
+      "threat": "Proxy / Grey-Zone",
+      "probability": 0.286,
+      "lat": null,
+      "lng": null
+    }
+  ],
+  "raw_schemas": {}
+}

@@ -1,1 +1,115 @@
-{"forecast": {"predicted_attack_type": "Proxy / Grey-Zone", "predictability_score": "42.6%", "danger_risk_status": "CRITICAL: Accelerating Infiltration", "forecasted_event_volume": 314}, "timeline": [{"Year": 1965, "Border Skirmish": 104}, {"Year": 1970, "Proxy / Grey-Zone": 101}, {"Year": 1975, "Proxy / Grey-Zone": 92}, {"Year": 1985, "Proxy / Grey-Zone": 23}, {"Year": 1990, "Intra-State (Civil War)": 24}, {"Year": 1995, "Intra-State (Civil War)": 80}, {"Year": 2005, "Proxy / Grey-Zone": 98}, {"Year": 2010, "Internal armed conflict": 95}], "raw_schemas": {"kinetic": {"normalized_score": 93, "source": "ACLED DB"}, "cyber": {"normalized_score": 18, "source": "CFR_Cyber_Tracker DB"}, "economic": {"normalized_score": 75, "source": "UN_Comtrade_IMF DB"}}, "war_type_probabilities": {"Proxy / Grey-Zone": 0.426, "Border Skirmish": 0.332, "Full Conventional": 0.201, "Cyber / Digital": 0.027, "Naval Blockade": 0.013}, "future_hotspots": [{"region": "National Digital Infrastructure", "lat": null, "lng": null, "threat": "Cyber Severance", "probability": 0.18}, {"region": "Financial Sector Gateway", "lat": null, "lng": null, "threat": "Financial Paralysis", "probability": 0.75}, {"region": "Border / Periphery Zones", "lat": null, "lng": null, "threat": "Proxy / Grey-Zone", "probability": 0.93}]}
+{
+  "country": "Myanmar",
+  "forecast": {
+    "wvi": 61,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1819,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 2,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1824,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 31001,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1829,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 2,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1834,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1839,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1844,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1849,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 2001,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1854,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 4,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1944,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 4002,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1975,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 3000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Intra-State (Civil War)": 0.4882,
+    "Non-State (Cartel/Militia)": 0.2801,
+    "Border Skirmish": 0.0698,
+    "Proxy / Grey-Zone": 0.1217,
+    "Full Conventional": 0.0401
+  },
+  "future_hotspots": [
+    {
+      "region": "Myanmar - Border Flashpoint",
+      "threat": "Non-State (Cartel/Militia)",
+      "probability": 0.28,
+      "lat": null,
+      "lng": null
+    }
+  ],
+  "raw_schemas": {}
+}

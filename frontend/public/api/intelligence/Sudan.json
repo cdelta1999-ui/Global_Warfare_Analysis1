@@ -1,1 +1,92 @@
-{"country": "Sudan", "computed_wvi": 70, "pillars": {"cyber": {"overall_score": 20, "sources": [{"name": "CFR Cyber Tracker", "metric": "Incidents (YTD)", "raw_value": 30, "unit": "events", "score": 21}, {"name": "EuRepoC", "metric": "Active Campaigns", "raw_value": 1, "unit": "campaigns", "score": 15}, {"name": "Carnegie Spyware", "metric": "Proliferation Index", "raw_value": 2.0, "unit": "index", "score": 16}]}, "economic": {"overall_score": 82, "sources": [{"name": "UN Comtrade", "metric": "Critical Import Dep.", "raw_value": 65.6, "unit": "%", "score": 79}, {"name": "IMF DOTS", "metric": "Trade Vulnerability", "raw_value": 49.2, "unit": "index", "score": 86}, {"name": "World Bank WITS", "metric": "Export Concentration", "raw_value": 32.8, "unit": "HHI", "score": 84}]}, "kinetic": {"overall_score": 92, "sources": [{"name": "ACLED", "metric": "Events (5yr)", "raw_value": 2300, "unit": "events", "score": 92}, {"name": "UCDP", "metric": "Conflict Intensity", "raw_value": 3.07, "unit": "index", "score": 95}, {"name": "SIPRI", "metric": "Military Expenditure", "raw_value": 18.4, "unit": "% GDP", "score": 90}]}, "fragmentation": {"score": 85, "primary_drivers": ["SAF vs RSF Civil War", "El-Fasher Massacre"]}}}
+{
+  "country": "Sudan",
+  "computed_wvi": 67,
+  "pillars": {
+    "cyber": {
+      "overall_score": 30,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 35,
+          "metric": "36 events (YTD)",
+          "raw_value": 36,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 20,
+          "metric": "1 campaigns",
+          "raw_value": 1,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 25,
+          "metric": "Active tracking",
+          "raw_value": 25,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 85,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 85,
+          "metric": "Dependency: 68%",
+          "raw_value": 68,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 77,
+          "metric": "Sanctions Exposure: 77/100",
+          "raw_value": 77,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 73,
+          "metric": "Trade Concentration: 73/100",
+          "raw_value": 73,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 88,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 88,
+          "metric": "704 events/yr",
+          "raw_value": 704,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 83,
+          "metric": "Fatalities: 10560/yr",
+          "raw_value": 10560,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 91,
+          "metric": "Military spend: 26.4% GDP",
+          "raw_value": 26.4,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 52,
+      "primary_drivers": [
+        "SAF vs RSF Civil War (Active)",
+        "El Fasher Massacre Zone",
+        "Largest Global Displacement Crisis"
+      ]
+    }
+  }
+}

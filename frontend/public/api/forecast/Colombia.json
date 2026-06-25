@@ -1,1 +1,99 @@
-{"forecast": {"predicted_attack_type": "Proxy / Grey-Zone", "predictability_score": "52.8%", "danger_risk_status": "ELEVATED: Upward Trend", "forecasted_event_volume": 104}, "timeline": [{"Year": 1960, "Proxy / Grey-Zone": 55}, {"Year": 1965, "Proxy / Grey-Zone": 63}, {"Year": 2010, "Internal armed conflict": 100}, {"Year": 2015, "Internal armed conflict": 34}], "raw_schemas": {"kinetic": {"normalized_score": 72, "source": "ACLED DB"}, "cyber": {"normalized_score": 42, "source": "CFR_Cyber_Tracker DB"}, "economic": {"normalized_score": 65, "source": "UN_Comtrade_IMF DB"}}, "war_type_probabilities": {"Proxy / Grey-Zone": 0.528, "Border Skirmish": 0.249, "Full Conventional": 0.118, "Cyber / Digital": 0.071, "Naval Blockade": 0.034}, "future_hotspots": [{"region": "National Digital Infrastructure", "lat": null, "lng": null, "threat": "Cyber Severance", "probability": 0.42}, {"region": "Financial Sector Gateway", "lat": null, "lng": null, "threat": "Financial Paralysis", "probability": 0.65}, {"region": "Border / Periphery Zones", "lat": null, "lng": null, "threat": "Proxy / Grey-Zone", "probability": 0.72}]}
+{
+  "country": "Colombia",
+  "forecast": {
+    "wvi": 60,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1820,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1825,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 10301,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1830,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1835,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 9601,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1840,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1855,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 7701,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1860,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1870,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 3000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Non-State (Cartel/Militia)": 0.5008,
+    "Proxy / Grey-Zone": 0.2301,
+    "Border Skirmish": 0.0641,
+    "Intra-State (Civil War)": 0.1948,
+    "Full Conventional": 0.0103
+  },
+  "future_hotspots": [
+    {
+      "region": "Colombia - Border Flashpoint",
+      "threat": "Proxy / Grey-Zone",
+      "probability": 0.23,
+      "lat": null,
+      "lng": null
+    }
+  ],
+  "raw_schemas": {}
+}

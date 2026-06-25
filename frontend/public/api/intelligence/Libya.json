@@ -1,1 +1,92 @@
-{"country": "Libya", "computed_wvi": 68, "pillars": {"cyber": {"overall_score": 22, "sources": [{"name": "CFR Cyber Tracker", "metric": "Incidents (YTD)", "raw_value": 33, "unit": "events", "score": 26}, {"name": "EuRepoC", "metric": "Active Campaigns", "raw_value": 1, "unit": "campaigns", "score": 26}, {"name": "Carnegie Spyware", "metric": "Proliferation Index", "raw_value": 2.2, "unit": "index", "score": 21}]}, "economic": {"overall_score": 80, "sources": [{"name": "UN Comtrade", "metric": "Critical Import Dep.", "raw_value": 64.0, "unit": "%", "score": 77}, {"name": "IMF DOTS", "metric": "Trade Vulnerability", "raw_value": 48.0, "unit": "index", "score": 77}, {"name": "World Bank WITS", "metric": "Export Concentration", "raw_value": 32.0, "unit": "HHI", "score": 77}]}, "kinetic": {"overall_score": 87, "sources": [{"name": "ACLED", "metric": "Events (5yr)", "raw_value": 2175, "unit": "events", "score": 91}, {"name": "UCDP", "metric": "Conflict Intensity", "raw_value": 2.9, "unit": "index", "score": 85}, {"name": "SIPRI", "metric": "Military Expenditure", "raw_value": 17.4, "unit": "% GDP", "score": 88}]}, "fragmentation": {"score": 82, "primary_drivers": ["Dual-Government Civil War", "Mercenary Presence"]}}}
+{
+  "country": "Libya",
+  "computed_wvi": 63,
+  "pillars": {
+    "cyber": {
+      "overall_score": 28,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 33,
+          "metric": "33 events (YTD)",
+          "raw_value": 33,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 18,
+          "metric": "1 campaigns",
+          "raw_value": 1,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 23,
+          "metric": "Active tracking",
+          "raw_value": 23,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 82,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 82,
+          "metric": "Dependency: 65%",
+          "raw_value": 65,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 74,
+          "metric": "Sanctions Exposure: 74/100",
+          "raw_value": 74,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 70,
+          "metric": "Trade Concentration: 70/100",
+          "raw_value": 70,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 80,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 80,
+          "metric": "640 events/yr",
+          "raw_value": 640,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 75,
+          "metric": "Fatalities: 9600/yr",
+          "raw_value": 9600,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 83,
+          "metric": "Military spend: 24.0% GDP",
+          "raw_value": 24.0,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 49,
+      "primary_drivers": [
+        "Dual Government Civil War",
+        "Wagner Group Presence",
+        "Migrant Weaponization"
+      ]
+    }
+  }
+}

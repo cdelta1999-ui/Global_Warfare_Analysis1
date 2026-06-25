@@ -1,1 +1,92 @@
-{"country": "Iran", "computed_wvi": 74, "pillars": {"cyber": {"overall_score": 70, "sources": [{"name": "CFR Cyber Tracker", "metric": "Incidents (YTD)", "raw_value": 105, "unit": "events", "score": 75}, {"name": "EuRepoC", "metric": "Active Campaigns", "raw_value": 3, "unit": "campaigns", "score": 66}, {"name": "Carnegie Spyware", "metric": "Proliferation Index", "raw_value": 7.0, "unit": "index", "score": 75}]}, "economic": {"overall_score": 82, "sources": [{"name": "UN Comtrade", "metric": "Critical Import Dep.", "raw_value": 65.6, "unit": "%", "score": 83}, {"name": "IMF DOTS", "metric": "Trade Vulnerability", "raw_value": 49.2, "unit": "index", "score": 86}, {"name": "World Bank WITS", "metric": "Export Concentration", "raw_value": 32.8, "unit": "HHI", "score": 77}]}, "kinetic": {"overall_score": 75, "sources": [{"name": "ACLED", "metric": "Events (5yr)", "raw_value": 1875, "unit": "events", "score": 77}, {"name": "UCDP", "metric": "Conflict Intensity", "raw_value": 2.5, "unit": "index", "score": 77}, {"name": "SIPRI", "metric": "Military Expenditure", "raw_value": 15.0, "unit": "% GDP", "score": 78}]}, "fragmentation": {"score": 62, "primary_drivers": ["Proxy Network (Hamas,Hezbollah)", "Strait of Hormuz"]}}}
+{
+  "country": "Iran",
+  "computed_wvi": 69,
+  "pillars": {
+    "cyber": {
+      "overall_score": 75,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 80,
+          "metric": "90 events (YTD)",
+          "raw_value": 90,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 65,
+          "metric": "3 campaigns",
+          "raw_value": 3,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 70,
+          "metric": "Active tracking",
+          "raw_value": 70,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 80,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 80,
+          "metric": "Dependency: 64%",
+          "raw_value": 64,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 72,
+          "metric": "Sanctions Exposure: 72/100",
+          "raw_value": 72,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 68,
+          "metric": "Trade Concentration: 68/100",
+          "raw_value": 68,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 72,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 72,
+          "metric": "576 events/yr",
+          "raw_value": 576,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 67,
+          "metric": "Fatalities: 8640/yr",
+          "raw_value": 8640,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 75,
+          "metric": "Military spend: 21.6% GDP",
+          "raw_value": 21.6,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 30,
+      "primary_drivers": [
+        "Regional Proxy Network",
+        "Nuclear Program Tensions",
+        "Internal Protest Suppression"
+      ]
+    }
+  }
+}

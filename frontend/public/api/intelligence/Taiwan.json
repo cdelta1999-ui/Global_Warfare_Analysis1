@@ -1,1 +1,92 @@
-{"country": "Taiwan", "computed_wvi": 70, "pillars": {"cyber": {"overall_score": 75, "sources": [{"name": "CFR Cyber Tracker", "metric": "Incidents (YTD)", "raw_value": 112, "unit": "events", "score": 75}, {"name": "EuRepoC", "metric": "Active Campaigns", "raw_value": 3, "unit": "campaigns", "score": 82}, {"name": "Carnegie Spyware", "metric": "Proliferation Index", "raw_value": 7.5, "unit": "index", "score": 75}]}, "economic": {"overall_score": 70, "sources": [{"name": "UN Comtrade", "metric": "Critical Import Dep.", "raw_value": 56.0, "unit": "%", "score": 67}, {"name": "IMF DOTS", "metric": "Trade Vulnerability", "raw_value": 42.0, "unit": "index", "score": 62}, {"name": "World Bank WITS", "metric": "Export Concentration", "raw_value": 28.0, "unit": "HHI", "score": 69}]}, "kinetic": {"overall_score": 72, "sources": [{"name": "ACLED", "metric": "Events (5yr)", "raw_value": 1800, "unit": "events", "score": 77}, {"name": "UCDP", "metric": "Conflict Intensity", "raw_value": 2.4, "unit": "index", "score": 70}, {"name": "SIPRI", "metric": "Military Expenditure", "raw_value": 14.4, "unit": "% GDP", "score": 73}]}, "fragmentation": {"score": 60, "primary_drivers": ["PRC Naval Blockade Threat", "Cyber Severance Risk"]}}}
+{
+  "country": "Taiwan",
+  "computed_wvi": 65,
+  "pillars": {
+    "cyber": {
+      "overall_score": 80,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 85,
+          "metric": "96 events (YTD)",
+          "raw_value": 96,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 70,
+          "metric": "4 campaigns",
+          "raw_value": 4,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 75,
+          "metric": "Active tracking",
+          "raw_value": 75,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 65,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 65,
+          "metric": "Dependency: 52%",
+          "raw_value": 52,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 57,
+          "metric": "Sanctions Exposure: 57/100",
+          "raw_value": 57,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 53,
+          "metric": "Trade Concentration: 53/100",
+          "raw_value": 53,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 72,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 72,
+          "metric": "576 events/yr",
+          "raw_value": 576,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 67,
+          "metric": "Fatalities: 8640/yr",
+          "raw_value": 8640,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 75,
+          "metric": "Military spend: 21.6% GDP",
+          "raw_value": 21.6,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 23,
+      "primary_drivers": [
+        "PRC Invasion Threat",
+        "Strait Median Line Violations",
+        "Semiconductor Supply Chain Target"
+      ]
+    }
+  }
+}

@@ -1,1 +1,91 @@
-{"country": "Japan", "computed_wvi": 43, "pillars": {"cyber": {"overall_score": 72, "sources": [{"name": "CFR Cyber Tracker", "metric": "Incidents (YTD)", "raw_value": 108, "unit": "events", "score": 68}, {"name": "EuRepoC", "metric": "Active Campaigns", "raw_value": 3, "unit": "campaigns", "score": 76}, {"name": "Carnegie Spyware", "metric": "Proliferation Index", "raw_value": 7.2, "unit": "index", "score": 69}]}, "economic": {"overall_score": 38, "sources": [{"name": "UN Comtrade", "metric": "Critical Import Dep.", "raw_value": 30.4, "unit": "%", "score": 39}, {"name": "IMF DOTS", "metric": "Trade Vulnerability", "raw_value": 22.8, "unit": "index", "score": 36}, {"name": "World Bank WITS", "metric": "Export Concentration", "raw_value": 15.2, "unit": "HHI", "score": 39}]}, "kinetic": {"overall_score": 32, "sources": [{"name": "ACLED", "metric": "Events (5yr)", "raw_value": 800, "unit": "events", "score": 31}, {"name": "UCDP", "metric": "Conflict Intensity", "raw_value": 1.07, "unit": "index", "score": 30}, {"name": "SIPRI", "metric": "Military Expenditure", "raw_value": 6.4, "unit": "% GDP", "score": 32}]}, "fragmentation": {"score": 28, "primary_drivers": ["North Korea Missile Threats", "Senkaku Islands Dispute"]}}}
+{
+  "country": "Japan",
+  "computed_wvi": 50,
+  "pillars": {
+    "cyber": {
+      "overall_score": 78,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 83,
+          "metric": "93 events (YTD)",
+          "raw_value": 93,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 68,
+          "metric": "3 campaigns",
+          "raw_value": 3,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 73,
+          "metric": "Active tracking",
+          "raw_value": 73,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 52,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 52,
+          "metric": "Dependency: 41%",
+          "raw_value": 41,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 44,
+          "metric": "Sanctions Exposure: 44/100",
+          "raw_value": 44,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 40,
+          "metric": "Trade Concentration: 40/100",
+          "raw_value": 40,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 45,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 45,
+          "metric": "360 events/yr",
+          "raw_value": 360,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 40,
+          "metric": "Fatalities: 5400/yr",
+          "raw_value": 5400,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 48,
+          "metric": "Military spend: 13.5% GDP",
+          "raw_value": 13.5,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 9,
+      "primary_drivers": [
+        "Senkaku/Diaoyu Island Dispute",
+        "North Korea Missile Overflight"
+      ]
+    }
+  }
+}

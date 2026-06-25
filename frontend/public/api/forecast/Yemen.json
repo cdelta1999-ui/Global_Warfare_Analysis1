@@ -1,1 +1,107 @@
-{"forecast": {"predicted_attack_type": "Proxy / Grey-Zone", "predictability_score": "44.0%", "danger_risk_status": "CRITICAL: Accelerating Infiltration", "forecasted_event_volume": 436}, "timeline": [{"Year": 1994, "Intra-State (Civil War)": 10000}, {"Year": 2015, "Proxy / Grey-Zone": 6000}, {"Year": 2016, "Proxy / Grey-Zone": 7000}, {"Year": 2017, "Proxy / Grey-Zone": 6000}, {"Year": 2018, "Proxy / Grey-Zone": 8000}, {"Year": 2019, "Proxy / Grey-Zone": 5000}, {"Year": 2020, "Proxy / Grey-Zone": 4000}, {"Year": 2021, "Proxy / Grey-Zone": 3000}, {"Year": 2022, "Proxy / Grey-Zone": 2500}, {"Year": 2023, "Proxy / Grey-Zone": 3500}], "raw_schemas": {"kinetic": {"normalized_score": 96, "source": "ACLED DB"}, "cyber": {"normalized_score": 20, "source": "CFR_Cyber_Tracker DB"}, "economic": {"normalized_score": 92, "source": "UN_Comtrade_IMF DB"}}, "war_type_probabilities": {"Proxy / Grey-Zone": 0.44, "Naval Blockade": 0.361, "Border Skirmish": 0.114, "Cyber / Digital": 0.015, "Full Conventional": 0.069}, "future_hotspots": [{"region": "Bab-el-Mandeb Strait", "lat": 12.6, "lng": 43.3, "threat": "Shipping Blockade", "probability": 0.96}, {"region": "Hodeidah Port", "lat": 14.8, "lng": 42.9, "threat": "Naval Blockade", "probability": 0.84}]}
+{
+  "country": "Yemen",
+  "forecast": {
+    "wvi": 69,
+    "trend": "Rising",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1900,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 999,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1920,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1940,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 302,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1960,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1980,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2000,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 187,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2010,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2015,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1891,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2020,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Intra-State (Civil War)": 0.3316,
+    "Full Conventional": 0.1902,
+    "One-Sided Violence": 0.2247,
+    "Naval Blockade": 0.0924,
+    "Proxy / Grey-Zone": 0.161
+  },
+  "future_hotspots": [
+    {
+      "region": "Yemen - Border Flashpoint",
+      "threat": "Full Conventional",
+      "probability": 0.225,
+      "lat": null,
+      "lng": null
+    }
+  ],
+  "raw_schemas": {}
+}

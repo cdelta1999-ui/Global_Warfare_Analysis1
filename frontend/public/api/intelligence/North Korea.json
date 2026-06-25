@@ -1,1 +1,92 @@
-{"country": "North Korea", "computed_wvi": 76, "pillars": {"cyber": {"overall_score": 75, "sources": [{"name": "CFR Cyber Tracker", "metric": "Incidents (YTD)", "raw_value": 112, "unit": "events", "score": 70}, {"name": "EuRepoC", "metric": "Active Campaigns", "raw_value": 3, "unit": "campaigns", "score": 83}, {"name": "Carnegie Spyware", "metric": "Proliferation Index", "raw_value": 7.5, "unit": "index", "score": 70}]}, "economic": {"overall_score": 80, "sources": [{"name": "UN Comtrade", "metric": "Critical Import Dep.", "raw_value": 64.0, "unit": "%", "score": 75}, {"name": "IMF DOTS", "metric": "Trade Vulnerability", "raw_value": 48.0, "unit": "index", "score": 84}, {"name": "World Bank WITS", "metric": "Export Concentration", "raw_value": 32.0, "unit": "HHI", "score": 76}]}, "kinetic": {"overall_score": 78, "sources": [{"name": "ACLED", "metric": "Events (5yr)", "raw_value": 1950, "unit": "events", "score": 73}, {"name": "UCDP", "metric": "Conflict Intensity", "raw_value": 2.6, "unit": "index", "score": 81}, {"name": "SIPRI", "metric": "Military Expenditure", "raw_value": 15.6, "unit": "% GDP", "score": 74}]}, "fragmentation": {"score": 65, "primary_drivers": ["Missile Escalation", "Economic Coercion"]}}}
+{
+  "country": "North Korea",
+  "computed_wvi": 76,
+  "pillars": {
+    "cyber": {
+      "overall_score": 80,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 85,
+          "metric": "96 events (YTD)",
+          "raw_value": 96,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 70,
+          "metric": "4 campaigns",
+          "raw_value": 4,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 75,
+          "metric": "Active tracking",
+          "raw_value": 75,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 90,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 90,
+          "metric": "Dependency: 72%",
+          "raw_value": 72,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 82,
+          "metric": "Sanctions Exposure: 82/100",
+          "raw_value": 82,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 78,
+          "metric": "Trade Concentration: 78/100",
+          "raw_value": 78,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 85,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 85,
+          "metric": "680 events/yr",
+          "raw_value": 680,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 80,
+          "metric": "Fatalities: 10200/yr",
+          "raw_value": 10200,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 88,
+          "metric": "Military spend: 25.5% GDP",
+          "raw_value": 25.5,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 24,
+      "primary_drivers": [
+        "Nuclear Weapons Program",
+        "ICBM Development",
+        "Seoul Artillery Range"
+      ]
+    }
+  }
+}

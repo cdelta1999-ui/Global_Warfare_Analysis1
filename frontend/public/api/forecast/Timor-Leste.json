@@ -1,5 +1,5 @@
 {
-  "country": "Cuba",
+  "country": "Timor-Leste",
   "forecast": {
     "wvi": 30,
     "trend": "Stable",
@@ -25,7 +25,7 @@
     {
       "Year": 1940,
       "Inter-State (Conventional)": 0,
-      "Intra-State (Civil War)": 157,
+      "Intra-State (Civil War)": 1748,
       "Non-State (Cartel/Militia)": 0,
       "One-Sided Violence": 0,
       "Terrorism / Extremism": 0
@@ -33,7 +33,7 @@
     {
       "Year": 1960,
       "Inter-State (Conventional)": 0,
-      "Intra-State (Civil War)": 0,
+      "Intra-State (Civil War)": 1258,
       "Non-State (Cartel/Militia)": 0,
       "One-Sided Violence": 0,
       "Terrorism / Extremism": 0
@@ -57,7 +57,7 @@
     {
       "Year": 2010,
       "Inter-State (Conventional)": 0,
-      "Intra-State (Civil War)": 1635,
+      "Intra-State (Civil War)": 0,
       "Non-State (Cartel/Militia)": 0,
       "One-Sided Violence": 0,
       "Terrorism / Extremism": 0
@@ -73,7 +73,7 @@
     {
       "Year": 2020,
       "Inter-State (Conventional)": 0,
-      "Intra-State (Civil War)": 0,
+      "Intra-State (Civil War)": 557,
       "Non-State (Cartel/Militia)": 0,
       "One-Sided Violence": 0,
       "Terrorism / Extremism": 0
@@ -81,7 +81,7 @@
     {
       "Year": 2025,
       "Inter-State (Conventional)": 0,
-      "Intra-State (Civil War)": 726,
+      "Intra-State (Civil War)": 1711,
       "Non-State (Cartel/Militia)": 0,
       "One-Sided Violence": 0,
       "Terrorism / Extremism": 0

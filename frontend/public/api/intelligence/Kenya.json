@@ -1,1 +1,92 @@
-{"country": "Kenya", "computed_wvi": 30, "pillars": {"cyber": {"overall_score": 20, "sources": [{"name": "CFR Cyber Tracker", "metric": "Incidents (YTD)", "raw_value": 30, "unit": "events", "score": 21}, {"name": "EuRepoC", "metric": "Active Campaigns", "raw_value": 1, "unit": "campaigns", "score": 21}, {"name": "Carnegie Spyware", "metric": "Proliferation Index", "raw_value": 2.0, "unit": "index", "score": 24}]}, "economic": {"overall_score": 40, "sources": [{"name": "UN Comtrade", "metric": "Critical Import Dep.", "raw_value": 32.0, "unit": "%", "score": 35}, {"name": "IMF DOTS", "metric": "Trade Vulnerability", "raw_value": 24.0, "unit": "index", "score": 39}, {"name": "World Bank WITS", "metric": "Export Concentration", "raw_value": 16.0, "unit": "HHI", "score": 41}]}, "kinetic": {"overall_score": 30, "sources": [{"name": "ACLED", "metric": "Events (5yr)", "raw_value": 750, "unit": "events", "score": 31}, {"name": "UCDP", "metric": "Conflict Intensity", "raw_value": 1.0, "unit": "index", "score": 24}, {"name": "SIPRI", "metric": "Military Expenditure", "raw_value": 6.0, "unit": "% GDP", "score": 29}]}, "fragmentation": {"score": 30, "primary_drivers": ["Regional Instability", "Governance Fragility"]}}}
+{
+  "country": "Kenya",
+  "computed_wvi": 51,
+  "pillars": {
+    "cyber": {
+      "overall_score": 42,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 47,
+          "metric": "50 events (YTD)",
+          "raw_value": 50,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 32,
+          "metric": "2 campaigns",
+          "raw_value": 2,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 37,
+          "metric": "Active tracking",
+          "raw_value": 37,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 60,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 60,
+          "metric": "Dependency: 48%",
+          "raw_value": 48,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 52,
+          "metric": "Sanctions Exposure: 52/100",
+          "raw_value": 52,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 48,
+          "metric": "Trade Concentration: 48/100",
+          "raw_value": 48,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 55,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 55,
+          "metric": "440 events/yr",
+          "raw_value": 440,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 50,
+          "metric": "Fatalities: 6600/yr",
+          "raw_value": 6600,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 58,
+          "metric": "Military spend: 16.5% GDP",
+          "raw_value": 16.5,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 39,
+      "primary_drivers": [
+        "Al-Shabaab Cross-Border Attacks",
+        "Ethnic Violence",
+        "Anti-Government Protests"
+      ]
+    }
+  }
+}

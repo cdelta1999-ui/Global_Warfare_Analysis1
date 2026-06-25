@@ -1,1 +1,35 @@
-{"forecast": {"predicted_attack_type": "Proxy / Grey-Zone", "predictability_score": "35.4%", "danger_risk_status": "STABLE: Baseline Activity", "forecasted_event_volume": 26}, "timeline": [{"Year": 1980, "Proxy / Grey-Zone": 49}, {"Year": 1995, "Proxy / Grey-Zone": 44}, {"Year": 2005, "Border Skirmish": 53}, {"Year": 2020, "Intra-State (Civil War)": 43}], "raw_schemas": {"kinetic": {"normalized_score": 45, "source": "ACLED DB"}, "cyber": {"normalized_score": 42, "source": "CFR_Cyber_Tracker DB"}, "economic": {"normalized_score": 55, "source": "UN_Comtrade_IMF DB"}}, "war_type_probabilities": {"Proxy / Grey-Zone": 0.354, "Border Skirmish": 0.276, "Cyber / Digital": 0.167, "Full Conventional": 0.072, "Naval Blockade": 0.13}, "future_hotspots": [{"region": "Boucraa Phosphate Reserve", "lat": 26.3, "lng": -12.8, "threat": "Global Agricultural Choke", "probability": 0.92}]}
+{
+  "country": "Morocco",
+  "forecast": {
+    "wvi": 30,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1975,
+      "Inter-State (Conventional)": 9500,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Non-State (Cartel/Militia)": 0.2732,
+    "Border Skirmish": 0.2069,
+    "Proxy / Grey-Zone": 0.1567,
+    "Intra-State (Civil War)": 0.2444,
+    "Cyber / Digital": 0.1187
+  },
+  "future_hotspots": [],
+  "raw_schemas": {}
+}
