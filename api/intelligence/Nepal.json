@@ -1,1 +1,91 @@
-{"country": "Nepal", "pillars": {"kinetic": {"overall_score": 17, "sources": [{"name": "ACLED", "metric": "Instability Velocity", "raw_value": 0.0, "unit": "std_dev", "score": 17}, {"name": "SIPRI", "metric": "EMA Fatalities", "raw_value": 1798, "unit": "deaths/yr", "score": 17}, {"name": "AIS Marine", "metric": "Choke Point Flow", "raw_value": 1798, "unit": "vessels/day", "score": 17}], "raw_feed": {"source": "ACLED", "country_code": "NEP", "region": "Capital Region", "data_points": {"event_id": "ACLED-8425", "event_type": "Battles / Border Skirmishes", "actor_1": "Military Forces of Nepal", "actor_2": "Unidentified Armed Group", "fatalities": 534, "geo_coordinates": {"lat": -46.5209, "lng": -178.7821}}, "wvi_normalized_score": 17.0}}, "cyber": {"overall_score": 12, "sources": [{"name": "CFR Cyber Tracker", "metric": "Incidents (YTD)", "raw_value": 18, "unit": "events", "score": 12}, {"name": "EuRepoC", "metric": "Active Campaigns", "raw_value": 0, "unit": "campaigns", "score": 12}, {"name": "Carnegie Spyware", "metric": "Proliferation", "raw_value": 0.12, "unit": "index", "score": 12}], "raw_feed": {"source": "CFR_Cyber_Tracker", "target_country": "Nepal", "suspected_attribution": "Unknown State Actor", "data_points": {"incident_type": "Cyber Espionage / Infrastructure Spoofing", "target_sector": "Energy Grid / Maritime Navigation", "severity_level": "Medium"}, "wvi_normalized_score": 12.0}}, "economic": {"overall_score": 46, "sources": [{"name": "UN Comtrade", "metric": "Critical Import Dep.", "raw_value": "$46B", "unit": "USD", "score": 46}, {"name": "IMF DOTS", "metric": "Trade Imbalance", "raw_value": "-$55B", "unit": "USD", "score": 46}, {"name": "World Bank", "metric": "Tariff Barrier", "raw_value": "9.2%", "unit": "rate", "score": 46}], "raw_feed": {"source": "UN_Comtrade_IMF", "reporting_country": "NEP", "partner_country": "Global Market", "data_points": {"commodity_code": "HS-8542", "commodity_description": "Electronic Integrated Circuits", "bilateral_trade_value_usd": 38608489290, "import_dependency_percentage": 30.8}, "wvi_normalized_score": 46.0}}}, "wvi_metadata": {"m_geo_multiplier": 1.0, "delta_socio_multiplier": 1.0, "boiling_point_triggered": false, "boiling_point_alert": null}}
+{
+  "country": "Nepal",
+  "computed_wvi": 30,
+  "pillars": {
+    "cyber": {
+      "overall_score": 22,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 27,
+          "metric": "26 events (YTD)",
+          "raw_value": 26,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 12,
+          "metric": "1 campaigns",
+          "raw_value": 1,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 17,
+          "metric": "Active tracking",
+          "raw_value": 17,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 42,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 42,
+          "metric": "Dependency: 33%",
+          "raw_value": 33,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 34,
+          "metric": "Sanctions Exposure: 34/100",
+          "raw_value": 34,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 30,
+          "metric": "Trade Concentration: 30/100",
+          "raw_value": 30,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 30,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 30,
+          "metric": "240 events/yr",
+          "raw_value": 240,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 25,
+          "metric": "Fatalities: 3600/yr",
+          "raw_value": 3600,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 33,
+          "metric": "Military spend: 9.0% GDP",
+          "raw_value": 9.0,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 17,
+      "primary_drivers": [
+        "Regional Instability",
+        "Governance Fragility"
+      ]
+    }
+  }
+}
