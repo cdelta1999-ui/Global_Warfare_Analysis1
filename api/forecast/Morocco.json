@@ -1,1 +1,35 @@
-{"country": "Morocco", "wound_vulnerability_index": 31, "escalation_risk": "MODERATE", "historical_timeline": [{"Year": 1859, "Inter-State (Conventional)": 6000.0}, {"Year": 1907, "Intra-State (Civil War)": 1200.0}, {"Year": 1909, "Inter-State (Conventional)": 8000.0}, {"Year": 1953, "Extrasystemic armed conflict": 100.0}, {"Year": 1954, "Extrasystemic armed conflict": 100.0}, {"Year": 1955, "Extrasystemic armed conflict": 100.0}, {"Year": 1956, "Extrasystemic armed conflict": 100.0}, {"Year": 1957, "Inter-State (Conventional)": 1000.0}, {"Year": 1971, "Internal armed conflict": 100.0}, {"Year": 1975, "Extra-State": 13500.0, "Internal armed conflict": 100.0}, {"Year": 1976, "Internationalized internal armed conflict": 100.0}, {"Year": 1977, "Internal armed conflict": 100.0}, {"Year": 1978, "Internal armed conflict": 100.0}, {"Year": 1979, "Internal armed conflict": 1000.0}, {"Year": 1980, "Internal armed conflict": 1000.0}, {"Year": 1981, "Internal armed conflict": 100.0}, {"Year": 1982, "Internal armed conflict": 100.0}, {"Year": 1983, "Internal armed conflict": 100.0}, {"Year": 1984, "Internal armed conflict": 100.0}, {"Year": 1985, "Internal armed conflict": 100.0}, {"Year": 1986, "Internal armed conflict": 100.0}, {"Year": 1987, "Internal armed conflict": 100.0}, {"Year": 1988, "Internal armed conflict": 100.0}, {"Year": 1989, "Internal armed conflict": 100.0}, {"Year": 1991, "Inter-State (Conventional)": 0.0}, {"Year": 2003, "One-Sided Violence": 34.0}], "predicted_conflict_vectors": [{"type": "Border Skirmish", "probability": 15}, {"type": "Proxy / Grey-Zone", "probability": 17}, {"type": "Naval Blockade", "probability": 45}, {"type": "Cyber / Digital", "probability": 21}, {"type": "Algorithmic / AI Strike", "probability": 10}, {"type": "Full Conventional", "probability": 3}], "ml_forecast_volume": 2}
+{
+  "country": "Morocco",
+  "forecast": {
+    "wvi": 30,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1975,
+      "Inter-State (Conventional)": 9500,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Non-State (Cartel/Militia)": 0.2732,
+    "Border Skirmish": 0.2069,
+    "Proxy / Grey-Zone": 0.1567,
+    "Intra-State (Civil War)": 0.2444,
+    "Cyber / Digital": 0.1187
+  },
+  "future_hotspots": [],
+  "raw_schemas": {}
+}
