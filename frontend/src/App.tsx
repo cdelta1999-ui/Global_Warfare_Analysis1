@@ -6,7 +6,7 @@ import {
   AreaChart, Area, BarChart, Bar, Cell,
   XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, Legend as RechartsLegend,
 } from 'recharts';
-import { Target, Anchor, ShieldAlert, X, Crosshair, MapPin, Database, ActivitySquare, Gem, Ship, Wifi, Rocket, BookOpen, AlertTriangle, BrainCircuit, TrendingUp, Globe, ChevronDown, ChevronUp } from 'lucide-react';
+import { Target, Anchor, ShieldAlert, X, Crosshair, MapPin, Database, ActivitySquare, Gem, Ship, Wifi, Rocket, BookOpen, AlertTriangle, BrainCircuit, TrendingUp, Globe, ChevronDown, ChevronUp, Info, FlaskConical, Layers, Zap } from 'lucide-react';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
 const MAPBOX_TOKEN = atob("cGsuZXlKMUlqb2lhVzFsZGpFM09EZ3ZJbjAua1hYclBVMnZxbWFXWGtoMEswQWJEdw==");
@@ -244,6 +244,8 @@ export default function App() {
   const [showWarPrediction, setShowWarPrediction] = useState(false);
   const [warPredictionData, setWarPredictionData] = useState<any>(null);
   const [expandedRegion, setExpandedRegion] = useState<number | null>(null);
+  const [showGuide, setShowGuide] = useState(false);
+  const [guideTab, setGuideTab] = useState<'quickstart' | 'wvi' | 'hven' | 'conflict' | 'overlays'>('quickstart');
 
   // Lazy-load timeline: show last 10 years first, then full history
   useEffect(() => {
@@ -374,6 +376,9 @@ export default function App() {
       <div style={{ position: 'absolute', top: 24, left: '50%', transform: 'translateX(-50%)', zIndex: 10, pointerEvents: 'none', textAlign: 'center' }}>
         <h1 className="glow-text" style={{ margin: 0, fontSize: '1.8rem', letterSpacing: '-0.03em' }}>BLEED, DON'T BREAK</h1>
         <p className="label-text" style={{ marginTop: 6, letterSpacing: '0.2em' }}>PARALYSIS OVER POWER · WOUND VULNERABILITY INDEX</p>
+        <p style={{ margin: '6px 0 0', fontSize: '0.65rem', color: 'rgba(136,146,176,0.55)', letterSpacing: '0.12em' }}>
+          CLICK COUNTRY → DOSSIER &nbsp;·&nbsp; HOVER → TOOLTIP &nbsp;·&nbsp; USE BUTTONS LEFT FOR ANALYSIS &amp; GUIDE
+        </p>
       </div>
 
       {/* ─── Strategic Doctrine Button ─── */}
@@ -385,6 +390,12 @@ export default function App() {
       <button className="strategic-doctrine-btn" onClick={() => setShowWarPrediction(true)}
         style={{ top: 72, borderColor: 'rgba(167,139,250,0.3)', color: '#a78bfa', boxShadow: '0 4px 20px rgba(167,139,250,0.15)' }}>
         <BrainCircuit size={16} /> War Prediction AI
+      </button>
+
+      {/* ─── Metrics Guide Button ─── */}
+      <button className="strategic-doctrine-btn" onClick={() => setShowGuide(true)}
+        style={{ top: 118, borderColor: 'rgba(0,242,254,0.3)', color: '#00f2fe', boxShadow: '0 4px 20px rgba(0,242,254,0.12)' }}>
+        <Info size={16} /> Metrics Guide
       </button>
 
       {/* ─── Live Database Toggle ─── */}
@@ -488,6 +499,15 @@ export default function App() {
             <div style={{ display: 'flex', flex: 1, overflow: 'hidden' }}>
               {/* Left: Ranked regions */}
               <div style={{ flex: 1, overflowY: 'auto', padding: '16px 20px', display: 'flex', flexDirection: 'column', gap: 10 }}>
+                {/* HVEN legend */}
+                <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginBottom: 12, padding: '8px 12px', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: 8 }}>
+                  <span style={{ fontSize: '0.6rem', color: 'var(--text-dim)', marginRight: 4, letterSpacing: '0.1em' }}>SCORE KEYS:</span>
+                  {[['H', 'Historical', '#ff4b4b'], ['V', 'Volatility', '#f5a623'], ['E', 'Escalation', '#ff4b4b'], ['N', 'Neighbors', '#34d399'], ['R', 'Resources', '#00f2fe']].map(([k, name, color]) => (
+                    <span key={k} style={{ fontSize: '0.62rem', color: 'rgba(255,255,255,0.55)' }}>
+                      <span style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 700, color: color as string }}>{k}</span>=<span style={{ color: 'rgba(255,255,255,0.4)' }}>{name}</span>
+                    </span>
+                  ))}
+                </div>
                 <div style={{ fontSize: '0.68rem', color: 'var(--text-secondary)', letterSpacing: '0.15em', marginBottom: 4 }}>TOP FUTURE WAR-PRONE REGIONS</div>
                 {warPredictionData.top_regions.map((region: any, idx: number) => {
                   const scoreColor = region.prediction_score >= 85 ? '#ff4b4b' : region.prediction_score >= 75 ? '#f5a623' : '#00f2fe';
@@ -514,10 +534,10 @@ export default function App() {
                             <div style={{ fontSize: '0.55rem', color: 'var(--text-dim)', letterSpacing: '0.1em' }}>RISK</div>
                           </div>
                           {/* HVEN mini bars */}
-                          <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+                          <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }} title="H=Historical Recurrence · V=Current Volatility · E=Escalation Pressure · N=Neighbor Contagion · R=Resource/Climate">
                             {Object.entries(region.hven_scores).map(([k, v]: any) => (
                               <div key={k} style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
-                                <span style={{ fontSize: '0.52rem', color: 'var(--text-dim)', width: 12 }}>{k}</span>
+                                <span style={{ fontSize: '0.52rem', color: 'var(--text-dim)', width: 12, fontFamily: "'JetBrains Mono', monospace" }}>{k}</span>
                                 <div style={{ width: 50, height: 3, background: 'rgba(255,255,255,0.06)', borderRadius: 2 }}>
                                   <div style={{ height: '100%', width: `${v}%`, background: scoreColor, borderRadius: 2, opacity: 0.7 }} />
                                 </div>
@@ -686,6 +706,274 @@ export default function App() {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </>
+      )}
+
+      {/* ─── Metrics Guide Modal ─── */}
+      {showGuide && (
+        <>
+          <div className="doctrine-backdrop" onClick={() => setShowGuide(false)} />
+          <div className="glass-panel doctrine-modal fade-in" style={{ width: '86vw', maxWidth: 1000, height: '82vh' }}>
+            <div style={{ padding: '20px 24px', borderBottom: '1px solid rgba(255,255,255,0.08)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexShrink: 0 }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                <Info size={18} style={{ color: '#00f2fe' }} />
+                <h2 style={{ margin: 0, fontSize: '1.15rem', color: '#00f2fe' }}>Dashboard Guide & Metrics Methodology</h2>
+              </div>
+              <button onClick={() => setShowGuide(false)} style={{ background: 'none', border: 'none', color: 'var(--text-secondary)', cursor: 'pointer' }}><X size={20} /></button>
+            </div>
+
+            {/* Tab Bar */}
+            <div style={{ display: 'flex', gap: 4, padding: '12px 24px', borderBottom: '1px solid rgba(255,255,255,0.06)', flexShrink: 0, flexWrap: 'wrap' }}>
+              {([
+                { id: 'quickstart', label: '🚀 Quick Start', icon: Zap },
+                { id: 'wvi', label: 'WVI Formula', icon: FlaskConical },
+                { id: 'hven', label: 'HVEN-R Model', icon: BrainCircuit },
+                { id: 'conflict', label: 'Conflict Types', icon: Target },
+                { id: 'overlays', label: 'Map Overlays', icon: Layers },
+              ] as const).map(tab => (
+                <button key={tab.id} onClick={() => setGuideTab(tab.id)}
+                  style={{
+                    background: guideTab === tab.id ? 'rgba(0,242,254,0.12)' : 'rgba(255,255,255,0.03)',
+                    border: `1px solid ${guideTab === tab.id ? 'rgba(0,242,254,0.35)' : 'rgba(255,255,255,0.06)'}`,
+                    borderRadius: 8, padding: '6px 14px', color: guideTab === tab.id ? '#00f2fe' : 'rgba(136,146,176,0.8)',
+                    cursor: 'pointer', fontSize: '0.78rem', fontWeight: 600, transition: 'all 0.2s ease', display: 'flex', alignItems: 'center', gap: 6
+                  }}>
+                  <tab.icon size={13} /> {tab.label}
+                </button>
+              ))}
+            </div>
+
+            <div style={{ flex: 1, overflowY: 'auto', padding: '24px 28px', fontSize: '0.86rem', color: 'var(--text-primary)', lineHeight: 1.75 }}>
+
+              {guideTab === 'quickstart' && (
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
+                  <div>
+                    <h3 style={{ color: '#00f2fe', marginTop: 0, display: 'flex', alignItems: 'center', gap: 8 }}><Zap size={16} /> How to Use This Dashboard</h3>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                      {[
+                        { step: '1', color: '#00f2fe', title: 'Explore the Map', desc: 'The world map shows every country colored by its Wound Vulnerability Index (WVI). Darker red = higher vulnerability to conflict-induced paralysis. Click any country to open its full intelligence dossier.' },
+                        { step: '2', color: '#a78bfa', title: 'Toggle Overlays', desc: 'Use the top-right panel to show/hide infrastructure overlays: shipping routes, naval patrols, choke points, digital lifelines, strategic resources, and asymmetric vulnerabilities.' },
+                        { step: '3', color: '#f5a623', title: 'Country Intelligence', desc: 'Click a country to open the bottom dashboard showing: WVI ring score, intelligence pillars (Cyber/Economic/Kinetic), predicted war types, conflict timeline, and future attack hotspots.' },
+                        { step: '4', color: '#ff4b4b', title: 'War Prediction AI', desc: 'Click "War Prediction AI" to see the HVEN-R model ranking the 10 regions most likely to see conflict in the next 2–5 years, with behavioral archetype analysis and escalation pathways.' },
+                        { step: '5', color: '#34d399', title: 'Strategic Doctrine', desc: 'Click "Strategic Doctrine" for deep analysis of how modern powers use grey-zone warfare: cabbage strategies, demographic weapons, tech-packaging chokepoints.' },
+                      ].map(s => (
+                        <div key={s.step} style={{ display: 'flex', gap: 14, alignItems: 'flex-start' }}>
+                          <div style={{ width: 28, height: 28, borderRadius: '50%', background: `${s.color}20`, border: `2px solid ${s.color}`, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: 2 }}>
+                            <span style={{ fontSize: '0.7rem', fontWeight: 900, color: s.color }}>{s.step}</span>
+                          </div>
+                          <div>
+                            <div style={{ fontWeight: 700, color: s.color, marginBottom: 3 }}>{s.title}</div>
+                            <div style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.62)', lineHeight: 1.65 }}>{s.desc}</div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <div>
+                    <h3 style={{ color: '#f5a623', marginTop: 0 }}>Color & Risk Scale</h3>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                      {[
+                        { color: '#34d399', label: '0 – 50', title: 'STABLE', desc: 'Low vulnerability. Functional state institutions, no active major conflict.' },
+                        { color: '#f5a623', label: '51 – 75', title: 'ELEVATED', desc: 'Moderate fragility. Political tensions, economic stress, or border disputes present.' },
+                        { color: '#ff4b4b', label: '76 – 89', title: 'CRITICAL', desc: 'Active conflict or imminent risk. Multiple pillars under severe stress.' },
+                        { color: '#b90000', label: '90 – 100', title: 'CATASTROPHIC', desc: 'Near-failed state. Ongoing large-scale conflict or collapse conditions.' },
+                      ].map(r => (
+                        <div key={r.label} style={{ display: 'flex', gap: 12, alignItems: 'flex-start', padding: '10px 14px', background: `${r.color}08`, border: `1px solid ${r.color}25`, borderRadius: 8 }}>
+                          <div style={{ width: 44, textAlign: 'center', flexShrink: 0 }}>
+                            <div style={{ fontSize: '0.68rem', fontWeight: 900, color: r.color, fontFamily: "'JetBrains Mono', monospace" }}>{r.label}</div>
+                            <div style={{ fontSize: '0.55rem', color: r.color, letterSpacing: '0.08em', marginTop: 2 }}>{r.title}</div>
+                          </div>
+                          <div style={{ fontSize: '0.78rem', color: 'rgba(255,255,255,0.6)' }}>{r.desc}</div>
+                        </div>
+                      ))}
+                    </div>
+                    <div style={{ marginTop: 20, background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.06)', borderRadius: 10, padding: '14px 16px' }}>
+                      <div style={{ fontSize: '0.65rem', color: 'var(--text-secondary)', letterSpacing: '0.12em', marginBottom: 8 }}>INTERACTION GUIDE</div>
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: 7, fontSize: '0.78rem', color: 'rgba(255,255,255,0.6)' }}>
+                        <div><span style={{ color: '#00f2fe', fontWeight: 600 }}>Hover</span> over any country or marker to see a tooltip with key metrics.</div>
+                        <div><span style={{ color: '#00f2fe', fontWeight: 600 }}>Click</span> a country for its full intelligence dossier in the bottom panel.</div>
+                        <div><span style={{ color: '#00f2fe', fontWeight: 600 }}>Click</span> infrastructure markers (dots/lines) for detailed threat analysis.</div>
+                        <div><span style={{ color: '#00f2fe', fontWeight: 600 }}>Click</span> a hotspot row in the dashboard to fly the map to that region.</div>
+                        <div><span style={{ color: '#00f2fe', fontWeight: 600 }}>Expand</span> regions in War Prediction AI for full behavioral analysis.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {guideTab === 'wvi' && (
+                <div>
+                  <h3 style={{ color: '#00f2fe', marginTop: 0, display: 'flex', alignItems: 'center', gap: 8 }}><FlaskConical size={16} /> Wound Vulnerability Index (WVI)</h3>
+                  <p style={{ color: 'rgba(255,255,255,0.65)', marginTop: 0 }}>The WVI measures how vulnerable a country is to being <em style={{ color: '#f5a623' }}>paralyzed</em> by conflict — not just how likely conflict is, but how deeply it would wound state and societal function. A high WVI means the country can be destabilized by targeted strikes on critical systems without traditional military defeat.</p>
+
+                  {/* Formula Box */}
+                  <div style={{ background: 'rgba(0,0,0,0.4)', border: '1px solid rgba(0,242,254,0.2)', borderRadius: 12, padding: '20px 24px', marginBottom: 24 }}>
+                    <div style={{ fontSize: '0.65rem', color: 'var(--text-secondary)', letterSpacing: '0.15em', marginBottom: 12 }}>FORMULA</div>
+                    <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '1.05rem', color: '#00f2fe', marginBottom: 8 }}>
+                      WVI = <span style={{ color: '#00f2fe' }}>0.25·C</span> + <span style={{ color: '#f5a623' }}>0.30·E</span> + <span style={{ color: '#ff4b4b' }}>0.30·K</span> + <span style={{ color: '#a78bfa' }}>0.15·F</span>
+                    </div>
+                    <div style={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.4)', fontFamily: "'JetBrains Mono', monospace" }}>Range: 0–100 · Weights sum to 1.00</div>
+                  </div>
+
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+                    {[
+                      { key: 'C', label: 'Cyber Pillar', weight: '0.25 (25%)', color: '#00f2fe', desc: 'Digital attack surface and defensive capacity. Measures internet infrastructure dependency, known APT (Advanced Persistent Threat) activity, percentage of critical infrastructure exposed online, and state cyber-offensive capability.', sources: ['CrowdStrike APT Index', 'ITU Global Cybersecurity Index', 'CISA advisories', 'FireEye Threat Intelligence'] },
+                      { key: 'E', label: 'Economic Pillar', weight: '0.30 (30%)', color: '#f5a623', desc: 'Structural economic fragility to conflict shocks. Tracks commodity export concentration (single-resource dependency), debt-to-GDP ratio, foreign currency reserve coverage, inflation volatility, and trade corridor exposure.', sources: ['IMF World Economic Outlook', 'World Bank WDI', 'OECD Trade data', 'UN Comtrade'] },
+                      { key: 'K', label: 'Kinetic Pillar', weight: '0.30 (30%)', color: '#ff4b4b', desc: 'Physical conflict capacity and exposure. Covers active conflict incidents, border militarization, military expenditure as % of GDP, arms import dependency, internal displacement rates, and presence of non-state armed groups.', sources: ['UCDP/PRIO Armed Conflict Dataset', 'SIPRI Military Expenditure', 'ACLED Event Data', 'UNHCR Displacement'] },
+                      { key: 'F', label: 'Fragmentation Score', weight: '0.15 (15%)', color: '#a78bfa', desc: 'Internal political and social cohesion. Derived from a sub-formula combining political violence index (Vi) and the ratio of political parties to social capital (Pp/Sc). High fragmentation means governance can be disrupted with minimal external force.', sources: ['V-Dem Institute', 'Polity V Dataset', 'Freedom House', 'Social Progress Index'] },
+                    ].map(p => (
+                      <div key={p.key} style={{ background: `${p.color}06`, border: `1px solid ${p.color}20`, borderRadius: 10, padding: '16px 18px' }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 }}>
+                          <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                            <div style={{ width: 32, height: 32, borderRadius: 8, background: `${p.color}20`, border: `2px solid ${p.color}`, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                              <span style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 900, color: p.color, fontSize: '1rem' }}>{p.key}</span>
+                            </div>
+                            <div>
+                              <div style={{ fontWeight: 700, color: p.color, fontSize: '0.88rem' }}>{p.label}</div>
+                              <div style={{ fontSize: '0.62rem', color: 'rgba(255,255,255,0.35)', fontFamily: "'JetBrains Mono', monospace" }}>weight: {p.weight}</div>
+                            </div>
+                          </div>
+                        </div>
+                        <p style={{ margin: '0 0 10px', fontSize: '0.77rem', color: 'rgba(255,255,255,0.6)', lineHeight: 1.65 }}>{p.desc}</p>
+                        <div style={{ fontSize: '0.62rem', color: 'var(--text-dim)', borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: 8 }}>
+                          Sources: {p.sources.join(' · ')}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div style={{ marginTop: 20, background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.06)', borderRadius: 10, padding: '14px 18px' }}>
+                    <div style={{ fontSize: '0.65rem', color: 'var(--text-secondary)', letterSpacing: '0.12em', marginBottom: 8 }}>FRAGMENTATION SUB-FORMULA</div>
+                    <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '0.9rem', color: '#a78bfa', marginBottom: 8 }}>
+                      F = 0.6·Vi + 0.4·(Pp / Sc)
+                    </div>
+                    <div style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.5)', display: 'flex', gap: 24 }}>
+                      <span><span style={{ color: '#a78bfa' }}>Vi</span> = Political Violence Index (0–100)</span>
+                      <span><span style={{ color: '#a78bfa' }}>Pp</span> = Party Polarization score</span>
+                      <span><span style={{ color: '#a78bfa' }}>Sc</span> = Social Cohesion score</span>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {guideTab === 'hven' && (
+                <div>
+                  <h3 style={{ color: '#a78bfa', marginTop: 0, display: 'flex', alignItems: 'center', gap: 8 }}><BrainCircuit size={16} /> HVEN-R War Prediction Model v2.1</h3>
+                  <p style={{ color: 'rgba(255,255,255,0.65)', marginTop: 0 }}>The HVEN-R model forecasts the probability of a region entering armed conflict within a 2–10 year window. It combines five structural dimensions into a composite prediction score, then applies behavioral archetype amplifiers based on observed historical patterns.</p>
+
+                  <div style={{ background: 'rgba(0,0,0,0.4)', border: '1px solid rgba(167,139,250,0.2)', borderRadius: 12, padding: '20px 24px', marginBottom: 24 }}>
+                    <div style={{ fontSize: '0.65rem', color: 'var(--text-secondary)', letterSpacing: '0.15em', marginBottom: 12 }}>BASE FORMULA</div>
+                    <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '1rem', color: '#a78bfa', marginBottom: 8 }}>
+                      P = <span style={{ color: '#ff4b4b' }}>0.25·H</span> + <span style={{ color: '#f5a623' }}>0.30·V</span> + <span style={{ color: '#ff4b4b' }}>0.25·E</span> + <span style={{ color: '#34d399' }}>0.15·N</span> + <span style={{ color: '#00f2fe' }}>0.05·R</span>
+                    </div>
+                    <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '0.8rem', color: 'rgba(255,255,255,0.3)', marginBottom: 12 }}>Adjusted Score = P × Behavioral Archetype Amplifier</div>
+                    <div style={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.4)', fontFamily: "'JetBrains Mono', monospace" }}>Range: 0–100 · Confidence: ±8 points (95% CI)</div>
+                  </div>
+
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, marginBottom: 24 }}>
+                    {[
+                      { key: 'H', label: 'Historical Recurrence', weight: '0.25', color: '#ff4b4b', desc: 'How often has this region experienced major armed conflict in the last 75 years? Regions with repeated war cycles (like the Middle East or Central Africa) score higher. Conflict begets conflict.' },
+                      { key: 'V', label: 'Current Volatility', weight: '0.30', color: '#f5a623', desc: 'Real-time instability signals: coup attempts, political assassinations, mass protests, government collapses, and military mobilization events in the last 24 months. Highest weight — the present predicts the near future.' },
+                      { key: 'E', label: 'Escalation Pressure', weight: '0.25', color: '#ff4b4b', desc: 'Structural forces pushing toward conflict: elite defection rates, security force fracturing, external power interference, arms build-up, and unresolved territorial disputes.' },
+                      { key: 'N', label: 'Neighbor Contagion', weight: '0.15', color: '#34d399', desc: 'Conflict spreads. Regions bordering active war zones absorb refugees, weapons, militants, and economic shocks. This dimension quantifies proximity-to-conflict spillover risk.' },
+                      { key: 'R', label: 'Resource/Climate Stress', weight: '0.05', color: '#00f2fe', desc: 'Long-term structural driver. Water scarcity, arable land loss, resource competition (oil, minerals, rare earths), and climate-displacement pressure. Low weight reflects its role as a background multiplier.' },
+                    ].map(p => (
+                      <div key={p.key} style={{ background: `${p.color}06`, border: `1px solid ${p.color}20`, borderRadius: 10, padding: '14px 16px', display: 'flex', gap: 12 }}>
+                        <div style={{ width: 36, height: 36, borderRadius: 8, background: `${p.color}20`, border: `2px solid ${p.color}`, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                          <span style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 900, color: p.color, fontSize: '1.1rem' }}>{p.key}</span>
+                        </div>
+                        <div>
+                          <div style={{ fontWeight: 700, color: p.color, fontSize: '0.85rem', marginBottom: 2 }}>{p.label}</div>
+                          <div style={{ fontSize: '0.62rem', color: 'rgba(255,255,255,0.35)', fontFamily: "'JetBrains Mono', monospace", marginBottom: 6 }}>weight: {p.weight} ({parseFloat(p.weight)*100}%)</div>
+                          <div style={{ fontSize: '0.76rem', color: 'rgba(255,255,255,0.58)', lineHeight: 1.6 }}>{p.desc}</div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  <h4 style={{ color: '#f5a623', marginBottom: 12 }}>Behavioral Archetype Amplifiers</h4>
+                  <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.8rem', marginTop: 0 }}>When a region matches a behavioral archetype, its base HVEN score is multiplied by the amplifier. These are derived from historical pattern matching across 200+ conflicts since 1945.</p>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10 }}>
+                    {[
+                      { name: 'Nuclear Shadow Paradox', amp: '×1.42', color: '#ff4b4b', desc: 'Nuclear-armed states in conventional standoffs — paradoxically more likely to escalate below the nuclear threshold.' },
+                      { name: 'Imperial Restoration', amp: '×1.35', color: '#f5a623', desc: 'Revisionist powers attempting to recover lost territory or sphere of influence. Russia, China, Iran exhibit this pattern.' },
+                      { name: 'State Failure Cascade', amp: '×1.30', color: '#ff4b4b', desc: 'Multiple institutional failures compounding simultaneously — security, economy, governance. Sudan, Myanmar.' },
+                      { name: 'Youth Bulge Mobilization', amp: '×1.28', color: '#a78bfa', desc: 'High youth unemployment + strong ethnic/religious identity + organizational capacity = insurgency precondition.' },
+                      { name: 'Proxy Economy Perpetuation', amp: '×1.22', color: '#34d399', desc: 'External powers sustain conflict to advance strategic goals without direct intervention. Sahelian conflicts.' },
+                      { name: 'Grievance Memory Cycle', amp: '×1.18', color: '#00f2fe', desc: 'Unresolved historic trauma (genocide, colonial injustice, territorial partition) that resurfaces generationally.' },
+                    ].map(a => (
+                      <div key={a.name} style={{ background: `${a.color}06`, border: `1px solid ${a.color}20`, borderRadius: 8, padding: '12px 14px' }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 5 }}>
+                          <span style={{ fontSize: '0.72rem', fontWeight: 700, color: a.color }}>{a.name}</span>
+                          <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '0.82rem', fontWeight: 900, color: '#f5a623' }}>{a.amp}</span>
+                        </div>
+                        <div style={{ fontSize: '0.72rem', color: 'rgba(255,255,255,0.52)', lineHeight: 1.6 }}>{a.desc}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {guideTab === 'conflict' && (
+                <div>
+                  <h3 style={{ color: '#ff4b4b', marginTop: 0, display: 'flex', alignItems: 'center', gap: 8 }}><Target size={16} /> Conflict Type Classification</h3>
+                  <p style={{ color: 'rgba(255,255,255,0.65)', marginTop: 0 }}>War type probabilities are calculated using a <strong style={{ color: '#00f2fe' }}>softmax function (temperature=18)</strong> applied to raw conflict-type scores derived from each country's capability profile, geopolitical context, and historical precedent.</p>
+                  <div style={{ background: 'rgba(0,0,0,0.35)', border: '1px solid rgba(255,255,255,0.06)', borderRadius: 10, padding: '14px 18px', marginBottom: 20, fontFamily: "'JetBrains Mono', monospace", fontSize: '0.78rem', color: '#a78bfa' }}>
+                    softmax(xᵢ) = e^(xᵢ/T) / Σⱼ e^(xⱼ/T) · · · T = 18 (calibration temperature)
+                  </div>
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+                    {Object.entries({
+                      'Full Conventional': { color: '#ff4b4b', desc: 'Large-scale interstate or intrastate military operations with declared or de-facto state actors. Tank battles, air campaigns, naval engagements.' },
+                      'Proxy / Grey-Zone': { color: '#a78bfa', desc: 'Externally sponsored non-state actors fighting on behalf of a foreign power. Deniable. Uses civilian militias, mercenaries, and irregular forces.' },
+                      'Cyber / Digital': { color: '#00f2fe', desc: 'Attacks on critical digital infrastructure: power grids, financial systems, communications. Often precedes or accompanies kinetic action.' },
+                      'Naval Blockade': { color: '#3b82f6', desc: 'Maritime interdiction to cut off supply chains, energy imports, or exports. Used to starve economies rather than capture territory.' },
+                      'Border Skirmish': { color: '#f5a623', desc: 'Limited, localized military engagements along contested borders. Rarely escalates to full war but destabilizes regions and tests resolve.' },
+                      'Maritime Escalation': { color: '#3b82f6', desc: 'Aggressive naval maneuvers, seizure of vessels, or confrontation in disputed waters. South China Sea, Strait of Hormuz patterns.' },
+                      'Aerospace Corridor Denial': { color: '#f5a623', desc: 'Denial of airspace access through S-400 deployments, no-fly zones, or drone swarm interdiction. Emerging domain.' },
+                      'Digital Subversion': { color: '#00f2fe', desc: 'Long-term information operations, election interference, social media manipulation. Weaponizes democratic openness.' },
+                    }).map(([type, { color, desc }]) => (
+                      <div key={type} style={{ display: 'flex', gap: 12, padding: '12px 14px', background: `${color}06`, border: `1px solid ${color}20`, borderRadius: 8 }}>
+                        <div style={{ width: 10, height: 10, borderRadius: '50%', background: color, boxShadow: `0 0 8px ${color}`, flexShrink: 0, marginTop: 5 }} />
+                        <div>
+                          <div style={{ fontWeight: 700, color, fontSize: '0.82rem', marginBottom: 4 }}>{type}</div>
+                          <div style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.55)', lineHeight: 1.6 }}>{desc}</div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {guideTab === 'overlays' && (
+                <div>
+                  <h3 style={{ color: '#34d399', marginTop: 0, display: 'flex', alignItems: 'center', gap: 8 }}><Layers size={16} /> Map Infrastructure Overlays</h3>
+                  <p style={{ color: 'rgba(255,255,255,0.65)', marginTop: 0 }}>Each overlay reveals a different layer of strategic vulnerability — the hidden chokepoints, supply lines, and asymmetric targets that define modern grey-zone conflict. Click any marker on the map for a detailed threat dossier.</p>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                    {[
+                      { icon: Wifi, color: '#a78bfa', label: 'Digital Lifelines', desc: 'Subsea fiber-optic cables and internet exchange points. These carry 97% of international data traffic. Cutting just 2–3 key cables can sever a continent from the global financial system. Most are unprotected on the seafloor.', threat: 'Anchor drag sabotage, ROV cutting, state-sponsored "accidents"' },
+                      { icon: Gem, color: '#34d399', label: 'Strategic Resources', desc: 'Critical mineral extraction and processing nodes: lithium (batteries/EVs), cobalt (defense electronics), rare earths (semiconductors), phosphate (global fertilizer). Controlling processing — not just mining — creates invisible chokepoints.', threat: 'Sabotage, proxy insurgency, export embargo, infrastructure attack' },
+                      { icon: Rocket, color: '#f5a623', label: 'Asymmetric Vulnerabilities', desc: 'Nodes that appear civilian but are strategically decisive. Semiconductor packaging hubs, water treatment for mega-cities, vaccine cold-chain distribution centers, GPS ground stations. High damage, low attribution.', threat: 'Ransomware, insider threat, supply chain injection, physical sabotage' },
+                      { icon: ShieldAlert, color: '#ff4b4b', label: 'Choke Points', desc: 'Maritime straits and canals where traffic bottlenecks create leverage: Strait of Hormuz (20% of global oil), Strait of Malacca (25% of trade), Bab el-Mandeb (Red Sea gateway), Suez Canal. Blocking any one triggers global supply shocks.', threat: 'Naval blockade, mine laying, Houthi-style drone strikes, territorial seizure' },
+                      { icon: Anchor, color: '#00f2fe', label: 'Maritime Routes', desc: 'Major commercial shipping lanes colored by traffic volume. Darker blue = higher tonnage. These routes carry ~80% of global trade by volume. Disruption cascades into manufacturing shutdowns within 2–3 weeks.', threat: 'Piracy, naval harassment, sanctions enforcement, blockade' },
+                      { icon: Ship, color: '#60a5fa', label: 'Naval Patrols', desc: 'Known operational areas of major naval powers. Blue = US/NATO patrol corridors, Red = Chinese PLAN operations, Yellow = Russian Black Sea / Arctic. Overlap zones indicate friction points.', threat: 'Incidents at sea, signaling escalation, FONOP (Freedom of Navigation) tensions' },
+                    ].map(o => (
+                      <div key={o.label} style={{ display: 'flex', gap: 16, padding: '16px 18px', background: `${o.color}06`, border: `1px solid ${o.color}20`, borderRadius: 10 }}>
+                        <div style={{ flexShrink: 0, marginTop: 2 }}><o.icon size={20} style={{ color: o.color }} /></div>
+                        <div>
+                          <div style={{ fontWeight: 700, color: o.color, fontSize: '0.9rem', marginBottom: 5 }}>{o.label}</div>
+                          <p style={{ margin: '0 0 8px', fontSize: '0.78rem', color: 'rgba(255,255,255,0.6)', lineHeight: 1.65 }}>{o.desc}</p>
+                          <div style={{ fontSize: '0.68rem', color: 'rgba(255,255,255,0.35)' }}>
+                            <span style={{ color: o.color, fontWeight: 600 }}>Threat vectors: </span>{o.threat}
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
             </div>
           </div>
         </>
@@ -878,10 +1166,40 @@ export default function App() {
               <span style={{ fontWeight: 700, fontSize: '1.05rem' }}>{selectedCountry}</span>
             </div>
             <WVIRing score={reactiveWVI} color={wviColor} />
-            <span className="label-text" style={{ marginTop: 8 }}>Computed WVI</span>
+            <span className="label-text" style={{ marginTop: 8 }}>Wound Vulnerability Index</span>
             <span style={{ fontSize: '0.68rem', color: wviColor, marginTop: 4, fontWeight: 600, letterSpacing: '0.05em' }}>
               {reactiveWVI > 75 ? 'CRITICAL' : reactiveWVI > 50 ? 'ELEVATED' : 'STABLE'}
             </span>
+
+            {/* WVI formula + pillar scores */}
+            {intelligenceData?.pillars && (
+              <div style={{ width: '100%', marginTop: 12, background: 'rgba(0,0,0,0.25)', borderRadius: 8, padding: '10px 12px' }}>
+                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '0.55rem', color: 'rgba(255,255,255,0.3)', textAlign: 'center', marginBottom: 8, lineHeight: 1.8 }}>
+                  <span style={{ color: '#00f2fe' }}>0.25C</span>+<span style={{ color: '#f5a623' }}>0.30E</span>+<span style={{ color: '#ff4b4b' }}>0.30K</span>+<span style={{ color: '#a78bfa' }}>0.15F</span>
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 5 }}>
+                  {[
+                    { key: 'C', label: 'Cyber', pillar: 'cyber', color: '#00f2fe' },
+                    { key: 'E', label: 'Econ', pillar: 'economic', color: '#f5a623' },
+                    { key: 'K', label: 'Kinetic', pillar: 'kinetic', color: '#ff4b4b' },
+                    { key: 'F', label: 'Frag', pillar: 'fragmentation', color: '#a78bfa' },
+                  ].map(({ key, label, pillar, color }) => {
+                    const score = pillar === 'fragmentation'
+                      ? intelligenceData.pillars.fragmentation?.score ?? 0
+                      : intelligenceData.pillars[pillar]?.overall_score ?? 0;
+                    return (
+                      <div key={key} style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+                        <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '0.58rem', color, width: 12, flexShrink: 0 }}>{key}</span>
+                        <div style={{ flex: 1, height: 4, background: 'rgba(255,255,255,0.05)', borderRadius: 2 }}>
+                          <div style={{ height: '100%', width: `${score}%`, background: `linear-gradient(90deg, ${color}66, ${color})`, borderRadius: 2, transition: 'width 0.8s ease' }} />
+                        </div>
+                        <span style={{ fontSize: '0.62rem', fontWeight: 700, color, width: 24, textAlign: 'right', fontFamily: "'JetBrains Mono', monospace" }}>{score}</span>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
 
             {/* Fragmentation sub-score */}
             {intelligenceData.pillars?.fragmentation && (() => {
