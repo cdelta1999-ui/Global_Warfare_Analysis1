@@ -1,1 +1,91 @@
-{"country": "Argentina", "wound_vulnerability_index": 38, "escalation_risk": "MODERATE", "historical_timeline": [{"Year": 1833, "Non-State (Cartel/Militia)": -9.0}, {"Year": 1841, "Intra-State (Civil War)": 3300.0}, {"Year": 1843, "Extra-State": 5000.0}, {"Year": 1851, "Inter-State (Conventional)": 800.0}, {"Year": 1859, "Extra-State": 1000.0}, {"Year": 1861, "Intra-State (Civil War)": 1000.0}, {"Year": 1863, "Intra-State (Civil War)": -18.0}, {"Year": 1865, "Inter-State (Conventional)": 10000.0}, {"Year": 1866, "Intra-State (Civil War)": -18.0}, {"Year": 1870, "Intra-State (Civil War)": -18.0}, {"Year": 1874, "Intra-State (Civil War)": -18.0}, {"Year": 1879, "Intra-State (Civil War)": 1700.0}, {"Year": 1880, "Intra-State (Civil War)": 1200.0}, {"Year": 1955, "Intra-State (Civil War)": -18.0, "Internal armed conflict": 100.0}, {"Year": 1963, "Internal armed conflict": 100.0}, {"Year": 1974, "Internal armed conflict": 100.0}, {"Year": 1975, "Intra-State (Civil War)": 2850.0, "Internal armed conflict": 100.0}, {"Year": 1976, "Internal armed conflict": 100.0}, {"Year": 1977, "Internal armed conflict": 100.0}, {"Year": 1982, "Inter-State (Conventional)": 746.0, "Interstate armed conflict": 100.0}, {"Year": 1994, "One-Sided Violence": 86.0}], "predicted_conflict_vectors": [{"type": "Border Skirmish", "probability": 14}, {"type": "Proxy / Grey-Zone", "probability": 22}, {"type": "Naval Blockade", "probability": 52}, {"type": "Cyber / Digital", "probability": 33}, {"type": "Algorithmic / AI Strike", "probability": 16}, {"type": "Full Conventional", "probability": 3}], "ml_forecast_volume": 3}
+{
+  "country": "Argentina",
+  "forecast": {
+    "wvi": 30,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1820,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1825,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 10301,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1830,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1835,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 9601,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1840,
+      "Inter-State (Conventional)": 1500,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1855,
+      "Inter-State (Conventional)": 500,
+      "Intra-State (Civil War)": 7701,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1860,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1870,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 3000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Non-State (Cartel/Militia)": 0.2732,
+    "Border Skirmish": 0.2069,
+    "Proxy / Grey-Zone": 0.1567,
+    "Intra-State (Civil War)": 0.2444,
+    "Cyber / Digital": 0.1187
+  },
+  "future_hotspots": [],
+  "raw_schemas": {}
+}
