@@ -1,1 +1,99 @@
-{"country": "Nicaragua", "wound_vulnerability_index": 33, "escalation_risk": "MODERATE", "historical_timeline": [{"Year": 1856, "Non-State (Cartel/Militia)": 7700.0}, {"Year": 1907, "Inter-State (Conventional)": 400.0}, {"Year": 1977, "Internal armed conflict": 100.0}, {"Year": 1978, "Intra-State (Civil War)": 4000.0, "Internal armed conflict": 1000.0}, {"Year": 1979, "Internal armed conflict": 1000.0}, {"Year": 1982, "Intra-State (Civil War)": 32200.0, "Internal armed conflict": 100.0}, {"Year": 1983, "Internal armed conflict": 1000.0}, {"Year": 1984, "Internal armed conflict": 1000.0}, {"Year": 1985, "Internal armed conflict": 1000.0}, {"Year": 1986, "Internal armed conflict": 1000.0}, {"Year": 1987, "Internal armed conflict": 1000.0}, {"Year": 1988, "Internal armed conflict": 1000.0}, {"Year": 1989, "Internal armed conflict": 100.0}, {"Year": 1990, "Internal armed conflict": 100.0}], "predicted_conflict_vectors": [{"type": "Border Skirmish", "probability": 9}, {"type": "Proxy / Grey-Zone", "probability": 17}, {"type": "Naval Blockade", "probability": 48}, {"type": "Cyber / Digital", "probability": 27}, {"type": "Algorithmic / AI Strike", "probability": 13}, {"type": "Full Conventional", "probability": 2}], "ml_forecast_volume": 3}
+{
+  "country": "Nicaragua",
+  "forecast": {
+    "wvi": 30,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1900,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1920,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1940,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1028,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1960,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1980,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1236,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2000,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2010,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 954,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2015,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2020,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 553,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Non-State (Cartel/Militia)": 0.2732,
+    "Border Skirmish": 0.2069,
+    "Proxy / Grey-Zone": 0.1567,
+    "Intra-State (Civil War)": 0.2444,
+    "Cyber / Digital": 0.1187
+  },
+  "future_hotspots": [],
+  "raw_schemas": {}
+}
