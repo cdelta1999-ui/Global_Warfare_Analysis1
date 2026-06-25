@@ -1,0 +1,92 @@
+{
+  "country": "Brazil",
+  "computed_wvi": 59,
+  "pillars": {
+    "cyber": {
+      "overall_score": 60,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 65,
+          "metric": "72 events (YTD)",
+          "raw_value": 72,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 50,
+          "metric": "3 campaigns",
+          "raw_value": 3,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 55,
+          "metric": "Active tracking",
+          "raw_value": 55,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 68,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 68,
+          "metric": "Dependency: 54%",
+          "raw_value": 54,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 60,
+          "metric": "Sanctions Exposure: 60/100",
+          "raw_value": 60,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 56,
+          "metric": "Trade Concentration: 56/100",
+          "raw_value": 56,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 58,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 58,
+          "metric": "464 events/yr",
+          "raw_value": 464,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 53,
+          "metric": "Fatalities: 6960/yr",
+          "raw_value": 6960,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 61,
+          "metric": "Military spend: 17.4% GDP",
+          "raw_value": 17.4,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 39,
+      "primary_drivers": [
+        "Organized Crime / Cartel Wars",
+        "Amazon Deforestation Conflict",
+        "Political Polarization"
+      ]
+    }
+  }
+}
