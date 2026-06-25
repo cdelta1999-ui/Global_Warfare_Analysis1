@@ -46,11 +46,11 @@ const shippingRouteLayer: Omit<LineLayer, 'source'> = {
 
 const navalPatrolGlowLayer: Omit<CircleLayer, 'source'> = {
   id: 'naval-patrols-glow', type: 'circle',
-  paint: { 'circle-radius': 14, 'circle-color': ['get', 'color'], 'circle-opacity': 0.12, 'circle-blur': 1.5, 'circle-stroke-width': 0 }
+  paint: { 'circle-radius': 14, 'circle-color': ['get', 'color'], 'circle-opacity': 0.12, 'circle-blur': 1.5, 'circle-stroke-width': 0, 'circle-pitch-alignment': 'map' }
 };
 const navalPatrolLayer: Omit<CircleLayer, 'source'> = {
   id: 'naval-patrols', type: 'circle',
-  paint: { 'circle-radius': 6, 'circle-color': ['get', 'color'], 'circle-opacity': 1, 'circle-stroke-width': 1.5, 'circle-stroke-color': 'rgba(255,255,255,0.7)' }
+  paint: { 'circle-radius': 6, 'circle-color': ['get', 'color'], 'circle-opacity': 1, 'circle-stroke-width': 1.5, 'circle-stroke-color': 'rgba(255,255,255,0.7)', 'circle-pitch-alignment': 'map' }
 };
 
 const chokePointPulseLayer: Omit<CircleLayer, 'source'> = {
@@ -58,7 +58,7 @@ const chokePointPulseLayer: Omit<CircleLayer, 'source'> = {
   paint: {
     'circle-radius': ['interpolate', ['linear'], ['get', 'risk'], 0, 14, 50, 20, 100, 28],
     'circle-color': ['interpolate', ['linear'], ['get', 'risk'], 0, '#fbbf24', 60, '#f97316', 100, '#ef4444'],
-    'circle-opacity': 0.15, 'circle-blur': 1.2,
+    'circle-opacity': 0.15, 'circle-blur': 1.2, 'circle-pitch-alignment': 'map',
   }
 };
 const chokePointLayer: Omit<CircleLayer, 'source'> = {
@@ -66,7 +66,7 @@ const chokePointLayer: Omit<CircleLayer, 'source'> = {
   paint: {
     'circle-radius': ['interpolate', ['linear'], ['get', 'risk'], 0, 7, 60, 10, 100, 14],
     'circle-color': ['interpolate', ['linear'], ['get', 'risk'], 0, '#fbbf24', 60, '#f97316', 100, '#ef4444'],
-    'circle-opacity': 0.95, 'circle-stroke-width': 2, 'circle-stroke-color': 'rgba(255,255,255,0.4)',
+    'circle-opacity': 0.95, 'circle-stroke-width': 2, 'circle-stroke-color': 'rgba(255,255,255,0.4)', 'circle-pitch-alignment': 'map',
   }
 };
 
@@ -85,25 +85,25 @@ const digitalLifelineLineLayer: Omit<LineLayer, 'source'> = {
 const digitalLifelinePointLayer: Omit<CircleLayer, 'source'> = {
   id: 'digital-lifelines-points', type: 'circle',
   filter: ['==', '$type', 'Point'],
-  paint: { 'circle-radius': 7, 'circle-color': CABLE_COLOR_EXPR, 'circle-stroke-width': 2, 'circle-stroke-color': 'rgba(255,255,255,0.5)', 'circle-opacity': 1 }
+  paint: { 'circle-radius': 7, 'circle-color': CABLE_COLOR_EXPR, 'circle-stroke-width': 2, 'circle-stroke-color': 'rgba(255,255,255,0.5)', 'circle-opacity': 1, 'circle-pitch-alignment': 'map' }
 };
 
 const strategicResourceGlowLayer: Omit<CircleLayer, 'source'> = {
   id: 'strategic-resources-glow', type: 'circle',
-  paint: { 'circle-radius': 18, 'circle-color': '#34d399', 'circle-opacity': 0.12, 'circle-blur': 1.5, 'circle-stroke-width': 0 }
+  paint: { 'circle-radius': 18, 'circle-color': '#34d399', 'circle-opacity': 0.12, 'circle-blur': 1.5, 'circle-stroke-width': 0, 'circle-pitch-alignment': 'map' }
 };
 const strategicResourceLayer: Omit<CircleLayer, 'source'> = {
   id: 'strategic-resources', type: 'circle',
-  paint: { 'circle-radius': 8, 'circle-color': '#34d399', 'circle-opacity': 1, 'circle-stroke-width': 2, 'circle-stroke-color': 'rgba(52,211,153,0.6)' }
+  paint: { 'circle-radius': 8, 'circle-color': '#34d399', 'circle-opacity': 1, 'circle-stroke-width': 2, 'circle-stroke-color': 'rgba(52,211,153,0.6)', 'circle-pitch-alignment': 'map' }
 };
 
 const asymmetricGlowLayer: Omit<CircleLayer, 'source'> = {
   id: 'asymmetric-vulnerabilities-glow', type: 'circle',
-  paint: { 'circle-radius': 18, 'circle-color': '#f97316', 'circle-opacity': 0.12, 'circle-blur': 1.5, 'circle-stroke-width': 0 }
+  paint: { 'circle-radius': 18, 'circle-color': '#f97316', 'circle-opacity': 0.12, 'circle-blur': 1.5, 'circle-stroke-width': 0, 'circle-pitch-alignment': 'map' }
 };
 const asymmetricLayer: Omit<CircleLayer, 'source'> = {
   id: 'asymmetric-vulnerabilities', type: 'circle',
-  paint: { 'circle-radius': 8, 'circle-color': '#f97316', 'circle-opacity': 1, 'circle-stroke-width': 2, 'circle-stroke-color': 'rgba(249,115,22,0.6)' }
+  paint: { 'circle-radius': 8, 'circle-color': '#f97316', 'circle-opacity': 1, 'circle-stroke-width': 2, 'circle-stroke-color': 'rgba(249,115,22,0.6)', 'circle-pitch-alignment': 'map' }
 };
 
 const activeHotspotLayer: Omit<CircleLayer, 'source'> = {
@@ -114,7 +114,8 @@ const activeHotspotLayer: Omit<CircleLayer, 'source'> = {
     'circle-opacity': 0.9,
     'circle-stroke-width': 3,
     'circle-stroke-color': 'rgba(255,75,75,0.45)',
-    'circle-blur': 0.15
+    'circle-blur': 0.15,
+    'circle-pitch-alignment': 'map',
   }
 };
 
@@ -180,7 +181,7 @@ const WVIRing = ({ score, color }: { score: number; color: string }) => {
 
 const brainPredictionGlowLayer: Omit<CircleLayer, 'source'> = {
   id: 'brain-predictions-glow', type: 'circle',
-  paint: { 'circle-radius': 28, 'circle-color': '#f97316', 'circle-opacity': 0.10, 'circle-blur': 1.8, 'circle-stroke-width': 0 }
+  paint: { 'circle-radius': 28, 'circle-color': '#f97316', 'circle-opacity': 0.10, 'circle-blur': 1.8, 'circle-stroke-width': 0, 'circle-pitch-alignment': 'map' }
 };
 const brainPredictionLayer: Omit<CircleLayer, 'source'> = {
   id: 'brain-predictions-layer', type: 'circle',
@@ -190,7 +191,8 @@ const brainPredictionLayer: Omit<CircleLayer, 'source'> = {
     'circle-opacity': 0.9,
     'circle-stroke-width': 2.5,
     'circle-stroke-color': 'rgba(251,191,36,0.7)',
-    'circle-blur': 0.1
+    'circle-blur': 0.1,
+    'circle-pitch-alignment': 'map',
   }
 };
 
@@ -200,7 +202,7 @@ const warRegionGlowLayer: Omit<CircleLayer, 'source'> = {
   paint: {
     'circle-radius': ['interpolate', ['linear'], ['get', 'prediction_score'], 42, 32, 91, 56],
     'circle-color': ['case', ['==', ['get', 'layer_type'], 'flashpoint'], '#f5a623', '#ff4b4b'],
-    'circle-opacity': 0.07, 'circle-blur': 1.6,
+    'circle-opacity': 0.07, 'circle-blur': 1.6, 'circle-pitch-alignment': 'map',
   }
 };
 const warRegionLayer: Omit<CircleLayer, 'source'> = {
@@ -211,6 +213,7 @@ const warRegionLayer: Omit<CircleLayer, 'source'> = {
     'circle-opacity': 0.82,
     'circle-stroke-width': 2.5,
     'circle-stroke-color': ['case', ['==', ['get', 'layer_type'], 'flashpoint'], 'rgba(245,166,35,0.5)', 'rgba(255,75,75,0.45)'],
+    'circle-pitch-alignment': 'map',
   }
 };
 
@@ -234,7 +237,7 @@ const borderDisputeLineLayer: Omit<LineLayer, 'source'> = {
 // Critical minerals layer
 const mineralGlowLayer: Omit<CircleLayer, 'source'> = {
   id: 'critical-minerals-glow', type: 'circle',
-  paint: { 'circle-radius': 22, 'circle-color': '#34d399', 'circle-opacity': 0.12, 'circle-blur': 1.6 }
+  paint: { 'circle-radius': 22, 'circle-color': '#34d399', 'circle-opacity': 0.12, 'circle-blur': 1.6, 'circle-pitch-alignment': 'map' }
 };
 const mineralLayer: Omit<CircleLayer, 'source'> = {
   id: 'critical-minerals-layer', type: 'circle',
@@ -242,6 +245,7 @@ const mineralLayer: Omit<CircleLayer, 'source'> = {
     'circle-radius': ['interpolate', ['linear'], ['get', 'strategic_importance'], 70, 9, 90, 13, 100, 16],
     'circle-color': ['get', 'color'],
     'circle-opacity': 0.95, 'circle-stroke-width': 2.5, 'circle-stroke-color': 'rgba(52,211,153,0.5)',
+    'circle-pitch-alignment': 'map',
   }
 };
 

@@ -568,6 +568,122 @@
           29.0
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Iran Nuclear Threshold — Pre-emptive Strike Window",
+        "type": "Nuclear Escalation / Pre-emptive War",
+        "risk": "Academic Brain Prediction — CRITICAL NEAR-TERM",
+        "behavioral_strategy": "Nuclear Ambiguity as Strategic Leverage",
+        "wounding_strategy": "IAEA confirmed: Iran at 60%+ enrichment, weeks from 90% weapons-grade. Cederman-Pengl Rule R5 (IF conventional military loss imminent THEN nuclear first-use consideration = HIGH) applies in mirror image to Israel: Israeli Air Force calculates a closing pre-emptive window. The 2024 direct Iran-Israel ballistic missile exchanges (April, October) have already crossed the direct-state-conflict threshold. IRGCN Strait of Hormuz interdiction + Houthi proxy cable cuts = Iran has validated every component of its asymmetric escalation doctrine. Missing only: nuclear deterrent finalization.",
+        "confidence": "91%",
+        "predicted": true,
+        "threat_actor": "Iran IRGC / IRGCN vs Israel IDF + US CENTCOM",
+        "timeframe": "0–18 months",
+        "strategic_impact": "EXISTENTIAL — regional nuclear war risk, global oil supply collapse",
+        "source_rule": "R2 + R5 (Cederman-Pengl) + Nuclear Shadow Paradox",
+        "iran_threat": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          51.4,
+          35.7
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Saudi Aramco — Infrastructure Paralysis via Houthi Proxy",
+        "type": "Critical Energy Infrastructure Attack",
+        "risk": "Black Swan Wounding Zone — PROVEN CAPABILITY",
+        "behavioral_strategy": "Proxy Infrastructure Denial",
+        "wounding_strategy": "2019 Abqaiq drone attack PROOF OF CONCEPT: took 5% of global oil supply offline in a single strike. Houthis have since acquired longer-range Iranian drones and ballistic missiles with improved precision. A sustained 30-day campaign targeting Ras Tanura (world's largest offshore oil loading facility, 7% of global daily oil supply) + Abqaiq reprocessing plant = catastrophic global energy shock. Iran achieves maximum strategic disruption through plausibly deniable Houthi proxy — zero direct attribution.",
+        "confidence": "79%",
+        "predicted": true,
+        "threat_actor": "Houthi IRGC-proxies (Iran direction)",
+        "timeframe": "6–24 months (crisis-triggered)",
+        "strategic_impact": "CRITICAL — 5-10% global oil supply disruption, energy price cascade",
+        "source_rule": "Proxy Infrastructure Denial + Proven Capability Escalation"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          49.7,
+          26.3
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Malacca Strait — Taiwan War Chokepoint Activation",
+        "type": "Naval Interdiction / Trade Route Severance",
+        "risk": "Academic Brain Prediction — TAIWAN TRIGGER",
+        "behavioral_strategy": "Chokepoint Leverage in Great-Power Conflict",
+        "wounding_strategy": "If US-China conflict over Taiwan escalates to naval confrontation, the Malacca Strait becomes the primary US pressure point on China: 80% of Chinese oil imports transit here. A US Navy 7th Fleet Malacca interdiction order (blockade of Chinese commercial shipping) would be the economic equivalent of nuclear-level escalation — China's economy would contract 15%+ within 90 days. China knows this. Hence the Myanmar pipeline, Kra Canal pressure, and South China Sea island militarization — all are Malacca bypass strategies. Singapore's port (PSA International) is the digital control layer — a cyber attack here achieves blockade-equivalent disruption without a single warship.",
+        "confidence": "76%",
+        "predicted": true,
+        "threat_actor": "US Navy (interdiction) vs China (bypass / cyber counter)",
+        "timeframe": "Crisis-triggered (Taiwan conflict onset)",
+        "strategic_impact": "CATASTROPHIC — 40% of global trade disrupted, China economic collapse trigger",
+        "source_rule": "Thucydides Trap Activation + Chokepoint Leverage Dynamics"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.5,
+          1.8
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Myanmar Civil War — ASEAN Governance Vacuum",
+        "type": "State Failure / Regional Ungoverned Space",
+        "risk": "Academic Brain Prediction — ACTIVE COLLAPSE",
+        "behavioral_strategy": "Post-Coup State Fragmentation",
+        "wounding_strategy": "Myanmar's military junta (SAC) has lost effective control of 70%+ of territory to resistance forces (PDF, ethnic armed organizations) as of 2025. This is not a frozen conflict — it is active state disintegration. Three consequences cascade regionally: (1) 2M+ refugees destabilizing Thailand, Bangladesh, India's Manipur; (2) China's $15B BRI investment in Myanmar (Kyaukphyu port, pipelines) now at risk — triggering potential Chinese military intervention to protect assets; (3) Drug production (world's largest opium producer since 2023) funding all armed factions, creating narco-state dynamics. Cederman-Pengl R3 (Post-Conflict Poverty Trap) fully activated: GDP 20% below 2019 levels, no recovery pathway.",
+        "confidence": "88%",
+        "predicted": true,
+        "threat_actor": "SAC Junta vs. PDF/EAO Resistance + China BRI protection interest",
+        "timeframe": "Active — 0–36 months to potential state collapse",
+        "strategic_impact": "HIGH — ASEAN security vacuum, refugee crisis, China intervention risk",
+        "source_rule": "R3 + R6 (Cederman-Pengl State Failure Rules)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.1,
+          19.8
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Thailand — Kra Canal Geopolitical Proxy Competition",
+        "type": "Infrastructure Geopolitics / Proxy Strategic Competition",
+        "risk": "Black Swan Wounding Zone",
+        "behavioral_strategy": "Infrastructure as Strategic Weapon",
+        "wounding_strategy": "The proposed Kra Canal (120km across Kra Isthmus, southern Thailand) would create a new Malacca bypass — eliminating the need for ships to transit Singapore. China is the primary backer ($28B estimated cost). If built: Singapore loses 40% of port revenue and its strategic leverage; US loses Malacca as a China pressure point; Thailand becomes China's strategic partner. The decision is Thailand's — making it the most consequential infrastructure vote of the decade. A Chinese-backed Thai military government (post-coup) approving Kra Canal construction would represent a strategic rupture of the US-led Indo-Pacific order without a single shot fired.",
+        "confidence": "63%",
+        "predicted": true,
+        "threat_actor": "China (Kra Canal sponsor) vs US/Singapore (opposition)",
+        "timeframe": "24–84 months",
+        "strategic_impact": "SEVERE — Indo-Pacific trade architecture realignment, Singapore strategic displacement",
+        "source_rule": "Infrastructure Geopolitics + Thucydides Trap Regional Proxy"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.5,
+          10.5
+        ]
+      }
     }
   ]
 }
