@@ -1,1 +1,290 @@
-{"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"name": "Kasumbalesa Border (DRC)", "type": "Transport Corridor", "risk": "Supply Chain Bottleneck", "wounding_strategy": "The Mineral 'Neurology': Instead of attacking a nation's military bases, rivals will weaponize local labor unions, fund eco-terrorist sabotage, or buy up the specific port terminals where cobalt leaves Africa. Paralyzing these specific, narrow export routes starves the West and Asian rivals of the materials needed for EV transition and next-gen military tech."}, "geometry": {"type": "Point", "coordinates": [27.8, -12.37]}}, {"type": "Feature", "properties": {"name": "Kourou Spaceport (Fr. Guiana)", "type": "Aerospace Corridor", "risk": "Orbital Launch Denial", "wounding_strategy": "Equatorial Aerospace Corridors: The Earth's rotation provides the most fuel-efficient trajectory for satellite launches near the equator. From an aerospace strategic perspective, controlling the physical Earth-to-orbit corridor is as critical as controlling the oceans. Heavy diplomatic and economic coercion aimed at South American nations situated on the equator could deny rival space agencies and commercial satellite providers access to optimal launch trajectories, severely slowing down their orbital capabilities."}, "geometry": {"type": "Point", "coordinates": [-52.76, 5.23]}}, {"type": "Feature", "properties": {"name": "Penang Hub (Malaysia)", "type": "Tech Packaging Hub", "risk": "Asymmetric Disruption", "wounding_strategy": "Secondary Tech-Packaging Hubs: The strategy is asymmetric disruption. Why attack Taiwan\u2014which is a heavily fortified 'porcupine'\u2014when you can quietly fund a ransomware attack on a power grid in Malaysia? The microchips may be printed in Taipei, but if they cannot be tested and packaged in Penang, the global supply chain halts just the same, but with zero geopolitical fallout."}, "geometry": {"type": "Point", "coordinates": [100.3, 5.4]}}]}
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.0,
+          57.0
+        ]
+      },
+      "properties": {
+        "name": "Baltic Sea Cable Sabotage Zone",
+        "type": "Hybrid / Subsea Infrastructure",
+        "risk": "CRITICAL",
+        "wounding_strategy": "Russian shadow fleet vessels equipped with specialized anchoring equipment drag along known cable routes. GPS spoofing near major ports causes vessels to inadvertently cross sensitive cable corridors. Multiple Baltic fiber cables already severed 2023-2024 in incidents attributed to Russian commercial vessels. Coordinated multi-cable cutting would isolate Baltic NATO states from internet and communications.",
+        "threat_actor": "Russia (GRU / Shadow Fleet)",
+        "attack_vector": "Anchor Drag / GPS Spoofing / Subsea ROV",
+        "probability_2yr": 82
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.0,
+          14.0
+        ]
+      },
+      "properties": {
+        "name": "Red Sea GPS Spoofing Zone",
+        "type": "Electronic Warfare",
+        "risk": "CRITICAL",
+        "wounding_strategy": "IRGC-supplied GPS spoofing equipment deployed by Houthis creates phantom flight paths and ship positions throughout the Red Sea corridor. Commercial vessels have reported appearing 100km off their actual location. Creates conditions for ship groundings, collisions, and false emergency signals. Disrupts GPS-guided munitions used against Houthi positions. Combined with drone and missile attacks for maximum disruption.",
+        "threat_actor": "Houthi Movement / IRGC",
+        "attack_vector": "GPS Spoofing / Drone Swarm / Anti-Ship Missile",
+        "probability_2yr": 95
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0,
+          25.0
+        ]
+      },
+      "properties": {
+        "name": "Taiwan Strait Fiber Cut Zone",
+        "type": "Undersea Cable Warfare",
+        "risk": "CRITICAL",
+        "wounding_strategy": "Pre-conflict PLAN cable severance campaign. PLAN submarines and surface vessels sever Taiwan's 14 undersea internet cables within hours of military operations beginning. Taiwan becomes information-isolated before kinetic conflict begins. Simultaneously cuts financial market connections (Taiwan Stock Exchange goes dark), communications links with US military advisers, and international coordination ability. Cable repair ships are then denied access by naval blockade.",
+        "threat_actor": "PLAN",
+        "attack_vector": "Submarine Cable Cutting / Kinetic Blockade",
+        "probability_2yr": 67
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8,
+          1.3
+        ]
+      },
+      "properties": {
+        "name": "Singapore Port Cyberattack Hub",
+        "type": "Cyber-Physical Port Attack",
+        "risk": "HIGH",
+        "wounding_strategy": "Ransomware targeting PSA International port management systems (NAVIS terminal operating system) used across Singapore's 60+ container berths. 2021 test attack on MPA systems demonstrated feasibility. Shutdown of Singapore port \u2014 world's second busiest \u2014 would cause global shipping backlogs within 72 hours. $650B annual trade flows through here. Attack timed with Taiwan Strait crisis would amplify economic pressure on QUAD nations.",
+        "threat_actor": "PLAN / State-sponsored hackers",
+        "attack_vector": "Ransomware / Supply Chain Software Attack",
+        "probability_2yr": 55
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.5,
+          51.9
+        ]
+      },
+      "properties": {
+        "name": "Rotterdam Port Cyber-Physical Attack",
+        "type": "Cyber-Physical Infrastructure",
+        "risk": "HIGH",
+        "wounding_strategy": "Europe's largest port handles 14.3 million TEUs annually. NotPetya malware (2017) already caused $300M damage to Maersk (Rotterdam-dependent) by destroying 45,000 PCs. Russian GRU has pre-positioned malware in Rotterdam port control systems per AIVD reporting. Coordinated cyber attack during NATO-Russia escalation would freeze European energy imports (Rotterdam handles 40% of Europe's oil/LNG imports), creating fuel crisis within weeks.",
+        "threat_actor": "Russia (GRU Sandworm)",
+        "attack_vector": "Destructive Malware / SCADA Compromise",
+        "probability_2yr": 48
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.8,
+          -12.37
+        ]
+      },
+      "properties": {
+        "name": "DRC Cobalt Transport Corridors",
+        "type": "Supply Chain Interdiction",
+        "risk": "HIGH",
+        "wounding_strategy": "The Mineral Neurology: DRC produces 70% of global cobalt essential for EV batteries and defense electronics. Rival states fund FDLR and M23 rebel groups to control key transport roads from Katanga mines to Dar es Salaam and Durban ports. Blocking just two major roads (RN1 and RN2) and the Lobito Corridor would halve global cobalt supply within 6 months, forcing halt of EV production and degrading US/EU defense battery stockpiles.",
+        "threat_actor": "China / Russia (proxy rebel groups)",
+        "attack_vector": "Proxy Rebel Funding / Road Blockage / Mine Seizure",
+        "probability_2yr": 61
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -52.76,
+          5.23
+        ]
+      },
+      "properties": {
+        "name": "Kourou Spaceport (French Guiana)",
+        "type": "Aerospace Corridor Denial",
+        "risk": "ELEVATED",
+        "wounding_strategy": "Equatorial Aerospace Corridor Denial: World's premier commercial launch facility at 5\u00b0N latitude. Ariane 6, Vega-C, and Soyuz launches from here provide EU space autonomy. Economic/diplomatic pressure on Suriname and Brazil to deny overflight rights or harbor anti-access activism. Insurgent groups (possibly state-sponsored) could disrupt ground transport routes through jungle to launch facilities. Denying equatorial access adds $50M+ per launch in fuel costs for substitute trajectories.",
+        "threat_actor": "Russia / China (diplomatic / proxy)",
+        "attack_vector": "Diplomatic Coercion / Proxy Sabotage / Overflight Denial",
+        "probability_2yr": 32
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.3,
+          5.4
+        ]
+      },
+      "properties": {
+        "name": "Penang Semiconductor Packaging Hub",
+        "type": "Supply Chain Asymmetric Attack",
+        "risk": "HIGH",
+        "wounding_strategy": "Secondary Tech-Packaging Disruption: Penang produces 8% of global semiconductors and handles packaging/testing for chips fabricated in Taiwan. If ransomware attacks Penang's power grid or water treatment (Intel, Broadcom, Infineon mega-fabs), chips fabricated in Taiwan cannot be packaged for delivery. Global semiconductor shortage materializes within 60 days. Attack creates Taiwan-equivalent supply shock at 1/100th the geopolitical risk. Malaysia's limited cyber defenses make this the path of least resistance.",
+        "threat_actor": "PLAN / State-sponsored hackers",
+        "attack_vector": "Power Grid Attack / Ransomware / Insider Threat",
+        "probability_2yr": 44
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          49.0,
+          40.0
+        ]
+      },
+      "properties": {
+        "name": "Baku-Tbilisi-Ceyhan Pipeline",
+        "type": "Energy Infrastructure",
+        "risk": "HIGH",
+        "wounding_strategy": "1,768km pipeline carrying 600,000 bbl/day of Caspian oil to Mediterranean. Only non-Russian energy route from Caspian to Europe. Already attacked by PKK in 2008. Russia has demonstrated willingness to target Georgian infrastructure (2008 war). Drone strike or sabotage near Armenian border crossing points \u2014 where pipeline traverses narrow mountain corridors \u2014 would cut Europe's Caspian oil supply, amplifying dependence on Russian alternatives during sanctions.",
+        "threat_actor": "Russia / Iran (IRGC proxies)",
+        "attack_vector": "Drone Strike / Proxy Sabotage / Cyber-Physical SCADA Attack",
+        "probability_2yr": 39
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.5,
+          -33.9
+        ]
+      },
+      "properties": {
+        "name": "Cape Town Port / Power Grid",
+        "type": "Critical Infrastructure",
+        "risk": "ELEVATED",
+        "wounding_strategy": "Cape Town handles 40%+ of diverted Red Sea shipping since 2023 Houthi campaign. Eskom power grid in Western Cape already in load-shedding crisis \u2014 strategic sabotage could trigger extended outages disabling port operations. Chinese BRI-aligned actors could leverage ANC political connections for permissive access. Disabling Cape Town as a diversion hub would remove the only viable Red Sea alternative, re-exposing shipping to Houthi attack zone.",
+        "threat_actor": "Russia / China (grey-zone)",
+        "attack_vector": "Grid Sabotage / Cyberattack on Eskom SCADA / Port Disruption",
+        "probability_2yr": 28
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          55.0,
+          24.0
+        ]
+      },
+      "properties": {
+        "name": "Iranian Shahed Drone Threat Zone",
+        "type": "Drone / Missile Saturation Attack",
+        "risk": "CRITICAL",
+        "wounding_strategy": "IRGC has demonstrated ability to saturate Gulf air defense with Shahed-136/131 drone swarms and Emad ballistic missiles simultaneously. Saudi Aramco Abqaiq attack (2019) shut down 5% of global oil supply for 2 weeks. Coordinated attack on multiple Gulf oil facilities \u2014 Ras Tanura, Jubail, Abqaiq \u2014 using 100+ simultaneous drones could overwhelm Patriot defenses and cause months-long production shutdown triggering $200/barrel oil prices.",
+        "threat_actor": "IRGC / Houthi (Iranian proxies)",
+        "attack_vector": "Shahed Drone Swarm / Ballistic Missile Saturation",
+        "probability_2yr": 58
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.0,
+          35.0
+        ]
+      },
+      "properties": {
+        "name": "Eastern Mediterranean GPS Jamming Zone",
+        "type": "Electronic Warfare",
+        "risk": "ELEVATED",
+        "wounding_strategy": "Multi-actor electronic warfare zone. Russia jams GPS from Syrian bases affecting Cyprus, Lebanon, Israel, Turkey air/sea navigation. Hezbollah GPS spoofing misdirects Israeli drones. Israeli electronic warfare operations affect Hezbollah and Iranian guidance systems. Commercial aviation has reported GPS anomalies forcing IFR-to-visual procedures. Coordinated jamming during Israel-Hezbollah escalation would disable airport operations at Nicosia, Beirut, Tel Aviv simultaneously.",
+        "threat_actor": "Russia / Hezbollah / IRGC (multi-actor)",
+        "attack_vector": "GPS Jamming / Spoofing / EMP threat",
+        "probability_2yr": 72
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.2,
+          33.7
+        ]
+      },
+      "properties": {
+        "name": "LA/Long Beach Port Cyber Attack",
+        "type": "Cyber-Physical Port Attack",
+        "risk": "HIGH",
+        "wounding_strategy": "LA/Long Beach handles 35% of US container imports. CISA has warned of Chinese pre-positioning of malware in port infrastructure via ZPMC cranes (manufactured by state-owned Shanghai Zhenhua Heavy Industries) which have cellular modems enabling remote access. A cyber attack timed with Taiwan crisis would freeze US goods imports, triggering supply chain panic buying and inflation \u2014 economic weapon against US domestic stability without kinetic engagement.",
+        "threat_actor": "China (MSS) / APT40",
+        "attack_vector": "ZPMC Crane Backdoor / SCADA Ransomware / Supply Chain Attack",
+        "probability_2yr": 52
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          62.3,
+          25.1
+        ]
+      },
+      "properties": {
+        "name": "Gwadar Port (CPEC Anchor)",
+        "type": "Strategic Dual-Use Port",
+        "risk": "HIGH",
+        "wounding_strategy": "China's $62B China-Pakistan Economic Corridor anchor port. BLA (Baloch Liberation Army) has attacked Gwadar Port complex twice. Pakistan political instability threatens CPEC security. Chinese naval access to Gwadar provides Indian Ocean presence between Hormuz and Malacca \u2014 completing the String of Pearls. Indian RAW sabotage operations and BLA proxy funding could deny China this strategic access, while Pakistani state failure would abandon the entire $62B investment.",
+        "threat_actor": "BLA / India RAW (proxy) / Pakistani state failure",
+        "attack_vector": "Insurgent Attack / Proxy Funding / State Fragility",
+        "probability_2yr": 46
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0,
+          82.0
+        ]
+      },
+      "properties": {
+        "name": "Arctic NATO SOSUS Sensor Network",
+        "type": "Undersea Surveillance Infrastructure",
+        "risk": "ELEVATED",
+        "wounding_strategy": "Sound Surveillance System (SOSUS) hydrophone arrays across GIUK Gap and Norwegian Sea provide NATO real-time tracking of Russian nuclear submarine movements. Russia has deployed deep-sea capable submersibles (Losharik class) to cut SOSUS cables and SLOM (Submarine Launched Ocean Monitoring) systems. Destroying SOSUS would blind NATO to SSBN patrol positions, undermining nuclear deterrence stability by creating launch uncertainty \u2014 the most dangerous asymmetric attack possible.",
+        "threat_actor": "Russia (GUGI / Losharik submarines)",
+        "attack_vector": "Deep-Submersible Cable Cutting / Sensor Jamming / ROV Sabotage",
+        "probability_2yr": 38
+      }
+    }
+  ]
+}

@@ -1,1 +1,485 @@
-{"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"name": "Strait of Malacca", "risk": "CRITICAL"}, "geometry": {"type": "Point", "coordinates": [100.0, 3.0]}}, {"type": "Feature", "properties": {"name": "Bab-el-Mandeb & The Red Sea", "risk": "CRITICAL"}, "geometry": {"type": "Point", "coordinates": [43.3, 12.6]}}, {"type": "Feature", "properties": {"name": "Strait of Hormuz", "risk": "CRITICAL"}, "geometry": {"type": "Point", "coordinates": [56.4, 26.5]}}, {"type": "Feature", "properties": {"name": "The Taiwan Strait", "risk": "CRITICAL"}, "geometry": {"type": "Point", "coordinates": [119.5, 24.0]}}, {"type": "Feature", "properties": {"name": "Suez Canal", "risk": "HIGH"}, "geometry": {"type": "Point", "coordinates": [32.3, 31.2]}}, {"type": "Feature", "properties": {"name": "Panama Canal", "risk": "HIGH"}, "geometry": {"type": "Point", "coordinates": [-79.9, 9.1]}}, {"type": "Feature", "properties": {"name": "The Bosphorus & Dardanelles", "risk": "HIGH"}, "geometry": {"type": "Point", "coordinates": [29.0, 41.0]}}, {"type": "Feature", "properties": {"name": "The Siliguri Corridor / \"Chicken's Neck\"", "risk": "ELEVATED"}, "geometry": {"type": "Point", "coordinates": [88.3, 26.7]}}, {"type": "Feature", "properties": {"name": "The Suwalki Gap", "risk": "HIGH"}, "geometry": {"type": "Point", "coordinates": [23.1, 54.1]}}, {"type": "Feature", "properties": {"name": "The Line of Actual Control / Karakoram Pass", "risk": "HIGH"}, "geometry": {"type": "Point", "coordinates": [78.5, 34.5]}}, {"type": "Feature", "properties": {"name": "South China Sea", "risk": "CRITICAL"}, "geometry": {"type": "Point", "coordinates": [112.0, 12.0]}}, {"type": "Feature", "properties": {"name": "The Sahel Region", "risk": "CRITICAL"}, "geometry": {"type": "Point", "coordinates": [2.0, 15.0]}}, {"type": "Feature", "properties": {"name": "Bering Strait (Arctic)", "risk": "ELEVATED"}, "geometry": {"type": "Point", "coordinates": [-169.0, 65.9]}}]}
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          56.4,
+          26.5
+        ]
+      },
+      "properties": {
+        "name": "Strait of Hormuz",
+        "risk": "CRITICAL",
+        "transit_volume_pct": 21,
+        "daily_ships": 21,
+        "cable_count": 3,
+        "current_threat": "IRGC naval harassment, Houthi missile threat, mine-laying operations, tanker seizures",
+        "primary_threat_actor": "IRGC / Houthi Coalition",
+        "vulnerability_type": "Naval Blockade / Mine Warfare",
+        "oil_pct": 20,
+        "predicted": false,
+        "prediction_confidence": 98,
+        "description": "The world's most critical oil chokepoint. 21 million barrels per day flow through this 34km-wide passage between Iran and Oman. Closure would trigger immediate global energy shock. Iran has repeatedly threatened to close the strait as leverage against Western sanctions."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          43.3,
+          12.6
+        ]
+      },
+      "properties": {
+        "name": "Bab al-Mandab Strait",
+        "risk": "CRITICAL",
+        "transit_volume_pct": 10,
+        "daily_ships": 50,
+        "cable_count": 9,
+        "current_threat": "Active Houthi drone, missile and naval drone attacks since November 2023. Major shipping rerouting via Cape of Good Hope.",
+        "primary_threat_actor": "Houthi Movement / IRGC",
+        "vulnerability_type": "Anti-ship Missile / Drone Swarm",
+        "oil_pct": 6,
+        "predicted": false,
+        "prediction_confidence": 99,
+        "description": "Gateway between the Red Sea and Gulf of Aden. Houthi attacks since 2023 have forced 60%+ of container shipping to divert 6,000nm around Africa, adding $1M+ per voyage. Nine major submarine cables transit here."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8,
+          2.5
+        ]
+      },
+      "properties": {
+        "name": "Strait of Malacca",
+        "risk": "CRITICAL",
+        "transit_volume_pct": 25,
+        "daily_ships": 220,
+        "cable_count": 25,
+        "current_threat": "PLAN military exercises, piracy, territorial disputes between Singapore/Malaysia/Indonesia, cyber attacks on port systems",
+        "primary_threat_actor": "PLAN / Non-State Piracy",
+        "vulnerability_type": "Naval Blockade / Port Cyberattack",
+        "oil_pct": 15,
+        "predicted": false,
+        "prediction_confidence": 97,
+        "description": "The world's busiest shipping lane. 80,000+ vessels annually carrying 25% of global trade including 15 million barrels of oil per day. Only 2.8km wide at its narrowest."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.3,
+          31.5
+        ]
+      },
+      "properties": {
+        "name": "Suez Canal",
+        "risk": "CRITICAL",
+        "transit_volume_pct": 13,
+        "daily_ships": 100,
+        "cable_count": 12,
+        "current_threat": "Houthi-induced traffic diversion, Egyptian political instability, Israeli conflict spillover, accident vulnerability",
+        "primary_threat_actor": "Houthi / Regional Instability",
+        "vulnerability_type": "Traffic Blockage / State Fragility",
+        "oil_pct": 8,
+        "predicted": false,
+        "prediction_confidence": 96,
+        "description": "12-15% of global trade including 30% of global container traffic transits this 193km canal. The 2021 Ever Given grounding blocked $9.6B of trade per day for 6 days. Egypt earns $8B/year in tolls."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.9,
+          9.1
+        ]
+      },
+      "properties": {
+        "name": "Panama Canal",
+        "risk": "HIGH",
+        "transit_volume_pct": 4,
+        "daily_ships": 38,
+        "cable_count": 2,
+        "current_threat": "Severe drought reducing water levels (2023 record lows forced 40% traffic reduction), Chinese port investment at both ends via Panama Ports Company",
+        "primary_threat_actor": "Climate / Chinese Economic Influence",
+        "vulnerability_type": "Climate Disruption / Economic Coercion",
+        "oil_pct": 1,
+        "predicted": false,
+        "prediction_confidence": 89,
+        "description": "3-5% of global trade including critical US-Asia container routes. 2023 drought forced canal to operate at 60% capacity. Chinese companies control port operations at both Atlantic and Pacific entrances."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.5,
+          24.0
+        ]
+      },
+      "properties": {
+        "name": "Taiwan Strait",
+        "risk": "CRITICAL",
+        "transit_volume_pct": 48,
+        "daily_ships": 300,
+        "cable_count": 14,
+        "current_threat": "PLAN military exercises simulating blockade (2022, 2023), missile overflights, air incursion into ADIZ, economic coercion against Taiwan",
+        "primary_threat_actor": "PLAN / PRC",
+        "vulnerability_type": "Naval Blockade / Full Conventional War",
+        "oil_pct": 0,
+        "predicted": false,
+        "prediction_confidence": 88,
+        "description": "50% of global container shipping passes through or near this 180km strait. TSMC produces 90% of world's most advanced chips on Taiwan. A PLAN blockade would simultaneously sever semiconductor supply chains and disrupt global shipping."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.0,
+          14.0
+        ]
+      },
+      "properties": {
+        "name": "South China Sea",
+        "risk": "CRITICAL",
+        "transit_volume_pct": 33,
+        "daily_ships": 350,
+        "cable_count": 30,
+        "current_threat": "Chinese artificial island militarization, PLAN harassment of Philippines/Vietnam fishing vessels, 9-dash line enforcement, US FONOP responses",
+        "primary_threat_actor": "PLAN / PRC",
+        "vulnerability_type": "Territorial Seizure / Naval Interdiction",
+        "oil_pct": 11,
+        "predicted": false,
+        "prediction_confidence": 92,
+        "description": "$3.4 trillion in trade annually. China claims 90% via nine-dash line, rejected by international tribunal. Spratly and Paracel Islands militarized with runways, missile systems, and naval facilities."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.0,
+          41.0
+        ]
+      },
+      "properties": {
+        "name": "Bosphorus / Dardanelles",
+        "risk": "HIGH",
+        "transit_volume_pct": 3,
+        "daily_ships": 45,
+        "cable_count": 4,
+        "current_threat": "Turkey using Montreux Convention to block Russian warships, Russian Black Sea Fleet pressure, grain/oil export leverage, Turkish strategic ambiguity",
+        "primary_threat_actor": "Russia / Turkey Strategic Competition",
+        "vulnerability_type": "Montreux Convention Leverage / Naval Denial",
+        "oil_pct": 3,
+        "predicted": false,
+        "prediction_confidence": 82,
+        "description": "Only exit for Black Sea nations. Russian grain and oil exports depend on this passage. Turkey invoked Montreux Convention in 2022 to block Russian warships. 800M+ people's food security depends on Ukrainian/Russian grain exports through this passage."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -20.0,
+          62.0
+        ]
+      },
+      "properties": {
+        "name": "GIUK Gap",
+        "risk": "HIGH",
+        "transit_volume_pct": 30,
+        "daily_ships": 80,
+        "cable_count": 8,
+        "current_threat": "Russian submarine patrols testing NATO acoustic surveillance, Northern Fleet deployment exercises, Svalbard archipelago disputes",
+        "primary_threat_actor": "Russian Northern Fleet",
+        "vulnerability_type": "Submarine Warfare / Atlantic Interdiction",
+        "oil_pct": 0,
+        "predicted": false,
+        "prediction_confidence": 85,
+        "description": "Greenland-Iceland-UK gap is NATO's critical anti-submarine barrier. Russia must pass through to reach Atlantic. SOSUS hydrophone arrays monitor passage. In a NATO-Russia conflict, Russian submarines would attempt to breach this gap to interdict trans-Atlantic supply convoys."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.4,
+          -34.4
+        ]
+      },
+      "properties": {
+        "name": "Cape of Good Hope",
+        "risk": "HIGH",
+        "transit_volume_pct": 15,
+        "daily_ships": 55,
+        "cable_count": 6,
+        "current_threat": "Surging traffic from Red Sea diversion causing port congestion at Cape Town/Durban, limited infrastructure, South African political instability",
+        "primary_threat_actor": "Houthi Displacement Effect / Infrastructure Bottleneck",
+        "vulnerability_type": "Diversion Congestion / Infrastructure Failure",
+        "oil_pct": 5,
+        "predicted": false,
+        "prediction_confidence": 80,
+        "description": "Emerged as critical alternative following Houthi Red Sea attacks. Traffic increased 40%+ since late 2023. Route adds 6,000nm and 10-14 days to Europe-Asia voyages. South African port infrastructure not designed for this volume."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.7,
+          -8.5
+        ]
+      },
+      "properties": {
+        "name": "Lombok Strait",
+        "risk": "ELEVATED",
+        "transit_volume_pct": 4,
+        "daily_ships": 60,
+        "cable_count": 2,
+        "current_threat": "PLAN submarine transit to avoid Malacca shallow waters, Indonesian maritime sovereignty concerns, limited surveillance",
+        "primary_threat_actor": "PLAN Submarine Operations",
+        "vulnerability_type": "Submarine Transit / Surveillance Gap",
+        "oil_pct": 2,
+        "predicted": false,
+        "prediction_confidence": 74,
+        "description": "Deep water alternative to Malacca Strait allowing PLAN nuclear submarines to transit between Indian and Pacific Oceans undetected. 40m minimum depth vs Malacca's 23m. Preferred route for Chinese Type 094 ballistic missile submarines."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.0,
+          -18.0
+        ]
+      },
+      "properties": {
+        "name": "Mozambique Channel",
+        "risk": "ELEVATED",
+        "transit_volume_pct": 6,
+        "daily_ships": 30,
+        "cable_count": 4,
+        "current_threat": "Mozambique LNG insurgency disrupting Chinese BRI port investments, Islamist insurgency in Cabo Delgado, Chinese naval access to Nacala and Pemba ports",
+        "primary_threat_actor": "PLAN Strategic Positioning / Islamist Insurgency",
+        "vulnerability_type": "BRI Port Dependency / Insurgency Disruption",
+        "oil_pct": 1,
+        "predicted": false,
+        "prediction_confidence": 68,
+        "description": "600km channel between Madagascar and Mozambique. Strategic for Cape diversion shipping and Chinese BRI port strategy. China invested $5B in Mozambique. Islamist insurgency threatens LNG operations and port infrastructure."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5,
+          20.0
+        ]
+      },
+      "properties": {
+        "name": "Luzon Strait",
+        "risk": "ELEVATED",
+        "transit_volume_pct": 8,
+        "daily_ships": 100,
+        "cable_count": 8,
+        "current_threat": "PLAN exercises in Philippine Sea, Chinese pressure on Philippine fishing vessels at Scarborough Shoal, US-Philippines treaty obligations tension",
+        "primary_threat_actor": "PLAN",
+        "vulnerability_type": "Naval Interdiction / Submarine Highway",
+        "oil_pct": 0,
+        "predicted": false,
+        "prediction_confidence": 76,
+        "description": "350km strait between Taiwan and Luzon (Philippines) is PLAN's primary deep-water access from South China Sea to Pacific Ocean. Critical submarine route to PLAN's Pacific deterrent patrol areas. Eight submarine cables transit here."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.5,
+          26.7
+        ]
+      },
+      "properties": {
+        "name": "Siliguri Corridor (Chicken's Neck)",
+        "risk": "HIGH",
+        "transit_volume_pct": 0,
+        "daily_ships": 0,
+        "cable_count": 2,
+        "current_threat": "Chinese infrastructure development along Bhutan border narrowing corridor, PLAN positioning in Chumbi Valley, Bangladesh instability, India-China border tensions since 2020 Galwan clash",
+        "primary_threat_actor": "PLAN / China",
+        "vulnerability_type": "Land Corridor Severance / Encirclement",
+        "oil_pct": 0,
+        "predicted": false,
+        "prediction_confidence": 83,
+        "description": "22km-wide land corridor connecting mainland India to its entire northeastern states (population 45 million). China controls terrain on three sides. Severance would instantly isolate Assam, Arunachal Pradesh, Nagaland, Manipur. India's greatest geographic vulnerability."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.0,
+          54.1
+        ]
+      },
+      "properties": {
+        "name": "Suwalki Gap",
+        "risk": "HIGH",
+        "transit_volume_pct": 0,
+        "daily_ships": 0,
+        "cable_count": 3,
+        "current_threat": "Russian-Belarusian military exercises near gap, Wagner Group Belarus presence, Kaliningrad missile deployment, Russian hybrid operations in Lithuania/Poland",
+        "primary_threat_actor": "Russia / Belarus",
+        "vulnerability_type": "NATO Land Corridor Severance / Baltic Encirclement",
+        "oil_pct": 0,
+        "predicted": false,
+        "prediction_confidence": 86,
+        "description": "65km land corridor between Poland and Lithuania \u2014 the only overland connection between NATO's Baltic states and the rest of NATO. On one side is Russian Kaliningrad (nuclear weapons, Iskander missiles), on the other Belarus. NATO's most identified conventional warfare vulnerability in Europe."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.0,
+          73.0
+        ]
+      },
+      "properties": {
+        "name": "Arctic Northwest Passage",
+        "risk": "ELEVATED",
+        "transit_volume_pct": 1,
+        "daily_ships": 2,
+        "cable_count": 0,
+        "current_threat": "Russia claiming Arctic sovereignty, Canada-US disputes over territorial waters, Russian military Arctic buildup, climate opening accelerating strategic competition",
+        "primary_threat_actor": "Russia / China Arctic Coalition",
+        "vulnerability_type": "Sovereignty Dispute / Strategic Control",
+        "oil_pct": 0,
+        "predicted": true,
+        "prediction_confidence": 82,
+        "description": "Climate change is opening Arctic shipping routes 2-3 months annually, reducing Asia-Europe distances by 40% versus Suez. Russia operates Northern Sea Route and claims exclusive control. Projected to be commercially viable year-round by 2035-2040."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.0,
+          69.0
+        ]
+      },
+      "properties": {
+        "name": "Kola Peninsula Approaches",
+        "risk": "ELEVATED",
+        "transit_volume_pct": 0,
+        "daily_ships": 5,
+        "cable_count": 1,
+        "current_threat": "Russia Northern Fleet nuclear submarine base at Severomorsk, SSBN patrol routes to Atlantic, NATO maritime patrol aircraft surveillance, Norwegian monitoring networks",
+        "primary_threat_actor": "Russia Northern Fleet",
+        "vulnerability_type": "Nuclear Submarine Corridor / Strategic Deterrence",
+        "oil_pct": 0,
+        "predicted": true,
+        "prediction_confidence": 79,
+        "description": "The Kola Peninsula hosts 60%+ of Russia's nuclear submarine fleet. These submarines must transit to the Atlantic and Arctic to maintain deterrent patrols. NATO anti-submarine warfare assets position to monitor these transit routes."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.5,
+          57.5
+        ]
+      },
+      "properties": {
+        "name": "Baltic Sea Exits (Denmark Straits)",
+        "risk": "HIGH",
+        "transit_volume_pct": 5,
+        "daily_ships": 120,
+        "cable_count": 12,
+        "current_threat": "Nord Stream pipeline sabotage precedent, Baltic cable cutting incidents (2023-2024), Russian Baltic Fleet operational pressure, Sweden/Finland NATO membership escalation",
+        "primary_threat_actor": "Russia / Grey-Zone Operations",
+        "vulnerability_type": "Subsea Infrastructure Sabotage / Naval Denial",
+        "oil_pct": 2,
+        "predicted": true,
+        "prediction_confidence": 84,
+        "description": "Denmark Straits (Great Belt, Little Belt, Oresund) are sole exits for Russia's Baltic Fleet. Nord Stream sabotage (2022) demonstrated vulnerability. Multiple Baltic cable cutting incidents attributed to Russian shadow fleet in 2023-2024."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.5,
+          2.5
+        ]
+      },
+      "properties": {
+        "name": "Gulf of Guinea",
+        "risk": "ELEVATED",
+        "transit_volume_pct": 4,
+        "daily_ships": 25,
+        "cable_count": 5,
+        "current_threat": "Russian Wagner/Africa Corps influence in surrounding states (Mali, Niger, Burkina Faso, CAR), maritime piracy resurgence, Chinese port investments, West African coups destabilizing maritime security",
+        "primary_threat_actor": "Russia Wagner Network / Maritime Piracy",
+        "vulnerability_type": "Proxy Destabilization / Energy Access",
+        "oil_pct": 4,
+        "predicted": true,
+        "prediction_confidence": 71,
+        "description": "Gulf of Guinea produces 4-5 million barrels/day. Wagner/Africa Corps coup wave in Sahel is encircling coastal West African states. Piracy attacks surged. Chinese port investments at Lome, Tema, Cotonou create dual-use access potential."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.0,
+          8.0
+        ]
+      },
+      "properties": {
+        "name": "Hormuz-Malacca Energy Corridor",
+        "risk": "CRITICAL",
+        "transit_volume_pct": 40,
+        "daily_ships": 280,
+        "cable_count": 18,
+        "current_threat": "Indian Ocean power competition: US 5th Fleet, Indian Navy, PLAN expansion, submarine operations, anti-ship missile proliferation across multiple nations",
+        "primary_threat_actor": "Multi-Polar Naval Competition",
+        "vulnerability_type": "Multi-Chokepoint Energy Corridor Disruption",
+        "oil_pct": 40,
+        "predicted": true,
+        "prediction_confidence": 91,
+        "description": "The entire Indian Ocean arc from Hormuz through Bab al-Mandab, around Sri Lanka, and through Malacca constitutes the single largest energy corridor on Earth. 40% of all global oil transits this route. Simultaneous disruption at two or more chokepoints would trigger a cascading global energy crisis."
+      }
+    }
+  ]
+}

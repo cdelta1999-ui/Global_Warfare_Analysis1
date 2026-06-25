@@ -1,1 +1,858 @@
-{"shipping_routes": {"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"name": "Energy Route: Middle East to Malacca", "volume": 85}, "geometry": {"type": "LineString", "coordinates": [[54.37, 24.45], [56.88, 23.36], [65.0, 15.0], [75.0, 5.0], [85.0, 5.0], [95.0, 5.0], [100.0, 3.0], [105.0, 5.0], [115.0, 20.0]]}}, {"type": "Feature", "properties": {"name": "Suez to Indian Ocean", "volume": 60}, "geometry": {"type": "LineString", "coordinates": [[32.3, 31.2], [38.0, 20.0], [43.3, 12.6], [50.0, 10.0], [65.0, 15.0]]}}, {"type": "Feature", "properties": {"name": "South China Sea Transit", "volume": 95}, "geometry": {"type": "LineString", "coordinates": [[119.5, 24.0], [115.0, 18.0], [112.0, 12.0], [108.0, 7.0], [104.0, 2.0]]}}, {"type": "Feature", "properties": {"name": "GIUK Gap Patrols", "volume": 30}, "geometry": {"type": "LineString", "coordinates": [[-40.0, 60.0], [-25.0, 63.0], [-10.0, 60.0], [0.0, 55.0]]}}, {"type": "Feature", "properties": {"name": "English Channel Transit", "volume": 100}, "geometry": {"type": "LineString", "coordinates": [[-5.0, 48.5], [0.0, 50.0], [2.0, 51.0], [4.0, 52.0]]}}, {"type": "Feature", "properties": {"name": "Panama Canal Approaches", "volume": 75}, "geometry": {"type": "LineString", "coordinates": [[-90.0, 5.0], [-85.0, 7.0], [-79.9, 9.1], [-75.0, 12.0], [-65.0, 18.0]]}}, {"type": "Feature", "properties": {"name": "Bosphorus / Black Sea Route", "volume": 50}, "geometry": {"type": "LineString", "coordinates": [[26.0, 39.0], [28.0, 40.5], [29.0, 41.0], [31.0, 42.5], [35.0, 43.5]]}}]}, "naval_patrols": {"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"type": "PLAN Submarine", "color": "#ff4b4b"}, "geometry": {"type": "Point", "coordinates": [85.0, 5.0]}}, {"type": "Feature", "properties": {"type": "PLAN Submarine", "color": "#ff4b4b"}, "geometry": {"type": "Point", "coordinates": [93.0, 10.0]}}, {"type": "Feature", "properties": {"type": "Indian Navy Destroyer", "color": "#00f2fe"}, "geometry": {"type": "Point", "coordinates": [72.8, 18.9]}}, {"type": "Feature", "properties": {"type": "Indian Navy Carrier Strike", "color": "#00f2fe"}, "geometry": {"type": "Point", "coordinates": [92.7, 11.6]}}]}}
+{
+  "shipping_routes": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              56.0,
+              26.0
+            ],
+            [
+              65.0,
+              15.0
+            ],
+            [
+              75.0,
+              8.0
+            ],
+            [
+              85.0,
+              5.0
+            ],
+            [
+              95.0,
+              5.0
+            ],
+            [
+              100.0,
+              3.0
+            ],
+            [
+              103.8,
+              2.5
+            ]
+          ]
+        },
+        "properties": {
+          "name": "Persian Gulf \u2192 Malacca Energy Corridor",
+          "volume": 85,
+          "trade_value_bn_usd": 1200,
+          "route_type": "Energy",
+          "current_threat": "IRGC harassment at Hormuz exit, Houthi threat in Arabian Sea approaches, PLAN monitoring near Malacca"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              32.3,
+              31.5
+            ],
+            [
+              32.5,
+              30.0
+            ],
+            [
+              38.0,
+              20.0
+            ],
+            [
+              43.3,
+              12.6
+            ],
+            [
+              50.0,
+              10.0
+            ],
+            [
+              65.0,
+              8.0
+            ],
+            [
+              72.8,
+              18.9
+            ]
+          ]
+        },
+        "properties": {
+          "name": "Suez-Red Sea-Indian Ocean",
+          "volume": 75,
+          "trade_value_bn_usd": 900,
+          "route_type": "Container / General Cargo",
+          "current_threat": "Houthi missile attacks forcing diversions; 60% reduction in Red Sea container traffic since November 2023"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              28.0,
+              34.0
+            ],
+            [
+              20.0,
+              20.0
+            ],
+            [
+              18.4,
+              -34.4
+            ],
+            [
+              10.0,
+              -30.0
+            ],
+            [
+              -10.0,
+              -10.0
+            ],
+            [
+              -15.0,
+              5.0
+            ],
+            [
+              -5.0,
+              35.0
+            ],
+            [
+              5.3,
+              43.3
+            ]
+          ]
+        },
+        "properties": {
+          "name": "Cape Diversion Route (post-Houthi)",
+          "volume": 45,
+          "trade_value_bn_usd": 400,
+          "route_type": "Container Diversion",
+          "current_threat": "Storm risk at Cape, port congestion at Cape Town/Durban, 40% longer voyage adding 10-14 days and $1M+ fuel costs per voyage"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              103.8,
+              2.5
+            ],
+            [
+              120.0,
+              20.0
+            ],
+            [
+              140.0,
+              30.0
+            ],
+            [
+              155.0,
+              25.0
+            ],
+            [
+              -150.0,
+              30.0
+            ],
+            [
+              -117.2,
+              32.7
+            ]
+          ]
+        },
+        "properties": {
+          "name": "Trans-Pacific (Asia \u2192 US West Coast)",
+          "volume": 95,
+          "trade_value_bn_usd": 1800,
+          "route_type": "Container",
+          "current_threat": "PLAN naval exercises in Philippine Sea, potential Taiwan Strait blockade rerouting, LA/Long Beach port congestion"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -75.0,
+              40.0
+            ],
+            [
+              -40.0,
+              45.0
+            ],
+            [
+              -20.0,
+              50.0
+            ],
+            [
+              -5.0,
+              48.5
+            ]
+          ]
+        },
+        "properties": {
+          "name": "North Atlantic (Europe-US)",
+          "volume": 80,
+          "trade_value_bn_usd": 1100,
+          "route_type": "Container / LNG",
+          "current_threat": "Russian submarine activity, GIUK Gap monitoring, LNG cargo interdiction risk, NATO convoy escort requirements in escalation scenario"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              119.5,
+              24.0
+            ],
+            [
+              115.0,
+              18.0
+            ],
+            [
+              112.0,
+              12.0
+            ],
+            [
+              108.0,
+              7.0
+            ],
+            [
+              104.0,
+              2.0
+            ],
+            [
+              103.8,
+              1.3
+            ]
+          ]
+        },
+        "properties": {
+          "name": "South China Sea Transit",
+          "volume": 95,
+          "trade_value_bn_usd": 3400,
+          "route_type": "Container / Energy",
+          "current_threat": "PLAN territorial enforcement, island military facilities monitoring shipping, Philippines/Vietnam coast guard incidents, US FONOP friction"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -80.0,
+              0.0
+            ],
+            [
+              -79.9,
+              9.1
+            ],
+            [
+              -75.0,
+              18.0
+            ],
+            [
+              -70.0,
+              22.0
+            ],
+            [
+              -65.0,
+              25.0
+            ]
+          ]
+        },
+        "properties": {
+          "name": "Panama Canal Approaches",
+          "volume": 70,
+          "trade_value_bn_usd": 270,
+          "route_type": "Container",
+          "current_threat": "Drought-induced capacity restrictions, Chinese port company control at both canal entrances, infrastructure vulnerability"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              30.0,
+              43.0
+            ],
+            [
+              29.0,
+              41.0
+            ],
+            [
+              26.5,
+              40.5
+            ],
+            [
+              24.0,
+              38.5
+            ],
+            [
+              18.0,
+              38.0
+            ],
+            [
+              5.3,
+              43.3
+            ]
+          ]
+        },
+        "properties": {
+          "name": "Black Sea-Bosphorus-Mediterranean",
+          "volume": 40,
+          "trade_value_bn_usd": 220,
+          "route_type": "Grain / Energy",
+          "current_threat": "Ukraine war disruption, Russian Black Sea Fleet interdiction, Turkey Montreux Convention leverage, grain export disruption affecting global food prices"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -168.0,
+              65.0
+            ],
+            [
+              -120.0,
+              75.0
+            ],
+            [
+              -60.0,
+              78.0
+            ],
+            [
+              20.0,
+              75.0
+            ],
+            [
+              30.0,
+              70.0
+            ],
+            [
+              60.0,
+              65.0
+            ]
+          ]
+        },
+        "properties": {
+          "name": "Arctic Northern Sea Route (Seasonal)",
+          "volume": 20,
+          "trade_value_bn_usd": 40,
+          "route_type": "LNG / Bulk Cargo",
+          "current_threat": "Russia controls access permits, ice conditions, limited SAR infrastructure, Russia-sanctions compliance risk for Asian shippers"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -0.2,
+              5.6
+            ],
+            [
+              5.0,
+              3.0
+            ],
+            [
+              8.0,
+              -1.0
+            ],
+            [
+              5.0,
+              35.0
+            ],
+            [
+              5.3,
+              43.3
+            ]
+          ]
+        },
+        "properties": {
+          "name": "West Africa LNG Export Route",
+          "volume": 30,
+          "trade_value_bn_usd": 85,
+          "route_type": "LNG",
+          "current_threat": "Gulf of Guinea piracy, Wagner destabilization of hinterland states, Boko Haram and ISWAP activity in Nigeria delta region, offshore platform vulnerability"
+        }
+      }
+    ]
+  },
+  "naval_patrols": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            51.5,
+            26.2
+          ]
+        },
+        "properties": {
+          "name": "US 5th Fleet HQ",
+          "type": "US Navy",
+          "color": "#3b82f6",
+          "nation": "USA",
+          "fleet": "5th Fleet",
+          "mission": "Persian Gulf / Red Sea operations, counter-Iran, Freedom of Navigation",
+          "vessel_class": "HQ Manama Bahrain"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            65.0,
+            20.0
+          ]
+        },
+        "properties": {
+          "name": "USS Gerald R. Ford CSG",
+          "type": "US Navy",
+          "color": "#3b82f6",
+          "nation": "USA",
+          "fleet": "5th Fleet",
+          "mission": "Arabian Sea deterrence, rapid response Hormuz/Bab al-Mandab",
+          "vessel_class": "Ford-class CVN"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            135.0,
+            30.0
+          ]
+        },
+        "properties": {
+          "name": "US 7th Fleet (Yokosuka)",
+          "type": "US Navy",
+          "color": "#3b82f6",
+          "nation": "USA",
+          "fleet": "7th Fleet",
+          "mission": "Taiwan Strait deterrence, Japan/Korea defense, PLAN containment",
+          "vessel_class": "CVN/DDG/SSN"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -20.0,
+            40.0
+          ]
+        },
+        "properties": {
+          "name": "US 6th Fleet (Atlantic)",
+          "type": "US Navy",
+          "color": "#3b82f6",
+          "nation": "USA",
+          "fleet": "6th Fleet",
+          "mission": "Atlantic SLOC protection, NATO support, Russia Northern Fleet monitoring",
+          "vessel_class": "DDG/SSN/LHD"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -5.0,
+            36.0
+          ]
+        },
+        "properties": {
+          "name": "HMS Queen Elizabeth Strike Group",
+          "type": "Royal Navy",
+          "color": "#60a5fa",
+          "nation": "UK",
+          "fleet": "Carrier Strike Group 1",
+          "mission": "Mediterranean/East of Suez deployments, NATO interoperability",
+          "vessel_class": "Queen Elizabeth-class CVF"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -30.0,
+            42.0
+          ]
+        },
+        "properties": {
+          "name": "Royal Navy Atlantic Patrol",
+          "type": "Royal Navy",
+          "color": "#60a5fa",
+          "nation": "UK",
+          "fleet": "SNMG1",
+          "mission": "Atlantic patrol, GIUK Gap ASW, Falklands reinforcement route monitoring",
+          "vessel_class": "Type 45 DDG / Type 23 FF"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            55.5,
+            -4.6
+          ]
+        },
+        "properties": {
+          "name": "French Indian Ocean Force (La R\u00e9union)",
+          "type": "Marine Nationale",
+          "color": "#a78bfa",
+          "nation": "France",
+          "fleet": "ALINDIEN",
+          "mission": "Indian Ocean patrol, anti-piracy, protection of French EEZ",
+          "vessel_class": "FLF Frigate / BATRAL"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            5.0,
+            43.5
+          ]
+        },
+        "properties": {
+          "name": "French Toulon Fleet HQ",
+          "type": "Marine Nationale",
+          "color": "#a78bfa",
+          "nation": "France",
+          "fleet": "Mediterranean Fleet",
+          "mission": "Mediterranean operations, Libya/Lebanon monitoring, NATO southern flank",
+          "vessel_class": "PA Charles de Gaulle CSG"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            82.0,
+            14.0
+          ]
+        },
+        "properties": {
+          "name": "INS Eastern Fleet (Visakhapatnam)",
+          "type": "Indian Navy",
+          "color": "#f97316",
+          "nation": "India",
+          "fleet": "Eastern Naval Command",
+          "mission": "Bay of Bengal, Andaman Sea, China PLAN monitoring, QUAD exercises",
+          "vessel_class": "INS Vikrant / Kolkata-class DDG"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            72.0,
+            14.0
+          ]
+        },
+        "properties": {
+          "name": "INS Western Fleet (Mumbai)",
+          "type": "Indian Navy",
+          "color": "#f97316",
+          "nation": "India",
+          "fleet": "Western Naval Command",
+          "mission": "Arabian Sea, counter-Pakistan Navy, Persian Gulf approaches, Hormuz monitoring",
+          "vessel_class": "INS Delhi-class DDG / Shivalik FF"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            78.0,
+            8.0
+          ]
+        },
+        "properties": {
+          "name": "INS Vikrant Strike Group",
+          "type": "Indian Navy",
+          "color": "#f97316",
+          "nation": "India",
+          "fleet": "Carrier Strike Group",
+          "mission": "Indian Ocean power projection, PLAN containment, QUAD coordination",
+          "vessel_class": "IAC-1 Vikrant CVL"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            115.0,
+            15.0
+          ]
+        },
+        "properties": {
+          "name": "PLAN South Sea Fleet",
+          "type": "PLAN",
+          "color": "#ff4b4b",
+          "nation": "China",
+          "fleet": "Southern Theater Navy",
+          "mission": "SCS sovereignty enforcement, Taiwan blockade exercises, Spratly garrison support",
+          "vessel_class": "Type 055 DDG / Type 052D / Type 075 LHD"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            75.0,
+            5.0
+          ]
+        },
+        "properties": {
+          "name": "PLAN Indian Ocean Deployment",
+          "type": "PLAN",
+          "color": "#ff4b4b",
+          "nation": "China",
+          "fleet": "PLAN Indo-Pacific",
+          "mission": "Anti-piracy cover for BRI protection, intelligence collection on US/India movements, Djibouti naval base support",
+          "vessel_class": "Type 054A FF / Type 052D DDG"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            0.0,
+            -15.0
+          ]
+        },
+        "properties": {
+          "name": "PLAN South Atlantic Deployment",
+          "type": "PLAN",
+          "color": "#ff4b4b",
+          "nation": "China",
+          "fleet": "PLAN Global Deployment",
+          "mission": "Presence operations near African BRI ports, diplomatic signaling to South American partners, intelligence collection",
+          "vessel_class": "Type 054A FF"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            32.0,
+            69.5
+          ]
+        },
+        "properties": {
+          "name": "Russian Northern Fleet HQ (Severomorsk)",
+          "type": "Russian Navy",
+          "color": "#ef4444",
+          "nation": "Russia",
+          "fleet": "Northern Fleet",
+          "mission": "SSBN deterrent patrols, GIUK Gap operations, Arctic sovereignty enforcement, Atlantic interdiction planning",
+          "vessel_class": "Borei SSBN / Yasen SSN / Kuznetsov CVL"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            23.0,
+            56.0
+          ]
+        },
+        "properties": {
+          "name": "Russian Baltic Fleet (Baltiysk)",
+          "type": "Russian Navy",
+          "color": "#ef4444",
+          "nation": "Russia",
+          "fleet": "Baltic Fleet",
+          "mission": "Baltic Sea operations, Kaliningrad garrison support, NATO Baltic state pressure, mine-laying capability",
+          "vessel_class": "Steregushchiy Corvette / Kilo-class submarine"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            62.0,
+            18.0
+          ]
+        },
+        "properties": {
+          "name": "NATO CMF CTF-150",
+          "type": "NATO/Coalition",
+          "color": "#22d3ee",
+          "nation": "Multi-National",
+          "fleet": "Combined Maritime Forces CTF-150",
+          "mission": "Counter-narcotics, counter-terrorism, maritime security in international waters of North Arabian Sea, Gulf of Oman",
+          "vessel_class": "Multi-national frigates"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            54.0,
+            13.0
+          ]
+        },
+        "properties": {
+          "name": "NATO CMF CTF-151 Anti-Piracy",
+          "type": "NATO/Coalition",
+          "color": "#22d3ee",
+          "nation": "Multi-National",
+          "fleet": "Combined Maritime Forces CTF-151",
+          "mission": "Counter-piracy operations Gulf of Aden / Somali Basin, HMS protection escorting WFP food shipments to Somalia",
+          "vessel_class": "Multi-national frigates / maritime patrol aircraft"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            133.0,
+            32.0
+          ]
+        },
+        "properties": {
+          "name": "JMSDF West Fleet (Sasebo)",
+          "type": "JMSDF",
+          "color": "#34d399",
+          "nation": "Japan",
+          "fleet": "Self-Defense Fleet West",
+          "mission": "East China Sea patrol, Senkaku Islands monitoring, Taiwan Strait approaches monitoring, ASW East China Sea",
+          "vessel_class": "Izumo DDH / Atago DDG / Soryu SSK"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            140.0,
+            34.0
+          ]
+        },
+        "properties": {
+          "name": "JMSDF East Fleet (Yokosuka)",
+          "type": "JMSDF",
+          "color": "#34d399",
+          "nation": "Japan",
+          "fleet": "Self-Defense Fleet East",
+          "mission": "Pacific approaches, US 7th Fleet coordination, SOSUS monitoring, PLAN submarine tracking",
+          "vessel_class": "DDG/FF/SSK"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            130.0,
+            -12.0
+          ]
+        },
+        "properties": {
+          "name": "Royal Australian Navy (Darwin)",
+          "type": "Royal Australian Navy",
+          "color": "#fbbf24",
+          "nation": "Australia",
+          "fleet": "Northern Command",
+          "mission": "Indo-Pacific gateway, Indonesia maritime patrol, AUKUS submarine program preparations, QUAD exercises",
+          "vessel_class": "Hobart-class DDG / Collins-class SSK"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            44.0,
+            15.0
+          ]
+        },
+        "properties": {
+          "name": "Saudi/UAE Coalition Naval Forces",
+          "type": "Gulf Coalition",
+          "color": "#f59e0b",
+          "nation": "Saudi Arabia / UAE",
+          "fleet": "GCC Naval Forces",
+          "mission": "Red Sea/Gulf patrol, Houthi counter-operations, Bab al-Mandab protection, Iranian IRGC monitoring",
+          "vessel_class": "Al-Riyadh / Baynunah Class"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            55.0,
+            26.5
+          ]
+        },
+        "properties": {
+          "name": "IRGC Naval Forces (Bandar Abbas)",
+          "type": "IRGC Navy",
+          "color": "#ff4b4b",
+          "nation": "Iran",
+          "fleet": "IRGCN Hormuz Force",
+          "mission": "Strait of Hormuz harassment, tanker seizure operations, mine-laying exercises, fast boat swarm tactics against USN",
+          "vessel_class": "IRGCN Fast Attack Craft / Fateh-class SS / UAV carriers"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            127.0,
+            35.0
+          ]
+        },
+        "properties": {
+          "name": "Republic of Korea Navy (Jinhae)",
+          "type": "ROKN",
+          "color": "#10b981",
+          "nation": "South Korea",
+          "fleet": "1st Fleet",
+          "mission": "North Korea naval provocations, Korea Strait monitoring, PLAN South Sea approaches, Dokdo/Takeshima patrol",
+          "vessel_class": "Sejong the Great DDG / Chang Bogo-class SSK"
+        }
+      }
+    ]
+  }
+}

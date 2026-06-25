@@ -1,1 +1,233 @@
-{"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"name": "Boucraa Reserves (Morocco)", "mineral": "Phosphates", "share": "70% Global", "wounding_strategy": "The Global Agricultural Choke Point: Over 70% of the earth's remaining high-quality phosphate rock is located here. If a superpower fuels a localized proxy conflict or blockade in this specific desert region, global fertilizer prices will skyrocket. The resulting agricultural yield drops would trigger famine and massive economic inflation in rival nations within a single harvest cycle. It is a slow, demographic weapon."}, "geometry": {"type": "Point", "coordinates": [-12.8, 26.3]}}, {"type": "Feature", "properties": {"name": "Salar de Atacama (Chile)", "mineral": "Lithium", "share": "25% Global", "wounding_strategy": "The Mineral 'Neurology': Future militaries and economies run on batteries. Instead of attacking a nation's military bases, rivals will weaponize local labor unions, fund eco-terrorist sabotage, or buy up the specific port terminals where lithium leaves South America. Paralyzing these specific, narrow export routes starves the West and Asian rivals of the materials needed for EV transition and next-gen military tech."}, "geometry": {"type": "Point", "coordinates": [-68.3, -23.5]}}, {"type": "Feature", "properties": {"name": "Zangmu Mega-Dam (China/Tibet)", "mineral": "Freshwater Flow", "share": "Brahmaputra Headwaters", "wounding_strategy": "The Tibetan 'Water Tower': The behavioral pattern is environmental hostage-taking. By building mega-dams on the upper Brahmaputra, the flow of water isn't necessarily stopped outright, but it is heavily regulated. During a border standoff, releasing sudden torrents of water (causing floods downstream) or withholding it (exacerbating droughts) allows the upstream power to devastate downstream agricultural yields without military engagement."}, "geometry": {"type": "Point", "coordinates": [92.65, 29.2]}}, {"type": "Feature", "properties": {"name": "Bayan Obo (China)", "mineral": "Light REEs", "share": "45% Global", "wounding_strategy": "Civil-Military Fusion & Tech Packaging: China understands that global leverage isn't just about making weapons; it's about controlling commercial supply chains. By dominating the back-end processing of rare earth minerals, they create an invisible choke point. If they halt processing, global tech manufacturing stalls."}, "geometry": {"type": "Point", "coordinates": [109.97, 41.76]}}]}
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -12.8,
+          26.3
+        ]
+      },
+      "properties": {
+        "name": "Boucraa Phosphate Mines (Western Sahara)",
+        "mineral": "Phosphates",
+        "share": "70% global reserves",
+        "wounding_strategy": "Global Agricultural Chokepoint: 70% of Earth's remaining high-quality phosphate rock. All synthetic fertilizers require phosphate. Proxy conflict or blockade in this disputed territory would skyrocket global fertilizer prices within one harvest cycle, triggering famine and inflation across food-import dependent nations \u2014 a slow demographic weapon costing zero military casualties.",
+        "strategic_importance": "CRITICAL",
+        "dependency_nation": "Morocco / OCP Group",
+        "annual_value_bn_usd": 18
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.3,
+          -23.5
+        ]
+      },
+      "properties": {
+        "name": "Salar de Atacama (Chile)",
+        "mineral": "Lithium",
+        "share": "25% global reserves",
+        "wounding_strategy": "EV and Defense Battery Neurology: Future militaries and economies run on lithium batteries. Weaponizing Atacama export routes \u2014 funding labor unrest, eco-terrorism, or buying port terminal access \u2014 would starve Western EV transition and US military drone/guided weapon battery stockpiles. Part of Lithium Triangle with Bolivia/Argentina controlling 56% of global reserves.",
+        "strategic_importance": "CRITICAL",
+        "dependency_nation": "Chile (SQM / Albemarle)",
+        "annual_value_bn_usd": 12
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.65,
+          29.2
+        ]
+      },
+      "properties": {
+        "name": "Zangmu Dam Complex (Tibet/Brahmaputra)",
+        "mineral": "Freshwater / Hydropower",
+        "share": "Brahmaputra headwaters (controls flow for 130M downstream)",
+        "wounding_strategy": "Environmental Hostage-Taking: China's series of mega-dams on the upper Brahmaputra regulates water flow to India and Bangladesh. During border standoffs, sudden water releases cause catastrophic downstream flooding; withholding water during dry season exacerbates Indian agricultural droughts. China's planned 60GW super-dam (3x Three Gorges) would give Beijing an unprecedented hydrological weapon over 130 million downstream South Asians.",
+        "strategic_importance": "CRITICAL",
+        "dependency_nation": "China vs India/Bangladesh",
+        "annual_value_bn_usd": 8
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.97,
+          41.76
+        ]
+      },
+      "properties": {
+        "name": "Bayan Obo Rare Earth Complex (Inner Mongolia)",
+        "mineral": "Rare Earth Elements (REE)",
+        "share": "45% global mine production / 85% global processing",
+        "wounding_strategy": "Invisible Tech Chokepoint: China controls 85% of REE processing globally even for ore mined elsewhere. REEs are irreplaceable in F-35 jet engines, GPS systems, night-vision goggles, and all semiconductor manufacturing. Export embargo \u2014 as China demonstrated in 2010 against Japan \u2014 would halt global defense electronics production within 18 months. Processing chokepoint creates leverage without touching a mine.",
+        "strategic_importance": "CRITICAL",
+        "dependency_nation": "China (China Northern Rare Earth Group)",
+        "annual_value_bn_usd": 25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.0,
+          -10.5
+        ]
+      },
+      "properties": {
+        "name": "DRC Cobalt Belt (Katanga)",
+        "mineral": "Cobalt",
+        "share": "70% global production",
+        "wounding_strategy": "Defense Electronics Strangulation: 70% of global cobalt essential for lithium-ion battery cathodes in EVs, smartphones, and military electronics. China controls 80% of cobalt refining globally. Proxy control of DRC mining regions via M23 and other armed groups allows China to determine global cobalt availability. EV transition halt and defense battery shortage would follow coordinated supply disruption within 12-18 months.",
+        "strategic_importance": "CRITICAL",
+        "dependency_nation": "China (Glencore / Zhejiang Huayou Cobalt)",
+        "annual_value_bn_usd": 9
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.8,
+          43.0
+        ]
+      },
+      "properties": {
+        "name": "Oyu Tolgoi Mine (Mongolia)",
+        "mineral": "Copper / Gold",
+        "share": "2% global copper (rising to 5% by 2030)",
+        "wounding_strategy": "Supply Chain Dependency: World's largest undeveloped copper deposit (Rio Tinto / Government of Mongolia). Copper is irreplaceable for electrical grid infrastructure, EV motors, and weapons systems. Mongolia's geographic dependence on China (95% of exports go through China) gives Beijing leverage to delay approvals, impose transit fees, or fund instability to prevent Western access to this critical resource.",
+        "strategic_importance": "HIGH",
+        "dependency_nation": "Mongolia / Rio Tinto (UK-Australian)",
+        "annual_value_bn_usd": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.1,
+          -4.05
+        ]
+      },
+      "properties": {
+        "name": "Grasberg Mine (Papua, Indonesia)",
+        "mineral": "Gold / Copper",
+        "share": "World's largest gold mine, 3rd largest copper mine",
+        "wounding_strategy": "Resource Corridor Control: Freeport-McMoRan mine at 4,300m altitude in Indonesian Papua produces 1.7M oz gold/year and 500M lbs copper. Indonesian government has increased state ownership pressure. West Papua independence movement and Papuan armed resistance (OPM/TPNPB) present persistent sabotage risk. China has sought to buy PT-FI shares. Indonesian state takeover of Grasberg would redirect copper/gold supply toward China-allied processing.",
+        "strategic_importance": "HIGH",
+        "dependency_nation": "USA (Freeport-McMoRan) / Indonesia (INALUM)",
+        "annual_value_bn_usd": 7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          49.0,
+          31.5
+        ]
+      },
+      "properties": {
+        "name": "Khuzestan Oil and Gas Fields (Iran)",
+        "mineral": "Oil / Natural Gas",
+        "share": "10% of global proven oil reserves",
+        "wounding_strategy": "Energy Leverage: Iran's oil heartland between Arab ethnic minority region and Zagros mountains. Arab separatism in Khuzestan funded by Gulf states. Ethnic unrest or infrastructure attack (Israeli/US strikes precedent) could shut down 3-4 million bbl/day from global market. Iran uses threat of supply disruption as deterrence. If sanctions collapse, Iran could flood market to crash price and damage US shale economics.",
+        "strategic_importance": "HIGH",
+        "dependency_nation": "Iran (NIOC)",
+        "annual_value_bn_usd": 55
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.0,
+          57.0
+        ]
+      },
+      "properties": {
+        "name": "Athabasca Oil Sands (Alberta, Canada)",
+        "mineral": "Oil Sands (Bitumen)",
+        "share": "World's 3rd largest proven reserves (170B barrels)",
+        "wounding_strategy": "North American Energy Security: Critical backup to Middle East instability. Keystone XL cancellation demonstrated US/Canadian political vulnerability to infrastructure opposition campaigns. Russian information operations fund environmental opposition to pipelines, landlocking Canadian oil and maintaining US import dependency on Middle East. Chinese sovereign funds acquisition of oil sands assets creates leverage over North American energy security.",
+        "strategic_importance": "HIGH",
+        "dependency_nation": "Canada (Suncor / CNRL / Imperial Oil)",
+        "annual_value_bn_usd": 32
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.0,
+          60.0
+        ]
+      },
+      "properties": {
+        "name": "Norwegian Continental Shelf Gas Fields",
+        "mineral": "Natural Gas",
+        "share": "25% of Europe's gas supply (post-Nordstream Europe's #1 supplier)",
+        "wounding_strategy": "European Energy Sovereignty: Norway became Europe's primary gas supplier after Russia Nordstream sabotage. Statoil (Equinor) platforms and Langeled pipeline to UK are exposed underwater infrastructure. Norway's Petroleum Safety Authority has warned of drone threats to offshore platforms. Russian GRU has surveilled Norwegian oil platforms (submarine activity confirmed). Disrupting Norwegian supply with no alternative would recreate European energy crisis of 2022.",
+        "strategic_importance": "CRITICAL",
+        "dependency_nation": "Norway (Equinor) \u2192 Europe",
+        "annual_value_bn_usd": 78
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.7,
+          34.9
+        ]
+      },
+      "properties": {
+        "name": "Gwangyang / Pohang Steel Complex (South Korea)",
+        "mineral": "Steel / Shipbuilding",
+        "share": "4% global steel, critical naval shipbuilding capacity",
+        "wounding_strategy": "Naval Industrial Base Targeting: POSCO Gwangyang and Pohang complexes are Asia's largest integrated steel mills and anchor South Korea's naval shipbuilding capacity (HD Hyundai, Hanwha Ocean). North Korean missile or drone strikes on these facilities during Korean Peninsula escalation would degrade ROK Navy's rebuild capacity and cut US Navy destroyer/submarine construction access to South Korean yards during a Pacific conflict.",
+        "strategic_importance": "HIGH",
+        "dependency_nation": "South Korea (POSCO / HD Hyundai)",
+        "annual_value_bn_usd": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.9,
+          24.8
+        ]
+      },
+      "properties": {
+        "name": "TSMC Hsinchu Science Park (Taiwan)",
+        "mineral": "Advanced Semiconductors",
+        "share": "90% of sub-7nm chips globally; 100% of 3nm and 2nm",
+        "wounding_strategy": "Silicon Hostage: Taiwan Semiconductor Manufacturing Company produces every advanced chip powering AI, defense electronics, smartphones, data centers, and autonomous vehicles. There is literally no substitute \u2014 Intel and Samsung are 2-4 years behind on most advanced nodes. PLAN blockade or kinetic attack triggers immediate global tech freeze. Even credible threat of conflict causes $500B+ market selloffs. The single biggest single-point-of-failure in the global economy.",
+        "strategic_importance": "CRITICAL",
+        "dependency_nation": "Taiwan (TSMC) \u2192 Global",
+        "annual_value_bn_usd": 90
+      }
+    }
+  ]
+}
