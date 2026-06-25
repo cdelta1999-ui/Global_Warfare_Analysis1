@@ -1,1 +1,107 @@
-{"country": "Mali", "wound_vulnerability_index": 56, "escalation_risk": "ELEVATED", "historical_timeline": [{"Year": 1990, "One-Sided Violence": 125.0, "Internal armed conflict": 100.0}, {"Year": 1991, "One-Sided Violence": 176.0, "Internal armed conflict": 100.0}, {"Year": 1992, "One-Sided Violence": 77.0}, {"Year": 1994, "One-Sided Violence": 593.0, "Internal armed conflict": 100.0}, {"Year": 2007, "Internal armed conflict": 100.0}, {"Year": 2008, "Internal armed conflict": 100.0}, {"Year": 2009, "Internal armed conflict": 200.0}, {"Year": 2012, "Internal armed conflict": 200.0}, {"Year": 2013, "One-Sided Violence": 26.0, "Internationalized internal armed conflict": 100.0}, {"Year": 2014, "Internal armed conflict": 100.0, "Internationalized internal armed conflict": 100.0}, {"Year": 2015, "Internationalized internal armed conflict": 200.0, "Internal armed conflict": 100.0}, {"Year": 2016, "Internationalized internal armed conflict": 100.0}, {"Year": 2017, "One-Sided Violence": 25.0, "Internationalized internal armed conflict": 200.0}, {"Year": 2018, "One-Sided Violence": 362.0, "Internationalized internal armed conflict": 200.0}, {"Year": 2019, "One-Sided Violence": 296.0, "Internationalized internal armed conflict": 200.0}, {"Year": 2020, "One-Sided Violence": 488.0, "Internationalized internal armed conflict": 200.0}, {"Year": 2021, "One-Sided Violence": 27.0, "Internationalized internal armed conflict": 200.0}, {"Year": 2022, "Internationalized internal armed conflict": 1100.0}, {"Year": 2023, "Internationalized internal armed conflict": 200.0, "Internal armed conflict": 100.0}, {"Year": 2024, "Internationalized internal armed conflict": 300.0}, {"Year": 2025, "Internationalized internal armed conflict": 1200.0}], "predicted_conflict_vectors": [{"type": "Border Skirmish", "probability": 100}, {"type": "Proxy / Grey-Zone", "probability": 57}, {"type": "Naval Blockade", "probability": 49}, {"type": "Cyber / Digital", "probability": 15}, {"type": "Algorithmic / AI Strike", "probability": 7}, {"type": "Full Conventional", "probability": 30}], "ml_forecast_volume": 6}
+{
+  "country": "Mali",
+  "forecast": {
+    "wvi": 59,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1900,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1296,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1920,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1940,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1960,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1980,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 346,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2000,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 589,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2010,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1873,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2015,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 383,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2020,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Non-State (Cartel/Militia)": 0.3216,
+    "Intra-State (Civil War)": 0.2436,
+    "Proxy / Grey-Zone": 0.1562,
+    "One-Sided Violence": 0.218,
+    "Border Skirmish": 0.0607
+  },
+  "future_hotspots": [
+    {
+      "region": "Mali - Border Flashpoint",
+      "threat": "Intra-State (Civil War)",
+      "probability": 0.244,
+      "lat": null,
+      "lng": null
+    }
+  ],
+  "raw_schemas": {}
+}
