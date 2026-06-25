@@ -1,1 +1,91 @@
-{"country": "China", "pillars": {"kinetic": {"overall_score": 37, "sources": [{"name": "ACLED", "metric": "Instability Velocity", "raw_value": 0.58, "unit": "std_dev", "score": 37}, {"name": "SIPRI", "metric": "EMA Fatalities", "raw_value": 6911, "unit": "deaths/yr", "score": 37}, {"name": "AIS Marine", "metric": "Choke Point Flow", "raw_value": 6911, "unit": "vessels/day", "score": 37}], "raw_feed": {"source": "ACLED", "country_code": "CHI", "region": "Capital Region", "data_points": {"event_id": "ACLED-7456", "event_type": "Battles / Border Skirmishes", "actor_1": "Military Forces of China", "actor_2": "Unidentified Armed Group", "fatalities": 63585, "geo_coordinates": {"lat": 3.067, "lng": -62.7653}}, "wvi_normalized_score": 37.0}}, "cyber": {"overall_score": 70, "sources": [{"name": "CFR Cyber Tracker", "metric": "Incidents (YTD)", "raw_value": 105, "unit": "events", "score": 70}, {"name": "EuRepoC", "metric": "Active Campaigns", "raw_value": 3, "unit": "campaigns", "score": 70}, {"name": "Carnegie Spyware", "metric": "Proliferation", "raw_value": 0.7, "unit": "index", "score": 70}], "raw_feed": {"source": "CFR_Cyber_Tracker", "target_country": "China", "suspected_attribution": "Unknown State Actor", "data_points": {"incident_type": "Cyber Espionage / Infrastructure Spoofing", "target_sector": "Energy Grid / Maritime Navigation", "severity_level": "Medium"}, "wvi_normalized_score": 70.0}}, "economic": {"overall_score": 31, "sources": [{"name": "UN Comtrade", "metric": "Critical Import Dep.", "raw_value": "$31B", "unit": "USD", "score": 31}, {"name": "IMF DOTS", "metric": "Trade Imbalance", "raw_value": "-$37B", "unit": "USD", "score": 31}, {"name": "World Bank", "metric": "Tariff Barrier", "raw_value": "6.2%", "unit": "rate", "score": 31}], "raw_feed": {"source": "UN_Comtrade_IMF", "reporting_country": "CHI", "partner_country": "Global Market", "data_points": {"commodity_code": "HS-8542", "commodity_description": "Electronic Integrated Circuits", "bilateral_trade_value_usd": 26645799882, "import_dependency_percentage": 32.2}, "wvi_normalized_score": 31.0}}}, "wvi_metadata": {"m_geo_multiplier": 1.5, "delta_socio_multiplier": 1.0, "boiling_point_triggered": false, "boiling_point_alert": null}}
+{
+  "country": "China",
+  "computed_wvi": 71,
+  "pillars": {
+    "cyber": {
+      "overall_score": 88,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 93,
+          "metric": "105 events (YTD)",
+          "raw_value": 105,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 78,
+          "metric": "4 campaigns",
+          "raw_value": 4,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 83,
+          "metric": "Active tracking",
+          "raw_value": 83,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 75,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 75,
+          "metric": "Dependency: 60%",
+          "raw_value": 60,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 67,
+          "metric": "Sanctions Exposure: 67/100",
+          "raw_value": 67,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 63,
+          "metric": "Trade Concentration: 63/100",
+          "raw_value": 63,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 78,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 78,
+          "metric": "624 events/yr",
+          "raw_value": 624,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 73,
+          "metric": "Fatalities: 9360/yr",
+          "raw_value": 9360,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 81,
+          "metric": "Military spend: 23.4% GDP",
+          "raw_value": 23.4,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 18,
+      "primary_drivers": [
+        "Taiwan Strait Tension",
+        "South China Sea Disputes"
+      ]
+    }
+  }
+}
