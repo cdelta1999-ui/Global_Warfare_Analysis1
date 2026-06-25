@@ -1,0 +1,92 @@
+{
+  "country": "Lebanon",
+  "computed_wvi": 63,
+  "pillars": {
+    "cyber": {
+      "overall_score": 42,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 47,
+          "metric": "50 events (YTD)",
+          "raw_value": 50,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 32,
+          "metric": "2 campaigns",
+          "raw_value": 2,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 37,
+          "metric": "Active tracking",
+          "raw_value": 37,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 82,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 82,
+          "metric": "Dependency: 65%",
+          "raw_value": 65,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 74,
+          "metric": "Sanctions Exposure: 74/100",
+          "raw_value": 74,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 70,
+          "metric": "Trade Concentration: 70/100",
+          "raw_value": 70,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 72,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 72,
+          "metric": "576 events/yr",
+          "raw_value": 576,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 67,
+          "metric": "Fatalities: 8640/yr",
+          "raw_value": 8640,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 75,
+          "metric": "Military spend: 21.6% GDP",
+          "raw_value": 21.6,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 44,
+      "primary_drivers": [
+        "Hezbollah-Israel Skirmishes",
+        "Economic Collapse",
+        "Political Deadlock"
+      ]
+    }
+  }
+}
