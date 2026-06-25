@@ -1,1 +1,91 @@
-{"country": "Morocco", "pillars": {"kinetic": {"overall_score": 13, "sources": [{"name": "ACLED", "metric": "Instability Velocity", "raw_value": 0.0, "unit": "std_dev", "score": 13}, {"name": "SIPRI", "metric": "EMA Fatalities", "raw_value": 232, "unit": "deaths/yr", "score": 13}, {"name": "AIS Marine", "metric": "Choke Point Flow", "raw_value": 232, "unit": "vessels/day", "score": 13}], "raw_feed": {"source": "ACLED", "country_code": "MOR", "region": "Capital Region", "data_points": {"event_id": "ACLED-4651", "event_type": "Battles / Border Skirmishes", "actor_1": "Military Forces of Morocco", "actor_2": "Unidentified Armed Group", "fatalities": 1242, "geo_coordinates": {"lat": 49.3621, "lng": -37.5976}}, "wvi_normalized_score": 13.0}}, "cyber": {"overall_score": 21, "sources": [{"name": "CFR Cyber Tracker", "metric": "Incidents (YTD)", "raw_value": 31, "unit": "events", "score": 21}, {"name": "EuRepoC", "metric": "Active Campaigns", "raw_value": 0, "unit": "campaigns", "score": 21}, {"name": "Carnegie Spyware", "metric": "Proliferation", "raw_value": 0.21, "unit": "index", "score": 21}], "raw_feed": {"source": "CFR_Cyber_Tracker", "target_country": "Morocco", "suspected_attribution": "Unknown State Actor", "data_points": {"incident_type": "Cyber Espionage / Infrastructure Spoofing", "target_sector": "Energy Grid / Maritime Navigation", "severity_level": "Medium"}, "wvi_normalized_score": 21.0}}, "economic": {"overall_score": 57, "sources": [{"name": "UN Comtrade", "metric": "Critical Import Dep.", "raw_value": "$57B", "unit": "USD", "score": 57}, {"name": "IMF DOTS", "metric": "Trade Imbalance", "raw_value": "-$68B", "unit": "USD", "score": 57}, {"name": "World Bank", "metric": "Tariff Barrier", "raw_value": "11.4%", "unit": "rate", "score": 57}], "raw_feed": {"source": "UN_Comtrade_IMF", "reporting_country": "MOR", "partner_country": "Global Market", "data_points": {"commodity_code": "HS-8542", "commodity_description": "Electronic Integrated Circuits", "bilateral_trade_value_usd": 30271300887, "import_dependency_percentage": 76.7}, "wvi_normalized_score": 57.0}}}, "wvi_metadata": {"m_geo_multiplier": 1.0, "delta_socio_multiplier": 1.0, "boiling_point_triggered": false, "boiling_point_alert": null}}
+{
+  "country": "Morocco",
+  "computed_wvi": 30,
+  "pillars": {
+    "cyber": {
+      "overall_score": 22,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 27,
+          "metric": "26 events (YTD)",
+          "raw_value": 26,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 12,
+          "metric": "1 campaigns",
+          "raw_value": 1,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 17,
+          "metric": "Active tracking",
+          "raw_value": 17,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 42,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 42,
+          "metric": "Dependency: 33%",
+          "raw_value": 33,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 34,
+          "metric": "Sanctions Exposure: 34/100",
+          "raw_value": 34,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 30,
+          "metric": "Trade Concentration: 30/100",
+          "raw_value": 30,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 30,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 30,
+          "metric": "240 events/yr",
+          "raw_value": 240,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 25,
+          "metric": "Fatalities: 3600/yr",
+          "raw_value": 3600,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 33,
+          "metric": "Military spend: 9.0% GDP",
+          "raw_value": 9.0,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 17,
+      "primary_drivers": [
+        "Regional Instability",
+        "Governance Fragility"
+      ]
+    }
+  }
+}

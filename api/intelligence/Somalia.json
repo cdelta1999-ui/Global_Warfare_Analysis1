@@ -1,1 +1,92 @@
-{"country": "Somalia", "pillars": {"kinetic": {"overall_score": 70, "sources": [{"name": "ACLED", "metric": "Instability Velocity", "raw_value": 0.58, "unit": "std_dev", "score": 70}, {"name": "SIPRI", "metric": "EMA Fatalities", "raw_value": 1014, "unit": "deaths/yr", "score": 70}, {"name": "AIS Marine", "metric": "Choke Point Flow", "raw_value": 1014, "unit": "vessels/day", "score": 70}], "raw_feed": {"source": "ACLED", "country_code": "SOM", "region": "Capital Region", "data_points": {"event_id": "ACLED-3944", "event_type": "Battles / Border Skirmishes", "actor_1": "Military Forces of Somalia", "actor_2": "Unidentified Armed Group", "fatalities": 628, "geo_coordinates": {"lat": -81.561, "lng": 34.7841}}, "wvi_normalized_score": 70.0}}, "cyber": {"overall_score": 33, "sources": [{"name": "CFR Cyber Tracker", "metric": "Incidents (YTD)", "raw_value": 49, "unit": "events", "score": 33}, {"name": "EuRepoC", "metric": "Active Campaigns", "raw_value": 0, "unit": "campaigns", "score": 33}, {"name": "Carnegie Spyware", "metric": "Proliferation", "raw_value": 0.33, "unit": "index", "score": 33}], "raw_feed": {"source": "CFR_Cyber_Tracker", "target_country": "Somalia", "suspected_attribution": "Unknown State Actor", "data_points": {"incident_type": "Cyber Espionage / Infrastructure Spoofing", "target_sector": "Energy Grid / Maritime Navigation", "severity_level": "Medium"}, "wvi_normalized_score": 33.0}}, "economic": {"overall_score": 49, "sources": [{"name": "UN Comtrade", "metric": "Critical Import Dep.", "raw_value": "$49B", "unit": "USD", "score": 49}, {"name": "IMF DOTS", "metric": "Trade Imbalance", "raw_value": "-$58B", "unit": "USD", "score": 49}, {"name": "World Bank", "metric": "Tariff Barrier", "raw_value": "9.8%", "unit": "rate", "score": 49}], "raw_feed": {"source": "UN_Comtrade_IMF", "reporting_country": "SOM", "partner_country": "Global Market", "data_points": {"commodity_code": "HS-8542", "commodity_description": "Electronic Integrated Circuits", "bilateral_trade_value_usd": 39330896337, "import_dependency_percentage": 37.8}, "wvi_normalized_score": 49.0}}}, "wvi_metadata": {"m_geo_multiplier": 1.0, "delta_socio_multiplier": 1.0, "boiling_point_triggered": false, "boiling_point_alert": null}}
+{
+  "country": "Somalia",
+  "computed_wvi": 65,
+  "pillars": {
+    "cyber": {
+      "overall_score": 18,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 23,
+          "metric": "21 events (YTD)",
+          "raw_value": 21,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 8,
+          "metric": "1 campaigns",
+          "raw_value": 1,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 13,
+          "metric": "Active tracking",
+          "raw_value": 13,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 92,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 92,
+          "metric": "Dependency: 73%",
+          "raw_value": 73,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 84,
+          "metric": "Sanctions Exposure: 84/100",
+          "raw_value": 84,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 80,
+          "metric": "Trade Concentration: 80/100",
+          "raw_value": 80,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 82,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 82,
+          "metric": "656 events/yr",
+          "raw_value": 656,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 77,
+          "metric": "Fatalities: 9840/yr",
+          "raw_value": 9840,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 85,
+          "metric": "Military spend: 24.6% GDP",
+          "raw_value": 24.6,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 56,
+      "primary_drivers": [
+        "Al-Shabaab Insurgency",
+        "Clan Warfare",
+        "Failed State Dynamics"
+      ]
+    }
+  }
+}

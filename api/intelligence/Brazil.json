@@ -1,1 +1,92 @@
-{"country": "Brazil", "pillars": {"kinetic": {"overall_score": 6, "sources": [{"name": "ACLED", "metric": "Instability Velocity", "raw_value": 0.0, "unit": "std_dev", "score": 6}, {"name": "SIPRI", "metric": "EMA Fatalities", "raw_value": 7199, "unit": "deaths/yr", "score": 6}, {"name": "AIS Marine", "metric": "Choke Point Flow", "raw_value": 7199, "unit": "vessels/day", "score": 6}], "raw_feed": {"source": "ACLED", "country_code": "BRA", "region": "Capital Region", "data_points": {"event_id": "ACLED-8746", "event_type": "Battles / Border Skirmishes", "actor_1": "Military Forces of Brazil", "actor_2": "Unidentified Armed Group", "fatalities": 8999, "geo_coordinates": {"lat": 10.9527, "lng": 35.314}}, "wvi_normalized_score": 6.0}}, "cyber": {"overall_score": 24, "sources": [{"name": "CFR Cyber Tracker", "metric": "Incidents (YTD)", "raw_value": 36, "unit": "events", "score": 24}, {"name": "EuRepoC", "metric": "Active Campaigns", "raw_value": 0, "unit": "campaigns", "score": 24}, {"name": "Carnegie Spyware", "metric": "Proliferation", "raw_value": 0.24, "unit": "index", "score": 24}], "raw_feed": {"source": "CFR_Cyber_Tracker", "target_country": "Brazil", "suspected_attribution": "Unknown State Actor", "data_points": {"incident_type": "Cyber Espionage / Infrastructure Spoofing", "target_sector": "Energy Grid / Maritime Navigation", "severity_level": "Medium"}, "wvi_normalized_score": 24.0}}, "economic": {"overall_score": 41, "sources": [{"name": "UN Comtrade", "metric": "Critical Import Dep.", "raw_value": "$41B", "unit": "USD", "score": 41}, {"name": "IMF DOTS", "metric": "Trade Imbalance", "raw_value": "-$49B", "unit": "USD", "score": 41}, {"name": "World Bank", "metric": "Tariff Barrier", "raw_value": "8.2%", "unit": "rate", "score": 41}], "raw_feed": {"source": "UN_Comtrade_IMF", "reporting_country": "BRA", "partner_country": "Global Market", "data_points": {"commodity_code": "HS-8542", "commodity_description": "Electronic Integrated Circuits", "bilateral_trade_value_usd": 35392568079, "import_dependency_percentage": 82.3}, "wvi_normalized_score": 41.0}}}, "wvi_metadata": {"m_geo_multiplier": 1.5, "delta_socio_multiplier": 1.0, "boiling_point_triggered": false, "boiling_point_alert": null}}
+{
+  "country": "Brazil",
+  "computed_wvi": 59,
+  "pillars": {
+    "cyber": {
+      "overall_score": 60,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 65,
+          "metric": "72 events (YTD)",
+          "raw_value": 72,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 50,
+          "metric": "3 campaigns",
+          "raw_value": 3,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 55,
+          "metric": "Active tracking",
+          "raw_value": 55,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 68,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 68,
+          "metric": "Dependency: 54%",
+          "raw_value": 54,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 60,
+          "metric": "Sanctions Exposure: 60/100",
+          "raw_value": 60,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 56,
+          "metric": "Trade Concentration: 56/100",
+          "raw_value": 56,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 58,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 58,
+          "metric": "464 events/yr",
+          "raw_value": 464,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 53,
+          "metric": "Fatalities: 6960/yr",
+          "raw_value": 6960,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 61,
+          "metric": "Military spend: 17.4% GDP",
+          "raw_value": 17.4,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 39,
+      "primary_drivers": [
+        "Organized Crime / Cartel Wars",
+        "Amazon Deforestation Conflict",
+        "Political Polarization"
+      ]
+    }
+  }
+}

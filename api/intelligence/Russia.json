@@ -1,1 +1,91 @@
-{"country": "Russia", "pillars": {"kinetic": {"overall_score": 88, "sources": [{"name": "ACLED", "metric": "Instability Velocity", "raw_value": 1.0, "unit": "std_dev", "score": 88}, {"name": "SIPRI", "metric": "EMA Fatalities", "raw_value": 782, "unit": "deaths/yr", "score": 88}, {"name": "AIS Marine", "metric": "Choke Point Flow", "raw_value": 782, "unit": "vessels/day", "score": 88}], "raw_feed": {"source": "ACLED", "country_code": "RUS", "region": "Capital Region", "data_points": {"event_id": "ACLED-1229", "event_type": "Battles / Border Skirmishes", "actor_1": "Military Forces of Russia", "actor_2": "Unidentified Armed Group", "fatalities": 23886, "geo_coordinates": {"lat": -57.2512, "lng": -161.1261}}, "wvi_normalized_score": 88.0}}, "cyber": {"overall_score": 73, "sources": [{"name": "CFR Cyber Tracker", "metric": "Incidents (YTD)", "raw_value": 109, "unit": "events", "score": 73}, {"name": "EuRepoC", "metric": "Active Campaigns", "raw_value": 3, "unit": "campaigns", "score": 73}, {"name": "Carnegie Spyware", "metric": "Proliferation", "raw_value": 0.73, "unit": "index", "score": 73}], "raw_feed": {"source": "CFR_Cyber_Tracker", "target_country": "Russia", "suspected_attribution": "Unknown State Actor", "data_points": {"incident_type": "Cyber Espionage / Infrastructure Spoofing", "target_sector": "Energy Grid / Maritime Navigation", "severity_level": "High"}, "wvi_normalized_score": 73.0}}, "economic": {"overall_score": 40, "sources": [{"name": "UN Comtrade", "metric": "Critical Import Dep.", "raw_value": "$40B", "unit": "USD", "score": 40}, {"name": "IMF DOTS", "metric": "Trade Imbalance", "raw_value": "-$48B", "unit": "USD", "score": 40}, {"name": "World Bank", "metric": "Tariff Barrier", "raw_value": "8.0%", "unit": "rate", "score": 40}], "raw_feed": {"source": "UN_Comtrade_IMF", "reporting_country": "RUS", "partner_country": "Global Market", "data_points": {"commodity_code": "HS-8542", "commodity_description": "Electronic Integrated Circuits", "bilateral_trade_value_usd": 12921539911, "import_dependency_percentage": 39.2}, "wvi_normalized_score": 40.0}}}, "wvi_metadata": {"m_geo_multiplier": 1.5, "delta_socio_multiplier": 1.0, "boiling_point_triggered": false, "boiling_point_alert": null}}
+{
+  "country": "Russia",
+  "computed_wvi": 79,
+  "pillars": {
+    "cyber": {
+      "overall_score": 90,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 95,
+          "metric": "108 events (YTD)",
+          "raw_value": 108,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 80,
+          "metric": "4 campaigns",
+          "raw_value": 4,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 85,
+          "metric": "Active tracking",
+          "raw_value": 85,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 82,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 82,
+          "metric": "Dependency: 65%",
+          "raw_value": 65,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 74,
+          "metric": "Sanctions Exposure: 74/100",
+          "raw_value": 74,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 70,
+          "metric": "Trade Concentration: 70/100",
+          "raw_value": 70,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 88,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 88,
+          "metric": "704 events/yr",
+          "raw_value": 704,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 83,
+          "metric": "Fatalities: 10560/yr",
+          "raw_value": 10560,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 91,
+          "metric": "Military spend: 26.4% GDP",
+          "raw_value": 26.4,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 36,
+      "primary_drivers": [
+        "Ukraine Conflict (Active)",
+        "NATO Expansion Friction"
+      ]
+    }
+  }
+}

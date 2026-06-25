@@ -1,1 +1,91 @@
-{"country": "Guyana", "pillars": {"kinetic": {"overall_score": 0, "sources": [{"name": "ACLED", "metric": "Instability Velocity", "raw_value": 0.0, "unit": "std_dev", "score": 0}, {"name": "SIPRI", "metric": "EMA Fatalities", "raw_value": 29, "unit": "deaths/yr", "score": 0}, {"name": "AIS Marine", "metric": "Choke Point Flow", "raw_value": 29, "unit": "vessels/day", "score": 0}], "raw_feed": {"source": "ACLED", "country_code": "GUY", "region": "Capital Region", "data_points": {"event_id": "ACLED-9688", "event_type": "Battles / Border Skirmishes", "actor_1": "Military Forces of Guyana", "actor_2": "Unidentified Armed Group", "fatalities": 29, "geo_coordinates": {"lat": 66.2752, "lng": -42.4621}}, "wvi_normalized_score": 0.0}}, "cyber": {"overall_score": 23, "sources": [{"name": "CFR Cyber Tracker", "metric": "Incidents (YTD)", "raw_value": 34, "unit": "events", "score": 23}, {"name": "EuRepoC", "metric": "Active Campaigns", "raw_value": 0, "unit": "campaigns", "score": 23}, {"name": "Carnegie Spyware", "metric": "Proliferation", "raw_value": 0.23, "unit": "index", "score": 23}], "raw_feed": {"source": "CFR_Cyber_Tracker", "target_country": "Guyana", "suspected_attribution": "Unknown State Actor", "data_points": {"incident_type": "Cyber Espionage / Infrastructure Spoofing", "target_sector": "Energy Grid / Maritime Navigation", "severity_level": "Medium"}, "wvi_normalized_score": 23.0}}, "economic": {"overall_score": 48, "sources": [{"name": "UN Comtrade", "metric": "Critical Import Dep.", "raw_value": "$48B", "unit": "USD", "score": 48}, {"name": "IMF DOTS", "metric": "Trade Imbalance", "raw_value": "-$57B", "unit": "USD", "score": 48}, {"name": "World Bank", "metric": "Tariff Barrier", "raw_value": "9.6%", "unit": "rate", "score": 48}], "raw_feed": {"source": "UN_Comtrade_IMF", "reporting_country": "GUY", "partner_country": "Global Market", "data_points": {"commodity_code": "HS-8542", "commodity_description": "Electronic Integrated Circuits", "bilateral_trade_value_usd": 33474584940, "import_dependency_percentage": 34.1}, "wvi_normalized_score": 48.0}}}, "wvi_metadata": {"m_geo_multiplier": 1.0, "delta_socio_multiplier": 1.0, "boiling_point_triggered": false, "boiling_point_alert": null}}
+{
+  "country": "Guyana",
+  "computed_wvi": 30,
+  "pillars": {
+    "cyber": {
+      "overall_score": 22,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 27,
+          "metric": "26 events (YTD)",
+          "raw_value": 26,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 12,
+          "metric": "1 campaigns",
+          "raw_value": 1,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 17,
+          "metric": "Active tracking",
+          "raw_value": 17,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 42,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 42,
+          "metric": "Dependency: 33%",
+          "raw_value": 33,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 34,
+          "metric": "Sanctions Exposure: 34/100",
+          "raw_value": 34,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 30,
+          "metric": "Trade Concentration: 30/100",
+          "raw_value": 30,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 30,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 30,
+          "metric": "240 events/yr",
+          "raw_value": 240,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 25,
+          "metric": "Fatalities: 3600/yr",
+          "raw_value": 3600,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 33,
+          "metric": "Military spend: 9.0% GDP",
+          "raw_value": 9.0,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 17,
+      "primary_drivers": [
+        "Regional Instability",
+        "Governance Fragility"
+      ]
+    }
+  }
+}

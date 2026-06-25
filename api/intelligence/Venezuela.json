@@ -1,1 +1,92 @@
-{"country": "Venezuela", "pillars": {"kinetic": {"overall_score": 24, "sources": [{"name": "ACLED", "metric": "Instability Velocity", "raw_value": 0.0, "unit": "std_dev", "score": 24}, {"name": "SIPRI", "metric": "EMA Fatalities", "raw_value": 82, "unit": "deaths/yr", "score": 24}, {"name": "AIS Marine", "metric": "Choke Point Flow", "raw_value": 82, "unit": "vessels/day", "score": 24}], "raw_feed": {"source": "ACLED", "country_code": "VEN", "region": "Capital Region", "data_points": {"event_id": "ACLED-5972", "event_type": "Battles / Border Skirmishes", "actor_1": "Military Forces of Venezuela", "actor_2": "Unidentified Armed Group", "fatalities": 992, "geo_coordinates": {"lat": 68.1807, "lng": 150.477}}, "wvi_normalized_score": 24.0}}, "cyber": {"overall_score": 35, "sources": [{"name": "CFR Cyber Tracker", "metric": "Incidents (YTD)", "raw_value": 52, "unit": "events", "score": 35}, {"name": "EuRepoC", "metric": "Active Campaigns", "raw_value": 0, "unit": "campaigns", "score": 35}, {"name": "Carnegie Spyware", "metric": "Proliferation", "raw_value": 0.35, "unit": "index", "score": 35}], "raw_feed": {"source": "CFR_Cyber_Tracker", "target_country": "Venezuela", "suspected_attribution": "Unknown State Actor", "data_points": {"incident_type": "Cyber Espionage / Infrastructure Spoofing", "target_sector": "Energy Grid / Maritime Navigation", "severity_level": "Medium"}, "wvi_normalized_score": 35.0}}, "economic": {"overall_score": 40, "sources": [{"name": "UN Comtrade", "metric": "Critical Import Dep.", "raw_value": "$40B", "unit": "USD", "score": 40}, {"name": "IMF DOTS", "metric": "Trade Imbalance", "raw_value": "-$48B", "unit": "USD", "score": 40}, {"name": "World Bank", "metric": "Tariff Barrier", "raw_value": "8.0%", "unit": "rate", "score": 40}], "raw_feed": {"source": "UN_Comtrade_IMF", "reporting_country": "VEN", "partner_country": "Global Market", "data_points": {"commodity_code": "HS-8542", "commodity_description": "Electronic Integrated Circuits", "bilateral_trade_value_usd": 9594796348, "import_dependency_percentage": 52.8}, "wvi_normalized_score": 40.0}}}, "wvi_metadata": {"m_geo_multiplier": 1.0, "delta_socio_multiplier": 1.0, "boiling_point_triggered": false, "boiling_point_alert": null}}
+{
+  "country": "Venezuela",
+  "computed_wvi": 60,
+  "pillars": {
+    "cyber": {
+      "overall_score": 40,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 45,
+          "metric": "48 events (YTD)",
+          "raw_value": 48,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 30,
+          "metric": "2 campaigns",
+          "raw_value": 2,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 35,
+          "metric": "Active tracking",
+          "raw_value": 35,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 90,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 90,
+          "metric": "Dependency: 72%",
+          "raw_value": 72,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 82,
+          "metric": "Sanctions Exposure: 82/100",
+          "raw_value": 82,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 78,
+          "metric": "Trade Concentration: 78/100",
+          "raw_value": 78,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 55,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 55,
+          "metric": "440 events/yr",
+          "raw_value": 440,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 50,
+          "metric": "Fatalities: 6600/yr",
+          "raw_value": 6600,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 58,
+          "metric": "Military spend: 16.5% GDP",
+          "raw_value": 16.5,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 40,
+      "primary_drivers": [
+        "Economic Collapse-Driven Instability",
+        "FARC Presence",
+        "Maduro Regime Crackdown"
+      ]
+    }
+  }
+}

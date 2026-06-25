@@ -1,1 +1,91 @@
-{"country": "Myanmar", "pillars": {"kinetic": {"overall_score": 100, "sources": [{"name": "ACLED", "metric": "Instability Velocity", "raw_value": 0.58, "unit": "std_dev", "score": 100}, {"name": "SIPRI", "metric": "EMA Fatalities", "raw_value": 1074, "unit": "deaths/yr", "score": 100}, {"name": "AIS Marine", "metric": "Choke Point Flow", "raw_value": 1074, "unit": "vessels/day", "score": 100}], "raw_feed": {"source": "ACLED", "country_code": "MYA", "region": "Capital Region", "data_points": {"event_id": "ACLED-4535", "event_type": "Battles / Border Skirmishes", "actor_1": "Military Forces of Myanmar", "actor_2": "Unidentified Armed Group", "fatalities": 252, "geo_coordinates": {"lat": 50.535, "lng": -98.2218}}, "wvi_normalized_score": 100.0}}, "cyber": {"overall_score": 28, "sources": [{"name": "CFR Cyber Tracker", "metric": "Incidents (YTD)", "raw_value": 42, "unit": "events", "score": 28}, {"name": "EuRepoC", "metric": "Active Campaigns", "raw_value": 0, "unit": "campaigns", "score": 28}, {"name": "Carnegie Spyware", "metric": "Proliferation", "raw_value": 0.28, "unit": "index", "score": 28}], "raw_feed": {"source": "CFR_Cyber_Tracker", "target_country": "Myanmar", "suspected_attribution": "Unknown State Actor", "data_points": {"incident_type": "Cyber Espionage / Infrastructure Spoofing", "target_sector": "Energy Grid / Maritime Navigation", "severity_level": "Medium"}, "wvi_normalized_score": 28.0}}, "economic": {"overall_score": 55, "sources": [{"name": "UN Comtrade", "metric": "Critical Import Dep.", "raw_value": "$55B", "unit": "USD", "score": 55}, {"name": "IMF DOTS", "metric": "Trade Imbalance", "raw_value": "-$66B", "unit": "USD", "score": 55}, {"name": "World Bank", "metric": "Tariff Barrier", "raw_value": "11.0%", "unit": "rate", "score": 55}], "raw_feed": {"source": "UN_Comtrade_IMF", "reporting_country": "MYA", "partner_country": "Global Market", "data_points": {"commodity_code": "HS-8542", "commodity_description": "Electronic Integrated Circuits", "bilateral_trade_value_usd": 14668060785, "import_dependency_percentage": 76.1}, "wvi_normalized_score": 55.0}}}, "wvi_metadata": {"m_geo_multiplier": 1.0, "delta_socio_multiplier": 1.0, "boiling_point_triggered": false, "boiling_point_alert": null}}
+{
+  "country": "Myanmar",
+  "computed_wvi": 61,
+  "pillars": {
+    "cyber": {
+      "overall_score": 25,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 30,
+          "metric": "30 events (YTD)",
+          "raw_value": 30,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 15,
+          "metric": "1 campaigns",
+          "raw_value": 1,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 20,
+          "metric": "Active tracking",
+          "raw_value": 20,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 72,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 72,
+          "metric": "Dependency: 57%",
+          "raw_value": 57,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 64,
+          "metric": "Sanctions Exposure: 64/100",
+          "raw_value": 64,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 60,
+          "metric": "Trade Concentration: 60/100",
+          "raw_value": 60,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 85,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 85,
+          "metric": "680 events/yr",
+          "raw_value": 680,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 80,
+          "metric": "Fatalities: 10200/yr",
+          "raw_value": 10200,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 88,
+          "metric": "Military spend: 25.5% GDP",
+          "raw_value": 25.5,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 54,
+      "primary_drivers": [
+        "Anti-Junta Resistance (1200+ Armed Groups)",
+        "Ethnic Armed Organizations"
+      ]
+    }
+  }
+}
