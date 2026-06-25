@@ -1,1 +1,35 @@
-{"country": "Estonia", "wound_vulnerability_index": 22, "escalation_risk": "MODERATE", "historical_timeline": [{"Year": 1918, "Inter-State (Conventional)": 3600.0}, {"Year": 1919, "Inter-State (Conventional)": 1000.0}], "predicted_conflict_vectors": [{"type": "Border Skirmish", "probability": 1}, {"type": "Proxy / Grey-Zone", "probability": 19}, {"type": "Naval Blockade", "probability": 20}, {"type": "Cyber / Digital", "probability": 37}, {"type": "Algorithmic / AI Strike", "probability": 18}, {"type": "Full Conventional", "probability": 0}], "ml_forecast_volume": 2}
+{
+  "country": "Estonia",
+  "forecast": {
+    "wvi": 30,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 2004,
+      "Inter-State (Conventional)": 23,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Non-State (Cartel/Militia)": 0.2732,
+    "Border Skirmish": 0.2069,
+    "Proxy / Grey-Zone": 0.1567,
+    "Intra-State (Civil War)": 0.2444,
+    "Cyber / Digital": 0.1187
+  },
+  "future_hotspots": [],
+  "raw_schemas": {}
+}
