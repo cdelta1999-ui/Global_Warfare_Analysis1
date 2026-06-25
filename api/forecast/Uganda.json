@@ -1,1 +1,99 @@
-{"country": "Uganda", "wound_vulnerability_index": 36, "escalation_risk": "MODERATE", "historical_timeline": [{"Year": 1966, "Intra-State (Civil War)": -18.0}, {"Year": 1971, "Internal armed conflict": 100.0}, {"Year": 1972, "Internal armed conflict": 100.0}, {"Year": 1974, "Internal armed conflict": 100.0}, {"Year": 1978, "Inter-State (Conventional)": 1500.0}, {"Year": 1979, "Internationalized internal armed conflict": 100.0}, {"Year": 1980, "Intra-State (Civil War)": 46000.0, "Internationalized internal armed conflict": 100.0}, {"Year": 1981, "Internationalized internal armed conflict": 1000.0}, {"Year": 1982, "Internal armed conflict": 1000.0}, {"Year": 1983, "Internal armed conflict": 1000.0}, {"Year": 1984, "Internal armed conflict": 1000.0}, {"Year": 1985, "Internal armed conflict": 1000.0}, {"Year": 1986, "Intra-State (Civil War)": 7000.0, "Internal armed conflict": 1000.0}, {"Year": 1987, "Internal armed conflict": 1000.0}, {"Year": 1988, "Internal armed conflict": 1000.0}, {"Year": 1989, "One-Sided Violence": 26.0, "Internal armed conflict": 1000.0}, {"Year": 1990, "One-Sided Violence": 183.0, "Internal armed conflict": 100.0}, {"Year": 1991, "One-Sided Violence": 161.0, "Internal armed conflict": 100.0}, {"Year": 1992, "Internal armed conflict": 100.0}, {"Year": 1994, "Internal armed conflict": 100.0}, {"Year": 1995, "Internal armed conflict": 100.0}, {"Year": 1996, "One-Sided Violence": 27.0, "Internal armed conflict": 1000.0}, {"Year": 1997, "One-Sided Violence": 144.0, "Internal armed conflict": 100.0}, {"Year": 1998, "One-Sided Violence": 202.0, "Internal armed conflict": 100.0}, {"Year": 1999, "Internal armed conflict": 100.0}, {"Year": 2000, "One-Sided Violence": 96.0, "Internal armed conflict": 100.0}, {"Year": 2001, "Internal armed conflict": 100.0}, {"Year": 2002, "Internal armed conflict": 1000.0}, {"Year": 2003, "Internal armed conflict": 100.0}, {"Year": 2004, "Internal armed conflict": 1000.0}, {"Year": 2005, "Internationalized internal armed conflict": 100.0}, {"Year": 2006, "Internal armed conflict": 100.0}, {"Year": 2007, "Internal armed conflict": 100.0}, {"Year": 2008, "Internationalized internal armed conflict": 100.0}, {"Year": 2009, "Internationalized internal armed conflict": 100.0}, {"Year": 2010, "Internationalized internal armed conflict": 100.0}, {"Year": 2011, "Internationalized internal armed conflict": 100.0}, {"Year": 2013, "Internationalized internal armed conflict": 100.0}, {"Year": 2014, "Internationalized internal armed conflict": 100.0}, {"Year": 2015, "Internationalized internal armed conflict": 100.0}, {"Year": 2016, "Internationalized internal armed conflict": 100.0}, {"Year": 2017, "Internationalized internal armed conflict": 100.0}, {"Year": 2022, "Internal armed conflict": 100.0}], "predicted_conflict_vectors": [{"type": "Border Skirmish", "probability": 49}, {"type": "Proxy / Grey-Zone", "probability": 26}, {"type": "Naval Blockade", "probability": 45}, {"type": "Cyber / Digital", "probability": 11}, {"type": "Algorithmic / AI Strike", "probability": 5}, {"type": "Full Conventional", "probability": 12}], "ml_forecast_volume": 2}
+{
+  "country": "Uganda",
+  "forecast": {
+    "wvi": 30,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1900,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1920,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1940,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1960,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 786,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1980,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2000,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2010,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2015,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1056,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2020,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Non-State (Cartel/Militia)": 0.2732,
+    "Border Skirmish": 0.2069,
+    "Proxy / Grey-Zone": 0.1567,
+    "Intra-State (Civil War)": 0.2444,
+    "Cyber / Digital": 0.1187
+  },
+  "future_hotspots": [],
+  "raw_schemas": {}
+}
