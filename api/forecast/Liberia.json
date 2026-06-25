@@ -1,1 +1,99 @@
-{"country": "Liberia", "wound_vulnerability_index": 33, "escalation_risk": "MODERATE", "historical_timeline": [{"Year": 1980, "Internal armed conflict": 100.0}, {"Year": 1989, "Intra-State (Civil War)": -18.0, "Internal armed conflict": 100.0}, {"Year": 1990, "One-Sided Violence": 3345.0, "Internal armed conflict": 100.0}, {"Year": 1991, "One-Sided Violence": 271.0}, {"Year": 1992, "Intra-State (Civil War)": -18.0, "One-Sided Violence": 403.0}, {"Year": 1993, "One-Sided Violence": 1594.0}, {"Year": 1994, "One-Sided Violence": 2313.0}, {"Year": 1995, "One-Sided Violence": 1266.0}, {"Year": 1996, "Intra-State (Civil War)": -18.0, "One-Sided Violence": 1025.0}, {"Year": 1999, "One-Sided Violence": 70.0}, {"Year": 2000, "One-Sided Violence": 44.0, "Internal armed conflict": 100.0}, {"Year": 2001, "One-Sided Violence": 120.0, "Internal armed conflict": 100.0}, {"Year": 2002, "Intra-State (Civil War)": -18.0, "One-Sided Violence": 1768.0, "Internal armed conflict": 100.0}, {"Year": 2003, "One-Sided Violence": 1494.0, "Internal armed conflict": 1000.0}], "predicted_conflict_vectors": [{"type": "Border Skirmish", "probability": 19}, {"type": "Proxy / Grey-Zone", "probability": 29}, {"type": "Naval Blockade", "probability": 32}, {"type": "Cyber / Digital", "probability": 43}, {"type": "Algorithmic / AI Strike", "probability": 21}, {"type": "Full Conventional", "probability": 4}], "ml_forecast_volume": 6}
+{
+  "country": "Liberia",
+  "forecast": {
+    "wvi": 30,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1900,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 457,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1920,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1940,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1960,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1675,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1980,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2000,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2010,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2015,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2020,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1819,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Non-State (Cartel/Militia)": 0.2732,
+    "Border Skirmish": 0.2069,
+    "Proxy / Grey-Zone": 0.1567,
+    "Intra-State (Civil War)": 0.2444,
+    "Cyber / Digital": 0.1187
+  },
+  "future_hotspots": [],
+  "raw_schemas": {}
+}
