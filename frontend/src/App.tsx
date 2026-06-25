@@ -1,4 +1,5 @@
-import { useState, useEffect, useMemo, useRef, useCallback, memo } from 'react';
+import { useState, useEffect, useMemo, useRef, useCallback, memo, Component } from 'react';
+import type { ReactNode } from 'react';
 import Map, { Source, Layer } from 'react-map-gl/mapbox';
 import type { MapLayerMouseEvent, MapRef } from 'react-map-gl/mapbox';
 import type { FillLayer, LineLayer, CircleLayer } from 'mapbox-gl';
@@ -10,6 +11,29 @@ import { Target, Anchor, ShieldAlert, X, Crosshair, MapPin, Database, ActivitySq
 import 'mapbox-gl/dist/mapbox-gl.css';
 
 const MAPBOX_TOKEN = atob("cGsuZXlKMUlqb2laR1ZzZEdFeU5UZ3dOalVpTENKaElqb2lZMjF4YldneGFUWnJNR0V3WmpKd2MyTTNaWGQzY1dWcFpTSjkuaGt2YVcxRTRPbTkwVFJiOHNDRnFCZw==");
+
+// ─── Error Boundary ───
+class ErrorBoundary extends Component<{ children: ReactNode }, { error: Error | null }> {
+  state = { error: null };
+  static getDerivedStateFromError(error: Error) { return { error }; }
+  render() {
+    if (this.state.error) {
+      return (
+        <div style={{ width: '100vw', height: '100vh', background: '#060810', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', color: 'white', gap: 16 }}>
+          <div style={{ fontSize: '2rem' }}>⚠️</div>
+          <div style={{ fontSize: '1rem', color: '#ef4444', fontWeight: 700 }}>Dashboard Error</div>
+          <div style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.5)', maxWidth: 400, textAlign: 'center' }}>{(this.state.error as Error).message}</div>
+          <button onClick={() => window.location.reload()} style={{ marginTop: 8, background: 'rgba(0,242,254,0.1)', border: '1px solid rgba(0,242,254,0.3)', borderRadius: 8, padding: '8px 20px', color: '#00f2fe', cursor: 'pointer', fontSize: '0.8rem' }}>Reload Dashboard</button>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
+
+// ─── Constants outside component (stable, never recreated) ───
+const API_BASE_CONST = import.meta.env.VITE_BACKEND_URL ? import.meta.env.VITE_BACKEND_URL : import.meta.env.BASE_URL;
+const EXT_CONST = import.meta.env.VITE_BACKEND_URL ? '' : '.json';
 
 const wviLayer: Omit<FillLayer, 'source'> = {
   id: 'data', type: 'fill',
@@ -315,6 +339,8 @@ const MapView = memo(({ worldGeoJson, flowMaps, chokePoints, digitalLifelines, s
       fog={{ color: '#080c18', 'high-color': '#1a2a6c', 'horizon-blend': 0.04, 'space-color': '#000005', 'star-intensity': 0.25 } as any}
       interactiveLayerIds={['data', 'choke-points', 'naval-patrols', 'digital-lifelines-lines', 'digital-lifelines-points', 'strategic-resources', 'asymmetric-vulnerabilities', 'shipping-routes', 'active-hotspots-layer', 'conflict-regions-fill', 'brain-predictions-layer', 'border-disputes-line', 'critical-minerals-layer', 'war-regions-layer']}
       onMouseMove={handleMouseMove} onClick={handleClick} cursor={cursor}
+      onError={(e) => { console.error('Mapbox error:', e); }}
+      reuseMaps
     >
       {worldGeoJson && <Source id="data" type="geojson" data={worldGeoJson}><Layer {...wviLayer} /></Source>}
       {showConflictRegions && conflictRegionsGeoJson && (
@@ -408,12 +434,14 @@ const MapView = memo(({ worldGeoJson, flowMaps, chokePoints, digitalLifelines, s
   p.onCountryClick === n.onCountryClick && p.onInfraClick === n.onInfraClick && p.onClear === n.onClear
 );
 
-export default function App() {
+function AppInner() {
   const mapRef = useRef<MapRef>(null);
   const [worldGeoJson, setWorldGeoJson] = useState<any>(null);
   const [wviDataMap, setWviDataMap] = useState<Record<string, any>>({});
-  const API_BASE = import.meta.env.VITE_BACKEND_URL ? import.meta.env.VITE_BACKEND_URL : import.meta.env.BASE_URL;
-  const EXT = import.meta.env.VITE_BACKEND_URL ? '' : '.json';
+  const [mapError, setMapError] = useState<string | null>(null);
+  const [coreLoaded, setCoreLoaded] = useState(false);
+  const API_BASE = API_BASE_CONST;
+  const EXT = EXT_CONST;
   const [flowMaps, setFlowMaps] = useState<any>(null);
   const [chokePoints, setChokePoints] = useState<any>(null);
   const [digitalLifelines, setDigitalLifelines] = useState<any>(null);
@@ -466,49 +494,63 @@ export default function App() {
     return () => clearTimeout(t);
   }, [forecastData]);
 
-  const fetchPipelineStatus = () => {
+  const fetchPipelineStatus = useCallback((signal?: AbortSignal) => {
     const url = import.meta.env.VITE_BACKEND_URL
       ? API_BASE + 'api/pipeline/status'
       : API_BASE + 'api/pipeline_status.json';
-    fetch(url).then(r => r.json()).then(setPipelineStatus).catch(console.error);
-  };
+    fetch(url, signal ? { signal } : {})
+      .then(r => { if (!r.ok) throw new Error(`${r.status}`); return r.json(); })
+      .then(setPipelineStatus)
+      .catch(() => {});
+  }, [API_BASE]);
+
+  const safeFetch = useCallback((url: string, signal: AbortSignal, setter: (d: any) => void) => {
+    fetch(url, { signal })
+      .then(r => { if (!r.ok) throw new Error(`${r.status}`); return r.json(); })
+      .then(setter)
+      .catch((e) => { if (e.name !== 'AbortError') console.warn(`Fetch failed: ${url}`, e.message); });
+  }, []);
 
   useEffect(() => {
-    Promise.all([
-      fetch(import.meta.env.BASE_URL + 'world.geo.json').then(r => r.json()),
-      fetch(API_BASE + `api/map_data${EXT}`).then(r => r.json()),
-      fetch(API_BASE + `api/flow_maps${EXT}`).then(r => r.json()),
-      fetch(API_BASE + `api/choke_points${EXT}`).then(r => r.json()),
-      fetch(API_BASE + `api/digital_lifelines${EXT}`).then(r => r.json()),
-      fetch(API_BASE + `api/strategic_resources${EXT}`).then(r => r.json()),
-      fetch(API_BASE + `api/asymmetric_vulnerabilities${EXT}`).then(r => r.json())
-    ]).then(([geoData, backendData, flowData, chokeData, digitalData, strategicData, asymmetricData]) => {
-      const wviMap: Record<string, number> = {};
-      const fullMap: Record<string, any> = {};
-      backendData.data.forEach((d: any) => { wviMap[d.Country] = d.WVI; fullMap[d.Country] = d; });
-      setWviDataMap(fullMap);
-      const features = geoData.features.map((f: any) => ({
-        ...f, properties: { ...f.properties, WVI: wviMap[f.properties.name] || 0 }
-      }));
-      setWorldGeoJson({ ...geoData, features });
-      setFlowMaps(flowData);
-      setChokePoints(chokeData);
-      setDigitalLifelines(digitalData);
-      setStrategicResources(strategicData);
-      setAsymmetricVuln(asymmetricData);
-    });
+    const ac = new AbortController();
+    const { signal } = ac;
 
-    fetchPipelineStatus();
-    const interval = setInterval(fetchPipelineStatus, 30000);
+    // Core data: fetch individually so one failure doesn't block others
+    const geoPromise = fetch(import.meta.env.BASE_URL + 'world.geo.json', { signal }).then(r => r.json());
+    const mapPromise = fetch(API_BASE + `api/map_data${EXT}`, { signal }).then(r => r.json());
 
-    fetch(API_BASE + `api/war_prediction${EXT}`).then(r => r.json()).then(setWarPredictionData).catch(console.error);
-    fetch(API_BASE + `api/conflict_regions${EXT}`).then(r => r.json()).then(setConflictRegionsGeoJson).catch(console.error);
-    fetch(API_BASE + `api/brain_predictions${EXT}`).then(r => r.json()).then(setBrainPredictionsData).catch(console.error);
-    fetch(API_BASE + `api/border_disputes${EXT}`).then(r => r.json()).then(setBorderDisputesData).catch(console.error);
-    fetch(API_BASE + `api/critical_minerals${EXT}`).then(r => r.json()).then(setMineralsData).catch(console.error);
+    Promise.all([geoPromise, mapPromise])
+      .then(([geoData, backendData]) => {
+        if (signal.aborted) return;
+        const wviMap: Record<string, number> = {};
+        const fullMap: Record<string, any> = {};
+        backendData.data.forEach((d: any) => { wviMap[d.Country] = d.WVI; fullMap[d.Country] = d; });
+        setWviDataMap(fullMap);
+        const features = geoData.features.map((f: any) => ({
+          ...f, properties: { ...f.properties, WVI: wviMap[f.properties.name] || 0 }
+        }));
+        setWorldGeoJson({ ...geoData, features });
+        setCoreLoaded(true);
+      })
+      .catch((e) => { if (e.name !== 'AbortError') { console.error('Core data load failed:', e); setCoreLoaded(true); } });
 
-    return () => clearInterval(interval);
-  }, []);
+    // Secondary data: independent fetches, failures are non-fatal
+    safeFetch(API_BASE + `api/flow_maps${EXT}`, signal, setFlowMaps);
+    safeFetch(API_BASE + `api/choke_points${EXT}`, signal, setChokePoints);
+    safeFetch(API_BASE + `api/digital_lifelines${EXT}`, signal, setDigitalLifelines);
+    safeFetch(API_BASE + `api/strategic_resources${EXT}`, signal, setStrategicResources);
+    safeFetch(API_BASE + `api/asymmetric_vulnerabilities${EXT}`, signal, setAsymmetricVuln);
+    safeFetch(API_BASE + `api/war_prediction${EXT}`, signal, setWarPredictionData);
+    safeFetch(API_BASE + `api/conflict_regions${EXT}`, signal, setConflictRegionsGeoJson);
+    safeFetch(API_BASE + `api/brain_predictions${EXT}`, signal, setBrainPredictionsData);
+    safeFetch(API_BASE + `api/border_disputes${EXT}`, signal, setBorderDisputesData);
+    safeFetch(API_BASE + `api/critical_minerals${EXT}`, signal, setMineralsData);
+
+    fetchPipelineStatus(signal);
+    const interval = setInterval(() => fetchPipelineStatus(), 60000);
+
+    return () => { ac.abort(); clearInterval(interval); };
+  }, [API_BASE, EXT, safeFetch, fetchPipelineStatus]);
 
   const onHoverChange = useCallback((info: any) => setHoverInfo(info), []);
 
@@ -695,6 +737,32 @@ export default function App() {
   }, [warPredictionData]);
 
   const wviColor = reactiveWVI > 75 ? '#ff4b4b' : reactiveWVI > 50 ? '#f5a623' : '#34d399';
+
+  // Loading screen while core geo + map_data fetch
+  if (!coreLoaded) {
+    return (
+      <div style={{ width: '100vw', height: '100vh', background: '#060810', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 20 }}>
+        <div style={{ fontSize: '1.5rem', fontWeight: 900, color: '#00f2fe', letterSpacing: '0.05em', fontFamily: "'JetBrains Mono', monospace" }}>BLEED, DON'T BREAK</div>
+        <div style={{ display: 'flex', gap: 6 }}>
+          {[0,1,2,3].map(i => (
+            <div key={i} style={{ width: 8, height: 8, borderRadius: '50%', background: '#00f2fe', animation: `pulse 1.2s ease-in-out ${i * 0.2}s infinite`, opacity: 0.7 }} />
+          ))}
+        </div>
+        <div style={{ fontSize: '0.68rem', color: 'rgba(255,255,255,0.35)', letterSpacing: '0.15em' }}>LOADING INTELLIGENCE DATA</div>
+        <style>{`@keyframes pulse { 0%,80%,100%{transform:scale(0.6);opacity:0.3} 40%{transform:scale(1);opacity:1} }`}</style>
+      </div>
+    );
+  }
+
+  if (mapError) {
+    return (
+      <div style={{ width: '100vw', height: '100vh', background: '#060810', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', color: 'white', gap: 16 }}>
+        <div style={{ fontSize: '1rem', color: '#ef4444', fontWeight: 700 }}>Map failed to load</div>
+        <div style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.4)' }}>{mapError}</div>
+        <button onClick={() => { setMapError(null); window.location.reload(); }} style={{ background: 'rgba(0,242,254,0.1)', border: '1px solid rgba(0,242,254,0.3)', borderRadius: 8, padding: '8px 20px', color: '#00f2fe', cursor: 'pointer', fontSize: '0.8rem' }}>Retry</button>
+      </div>
+    );
+  }
 
   return (
     <div style={{ width: '100vw', height: '100vh', position: 'relative', overflow: 'hidden' }}>
@@ -2318,4 +2386,8 @@ export default function App() {
       )}
     </div>
   );
+}
+
+export default function App() {
+  return <ErrorBoundary><AppInner /></ErrorBoundary>;
 }
