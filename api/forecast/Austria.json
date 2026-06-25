@@ -1,1 +1,43 @@
-{"country": "Austria", "wound_vulnerability_index": 32, "escalation_risk": "MODERATE", "historical_timeline": [{"Year": 1821, "Intra-State (Civil War)": -34.0}, {"Year": 1846, "Extra-State": 2000.0}, {"Year": 1848, "Inter-State (Conventional)": 3927.0, "Intra-State (Civil War)": 70279.0}, {"Year": 1849, "Inter-State (Conventional)": 100.0}, {"Year": 1859, "Inter-State (Conventional)": 12500.0}, {"Year": 1864, "Inter-State (Conventional)": 500.0}, {"Year": 1866, "Inter-State (Conventional)": 28000.0}], "predicted_conflict_vectors": [{"type": "Border Skirmish", "probability": 6}, {"type": "Proxy / Grey-Zone", "probability": 20}, {"type": "Naval Blockade", "probability": 43}, {"type": "Cyber / Digital", "probability": 35}, {"type": "Algorithmic / AI Strike", "probability": 17}, {"type": "Full Conventional", "probability": 1}], "ml_forecast_volume": 2}
+{
+  "country": "Austria",
+  "forecast": {
+    "wvi": 30,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1846,
+      "Inter-State (Conventional)": 1000,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1876,
+      "Inter-State (Conventional)": 3500,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Non-State (Cartel/Militia)": 0.2732,
+    "Border Skirmish": 0.2069,
+    "Proxy / Grey-Zone": 0.1567,
+    "Intra-State (Civil War)": 0.2444,
+    "Cyber / Digital": 0.1187
+  },
+  "future_hotspots": [],
+  "raw_schemas": {}
+}
