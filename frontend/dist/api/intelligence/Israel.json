@@ -1,0 +1,92 @@
+{
+  "country": "Israel",
+  "computed_wvi": 74,
+  "pillars": {
+    "cyber": {
+      "overall_score": 85,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 90,
+          "metric": "102 events (YTD)",
+          "raw_value": 102,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 75,
+          "metric": "4 campaigns",
+          "raw_value": 4,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 80,
+          "metric": "Active tracking",
+          "raw_value": 80,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 65,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 65,
+          "metric": "Dependency: 52%",
+          "raw_value": 52,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 57,
+          "metric": "Sanctions Exposure: 57/100",
+          "raw_value": 57,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 53,
+          "metric": "Trade Concentration: 53/100",
+          "raw_value": 53,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 88,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 88,
+          "metric": "704 events/yr",
+          "raw_value": 704,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 83,
+          "metric": "Fatalities: 10560/yr",
+          "raw_value": 10560,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 91,
+          "metric": "Military spend: 26.4% GDP",
+          "raw_value": 26.4,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 48,
+      "primary_drivers": [
+        "Gaza Conflict (Active)",
+        "Hezbollah Threat",
+        "Iranian Proxy Network"
+      ]
+    }
+  }
+}
