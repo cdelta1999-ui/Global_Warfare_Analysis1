@@ -1,0 +1,92 @@
+{
+  "country": "Sudan",
+  "computed_wvi": 67,
+  "pillars": {
+    "cyber": {
+      "overall_score": 30,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 35,
+          "metric": "36 events (YTD)",
+          "raw_value": 36,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 20,
+          "metric": "1 campaigns",
+          "raw_value": 1,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 25,
+          "metric": "Active tracking",
+          "raw_value": 25,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 85,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 85,
+          "metric": "Dependency: 68%",
+          "raw_value": 68,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 77,
+          "metric": "Sanctions Exposure: 77/100",
+          "raw_value": 77,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 73,
+          "metric": "Trade Concentration: 73/100",
+          "raw_value": 73,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 88,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 88,
+          "metric": "704 events/yr",
+          "raw_value": 704,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 83,
+          "metric": "Fatalities: 10560/yr",
+          "raw_value": 10560,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 91,
+          "metric": "Military spend: 26.4% GDP",
+          "raw_value": 26.4,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 52,
+      "primary_drivers": [
+        "SAF vs RSF Civil War (Active)",
+        "El Fasher Massacre Zone",
+        "Largest Global Displacement Crisis"
+      ]
+    }
+  }
+}
