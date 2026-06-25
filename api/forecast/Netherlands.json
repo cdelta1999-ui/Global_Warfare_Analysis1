@@ -1,1 +1,107 @@
-{"country": "Netherlands", "wound_vulnerability_index": 23, "escalation_risk": "MODERATE", "historical_timeline": [{"Year": 1816, "Extra-State": 5.0}, {"Year": 1825, "Extra-State": 215000.0}, {"Year": 1830, "Intra-State (Civil War)": 1100.0}, {"Year": 1848, "Extra-State": 2300.0}, {"Year": 1859, "Extra-State": 1000.0}, {"Year": 1864, "Extra-State": -6.0}, {"Year": 1873, "Extra-State": 23000.0}, {"Year": 1894, "Extra-State": 3000.0}, {"Year": 1904, "Extra-State": 24200.0}, {"Year": 1940, "Inter-State (Conventional)": 7900.0}, {"Year": 1945, "Extra-State": 4400.0}, {"Year": 1951, "Inter-State (Conventional)": 111.0}, {"Year": 1999, "Inter-State (Conventional)": 0.0}, {"Year": 2004, "Extra-State": -6.0}], "predicted_conflict_vectors": [{"type": "Border Skirmish", "probability": 8}, {"type": "Proxy / Grey-Zone", "probability": 15}, {"type": "Naval Blockade", "probability": 28}, {"type": "Cyber / Digital", "probability": 24}, {"type": "Algorithmic / AI Strike", "probability": 12}, {"type": "Full Conventional", "probability": 2}], "ml_forecast_volume": 3}
+{
+  "country": "Netherlands",
+  "forecast": {
+    "wvi": 30,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1816,
+      "Inter-State (Conventional)": 13,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1821,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 15000,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1846,
+      "Inter-State (Conventional)": 300,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1856,
+      "Inter-State (Conventional)": 500,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1861,
+      "Inter-State (Conventional)": 2,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1871,
+      "Inter-State (Conventional)": 12000,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1891,
+      "Inter-State (Conventional)": 1000,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1901,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 13000,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1941,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 800,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2004,
+      "Inter-State (Conventional)": 2,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Non-State (Cartel/Militia)": 0.2732,
+    "Border Skirmish": 0.2069,
+    "Proxy / Grey-Zone": 0.1567,
+    "Intra-State (Civil War)": 0.2444,
+    "Cyber / Digital": 0.1187
+  },
+  "future_hotspots": [],
+  "raw_schemas": {}
+}
