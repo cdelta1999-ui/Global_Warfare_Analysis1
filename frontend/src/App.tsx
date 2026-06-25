@@ -425,7 +425,12 @@ export default function App() {
     setSelectedInfra(null);
     setSelectedRegion(null);
     setActiveTab('timeline');
-    mapRef.current?.flyTo({ center: [lng, lat], zoom: 4.5, pitch: 35, bearing: 8, duration: 1800 });
+    // Normalize longitude to nearest equivalent relative to current map center (fixes globe wraparound)
+    const currentLng = mapRef.current?.getCenter().lng ?? 0;
+    let normLng = lng;
+    while (normLng - currentLng > 180) normLng -= 360;
+    while (normLng - currentLng < -180) normLng += 360;
+    mapRef.current?.flyTo({ center: [normLng, lat], zoom: 4.5, pitch: 35, bearing: 8, duration: 1800 });
     fetch(`${API_BASE}api/forecast/${encodeURIComponent(country)}${EXT}`)
       .then(r => r.json()).then(setForecastData).catch(console.error);
     fetch(`${API_BASE}api/intelligence/${encodeURIComponent(country)}${EXT}`)
@@ -1618,19 +1623,27 @@ export default function App() {
           )}
           {hoverInfo.feature.source === 'brain-predictions' && (() => {
             const p = hoverInfo.feature.properties;
+            const isBlackSwan = p.risk === 'Black Swan Wounding Zone';
+            const accentColor = isBlackSwan ? '#fb923c' : '#f97316';
             return (
               <>
                 <div style={{ fontWeight: 700, display: 'flex', alignItems: 'center', gap: 5 }}>
-                  <Zap size={13} style={{ color: '#f97316' }} />
-                  <span style={{ color: '#f97316' }}>{p.name}</span>
+                  <Zap size={13} style={{ color: accentColor }} />
+                  <span style={{ color: accentColor }}>{p.name}</span>
                 </div>
-                <div style={{ fontSize: '0.68rem', color: 'rgba(255,180,80,0.8)', marginTop: 2 }}>{p.type}</div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginTop: 5 }}>
-                  <div style={{ fontSize: '1rem', fontWeight: 900, color: '#f97316', fontFamily: "'JetBrains Mono', monospace" }}>{p.prediction_confidence}%</div>
+                {isBlackSwan && (
+                  <div style={{ fontSize: '0.6rem', fontWeight: 700, color: '#fb923c', background: 'rgba(251,146,60,0.15)', border: '1px solid rgba(251,146,60,0.3)', borderRadius: 3, padding: '1px 6px', display: 'inline-block', marginTop: 3, letterSpacing: '0.08em' }}>
+                    BLACK SWAN WOUNDING ZONE
+                  </div>
+                )}
+                <div style={{ fontSize: '0.68rem', color: 'rgba(255,180,80,0.8)', marginTop: 3 }}>{p.behavioral_strategy || p.type}</div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginTop: 4 }}>
+                  <div style={{ fontSize: '0.95rem', fontWeight: 900, color: accentColor, fontFamily: "'JetBrains Mono', monospace" }}>{p.confidence || p.prediction_confidence}</div>
                   <div style={{ fontSize: '0.6rem', color: 'rgba(255,255,255,0.4)' }}>CONFIDENCE</div>
                 </div>
-                <div style={{ fontSize: '0.65rem', color: 'rgba(255,255,255,0.55)', marginTop: 3 }}>{p.timeframe}</div>
-                <div style={{ fontSize: '0.62rem', color: 'var(--text-dim)', marginTop: 3 }}>Click for full analysis</div>
+                {p.timeframe && <div style={{ fontSize: '0.65rem', color: 'rgba(255,255,255,0.55)', marginTop: 3 }}>{p.timeframe}</div>}
+                {p.strategic_impact && <div style={{ fontSize: '0.62rem', color: '#fb923c', marginTop: 3 }}>{p.strategic_impact}</div>}
+                <div style={{ fontSize: '0.62rem', color: 'var(--text-dim)', marginTop: 4 }}>Click for full analysis</div>
               </>
             );
           })()}
@@ -1652,12 +1665,9 @@ export default function App() {
               {reactiveWVI > 75 ? 'CRITICAL' : reactiveWVI > 50 ? 'ELEVATED' : 'STABLE'}
             </span>
 
-            {/* WVI formula + pillar scores */}
+            {/* WVI pillar scores */}
             {intelligenceData?.pillars && (
               <div style={{ width: '100%', marginTop: 12, background: 'rgba(0,0,0,0.25)', borderRadius: 8, padding: '10px 12px' }}>
-                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '0.55rem', color: 'rgba(255,255,255,0.3)', textAlign: 'center', marginBottom: 8, lineHeight: 1.8 }}>
-                  <span style={{ color: '#00f2fe' }}>0.25C</span>+<span style={{ color: '#f5a623' }}>0.30E</span>+<span style={{ color: '#ff4b4b' }}>0.30K</span>+<span style={{ color: '#a78bfa' }}>0.15F</span>
-                </div>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 5 }}>
                   {[
                     { key: 'C', label: 'Cyber', pillar: 'cyber', color: '#00f2fe' },
