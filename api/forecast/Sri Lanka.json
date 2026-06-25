@@ -1,1 +1,99 @@
-{"country": "Sri Lanka", "wound_vulnerability_index": 37, "escalation_risk": "MODERATE", "historical_timeline": [{"Year": 1971, "Intra-State (Civil War)": 4053.0, "Internal armed conflict": 1000.0}, {"Year": 1983, "Intra-State (Civil War)": 25500.0}, {"Year": 1984, "Internal armed conflict": 100.0}, {"Year": 1985, "Internal armed conflict": 100.0}, {"Year": 1986, "Internal armed conflict": 100.0}, {"Year": 1987, "Intra-State (Civil War)": -18.0, "Internal armed conflict": 1000.0}, {"Year": 1988, "Internal armed conflict": 100.0}, {"Year": 1989, "One-Sided Violence": 454.0, "Internal armed conflict": 200.0}, {"Year": 1990, "One-Sided Violence": 1147.0, "Internal armed conflict": 1100.0}, {"Year": 1991, "One-Sided Violence": 214.0, "Internal armed conflict": 1000.0}, {"Year": 1992, "One-Sided Violence": 353.0, "Internal armed conflict": 1000.0}, {"Year": 1993, "Internal armed conflict": 1000.0}, {"Year": 1994, "One-Sided Violence": 25.0, "Internal armed conflict": 100.0}, {"Year": 1995, "One-Sided Violence": 197.0, "Internal armed conflict": 1000.0}, {"Year": 1996, "One-Sided Violence": 229.0, "Internal armed conflict": 1000.0}, {"Year": 1997, "Internal armed conflict": 1000.0}, {"Year": 1998, "One-Sided Violence": 60.0, "Internal armed conflict": 1000.0}, {"Year": 1999, "One-Sided Violence": 62.0, "Internal armed conflict": 1000.0}, {"Year": 2000, "One-Sided Violence": 35.0, "Internal armed conflict": 1000.0}, {"Year": 2001, "Internal armed conflict": 1000.0}, {"Year": 2003, "Internal armed conflict": 100.0}, {"Year": 2005, "Internal armed conflict": 100.0}, {"Year": 2006, "Intra-State (Civil War)": -18.0, "One-Sided Violence": 106.0, "Internal armed conflict": 1000.0}, {"Year": 2007, "One-Sided Violence": 46.0, "Internal armed conflict": 1000.0}, {"Year": 2008, "One-Sided Violence": 185.0, "Internal armed conflict": 1000.0}, {"Year": 2009, "One-Sided Violence": 248.0, "Internal armed conflict": 1000.0}], "predicted_conflict_vectors": [{"type": "Border Skirmish", "probability": 31}, {"type": "Proxy / Grey-Zone", "probability": 31}, {"type": "Naval Blockade", "probability": 37}, {"type": "Cyber / Digital", "probability": 37}, {"type": "Algorithmic / AI Strike", "probability": 18}, {"type": "Full Conventional", "probability": 7}], "ml_forecast_volume": 4}
+{
+  "country": "Sri Lanka",
+  "forecast": {
+    "wvi": 30,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1900,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1034,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1920,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1940,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1960,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1980,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1166,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2000,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1195,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2010,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2015,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 823,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2020,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 904,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Non-State (Cartel/Militia)": 0.2732,
+    "Border Skirmish": 0.2069,
+    "Proxy / Grey-Zone": 0.1567,
+    "Intra-State (Civil War)": 0.2444,
+    "Cyber / Digital": 0.1187
+  },
+  "future_hotspots": [],
+  "raw_schemas": {}
+}
