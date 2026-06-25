@@ -1,0 +1,92 @@
+{
+  "country": "United Kingdom",
+  "computed_wvi": 53,
+  "pillars": {
+    "cyber": {
+      "overall_score": 80,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 85,
+          "metric": "96 events (YTD)",
+          "raw_value": 96,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 70,
+          "metric": "4 campaigns",
+          "raw_value": 4,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 75,
+          "metric": "Active tracking",
+          "raw_value": 75,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 55,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 55,
+          "metric": "Dependency: 44%",
+          "raw_value": 44,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 47,
+          "metric": "Sanctions Exposure: 47/100",
+          "raw_value": 47,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 43,
+          "metric": "Trade Concentration: 43/100",
+          "raw_value": 43,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 50,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 50,
+          "metric": "400 events/yr",
+          "raw_value": 400,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 45,
+          "metric": "Fatalities: 6000/yr",
+          "raw_value": 6000,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 53,
+          "metric": "Military spend: 15.0% GDP",
+          "raw_value": 15.0,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 13,
+      "primary_drivers": [
+        "Russian Hybrid Threat",
+        "Northern Ireland Residual Tension",
+        "GCHQ-Level Cyber Operations"
+      ]
+    }
+  }
+}
