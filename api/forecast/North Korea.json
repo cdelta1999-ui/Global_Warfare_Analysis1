@@ -1,1 +1,114 @@
-{"country": "North Korea", "wound_vulnerability_index": 53, "escalation_risk": "ELEVATED", "historical_timeline": [{"Year": 1949, "Interstate armed conflict": 100.0}, {"Year": 1950, "Inter-State (Conventional)": 316579.0, "Interstate armed conflict": 1000.0}, {"Year": 1951, "Interstate armed conflict": 1000.0}, {"Year": 1952, "Interstate armed conflict": 1000.0}, {"Year": 1953, "Interstate armed conflict": 1000.0}], "predicted_conflict_vectors": [{"type": "Border Skirmish", "probability": 3}, {"type": "Proxy / Grey-Zone", "probability": 46}, {"type": "Naval Blockade", "probability": 48}, {"type": "Cyber / Digital", "probability": 89}, {"type": "Algorithmic / AI Strike", "probability": 44}, {"type": "Full Conventional", "probability": 0}], "ml_forecast_volume": 2}
+{
+  "country": "North Korea",
+  "forecast": {
+    "wvi": 76,
+    "trend": "Rising",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1900,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1920,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1940,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1960,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 901,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1980,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2000,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2010,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2015,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2020,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 658,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Full Conventional": 0.1751,
+    "Cyber / Digital": 0.3606,
+    "Naval Blockade": 0.1005,
+    "Border Skirmish": 0.2312,
+    "Proxy / Grey-Zone": 0.1326
+  },
+  "future_hotspots": [
+    {
+      "region": "North Korea - High-Risk Zone",
+      "threat": "Full Conventional",
+      "probability": 0.361,
+      "lat": null,
+      "lng": null
+    },
+    {
+      "region": "North Korea - Border Flashpoint",
+      "threat": "Cyber / Digital",
+      "probability": 0.231,
+      "lat": null,
+      "lng": null
+    }
+  ],
+  "raw_schemas": {}
+}
