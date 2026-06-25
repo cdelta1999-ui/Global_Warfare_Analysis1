@@ -1,0 +1,91 @@
+{
+  "country": "China",
+  "computed_wvi": 71,
+  "pillars": {
+    "cyber": {
+      "overall_score": 88,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 93,
+          "metric": "105 events (YTD)",
+          "raw_value": 105,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 78,
+          "metric": "4 campaigns",
+          "raw_value": 4,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 83,
+          "metric": "Active tracking",
+          "raw_value": 83,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 75,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 75,
+          "metric": "Dependency: 60%",
+          "raw_value": 60,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 67,
+          "metric": "Sanctions Exposure: 67/100",
+          "raw_value": 67,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 63,
+          "metric": "Trade Concentration: 63/100",
+          "raw_value": 63,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 78,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 78,
+          "metric": "624 events/yr",
+          "raw_value": 624,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 73,
+          "metric": "Fatalities: 9360/yr",
+          "raw_value": 9360,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 81,
+          "metric": "Military spend: 23.4% GDP",
+          "raw_value": 23.4,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 18,
+      "primary_drivers": [
+        "Taiwan Strait Tension",
+        "South China Sea Disputes"
+      ]
+    }
+  }
+}
