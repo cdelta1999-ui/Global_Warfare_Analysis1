@@ -1,1 +1,92 @@
-{"country": "Mexico", "pillars": {"kinetic": {"overall_score": 15, "sources": [{"name": "ACLED", "metric": "Instability Velocity", "raw_value": 0.0, "unit": "std_dev", "score": 15}, {"name": "SIPRI", "metric": "EMA Fatalities", "raw_value": 4156, "unit": "deaths/yr", "score": 15}, {"name": "AIS Marine", "metric": "Choke Point Flow", "raw_value": 4156, "unit": "vessels/day", "score": 15}], "raw_feed": {"source": "ACLED", "country_code": "MEX", "region": "Capital Region", "data_points": {"event_id": "ACLED-9535", "event_type": "Battles / Border Skirmishes", "actor_1": "Military Forces of Mexico", "actor_2": "Unidentified Armed Group", "fatalities": 7395, "geo_coordinates": {"lat": 20.4487, "lng": -78.4716}}, "wvi_normalized_score": 15.0}}, "cyber": {"overall_score": 45, "sources": [{"name": "CFR Cyber Tracker", "metric": "Incidents (YTD)", "raw_value": 67, "unit": "events", "score": 45}, {"name": "EuRepoC", "metric": "Active Campaigns", "raw_value": 0, "unit": "campaigns", "score": 45}, {"name": "Carnegie Spyware", "metric": "Proliferation", "raw_value": 0.45, "unit": "index", "score": 45}], "raw_feed": {"source": "CFR_Cyber_Tracker", "target_country": "Mexico", "suspected_attribution": "Unknown State Actor", "data_points": {"incident_type": "Cyber Espionage / Infrastructure Spoofing", "target_sector": "Energy Grid / Maritime Navigation", "severity_level": "Medium"}, "wvi_normalized_score": 45.0}}, "economic": {"overall_score": 67, "sources": [{"name": "UN Comtrade", "metric": "Critical Import Dep.", "raw_value": "$67B", "unit": "USD", "score": 67}, {"name": "IMF DOTS", "metric": "Trade Imbalance", "raw_value": "-$80B", "unit": "USD", "score": 67}, {"name": "World Bank", "metric": "Tariff Barrier", "raw_value": "13.4%", "unit": "rate", "score": 67}], "raw_feed": {"source": "UN_Comtrade_IMF", "reporting_country": "MEX", "partner_country": "Global Market", "data_points": {"commodity_code": "HS-8542", "commodity_description": "Electronic Integrated Circuits", "bilateral_trade_value_usd": 31491929596, "import_dependency_percentage": 23.1}, "wvi_normalized_score": 67.0}}}, "wvi_metadata": {"m_geo_multiplier": 1.0, "delta_socio_multiplier": 1.0, "boiling_point_triggered": false, "boiling_point_alert": null}}
+{
+  "country": "Mexico",
+  "computed_wvi": 64,
+  "pillars": {
+    "cyber": {
+      "overall_score": 55,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 60,
+          "metric": "66 events (YTD)",
+          "raw_value": 66,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 45,
+          "metric": "2 campaigns",
+          "raw_value": 2,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 50,
+          "metric": "Active tracking",
+          "raw_value": 50,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 70,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 70,
+          "metric": "Dependency: 56%",
+          "raw_value": 56,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 62,
+          "metric": "Sanctions Exposure: 62/100",
+          "raw_value": 62,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 58,
+          "metric": "Trade Concentration: 58/100",
+          "raw_value": 58,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 72,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 72,
+          "metric": "576 events/yr",
+          "raw_value": 576,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 67,
+          "metric": "Fatalities: 8640/yr",
+          "raw_value": 8640,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 75,
+          "metric": "Military spend: 21.6% GDP",
+          "raw_value": 21.6,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 48,
+      "primary_drivers": [
+        "Cartel Territorial Wars",
+        "State Capture Risk",
+        "US Border Militarization"
+      ]
+    }
+  }
+}
