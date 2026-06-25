@@ -1,9 +1,111 @@
 {
-  "database_version": "1.0",
+  "database_version": "2.0",
   "generated_at": "2026-06-25T00:00:00Z",
-  "source": "Encyclopaedia Britannica — List of Wars, augmented with UCDP/PRIO Conflict Database",
-  "description": "Structured historical conflict database spanning 1300 BCE to present. Used to calibrate AI conflict prediction via regional conflict density, cycle analysis, and behavioral pattern matching.",
+  "source": "Encyclopaedia Britannica — List of Wars; Wikipedia — Outline of War; UCDP/PRIO Conflict Database; Correlates of War Project",
+  "description": "Structured historical conflict database spanning 1300 BCE to present. Taxonomy aligned with Wikipedia Outline of War (war types, causes, theory, conduct). Used to calibrate AI conflict prediction via regional conflict density, cycle analysis, and behavioral pattern matching.",
   "total_conflicts": 247,
+  "war_taxonomy": {
+    "source": "Wikipedia — Outline of War (en.wikipedia.org/wiki/Outline_of_war)",
+    "theory_of_war": {
+      "classical": {
+        "Clausewitzian": "War as continuation of politics by other means (Carl von Clausewitz, On War, 1832). Key concepts: fog of war, friction, center of gravity, absolute vs. real war.",
+        "Sun_Tzu": "Win without fighting; deception; intelligence; flexibility (Sun Tzu, The Art of War, ~500 BCE). Foundational to Chinese military doctrine and modern asymmetric strategy.",
+        "Jominian": "Geometric approach; lines of operation; interior/exterior lines (Henri de Jomini). Influenced 19th-century European and US military doctrine.",
+        "Just_War": "Criteria for ethical warfare: just cause, right intention, proportionality, last resort, legitimate authority (Augustine, Aquinas, Grotius). Basis of modern international humanitarian law."
+      },
+      "modern": {
+        "Deterrence": "Prevention of war through credible threat of retaliation. Nuclear deterrence (MAD); conventional deterrence; extended deterrence to allies.",
+        "Maneuver_Warfare": "Defeat enemy through shock and disruption of cohesion rather than attrition. Blitzkrieg; Boyd's OODA loop; 3rd-generation warfare.",
+        "Attrition": "Winning by grinding down enemy resources, personnel, will. WWI Western Front; Iran-Iraq War; Ukraine-Russia war.",
+        "Fourth_Generation": "Non-state actors; blurred battlefield; political and social dimensions; Hezbollah model; ISIS; Taliban.",
+        "Hybrid_Warfare": "Blend of conventional, irregular, cyber, information, and economic tools. Russia's Gerasimov Doctrine; Chinese 'Three Warfares'.",
+        "Information_Warfare": "Control of information environment; propaganda; psyops; social media manipulation; cyber operations.",
+        "Network_Centric": "Leveraging information networks for battlefield advantage; C4ISR; joint all-domain operations.",
+        "Cognitive_Warfare": "Targeting enemy decision-making, morale, and societal cohesion. Emerging domain alongside cyber and space."
+      }
+    },
+    "types_by_scale": {
+      "Total_War": "Full mobilization of society and economy; no distinction between combatants/civilians. WWI, WWII, Napoleonic Wars.",
+      "Limited_War": "Restricted objectives, means, or geography. Korean War; Falklands; Gulf War 1991.",
+      "Guerrilla_War": "Irregular forces using hit-and-run tactics against larger conventional force. Vietnam; Afghanistan; Chechnya.",
+      "Proxy_War": "Superpower or regional power fights through surrogate forces. Cold War proxy conflicts; Yemen; Syria; Ukraine (partial).",
+      "Insurgency": "Armed resistance against a ruling authority, often with political objectives. Maoist; Islamist; nationalist.",
+      "Civil_War": "Armed conflict within a state between organized groups. 50% of all conflicts since 1945.",
+      "Interstate_War": "Armed conflict between sovereign states. Declining since 1945 but highest-casualty when it occurs.",
+      "Asymmetric_War": "Conflict between actors of vastly different military capabilities; weaker side uses non-conventional methods."
+    },
+    "types_by_domain": {
+      "Land_Warfare": "Ground combat; maneuver; siege; infantry; armor. Oldest form of warfare.",
+      "Naval_Warfare": "Control of sea lanes; blockade; amphibious operations; submarine warfare; carrier operations.",
+      "Air_Warfare": "Strategic bombing; close air support; air superiority; interdiction. Decisive since WWI.",
+      "Cyber_Warfare": "Attacks on digital infrastructure, networks, and systems. Stuxnet; Russian ops in Ukraine; Chinese APT groups.",
+      "Space_Warfare": "Satellite disruption; anti-satellite weapons; space-based surveillance. Emerging domain.",
+      "Information_Warfare": "Propaganda; psychological operations; disinformation; electronic warfare.",
+      "Economic_Warfare": "Sanctions; blockades; resource denial; financial system attacks; supply chain disruption.",
+      "Biological_Warfare": "Use of pathogens as weapons. Banned by Biological Weapons Convention 1972 but threat persists.",
+      "Chemical_Warfare": "Use of chemical agents. Banned by Chemical Weapons Convention 1993. Used in Syria 2013-2019.",
+      "Nuclear_Warfare": "Use of nuclear weapons. MAD doctrine; 9 states possess nuclear weapons (2026)."
+    },
+    "causes_of_war": {
+      "Territorial": "Border disputes; irredentism; separatism. Most common cause historically.",
+      "Resource": "Oil; water; minerals; food; strategic chokepoints. Increasingly important with climate change.",
+      "Ideological": "Communism vs. capitalism; democracy vs. authoritarianism; revolutionary ideology.",
+      "Religious": "Sectarian conflict; holy war/jihad; religious nationalism. Crusades to modern Islamist conflicts.",
+      "Ethnic": "Tribal; ethnic cleansing; nationalism; identity conflict. Balkans; Rwanda; Darfur.",
+      "Political": "Power struggle; regime change; succession; coup spillover.",
+      "Economic": "Trade disputes; sanctions; economic domination; development competition.",
+      "Security_Dilemma": "Spiral model: one state's defensive buildup perceived as offensive threat, triggering arms race.",
+      "Democratic_Peace_Failure": "Democracies rarely fight each other but may fight non-democracies.",
+      "Climate_Resource": "Emerging cause: drought, desertification, sea level rise triggering displacement and conflict (Sahel, MENA)."
+    },
+    "conduct_of_war": {
+      "Strategy": "Grand strategy linking war to political objectives; operational art; military strategy.",
+      "Tactics": "Battlefield-level actions; fire and movement; combined arms; squad to corps level.",
+      "Logistics": "Sustaining forces; supply chains; ammunition; fuel. 'Amateurs talk strategy, professionals talk logistics.'",
+      "Intelligence": "HUMINT; SIGINT; IMINT; OSINT; all-source analysis; battlefield intelligence.",
+      "Command_Control": "C2; C4ISR; unity of command; mission command (Auftragstaktik).",
+      "PSYOPS": "Psychological operations to influence enemy combatants and civilian population.",
+      "COIN": "Counter-insurgency doctrine (FM 3-24); hearts and minds; population-centric; clear-hold-build.",
+      "Laws_of_War": "Geneva Conventions; Hague Regulations; international humanitarian law; war crimes."
+    },
+    "effects_of_war": {
+      "Casualties": "Direct: killed, wounded, captured. Indirect: famine, disease, displacement.",
+      "Displacement": "Refugees; IDPs; statelessness. 122M displaced globally as of 2026.",
+      "Economic": "GDP loss; infrastructure destruction; capital flight; sanctions; debt.",
+      "Political": "State collapse; regime change; border redrawing; new international order.",
+      "Social": "Trauma; demographic change; social fragmentation; radicalization.",
+      "Environmental": "Ecocide; deforestation; contamination; resource depletion.",
+      "Technological": "War drives innovation: internet (ARPANET/DARPA); radar; nuclear power; GPS; drones."
+    },
+    "historical_periods": {
+      "Ancient": "before 500 CE — chariots, phalanx, legion, siege engines",
+      "Medieval": "500–1500 CE — cavalry, castle, crossbow, gunpowder introduction",
+      "Early_Modern": "1500–1800 CE — firearms, linear tactics, professional armies, naval power",
+      "Napoleonic": "1792–1815 — mass conscript armies, total mobilization, combined arms",
+      "Industrial": "1815–1945 — railways, telegraphs, machine guns, tanks, strategic bombing",
+      "Cold_War": "1945–1991 — nuclear deterrence, proxy wars, decolonization conflicts",
+      "Contemporary": "1991–present — asymmetric, hybrid, cyber, non-state actors, precision weapons"
+    },
+    "notable_war_theorists": [
+      { "name": "Sun Tzu", "era": "~500 BCE", "work": "The Art of War", "key_concept": "Win without fighting; supreme excellence" },
+      { "name": "Thucydides", "era": "~400 BCE", "work": "History of the Peloponnesian War", "key_concept": "Thucydides Trap: rising power vs. established power" },
+      { "name": "Carl von Clausewitz", "era": "1780–1831", "work": "On War (Vom Kriege)", "key_concept": "War as political instrument; fog of war; center of gravity" },
+      { "name": "Alfred Thayer Mahan", "era": "1840–1914", "work": "The Influence of Sea Power upon History", "key_concept": "Naval supremacy as foundation of national power" },
+      { "name": "Giulio Douhet", "era": "1869–1930", "work": "The Command of the Air", "key_concept": "Strategic bombing; air power as war-winner" },
+      { "name": "B.H. Liddell Hart", "era": "1895–1970", "work": "Strategy", "key_concept": "Indirect approach; dislocation over destruction" },
+      { "name": "Mao Zedong", "era": "1893–1976", "work": "On Guerrilla Warfare", "key_concept": "Three phases of protracted people's war" },
+      { "name": "John Boyd", "era": "1927–1997", "work": "A Discourse on Winning and Losing", "key_concept": "OODA loop; decision cycle advantage" },
+      { "name": "Martin van Creveld", "era": "1946–", "work": "The Transformation of War", "key_concept": "Decline of state war; rise of non-trinitarian warfare" },
+      { "name": "Thomas Schelling", "era": "1921–2016", "work": "Arms and Influence", "key_concept": "Compellence vs. deterrence; coercive bargaining" }
+    ],
+    "ai_prediction_relevance": {
+      "Clausewitzian_Center_of_Gravity": "HVEN-R model maps to Clausewitz's CoG concept — V (Volatility) and E (Escalation) scores identify enemy's critical vulnerability and decisive point",
+      "Thucydides_Trap": "Rising power (China) vs. established power (USA) dynamic directly modeled in East Asia prediction score (72). Historical base rate: 12 of 16 such transitions led to war",
+      "Conflict_Cycle": "Wars_database conflict_cycle_years correlates with H (Historical) score in HVEN-R — regions with shorter cycles receive higher H weighting",
+      "Hybrid_Warfare_Indicator": "WVI Cyber pillar + Economic pillar combined with kinetic score detects hybrid warfare build-up before conventional phase",
+      "Non-State_Proliferation": "4th-gen and insurgency patterns dominate Sahel and Horn regions — low WVI scores but high N (Neighbor) scores from cross-border spillover"
+    }
+  },
   "conflicts": [
     { "id": 1, "name": "Battle of Megiddo", "start_year": -1300, "end_year": -1299, "region": "Middle East", "subregion": "Levant", "type": "Interstate", "belligerents": ["Egypt", "Canaanite city-states"], "outcome": "Egyptian victory", "casualties_estimate": 1000, "historical_significance": "HIGH", "modern_relevance_region": "middle-east" },
     { "id": 2, "name": "Trojan War", "start_year": -1250, "end_year": -1240, "region": "Eastern Mediterranean", "subregion": "Aegean", "type": "Interstate", "belligerents": ["Greece", "Troy"], "outcome": "Greek victory", "casualties_estimate": 50000, "historical_significance": "HIGH", "modern_relevance_region": "eastern-europe" },
