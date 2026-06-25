@@ -1,1 +1,43 @@
-{"country": "Japan", "wound_vulnerability_index": 50, "escalation_risk": "MODERATE", "historical_timeline": [{"Year": 1868, "Intra-State (Civil War)": -18.0}, {"Year": 1877, "Intra-State (Civil War)": 17000.0}, {"Year": 1894, "Inter-State (Conventional)": 5000.0, "Intra-State (Civil War)": -17.0}, {"Year": 1895, "Extra-State": 12560.0}, {"Year": 1900, "Inter-State (Conventional)": 622.0}, {"Year": 1904, "Inter-State (Conventional)": 80378.0}, {"Year": 1907, "Extra-State": 17736.0}, {"Year": 1914, "Inter-State (Conventional)": 300.0}, {"Year": 1931, "Inter-State (Conventional)": 10000.0}, {"Year": 1937, "Inter-State (Conventional)": 250000.0}, {"Year": 1938, "Inter-State (Conventional)": 526.0}, {"Year": 1939, "Inter-State (Conventional)": 20000.0}, {"Year": 1941, "Inter-State (Conventional)": 1740000.0}], "predicted_conflict_vectors": [{"type": "Border Skirmish", "probability": 8}, {"type": "Proxy / Grey-Zone", "probability": 26}, {"type": "Naval Blockade", "probability": 48}, {"type": "Cyber / Digital", "probability": 45}, {"type": "Algorithmic / AI Strike", "probability": 22}, {"type": "Full Conventional", "probability": 2}], "ml_forecast_volume": 1}
+{
+  "country": "Japan",
+  "forecast": {
+    "wvi": 50,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1895,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 4800,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1905,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 136,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Cyber / Digital": 0.3937,
+    "Naval Blockade": 0.3153,
+    "Border Skirmish": 0.116,
+    "Proxy / Grey-Zone": 0.1531,
+    "Full Conventional": 0.0219
+  },
+  "future_hotspots": [],
+  "raw_schemas": {}
+}
