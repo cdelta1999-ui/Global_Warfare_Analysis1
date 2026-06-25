@@ -156,15 +156,33 @@ const WVIRing = ({ score, color }: { score: number; color: string }) => {
   );
 };
 
+const conflictRegionFillLayer: Omit<FillLayer, 'source'> = {
+  id: 'conflict-regions-fill', type: 'fill',
+  paint: {
+    'fill-color': ['get', 'color'],
+    'fill-opacity': ['interpolate', ['linear'], ['get', 'prediction_score'], 49, 0.08, 70, 0.14, 91, 0.22]
+  }
+};
+const conflictRegionLineLayer: Omit<LineLayer, 'source'> = {
+  id: 'conflict-regions-line', type: 'line',
+  paint: {
+    'line-color': ['get', 'color'],
+    'line-width': ['interpolate', ['linear'], ['get', 'prediction_score'], 49, 1.5, 91, 3],
+    'line-opacity': 0.75,
+    'line-dasharray': [4, 2]
+  }
+};
+
 interface MapViewProps {
   worldGeoJson: any; flowMaps: any; chokePoints: any; digitalLifelines: any; strategicResources: any; asymmetricVuln: any;
   showShipping: boolean; showPatrols: boolean; showChokePoints: boolean; showDigital: boolean; showStrategic: boolean; showAsymmetric: boolean;
+  showConflictRegions: boolean; conflictRegionsGeoJson: any;
   activeHotspotGeoJson: any; selectedCountry: string | null;
   onHoverChange: (info: any) => void; onCountryClick: (c: string) => void; onInfraClick: (i: any) => void; onClear: () => void;
   mapRef: React.RefObject<MapRef>;
 }
 
-const MapView = memo(({ worldGeoJson, flowMaps, chokePoints, digitalLifelines, strategicResources, asymmetricVuln, showShipping, showPatrols, showChokePoints, showDigital, showStrategic, showAsymmetric, activeHotspotGeoJson, selectedCountry, onHoverChange, onCountryClick, onInfraClick, onClear, mapRef }: MapViewProps) => {
+const MapView = memo(({ worldGeoJson, flowMaps, chokePoints, digitalLifelines, strategicResources, asymmetricVuln, showShipping, showPatrols, showChokePoints, showDigital, showStrategic, showAsymmetric, showConflictRegions, conflictRegionsGeoJson, activeHotspotGeoJson, selectedCountry, onHoverChange, onCountryClick, onInfraClick, onClear, mapRef }: MapViewProps) => {
   const [cursor, setCursor] = useState('grab');
 
   const handleMouseMove = useCallback((event: MapLayerMouseEvent) => {
@@ -188,10 +206,16 @@ const MapView = memo(({ worldGeoJson, flowMaps, chokePoints, digitalLifelines, s
       mapStyle="mapbox://styles/mapbox/dark-v11" mapboxAccessToken={MAPBOX_TOKEN}
       projection={{ name: 'globe' } as any}
       fog={{ color: '#080c18', 'high-color': '#1a2a6c', 'horizon-blend': 0.04, 'space-color': '#000005', 'star-intensity': 0.25 } as any}
-      interactiveLayerIds={['data', 'choke-points', 'naval-patrols', 'digital-lifelines-lines', 'digital-lifelines-points', 'strategic-resources', 'asymmetric-vulnerabilities', 'shipping-routes', 'active-hotspots-layer']}
+      interactiveLayerIds={['data', 'choke-points', 'naval-patrols', 'digital-lifelines-lines', 'digital-lifelines-points', 'strategic-resources', 'asymmetric-vulnerabilities', 'shipping-routes', 'active-hotspots-layer', 'conflict-regions-fill']}
       onMouseMove={handleMouseMove} onClick={handleClick} cursor={cursor}
     >
       {worldGeoJson && <Source id="data" type="geojson" data={worldGeoJson}><Layer {...wviLayer} /></Source>}
+      {showConflictRegions && conflictRegionsGeoJson && (
+        <Source id="conflict-regions" type="geojson" data={conflictRegionsGeoJson}>
+          <Layer {...conflictRegionFillLayer} />
+          <Layer {...conflictRegionLineLayer} />
+        </Source>
+      )}
       {showShipping && flowMaps?.shipping_routes && <Source id="shipping" type="geojson" data={flowMaps.shipping_routes}><Layer {...shippingRouteLayer} /></Source>}
       {showPatrols && flowMaps?.naval_patrols && <Source id="patrols" type="geojson" data={flowMaps.naval_patrols}><Layer {...navalPatrolLayer} /></Source>}
       {showChokePoints && chokePoints && <Source id="chokepoints" type="geojson" data={chokePoints}><Layer {...chokePointLayer} /></Source>}
@@ -214,7 +238,8 @@ const MapView = memo(({ worldGeoJson, flowMaps, chokePoints, digitalLifelines, s
   p.digitalLifelines === n.digitalLifelines && p.strategicResources === n.strategicResources &&
   p.asymmetricVuln === n.asymmetricVuln && p.showShipping === n.showShipping && p.showPatrols === n.showPatrols &&
   p.showChokePoints === n.showChokePoints && p.showDigital === n.showDigital && p.showStrategic === n.showStrategic &&
-  p.showAsymmetric === n.showAsymmetric && p.activeHotspotGeoJson === n.activeHotspotGeoJson &&
+  p.showAsymmetric === n.showAsymmetric && p.showConflictRegions === n.showConflictRegions &&
+  p.conflictRegionsGeoJson === n.conflictRegionsGeoJson && p.activeHotspotGeoJson === n.activeHotspotGeoJson &&
   p.selectedCountry === n.selectedCountry && p.onHoverChange === n.onHoverChange &&
   p.onCountryClick === n.onCountryClick && p.onInfraClick === n.onInfraClick && p.onClear === n.onClear
 );
@@ -237,6 +262,9 @@ export default function App() {
   const [showDigital, setShowDigital] = useState(true);
   const [showStrategic, setShowStrategic] = useState(true);
   const [showAsymmetric, setShowAsymmetric] = useState(true);
+  const [showConflictRegions, setShowConflictRegions] = useState(true);
+  const [conflictRegionsGeoJson, setConflictRegionsGeoJson] = useState<any>(null);
+  const [selectedRegion, setSelectedRegion] = useState<any>(null);
 
   const [hoverInfo, setHoverInfo] = useState<any>(null);
   const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
@@ -297,6 +325,7 @@ export default function App() {
     const interval = setInterval(fetchPipelineStatus, 30000);
 
     fetch(API_BASE + `api/war_prediction${EXT}`).then(r => r.json()).then(setWarPredictionData).catch(console.error);
+    fetch(API_BASE + `api/conflict_regions${EXT}`).then(r => r.json()).then(setConflictRegionsGeoJson).catch(console.error);
 
     return () => clearInterval(interval);
   }, []);
@@ -314,13 +343,21 @@ export default function App() {
   }, [API_BASE, EXT]);
 
   const onInfraClick = useCallback((infra: any) => {
-    setSelectedInfra(infra);
-    setSelectedCountry(null);
+    if (infra.source === 'conflict-regions') {
+      setSelectedRegion(infra.properties);
+      setSelectedCountry(null);
+      setSelectedInfra(null);
+    } else {
+      setSelectedInfra(infra);
+      setSelectedCountry(null);
+      setSelectedRegion(null);
+    }
   }, []);
 
   const onClear = useCallback(() => {
     setSelectedCountry(null);
     setSelectedInfra(null);
+    setSelectedRegion(null);
   }, []);
 
   const handleHotspotClick = (lng: number | null, lat: number | null) => {
@@ -376,6 +413,7 @@ export default function App() {
         digitalLifelines={digitalLifelines} strategicResources={strategicResources} asymmetricVuln={asymmetricVuln}
         showShipping={showShipping} showPatrols={showPatrols} showChokePoints={showChokePoints}
         showDigital={showDigital} showStrategic={showStrategic} showAsymmetric={showAsymmetric}
+        showConflictRegions={showConflictRegions} conflictRegionsGeoJson={conflictRegionsGeoJson}
         activeHotspotGeoJson={activeHotspotGeoJson} selectedCountry={selectedCountry}
         onHoverChange={onHoverChange} onCountryClick={onCountryClick} onInfraClick={onInfraClick} onClear={onClear}
       />
@@ -696,18 +734,11 @@ export default function App() {
                   </div>
                 </div>
 
-                {/* Methodology */}
+                {/* Data Sources */}
                 <div style={{ marginTop: 16, background: 'rgba(0,0,0,0.3)', borderRadius: 10, padding: '12px 14px' }}>
-                  <div style={{ fontSize: '0.68rem', color: 'var(--text-secondary)', letterSpacing: '0.15em', marginBottom: 8 }}>METHODOLOGY</div>
-                  <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '0.7rem', color: '#a78bfa', marginBottom: 8 }}>{warPredictionData.methodology.formula}</div>
-                  {Object.entries(warPredictionData.methodology.components).map(([k, v]: any) => (
-                    <div key={k} style={{ marginBottom: 5 }}>
-                      <span style={{ fontSize: '0.65rem', fontWeight: 700, color: '#f5a623', fontFamily: "'JetBrains Mono', monospace" }}>{k}: </span>
-                      <span style={{ fontSize: '0.63rem', color: 'rgba(255,255,255,0.55)' }}>{v}</span>
-                    </div>
-                  ))}
-                  <div style={{ marginTop: 10, fontSize: '0.6rem', color: 'var(--text-dim)', lineHeight: 1.6, borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: 8 }}>
-                    Sources: {warPredictionData.sources.join(' · ')}
+                  <div style={{ fontSize: '0.68rem', color: 'var(--text-secondary)', letterSpacing: '0.15em', marginBottom: 8 }}>DATA SOURCES</div>
+                  <div style={{ fontSize: '0.6rem', color: 'var(--text-dim)', lineHeight: 1.7 }}>
+                    {warPredictionData.sources?.join(' · ')}
                   </div>
                 </div>
               </div>
@@ -715,6 +746,113 @@ export default function App() {
           </div>
         </>
       )}
+
+      {/* ─── Conflict Region Detail Panel ─── */}
+      {selectedRegion && (() => {
+        const r = selectedRegion;
+        const color = r.color;
+        const scoreColor = r.prediction_score >= 80 ? '#ef4444' : r.prediction_score >= 65 ? '#f97316' : r.prediction_score >= 55 ? '#f59e0b' : '#34d399';
+        const keyCountries = typeof r.key_countries === 'string' ? JSON.parse(r.key_countries) : r.key_countries;
+        return (
+          <>
+            <div className="doctrine-backdrop" onClick={() => setSelectedRegion(null)} />
+            <div className="glass-panel doctrine-modal fade-in" style={{ width: '82vw', maxWidth: 900, height: '80vh', display: 'flex', flexDirection: 'column' }}>
+              {/* Header */}
+              <div style={{ padding: '18px 24px', borderBottom: '1px solid rgba(255,255,255,0.08)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexShrink: 0 }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                  <div style={{ width: 12, height: 12, borderRadius: '50%', background: color, boxShadow: `0 0 10px ${color}` }} />
+                  <div>
+                    <h2 style={{ margin: 0, fontSize: '1.15rem', color }}>{r.name}</h2>
+                    <div style={{ fontSize: '0.72rem', color: 'rgba(255,255,255,0.45)', marginTop: 2 }}>{r.subtitle}</div>
+                  </div>
+                </div>
+                <button onClick={() => setSelectedRegion(null)} style={{ background: 'none', border: 'none', color: 'var(--text-secondary)', cursor: 'pointer' }}><X size={20} /></button>
+              </div>
+
+              <div style={{ flex: 1, overflowY: 'auto', padding: '20px 24px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
+                {/* Left column */}
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+                  {/* Score card */}
+                  <div style={{ background: `${color}0d`, border: `1px solid ${color}30`, borderRadius: 12, padding: '16px 20px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
+                      <div>
+                        <div style={{ fontSize: '0.62rem', color: 'rgba(255,255,255,0.4)', letterSpacing: '0.12em', marginBottom: 4 }}>AI CONFLICT PREDICTION SCORE</div>
+                        <div style={{ fontSize: '3rem', fontWeight: 900, color, fontFamily: "'JetBrains Mono', monospace", lineHeight: 1 }}>{r.prediction_score}</div>
+                        <div style={{ fontSize: '0.65rem', color, letterSpacing: '0.1em', marginTop: 4 }}>{r.confidence} CONFIDENCE</div>
+                      </div>
+                      <div style={{ textAlign: 'right' }}>
+                        <div style={{ fontSize: '0.65rem', color: 'rgba(255,255,255,0.35)', letterSpacing: '0.1em', marginBottom: 4 }}>TRAJECTORY</div>
+                        <div style={{ fontSize: '0.78rem', fontWeight: 700, color: '#ef4444' }}>{r.trajectory}</div>
+                        <div style={{ fontSize: '0.65rem', color: 'rgba(255,255,255,0.4)', marginTop: 4 }}>{r.timeframe}</div>
+                      </div>
+                    </div>
+                    <div style={{ height: 6, background: 'rgba(255,255,255,0.06)', borderRadius: 3, overflow: 'hidden' }}>
+                      <div style={{ height: '100%', width: `${r.prediction_score}%`, background: `linear-gradient(90deg, ${color}66, ${color})`, borderRadius: 3, transition: 'width 1s ease' }} />
+                    </div>
+                  </div>
+
+                  {/* Key metrics */}
+                  <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.06)', borderRadius: 10, padding: '14px 16px' }}>
+                    <div style={{ fontSize: '0.62rem', color: 'rgba(255,255,255,0.35)', letterSpacing: '0.12em', marginBottom: 10 }}>HISTORICAL CONFLICT DATA</div>
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
+                      {[
+                        { label: 'Recorded Wars', value: r.historical_conflicts, color: '#f5a623' },
+                        { label: 'Active Now', value: r.current_active_wars, color: '#ef4444' },
+                        { label: 'Avg Cycle (yrs)', value: r.conflict_cycle_years?.toFixed(1), color: '#a78bfa' },
+                        { label: 'Avg WVI', value: r.avg_wvi, color: '#00f2fe' },
+                      ].map(m => (
+                        <div key={m.label} style={{ background: `${m.color}0a`, border: `1px solid ${m.color}25`, borderRadius: 8, padding: '10px 12px' }}>
+                          <div style={{ fontSize: '1.3rem', fontWeight: 900, color: m.color, fontFamily: "'JetBrains Mono', monospace" }}>{m.value}</div>
+                          <div style={{ fontSize: '0.6rem', color: 'rgba(255,255,255,0.4)', marginTop: 2 }}>{m.label}</div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Key countries */}
+                  <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.06)', borderRadius: 10, padding: '14px 16px' }}>
+                    <div style={{ fontSize: '0.62rem', color: 'rgba(255,255,255,0.35)', letterSpacing: '0.12em', marginBottom: 10 }}>KEY COUNTRIES</div>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 5 }}>
+                      {(keyCountries || []).map((c: string, i: number) => (
+                        <span key={i} style={{ fontSize: '0.7rem', background: `${color}12`, border: `1px solid ${color}30`, borderRadius: 5, padding: '3px 10px', color: 'rgba(255,255,255,0.75)' }}>{c}</span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Right column */}
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+                  {/* AI prediction summary */}
+                  <div style={{ background: 'rgba(167,139,250,0.04)', border: '1px solid rgba(167,139,250,0.15)', borderRadius: 10, padding: '14px 16px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 10 }}>
+                      <BrainCircuit size={13} style={{ color: '#a78bfa' }} />
+                      <span style={{ fontSize: '0.62rem', fontWeight: 700, color: '#a78bfa', letterSpacing: '0.12em' }}>AI PREDICTION ANALYSIS</span>
+                    </div>
+                    <p style={{ margin: 0, fontSize: '0.76rem', color: 'rgba(255,255,255,0.72)', lineHeight: 1.75 }}>{r.prediction_summary}</p>
+                  </div>
+
+                  {/* Threat + escalation */}
+                  <div style={{ background: 'rgba(239,68,68,0.04)', border: '1px solid rgba(239,68,68,0.15)', borderRadius: 10, padding: '14px 16px' }}>
+                    <div style={{ fontSize: '0.62rem', color: 'rgba(239,68,68,0.7)', letterSpacing: '0.12em', fontWeight: 700, marginBottom: 8 }}>PRIMARY THREAT</div>
+                    <p style={{ margin: '0 0 12px', fontSize: '0.75rem', color: 'rgba(255,200,200,0.8)', lineHeight: 1.6 }}>{r.primary_threat}</p>
+                    <div style={{ fontSize: '0.62rem', color: 'rgba(245,166,35,0.7)', letterSpacing: '0.12em', fontWeight: 700, marginBottom: 6 }}>ESCALATION PATHWAY</div>
+                    <div style={{ fontSize: '0.72rem', color: 'rgba(255,255,255,0.6)', lineHeight: 1.65, fontStyle: 'italic' }}>{r.escalation_pathway}</div>
+                  </div>
+
+                  {/* Conflict type */}
+                  <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.06)', borderRadius: 10, padding: '14px 16px' }}>
+                    <div style={{ fontSize: '0.62rem', color: 'rgba(255,255,255,0.35)', letterSpacing: '0.12em', marginBottom: 8 }}>PREDICTED CONFLICT TYPE</div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                      <div style={{ width: 8, height: 8, borderRadius: '50%', background: color, boxShadow: `0 0 8px ${color}` }} />
+                      <span style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.8)', fontWeight: 600 }}>{r.top_conflict_type}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </>
+        );
+      })()}
 
       {/* ─── Metrics Guide Modal ─── */}
       {showGuide && (
@@ -1075,7 +1213,8 @@ export default function App() {
           <div className="label-text" style={{ marginBottom: 8, color: 'rgba(255,255,255,0.4)' }}>OVERLAYS</div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
             {[
-              { show: showDigital,   set: setShowDigital,   icon: <Wifi size={13} />,         color: '#a78bfa', label: 'Digital Lifelines' },
+              { show: showConflictRegions, set: setShowConflictRegions, icon: <Globe size={13} />, color: '#ef4444', label: 'Conflict Regions' },
+            { show: showDigital,   set: setShowDigital,   icon: <Wifi size={13} />,         color: '#a78bfa', label: 'Digital Lifelines' },
               { show: showStrategic, set: setShowStrategic, icon: <Gem size={13} />,          color: '#34d399', label: 'Strategic Resources' },
               { show: showAsymmetric,set: setShowAsymmetric,icon: <Rocket size={13} />,       color: '#f5a623', label: 'Asymmetric Vulns' },
               { show: showShipping,  set: setShowShipping,  icon: <Anchor size={13} />,       color: '#00f2fe', label: 'Maritime Routes' },
@@ -1157,6 +1296,29 @@ export default function App() {
               <div style={{ fontSize: '0.7rem', color: 'var(--text-dim)', marginTop: 4 }}>Click for Dossier</div>
             </>
           )}
+          {hoverInfo.feature.source === 'conflict-regions' && (() => {
+            const p = hoverInfo.feature.properties;
+            const score = p.prediction_score;
+            const color = p.color;
+            return (
+              <>
+                <div style={{ fontWeight: 700, display: 'flex', alignItems: 'center', gap: 5 }}>
+                  <Globe size={13} style={{ color }} />
+                  <span style={{ color }}>{p.name}</span>
+                </div>
+                <div style={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.5)', marginTop: 2 }}>{p.subtitle}</div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginTop: 6 }}>
+                  <div style={{ fontSize: '1.1rem', fontWeight: 900, color, fontFamily: "'JetBrains Mono', monospace" }}>{score}</div>
+                  <div>
+                    <div style={{ fontSize: '0.62rem', color, fontWeight: 700 }}>CONFLICT SCORE</div>
+                    <div style={{ fontSize: '0.58rem', color: 'rgba(255,255,255,0.4)' }}>{p.confidence}</div>
+                  </div>
+                </div>
+                <div style={{ fontSize: '0.65rem', color: 'rgba(255,120,120,0.8)', marginTop: 4 }}>{p.trajectory}</div>
+                <div style={{ fontSize: '0.62rem', color: 'var(--text-dim)', marginTop: 3 }}>Click to open full analysis</div>
+              </>
+            );
+          })()}
           {(hoverInfo.feature.source === 'active-hotspots-source' || hoverInfo.feature.layer?.id === 'active-hotspots-layer') && (
             <>
               <div style={{ fontWeight: 700, display: 'flex', alignItems: 'center', gap: 5 }}><Target size={13} style={{ color: '#ff4b4b' }} /> {hoverInfo.feature.properties.name}</div>
