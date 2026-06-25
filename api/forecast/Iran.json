@@ -1,1 +1,75 @@
-{"country": "Iran", "wound_vulnerability_index": 100, "escalation_risk": "CRITICAL", "historical_timeline": [{"Year": 1856, "Inter-State (Conventional)": 1500.0}, {"Year": 1908, "Intra-State (Civil War)": -18.0}, {"Year": 1920, "Intra-State (Civil War)": -18.0}, {"Year": 1946, "Internationalized internal armed conflict": 200.0}, {"Year": 1966, "Internal armed conflict": 100.0}, {"Year": 1967, "Internal armed conflict": 100.0}, {"Year": 1968, "Internal armed conflict": 100.0}, {"Year": 1973, "Intra-State (Civil War)": 92.0}, {"Year": 1974, "Interstate armed conflict": 100.0}, {"Year": 1978, "Intra-State (Civil War)": 1100.0}, {"Year": 1979, "Intra-State (Civil War)": -18.0, "Internal armed conflict": 1200.0}, {"Year": 1980, "Inter-State (Conventional)": 750000.0, "Internal armed conflict": 1200.0, "Interstate armed conflict": 1000.0}, {"Year": 1981, "Internal armed conflict": 1100.0, "Interstate armed conflict": 1000.0}, {"Year": 1982, "Internal armed conflict": 2000.0, "Interstate armed conflict": 1000.0}, {"Year": 1983, "Internal armed conflict": 100.0, "Interstate armed conflict": 1000.0}, {"Year": 1984, "Internal armed conflict": 100.0, "Interstate armed conflict": 1000.0}, {"Year": 1985, "Internal armed conflict": 100.0, "Interstate armed conflict": 1000.0}, {"Year": 1986, "Internal armed conflict": 200.0, "Interstate armed conflict": 1000.0}, {"Year": 1987, "Internal armed conflict": 200.0, "Interstate armed conflict": 1000.0}, {"Year": 1988, "Internal armed conflict": 200.0, "Interstate armed conflict": 1000.0}, {"Year": 1990, "Internal armed conflict": 100.0}, {"Year": 1991, "Internal armed conflict": 100.0}, {"Year": 1993, "Internal armed conflict": 200.0}, {"Year": 1996, "Internal armed conflict": 100.0}, {"Year": 1997, "Internal armed conflict": 100.0}, {"Year": 1999, "Internal armed conflict": 100.0}, {"Year": 2000, "Internal armed conflict": 100.0}, {"Year": 2001, "Internal armed conflict": 100.0}, {"Year": 2005, "Internal armed conflict": 100.0}, {"Year": 2006, "Internal armed conflict": 100.0}, {"Year": 2007, "Internal armed conflict": 100.0}, {"Year": 2008, "Internal armed conflict": 100.0}, {"Year": 2009, "One-Sided Violence": 25.0, "Internal armed conflict": 100.0}, {"Year": 2010, "Internal armed conflict": 100.0}, {"Year": 2011, "Internal armed conflict": 100.0}, {"Year": 2016, "Internal armed conflict": 100.0}, {"Year": 2017, "Internal armed conflict": 100.0}, {"Year": 2018, "Internal armed conflict": 200.0, "Interstate armed conflict": 100.0}, {"Year": 2019, "One-Sided Violence": 252.0, "Internal armed conflict": 100.0, "Interstate armed conflict": 100.0}, {"Year": 2020, "One-Sided Violence": 27.0, "Internal armed conflict": 100.0, "Interstate armed conflict": 100.0}, {"Year": 2021, "One-Sided Violence": 26.0, "Internal armed conflict": 100.0, "Interstate armed conflict": 100.0}, {"Year": 2022, "Interstate armed conflict": 100.0}, {"Year": 2023, "Internal armed conflict": 100.0, "Interstate armed conflict": 100.0}, {"Year": 2024, "Internal armed conflict": 100.0, "Interstate armed conflict": 100.0}, {"Year": 2025, "Internal armed conflict": 100.0, "Interstate armed conflict": 1000.0}], "predicted_conflict_vectors": [{"type": "Border Skirmish", "probability": 99}, {"type": "Proxy / Grey-Zone", "probability": 88}, {"type": "Naval Blockade", "probability": 44}, {"type": "Cyber / Digital", "probability": 94}, {"type": "Algorithmic / AI Strike", "probability": 47}, {"type": "Full Conventional", "probability": 24}], "ml_forecast_volume": 5}
+{
+  "country": "Iran",
+  "forecast": {
+    "wvi": 69,
+    "trend": "Rising",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1883,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1918,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1923,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1943,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1886,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1968,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 5000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Proxy / Grey-Zone": 0.4741,
+    "Cyber / Digital": 0.1949,
+    "Naval Blockade": 0.2303,
+    "Border Skirmish": 0.0758,
+    "Full Conventional": 0.025
+  },
+  "future_hotspots": [
+    {
+      "region": "Iran - Border Flashpoint",
+      "threat": "Cyber / Digital",
+      "probability": 0.23,
+      "lat": null,
+      "lng": null
+    }
+  ],
+  "raw_schemas": {}
+}
