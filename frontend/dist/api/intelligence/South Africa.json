@@ -1,0 +1,92 @@
+{
+  "country": "South Africa",
+  "computed_wvi": 52,
+  "pillars": {
+    "cyber": {
+      "overall_score": 48,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 53,
+          "metric": "57 events (YTD)",
+          "raw_value": 57,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 38,
+          "metric": "2 campaigns",
+          "raw_value": 2,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 43,
+          "metric": "Active tracking",
+          "raw_value": 43,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 65,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 65,
+          "metric": "Dependency: 52%",
+          "raw_value": 52,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 57,
+          "metric": "Sanctions Exposure: 57/100",
+          "raw_value": 57,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 53,
+          "metric": "Trade Concentration: 53/100",
+          "raw_value": 53,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 50,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 50,
+          "metric": "400 events/yr",
+          "raw_value": 400,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 45,
+          "metric": "Fatalities: 6000/yr",
+          "raw_value": 6000,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 53,
+          "metric": "Military spend: 15.0% GDP",
+          "raw_value": 15.0,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 36,
+      "primary_drivers": [
+        "Criminal Gang Violence",
+        "ANC-MK Party Conflict",
+        "Load Shedding Economic Collapse"
+      ]
+    }
+  }
+}
