@@ -1,0 +1,173 @@
+{"type":"FeatureCollection","features":[
+  {
+    "type":"Feature",
+    "properties":{
+      "country":"China",
+      "minerals":["Rare Earth Elements","Lithium Processing","Cobalt Processing","Tungsten","Antimony"],
+      "primary_mineral":"Rare Earth Elements",
+      "global_share_pct":60,
+      "strategic_importance":98,
+      "attack_risk":"HIGH — US/West dependency; export controls used as weapon",
+      "warfare_type":"Economic Warfare + Supply Chain Coercion",
+      "threat_actor":"China vs USA/West",
+      "color":"#ef4444",
+      "conflict_status":"ACTIVE — China imposed REE export controls 2023-2025; escalating",
+      "summary":"China dominates rare earth production (60%+) AND processing (85%+). Even minerals mined in Africa/USA must be processed in China. REE export controls deployed as trade weapon against Japan (2010), USA (2023-2025). Invisible chokepoint: halt processing = global tech manufacturing stalls.",
+      "wounding_strategy":"Supply Chain Chokepoint: Control not just mines but processing. Even if rivals mine REEs domestically, they cannot use them without Chinese processing capacity. Zero military engagement required.",
+      "icon":"⚛️"
+    },
+    "geometry":{"type":"Point","coordinates":[104.0,35.0]}
+  },
+  {
+    "type":"Feature",
+    "properties":{
+      "country":"DRC (Congo)",
+      "minerals":["Cobalt","Coltan","Copper","Gold","Diamonds"],
+      "primary_mineral":"Cobalt",
+      "global_share_pct":70,
+      "strategic_importance":95,
+      "attack_risk":"CRITICAL — Armed groups control mining areas; China buying up concessions",
+      "warfare_type":"Proxy Conflict + Economic Coercion + Resource War",
+      "threat_actor":"China (concession acquisition) + Armed Militia + M23",
+      "color":"#ef4444",
+      "conflict_status":"ACTIVE WAR — M23 offensive 2024-2025; Goma besieged",
+      "summary":"DRC produces 70% of world cobalt — irreplaceable for EV batteries and military electronics. Armed groups and Chinese state companies control extraction. M23 rebel offensive 2024-2025 besieging Goma in eastern DRC. Congo conflict trap (1964-present): 18,888 cumulative deaths.",
+      "wounding_strategy":"Mineral Neurology Attack: Weaponize local labor unions, fund eco-terrorist sabotage, acquire port terminals where cobalt leaves Africa (Beira, Dar es Salaam). Starve Western EV and defense tech without firing a shot.",
+      "icon":"⚡"
+    },
+    "geometry":{"type":"Point","coordinates":[24.0,-4.0]}
+  },
+  {
+    "type":"Feature",
+    "properties":{
+      "country":"Chile",
+      "minerals":["Lithium","Copper"],
+      "primary_mineral":"Lithium",
+      "global_share_pct":36,
+      "strategic_importance":88,
+      "attack_risk":"MEDIUM — Political instability; lithium nationalization risk",
+      "warfare_type":"Economic Warfare + Political Destabilization",
+      "threat_actor":"China (investment control) + Political actors",
+      "color":"#f97316",
+      "conflict_status":"STABLE — Lithium nationalization policy 2023; geopolitical tension with Bolivia/Argentina over 'Lithium Triangle'",
+      "summary":"Chile holds world's largest lithium reserves and is top copper producer. Atacama Salt Flat contains 40%+ of global lithium. 'Lithium Triangle' (Chile+Bolivia+Argentina) controls 60%+ of global lithium reserves. EV transition makes this the new oil.",
+      "wounding_strategy":"Lithium Triangle Siege: Fund eco-sabotage, labor union weaponization, or port terminal acquisition across the corridor. Appears as domestic labor disputes — no direct military attribution.",
+      "icon":"🔋"
+    },
+    "geometry":{"type":"Point","coordinates":[-70.6,-33.5]}
+  },
+  {
+    "type":"Feature",
+    "properties":{
+      "country":"Australia",
+      "minerals":["Lithium","Iron Ore","Uranium","Gold","Nickel"],
+      "primary_mineral":"Lithium",
+      "global_share_pct":55,
+      "strategic_importance":85,
+      "attack_risk":"LOW-MEDIUM — China is top trading partner; economic coercion risk",
+      "warfare_type":"Economic Coercion + Cyber",
+      "threat_actor":"China (trade coercion, already used 2020-2023)",
+      "color":"#f5a623",
+      "conflict_status":"TENSION — China-Australia trade war 2020-2023 (barley, wine, coal bans). Partial normalization 2023+",
+      "summary":"World's largest lithium producer. Also dominates iron ore (Pilbara) and uranium. China applied economic coercive pressure 2020-2023 after Australia called for COVID inquiry — proof of concept for mineral-linked economic warfare.",
+      "wounding_strategy":"Economic Dependency Leverage: Australia exports 80%+ of resources to China. Trade bans on barley, wine, coal demonstrated how mineral dependency creates economic warfare leverage without military action.",
+      "icon":"⛏️"
+    },
+    "geometry":{"type":"Point","coordinates":[133.0,-27.0]}
+  },
+  {
+    "type":"Feature",
+    "properties":{
+      "country":"Canada",
+      "minerals":["Potash","Uranium","Nickel","Cobalt","Gold"],
+      "primary_mineral":"Potash",
+      "global_share_pct":40,
+      "strategic_importance":82,
+      "attack_risk":"LOW — NORAD/NATO protected; cyber risk",
+      "warfare_type":"Cyber + Economic",
+      "threat_actor":"Russia + China (cyber targeting of mining infrastructure)",
+      "color":"#22d3ee",
+      "conflict_status":"STABLE — Key potash supplier (40%+ global); uranium for nuclear fuel",
+      "summary":"Major potash supplier (global food security dependency) and uranium producer. Saskatchewan potash mines supply fertilizer to 80+ countries. Russia (formerly Belarus+Russia = 70% global potash) has used potash exports as geopolitical tool — Canada is critical Western alternative.",
+      "wounding_strategy":"Agricultural Security Leverage: Control potash = control global food production. Russia's 2022 Belarus sanctions created 30% potash shortfall. Canada filling gap but vulnerable to cyber attacks on mining infrastructure.",
+      "icon":"🌾"
+    },
+    "geometry":{"type":"Point","coordinates":[-96.8,56.0]}
+  },
+  {
+    "type":"Feature",
+    "properties":{
+      "country":"Indonesia",
+      "minerals":["Nickel","Tin","Bauxite","Coal","Gold"],
+      "primary_mineral":"Nickel",
+      "global_share_pct":48,
+      "strategic_importance":87,
+      "attack_risk":"MEDIUM — South China Sea proximity; Chinese investment dependency",
+      "warfare_type":"Economic Coercion + Proxy Influence",
+      "threat_actor":"China (investment dependency) + South China Sea territorial pressure",
+      "color":"#f97316",
+      "conflict_status":"TENSION — South China Sea disputes with China; massive Chinese nickel investment creating dependency",
+      "summary":"Dominates global nickel mining (48%). Critical for EV batteries (nickel-manganese-cobalt chemistry). Indonesia banned raw nickel ore exports 2019 — forced processing onshore, China built processing plants creating new dependency. South China Sea territorial disputes with China ongoing.",
+      "wounding_strategy":"Downstream Processing Capture: China invested $30B+ in Indonesian nickel smelters. Indonesia gets jobs; China controls processed output. Creates invisible chokepoint — Indonesia mines it, China determines global supply.",
+      "icon":"🔩"
+    },
+    "geometry":{"type":"Point","coordinates":[117.0,-2.5]}
+  },
+  {
+    "type":"Feature",
+    "properties":{
+      "country":"USA",
+      "minerals":["Copper","Rare Earth Elements","Uranium","Coal","Gold"],
+      "primary_mineral":"Copper",
+      "global_share_pct":8,
+      "strategic_importance":79,
+      "attack_risk":"LOW-MEDIUM — Domestic production; Chinese REE processing dependency",
+      "warfare_type":"Cyber + Economic Dependency Reduction",
+      "threat_actor":"China (processing dependency) + Domestic political risk",
+      "color":"#22d3ee",
+      "conflict_status":"STRATEGIC COMPETITION — Rebuilding domestic REE processing; Inflation Reduction Act critical mineral incentives",
+      "summary":"Key North American copper and REE producer but critically dependent on Chinese REE processing. Mountain Pass mine (CA) produces REEs but ships to China for processing — an absurd dependency. IRA 2022 investing $370B to rebuild domestic critical mineral supply chains.",
+      "wounding_strategy":"Processing Dependency: Even domestically mined REEs must go to China for processing. Rebuilding US processing = 5-10 year lag. Current vulnerability window being exploited in US-China trade war.",
+      "icon":"🦅"
+    },
+    "geometry":{"type":"Point","coordinates":[-98.5,38.0]}
+  },
+  {
+    "type":"Feature",
+    "properties":{
+      "country":"Bolivia",
+      "minerals":["Lithium","Silver","Zinc","Tin","Gold"],
+      "primary_mineral":"Lithium",
+      "global_share_pct":24,
+      "strategic_importance":82,
+      "attack_risk":"MEDIUM — Political instability; Chinese lithium concession competition",
+      "warfare_type":"Economic Coercion + Political Destabilization",
+      "threat_actor":"China vs USA competition for lithium concessions",
+      "color":"#f97316",
+      "conflict_status":"VOLATILE — Coup attempt 2024; competing Chinese/Western lithium contracts; Salar de Uyuni exploitation stalled",
+      "summary":"World's largest lithium reserves (Salar de Uyuni salt flat). Strategic partner competition between China and West for concession rights. Political instability (coup attempt 2024) creates exploitation uncertainty. Landlocked — dependent on Chilean/Peruvian ports.",
+      "wounding_strategy":"Landlocked Resource Trap: Bolivia can't export without Chile/Peru ports. Diplomatic pressure on neighboring countries can effectively embargo Bolivian lithium. Coup instability enables concession renegotiation.",
+      "icon":"🧊"
+    },
+    "geometry":{"type":"Point","coordinates":[-65.0,-17.0]}
+  },
+  {
+    "type":"Feature",
+    "properties":{
+      "country":"Western Sahara / Morocco",
+      "minerals":["Phosphate","Potash"],
+      "primary_mineral":"Phosphate",
+      "global_share_pct":72,
+      "strategic_importance":91,
+      "attack_risk":"HIGH — Territorial dispute; Polisario Front active; Algeria backing rebels",
+      "warfare_type":"Proxy Conflict + Economic Warfare",
+      "threat_actor":"Algeria + Polisario Front vs Morocco + USA/France backing",
+      "color":"#ef4444",
+      "conflict_status":"DISPUTED — Morocco controls 80%; Polisario Front resuming armed operations 2020+; Algeria arming Polisario",
+      "summary":"Morocco (including Western Sahara) controls 72% of global phosphate reserves — critical for all agriculture globally. No phosphate = no fertilizer = mass famine risk. Active territorial dispute with Polisario Front (backed by Algeria). Black Swan: proxy conflict here triggers global food price cascade.",
+      "wounding_strategy":"Agricultural Neurology: Control phosphate = control global food production. Polisario Front conflict or blockade → fertilizer price collapse → famine cascades in rival nations within one harvest cycle. Zero kinetic engagement with target.",
+      "icon":"🌿"
+    },
+    "geometry":{"type":"Point","coordinates":[-13.5,25.0]}
+  }
+]}

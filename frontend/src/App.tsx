@@ -194,6 +194,37 @@ const brainPredictionLayer: Omit<CircleLayer, 'source'> = {
   }
 };
 
+// Border dispute layers
+const borderDisputeGlowLayer: Omit<LineLayer, 'source'> = {
+  id: 'border-disputes-glow', type: 'line',
+  paint: {
+    'line-color': ['get', 'color'],
+    'line-width': 12, 'line-opacity': 0.12, 'line-blur': 8,
+  }
+};
+const borderDisputeLineLayer: Omit<LineLayer, 'source'> = {
+  id: 'border-disputes-line', type: 'line',
+  paint: {
+    'line-color': ['get', 'color'],
+    'line-width': 2.5, 'line-opacity': 0.9,
+    'line-dasharray': [4, 2],
+  }
+};
+
+// Critical minerals layer
+const mineralGlowLayer: Omit<CircleLayer, 'source'> = {
+  id: 'critical-minerals-glow', type: 'circle',
+  paint: { 'circle-radius': 22, 'circle-color': '#34d399', 'circle-opacity': 0.12, 'circle-blur': 1.6 }
+};
+const mineralLayer: Omit<CircleLayer, 'source'> = {
+  id: 'critical-minerals-layer', type: 'circle',
+  paint: {
+    'circle-radius': ['interpolate', ['linear'], ['get', 'strategic_importance'], 70, 9, 90, 13, 100, 16],
+    'circle-color': ['get', 'color'],
+    'circle-opacity': 0.95, 'circle-stroke-width': 2.5, 'circle-stroke-color': 'rgba(52,211,153,0.5)',
+  }
+};
+
 const conflictRegionFillLayer: Omit<FillLayer, 'source'> = {
   id: 'conflict-regions-fill', type: 'fill',
   paint: {
@@ -226,11 +257,13 @@ interface MapViewProps {
   showConflictRegions: boolean; conflictRegionsGeoJson: any;
   activeHotspotGeoJson: any; selectedCountry: string | null;
   showBrainPredictions: boolean; brainPredictionsGeoJson: any;
+  showBorderDisputes: boolean; borderDisputesGeoJson: any;
+  showMinerals: boolean; mineralsGeoJson: any;
   onHoverChange: (info: any) => void; onCountryClick: (c: string, lng: number, lat: number) => void; onInfraClick: (i: any) => void; onClear: () => void;
   mapRef: React.RefObject<MapRef>;
 }
 
-const MapView = memo(({ worldGeoJson, flowMaps, chokePoints, digitalLifelines, strategicResources, asymmetricVuln, showShipping, showPatrols, showChokePoints, showDigital, showStrategic, showAsymmetric, showConflictRegions, conflictRegionsGeoJson, activeHotspotGeoJson, selectedCountry, showBrainPredictions, brainPredictionsGeoJson, onHoverChange, onCountryClick, onInfraClick, onClear, mapRef }: MapViewProps) => {
+const MapView = memo(({ worldGeoJson, flowMaps, chokePoints, digitalLifelines, strategicResources, asymmetricVuln, showShipping, showPatrols, showChokePoints, showDigital, showStrategic, showAsymmetric, showConflictRegions, conflictRegionsGeoJson, activeHotspotGeoJson, selectedCountry, showBrainPredictions, brainPredictionsGeoJson, showBorderDisputes, borderDisputesGeoJson, showMinerals, mineralsGeoJson, onHoverChange, onCountryClick, onInfraClick, onClear, mapRef }: MapViewProps) => {
   const [cursor, setCursor] = useState('grab');
 
   const handleMouseMove = useCallback((event: MapLayerMouseEvent) => {
@@ -255,7 +288,7 @@ const MapView = memo(({ worldGeoJson, flowMaps, chokePoints, digitalLifelines, s
       mapStyle="mapbox://styles/mapbox/dark-v11" mapboxAccessToken={MAPBOX_TOKEN}
       projection={{ name: 'globe' } as any}
       fog={{ color: '#080c18', 'high-color': '#1a2a6c', 'horizon-blend': 0.04, 'space-color': '#000005', 'star-intensity': 0.25 } as any}
-      interactiveLayerIds={['data', 'choke-points', 'naval-patrols', 'digital-lifelines-lines', 'digital-lifelines-points', 'strategic-resources', 'asymmetric-vulnerabilities', 'shipping-routes', 'active-hotspots-layer', 'conflict-regions-fill', 'brain-predictions-layer']}
+      interactiveLayerIds={['data', 'choke-points', 'naval-patrols', 'digital-lifelines-lines', 'digital-lifelines-points', 'strategic-resources', 'asymmetric-vulnerabilities', 'shipping-routes', 'active-hotspots-layer', 'conflict-regions-fill', 'brain-predictions-layer', 'border-disputes-line', 'critical-minerals-layer']}
       onMouseMove={handleMouseMove} onClick={handleClick} cursor={cursor}
     >
       {worldGeoJson && <Source id="data" type="geojson" data={worldGeoJson}><Layer {...wviLayer} /></Source>}
@@ -314,6 +347,18 @@ const MapView = memo(({ worldGeoJson, flowMaps, chokePoints, digitalLifelines, s
           <Layer {...brainPredictionLayer} />
         </Source>
       )}
+      {showBorderDisputes && borderDisputesGeoJson && (
+        <Source id="border-disputes" type="geojson" data={borderDisputesGeoJson}>
+          <Layer {...borderDisputeGlowLayer} />
+          <Layer {...borderDisputeLineLayer} />
+        </Source>
+      )}
+      {showMinerals && mineralsGeoJson && (
+        <Source id="critical-minerals" type="geojson" data={mineralsGeoJson}>
+          <Layer {...mineralGlowLayer} />
+          <Layer {...mineralLayer} />
+        </Source>
+      )}
     </Map>
   );
 }, (p, n) =>
@@ -324,7 +369,10 @@ const MapView = memo(({ worldGeoJson, flowMaps, chokePoints, digitalLifelines, s
   p.showAsymmetric === n.showAsymmetric && p.showConflictRegions === n.showConflictRegions &&
   p.conflictRegionsGeoJson === n.conflictRegionsGeoJson && p.activeHotspotGeoJson === n.activeHotspotGeoJson &&
   p.selectedCountry === n.selectedCountry && p.showBrainPredictions === n.showBrainPredictions &&
-  p.brainPredictionsGeoJson === n.brainPredictionsGeoJson && p.onHoverChange === n.onHoverChange &&
+  p.brainPredictionsGeoJson === n.brainPredictionsGeoJson && p.showBorderDisputes === n.showBorderDisputes &&
+  p.borderDisputesGeoJson === n.borderDisputesGeoJson && p.showMinerals === n.showMinerals &&
+  p.mineralsGeoJson === n.mineralsGeoJson &&
+  p.onHoverChange === n.onHoverChange &&
   p.onCountryClick === n.onCountryClick && p.onInfraClick === n.onInfraClick && p.onClear === n.onClear
 );
 
@@ -370,6 +418,10 @@ export default function App() {
   const [showBrainPredictions, setShowBrainPredictions] = useState(true);
   const [brainPredictionsData, setBrainPredictionsData] = useState<any>(null);
   const [showBrainPanel, setShowBrainPanel] = useState(false);
+  const [showBorderDisputes, setShowBorderDisputes] = useState(true);
+  const [borderDisputesData, setBorderDisputesData] = useState<any>(null);
+  const [showMinerals, setShowMinerals] = useState(true);
+  const [mineralsData, setMineralsData] = useState<any>(null);
 
   // Lazy-load timeline: show last 10 years first, then full history
   useEffect(() => {
@@ -417,6 +469,8 @@ export default function App() {
     fetch(API_BASE + `api/war_prediction${EXT}`).then(r => r.json()).then(setWarPredictionData).catch(console.error);
     fetch(API_BASE + `api/conflict_regions${EXT}`).then(r => r.json()).then(setConflictRegionsGeoJson).catch(console.error);
     fetch(API_BASE + `api/brain_predictions${EXT}`).then(r => r.json()).then(setBrainPredictionsData).catch(console.error);
+    fetch(API_BASE + `api/border_disputes${EXT}`).then(r => r.json()).then(setBorderDisputesData).catch(console.error);
+    fetch(API_BASE + `api/critical_minerals${EXT}`).then(r => r.json()).then(setMineralsData).catch(console.error);
 
     return () => clearInterval(interval);
   }, []);
@@ -568,8 +622,10 @@ export default function App() {
   }, [forecastData]);
 
   const brainPredictionsGeoJson = useMemo(() => {
-    if (!brainPredictionsData?.predicted_chokepoints) return null;
-    return brainPredictionsData.predicted_chokepoints;
+    if (!brainPredictionsData) return null;
+    if (brainPredictionsData.predicted_chokepoints) return brainPredictionsData.predicted_chokepoints;
+    if (brainPredictionsData.type === 'FeatureCollection') return brainPredictionsData;
+    return null;
   }, [brainPredictionsData]);
 
   const wviColor = reactiveWVI > 75 ? '#ff4b4b' : reactiveWVI > 50 ? '#f5a623' : '#34d399';
@@ -587,6 +643,8 @@ export default function App() {
         showConflictRegions={showConflictRegions} conflictRegionsGeoJson={conflictRegionsGeoJson}
         activeHotspotGeoJson={activeHotspotGeoJson} selectedCountry={selectedCountry}
         showBrainPredictions={showBrainPredictions} brainPredictionsGeoJson={brainPredictionsGeoJson}
+        showBorderDisputes={showBorderDisputes} borderDisputesGeoJson={borderDisputesData}
+        showMinerals={showMinerals} mineralsGeoJson={mineralsData}
         onHoverChange={onHoverChange} onCountryClick={onCountryClick} onInfraClick={onInfraClick} onClear={onClear}
       />
 
@@ -1517,6 +1575,8 @@ export default function App() {
                   {selectedInfra.source === 'asymmetric' && <><Rocket size={12} style={{ display: 'inline', marginRight: 4 }} /> Asymmetric Vuln</>}
                   {selectedInfra.source === 'chokepoints' && <><ShieldAlert size={12} style={{ display: 'inline', marginRight: 4 }} /> Choke Point</>}
                   {selectedInfra.source === 'brain-predictions' && <><Zap size={12} style={{ display: 'inline', marginRight: 4, color: '#f97316' }} /> Predicted Threat</>}
+                  {selectedInfra.source === 'border-disputes' && <><AlertTriangle size={12} style={{ display: 'inline', marginRight: 4, color: '#ef4444' }} /> Border Skirmish</>}
+                  {selectedInfra.source === 'critical-minerals' && <><Database size={12} style={{ display: 'inline', marginRight: 4, color: '#34d399' }} /> Critical Mineral Zone</>}
                 </div>
                 <h2 style={{ margin: 0, fontSize: '1.1rem', color: 'var(--text-primary)' }}>{selectedInfra.properties.name}</h2>
               </div>
@@ -1524,26 +1584,132 @@ export default function App() {
             </div>
           </div>
           <div className="dossier-body">
-            {selectedInfra.properties.wounding_strategy ? (
+            {selectedInfra.source === 'border-disputes' && (() => {
+              const p = selectedInfra.properties;
+              const threatColor = p.threat_level === 'ACTIVE WAR' ? '#ef4444' : p.threat_level === 'ACTIVE SKIRMISH' ? '#f97316' : p.threat_level === 'FROZEN CONFLICT' ? '#f5a623' : '#22d3ee';
+              const warfareTypes: string[] = typeof p.warfare_types === 'string' ? JSON.parse(p.warfare_types) : (p.warfare_types || []);
+              return (
+                <>
+                  <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 14 }}>
+                    <div style={{ background: `${threatColor}18`, border: `1px solid ${threatColor}50`, borderRadius: 6, padding: '6px 12px', flex: 1, minWidth: 120 }}>
+                      <div style={{ fontSize: '0.6rem', color: 'rgba(255,255,255,0.4)', letterSpacing: '0.1em' }}>THREAT LEVEL</div>
+                      <div style={{ fontSize: '0.85rem', fontWeight: 800, color: threatColor, fontFamily: "'JetBrains Mono', monospace" }}>{p.threat_level}</div>
+                    </div>
+                    <div style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 6, padding: '6px 12px', flex: 1, minWidth: 80 }}>
+                      <div style={{ fontSize: '0.6rem', color: 'rgba(255,255,255,0.4)', letterSpacing: '0.1em' }}>SCORE</div>
+                      <div style={{ fontSize: '1.2rem', fontWeight: 900, color: threatColor, fontFamily: "'JetBrains Mono', monospace" }}>{p.threat_score}</div>
+                    </div>
+                  </div>
+                  <div style={{ marginBottom: 12 }}>
+                    <div style={{ fontSize: '0.62rem', color: 'rgba(255,255,255,0.4)', letterSpacing: '0.1em', marginBottom: 6 }}>WARFARE TYPES</div>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4 }}>
+                      {warfareTypes.map((wt: string) => (
+                        <span key={wt} style={{ fontSize: '0.65rem', background: 'rgba(239,68,68,0.12)', border: '1px solid rgba(239,68,68,0.3)', borderRadius: 4, padding: '2px 7px', color: '#fca5a5' }}>{wt}</span>
+                      ))}
+                    </div>
+                  </div>
+                  <div style={{ marginBottom: 12 }}>
+                    <div style={{ fontSize: '0.62rem', color: 'rgba(255,255,255,0.4)', letterSpacing: '0.1em', marginBottom: 4 }}>DOMINANT WARFARE</div>
+                    <div style={{ fontSize: '0.82rem', color: '#f97316', fontWeight: 600 }}>{p.dominant_warfare}</div>
+                  </div>
+                  {p.nuclear_risk && p.nuclear_risk !== 'NONE' && (
+                    <div style={{ background: 'rgba(251,191,36,0.08)', border: '1px solid rgba(251,191,36,0.25)', borderRadius: 6, padding: '8px 10px', marginBottom: 12 }}>
+                      <div style={{ fontSize: '0.62rem', color: '#fbbf24', letterSpacing: '0.1em', marginBottom: 2 }}>☢ NUCLEAR RISK</div>
+                      <div style={{ fontSize: '0.78rem', color: '#fde68a' }}>{p.nuclear_risk}</div>
+                    </div>
+                  )}
+                  <div style={{ marginBottom: 12 }}>
+                    <div style={{ fontSize: '0.62rem', color: 'rgba(255,255,255,0.4)', letterSpacing: '0.1em', marginBottom: 4 }}>STATUS</div>
+                    <div style={{ fontSize: '0.78rem', color: 'rgba(255,255,255,0.7)' }}>{p.status}</div>
+                  </div>
+                  <div style={{ marginBottom: 12 }}>
+                    <div style={{ fontSize: '0.62rem', color: 'rgba(255,255,255,0.4)', letterSpacing: '0.1em', marginBottom: 4 }}>CASUALTIES</div>
+                    <div style={{ fontSize: '0.75rem', color: '#fca5a5' }}>{p.casualties_estimate}</div>
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '0.62rem', color: 'rgba(255,255,255,0.4)', letterSpacing: '0.1em', marginBottom: 4 }}>SUMMARY</div>
+                    <p style={{ fontSize: '0.78rem', color: 'rgba(255,255,255,0.65)', lineHeight: 1.6, margin: 0 }}>{p.summary}</p>
+                  </div>
+                </>
+              );
+            })()}
+            {selectedInfra.source === 'critical-minerals' && (() => {
+              const p = selectedInfra.properties;
+              const minerals: string[] = typeof p.minerals === 'string' ? JSON.parse(p.minerals) : (p.minerals || []);
+              return (
+                <>
+                  <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 14 }}>
+                    <div style={{ background: `${p.color}18`, border: `1px solid ${p.color}50`, borderRadius: 6, padding: '6px 12px', flex: 1, minWidth: 120 }}>
+                      <div style={{ fontSize: '0.6rem', color: 'rgba(255,255,255,0.4)', letterSpacing: '0.1em' }}>PRIMARY MINERAL</div>
+                      <div style={{ fontSize: '0.9rem', fontWeight: 800, color: p.color, fontFamily: "'JetBrains Mono', monospace" }}>{p.primary_mineral}</div>
+                    </div>
+                    <div style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 6, padding: '6px 12px', flex: 1, minWidth: 80 }}>
+                      <div style={{ fontSize: '0.6rem', color: 'rgba(255,255,255,0.4)', letterSpacing: '0.1em' }}>GLOBAL SHARE</div>
+                      <div style={{ fontSize: '1.2rem', fontWeight: 900, color: p.color, fontFamily: "'JetBrains Mono', monospace" }}>{p.global_share_pct}%</div>
+                    </div>
+                  </div>
+                  <div style={{ marginBottom: 12 }}>
+                    <div style={{ fontSize: '0.62rem', color: 'rgba(255,255,255,0.4)', letterSpacing: '0.1em', marginBottom: 6 }}>MINERALS</div>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4 }}>
+                      {minerals.map((m: string) => (
+                        <span key={m} style={{ fontSize: '0.65rem', background: `${p.color}18`, border: `1px solid ${p.color}40`, borderRadius: 4, padding: '2px 7px', color: p.color }}>{m}</span>
+                      ))}
+                    </div>
+                  </div>
+                  <div style={{ marginBottom: 12 }}>
+                    <div style={{ fontSize: '0.62rem', color: 'rgba(255,255,255,0.4)', letterSpacing: '0.1em', marginBottom: 4 }}>WARFARE TYPE</div>
+                    <div style={{ fontSize: '0.82rem', color: '#f97316', fontWeight: 600 }}>{p.warfare_type}</div>
+                  </div>
+                  <div style={{ marginBottom: 12 }}>
+                    <div style={{ fontSize: '0.62rem', color: 'rgba(255,255,255,0.4)', letterSpacing: '0.1em', marginBottom: 4 }}>THREAT ACTOR</div>
+                    <div style={{ fontSize: '0.78rem', color: '#fca5a5' }}>{p.threat_actor}</div>
+                  </div>
+                  <div style={{ background: 'rgba(239,68,68,0.06)', border: '1px solid rgba(239,68,68,0.2)', borderRadius: 6, padding: '8px 10px', marginBottom: 12 }}>
+                    <div style={{ fontSize: '0.62rem', color: '#ef4444', letterSpacing: '0.1em', marginBottom: 4 }}>ATTACK RISK</div>
+                    <div style={{ fontSize: '0.75rem', color: '#fca5a5' }}>{p.attack_risk}</div>
+                  </div>
+                  <div style={{ marginBottom: 12 }}>
+                    <div style={{ fontSize: '0.62rem', color: 'rgba(255,255,255,0.4)', letterSpacing: '0.1em', marginBottom: 4 }}>CONFLICT STATUS</div>
+                    <div style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.65)' }}>{p.conflict_status}</div>
+                  </div>
+                  <div style={{ marginBottom: 12 }}>
+                    <div style={{ fontSize: '0.62rem', color: 'rgba(255,255,255,0.4)', letterSpacing: '0.1em', marginBottom: 4 }}>STRATEGIC SUMMARY</div>
+                    <p style={{ fontSize: '0.76rem', color: 'rgba(255,255,255,0.6)', lineHeight: 1.6, margin: 0 }}>{p.summary}</p>
+                  </div>
+                  {p.wounding_strategy && (
+                    <>
+                      <h4 style={{ margin: '16px 0 8px 0', color: 'var(--accent-red)', display: 'flex', alignItems: 'center', gap: 6 }}>
+                        <AlertTriangle size={14} /> Wounding Strategy
+                      </h4>
+                      <p style={{ fontSize: '0.76rem', color: 'rgba(255,255,255,0.65)', lineHeight: 1.6, margin: 0 }}>{p.wounding_strategy}</p>
+                    </>
+                  )}
+                </>
+              );
+            })()}
+            {selectedInfra.source !== 'border-disputes' && selectedInfra.source !== 'critical-minerals' && (
               <>
-                <h4 style={{ margin: '0 0 10px 0', color: 'var(--accent-red)', display: 'flex', alignItems: 'center', gap: 6 }}>
-                  <AlertTriangle size={14} /> Wounding Strategy
-                </h4>
-                <p>{selectedInfra.properties.wounding_strategy}</p>
+                {selectedInfra.properties.wounding_strategy ? (
+                  <>
+                    <h4 style={{ margin: '0 0 10px 0', color: 'var(--accent-red)', display: 'flex', alignItems: 'center', gap: 6 }}>
+                      <AlertTriangle size={14} /> Wounding Strategy
+                    </h4>
+                    <p>{selectedInfra.properties.wounding_strategy}</p>
+                  </>
+                ) : (
+                  <p>Detailed strategic intelligence is currently classified or syncing.</p>
+                )}
+                <div style={{ marginTop: 24 }}>
+                  <h4 style={{ margin: '0 0 10px 0', color: 'var(--text-primary)' }}>Node Metadata</h4>
+                  <ul style={{ paddingLeft: 16, margin: 0, color: 'var(--text-dim)' }}>
+                    {Object.entries(selectedInfra.properties).map(([k, v]) => {
+                      if (k === 'name' || k === 'wounding_strategy') return null;
+                      return <li key={k} style={{ marginBottom: 6 }}><strong style={{ color: 'var(--text-secondary)', textTransform: 'capitalize' }}>{k}:</strong> {v as any}</li>;
+                    })}
+                  </ul>
+                </div>
               </>
-            ) : (
-              <p>Detailed strategic intelligence is currently classified or syncing.</p>
             )}
-
-            <div style={{ marginTop: 24 }}>
-              <h4 style={{ margin: '0 0 10px 0', color: 'var(--text-primary)' }}>Node Metadata</h4>
-              <ul style={{ paddingLeft: 16, margin: 0, color: 'var(--text-dim)' }}>
-                {Object.entries(selectedInfra.properties).map(([k, v]) => {
-                  if (k === 'name' || k === 'wounding_strategy') return null;
-                  return <li key={k} style={{ marginBottom: 6 }}><strong style={{ color: 'var(--text-secondary)', textTransform: 'capitalize' }}>{k}:</strong> {v as any}</li>;
-                })}
-              </ul>
-            </div>
           </div>
         </div>
       )}
@@ -1572,6 +1738,8 @@ export default function App() {
               { show: showPatrols,   set: setShowPatrols,   icon: <Ship size={13} />,         color: '#60a5fa', label: 'Naval Patrols' },
               { show: showChokePoints,set:setShowChokePoints,icon:<ShieldAlert size={13} />,  color: '#ff4b4b', label: 'Choke Points' },
               { show: showBrainPredictions, set: setShowBrainPredictions, icon: <Zap size={13} />, color: '#f97316', label: 'Predicted Threats' },
+              { show: showBorderDisputes, set: setShowBorderDisputes, icon: <AlertTriangle size={13} />, color: '#ef4444', label: 'Border Skirmishes' },
+              { show: showMinerals, set: setShowMinerals, icon: <Database size={13} />, color: '#34d399', label: 'Critical Minerals' },
             ].map(({ show, set, icon, color, label }) => (
               <button key={label} onClick={() => set(!show)} style={{
                 display: 'flex', alignItems: 'center', gap: 8, background: show ? `${color}14` : 'transparent',
@@ -1677,6 +1845,38 @@ export default function App() {
               <div className="metric-value" style={{ color: '#ff4b4b', fontSize: '0.8rem', marginTop: 3 }}>{hoverInfo.feature.properties.threat}</div>
             </>
           )}
+          {hoverInfo.feature.source === 'border-disputes' && (() => {
+            const p = hoverInfo.feature.properties;
+            const threatColor = p.threat_level === 'ACTIVE WAR' ? '#ef4444' : p.threat_level === 'ACTIVE SKIRMISH' ? '#f97316' : p.threat_level === 'FROZEN CONFLICT' ? '#f5a623' : '#22d3ee';
+            return (
+              <>
+                <div style={{ fontWeight: 700, display: 'flex', alignItems: 'center', gap: 5 }}>
+                  <AlertTriangle size={13} style={{ color: threatColor }} />
+                  <span style={{ color: threatColor }}>{p.name}</span>
+                </div>
+                <div style={{ fontSize: '0.6rem', fontWeight: 700, color: threatColor, background: `${threatColor}18`, border: `1px solid ${threatColor}40`, borderRadius: 3, padding: '1px 6px', display: 'inline-block', marginTop: 3, letterSpacing: '0.08em' }}>{p.threat_level}</div>
+                <div style={{ fontSize: '0.68rem', color: 'rgba(255,255,255,0.6)', marginTop: 4 }}>{p.dominant_warfare}</div>
+                {p.nuclear_risk && p.nuclear_risk !== 'LOW' && p.nuclear_risk !== 'NONE' && (
+                  <div style={{ fontSize: '0.62rem', color: '#fbbf24', marginTop: 3 }}>☢ Nuclear Risk: {p.nuclear_risk}</div>
+                )}
+                <div style={{ fontSize: '0.62rem', color: 'var(--text-dim)', marginTop: 4 }}>Click for full analysis</div>
+              </>
+            );
+          })()}
+          {hoverInfo.feature.source === 'critical-minerals' && (() => {
+            const p = hoverInfo.feature.properties;
+            return (
+              <>
+                <div style={{ fontWeight: 700, display: 'flex', alignItems: 'center', gap: 5 }}>
+                  <Database size={13} style={{ color: p.color || '#34d399' }} />
+                  <span style={{ color: p.color || '#34d399' }}>{p.country}</span>
+                </div>
+                <div style={{ fontSize: '0.68rem', color: 'rgba(255,255,255,0.5)', marginTop: 2 }}>{p.primary_mineral} · {p.global_share_pct}% global share</div>
+                <div style={{ fontSize: '0.62rem', color: 'rgba(255,180,80,0.8)', marginTop: 3 }}>{p.warfare_type}</div>
+                <div style={{ fontSize: '0.62rem', color: 'var(--text-dim)', marginTop: 4 }}>Click for strategic analysis</div>
+              </>
+            );
+          })()}
           {hoverInfo.feature.source === 'brain-predictions' && (() => {
             const p = hoverInfo.feature.properties;
             const isBlackSwan = p.risk === 'Black Swan Wounding Zone';

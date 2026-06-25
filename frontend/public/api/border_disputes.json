@@ -1,0 +1,202 @@
+{"type":"FeatureCollection","features":[
+  {
+    "type":"Feature",
+    "properties":{
+      "id":"russia-ukraine",
+      "name":"Russia — Ukraine",
+      "threat_level":"ACTIVE WAR",
+      "threat_score":98,
+      "conflict_type":"Interstate Conventional War",
+      "warfare_types":["Conventional","Cyber","Asymmetric","Economic"],
+      "dominant_warfare":"Conventional + Drone + Cyber",
+      "status":"ACTIVE — Full-scale invasion since Feb 2022",
+      "casualties_estimate":"300,000+ combined military; millions displaced",
+      "nuclear_risk":"HIGH — Russia nuclear doctrine, battlefield tactical weapons",
+      "active_since":"2022",
+      "summary":"Largest interstate war in Europe since WWII. Front line runs hundreds of miles across eastern/southern Ukraine. Fortified with trenches, minefields, drones, long-range missile strikes. No settlement as of 2026.",
+      "border_length_km":2295,
+      "color":"#ef4444"
+    },
+    "geometry":{"type":"LineString","coordinates":[[30.5,51.5],[33.0,50.0],[36.0,48.5],[37.5,47.5],[39.0,47.2],[38.5,46.5]]}
+  },
+  {
+    "type":"Feature",
+    "properties":{
+      "id":"israel-neighbors",
+      "name":"Israel — Gaza / Lebanon / Syria / Iran",
+      "threat_level":"ACTIVE WAR",
+      "threat_score":95,
+      "conflict_type":"Multi-front Asymmetric + Interstate",
+      "warfare_types":["Asymmetric","Conventional","Cyber","Economic","Proxy"],
+      "dominant_warfare":"Asymmetric + Proxy + Precision Strikes",
+      "status":"ACTIVE — Multi-front since Oct 7, 2023",
+      "casualties_estimate":"Gaza: 45,000+ killed; Lebanon front: thousands; direct Iran exchange 2025",
+      "nuclear_risk":"MEDIUM — Israel undeclared deterrent; Iran nuclear program",
+      "active_since":"2023",
+      "summary":"Hamas attack Oct 7 2023 triggered Gaza war. Hezbollah front in Lebanon. Israel-Iran direct exchange 2025 involving US. Syrian frontier active. Most volatile border cluster on earth.",
+      "border_length_km":1068,
+      "color":"#ef4444"
+    },
+    "geometry":{"type":"LineString","coordinates":[[34.5,31.5],[35.2,32.8],[35.5,33.2],[36.0,33.5],[35.7,32.0],[34.2,31.2],[34.5,31.5]]}
+  },
+  {
+    "type":"Feature",
+    "properties":{
+      "id":"north-south-korea",
+      "name":"North Korea — South Korea (DMZ)",
+      "threat_level":"FROZEN CONFLICT",
+      "threat_score":82,
+      "conflict_type":"Armistice Standoff / Potential Nuclear",
+      "warfare_types":["Conventional","Nuclear","Cyber","Economic"],
+      "dominant_warfare":"Deterrence + Cyber + Nuclear Signaling",
+      "status":"FROZEN — Armistice since 1953; no peace treaty",
+      "casualties_estimate":"Technical state of war; periodic incidents, missile tests",
+      "nuclear_risk":"CRITICAL — North Korea operational nuclear arsenal, ICBM capability",
+      "active_since":"1953",
+      "summary":"160-mile strip. Most heavily fortified border on earth. Landmines, troops, surveillance. Korean War armistice 1953 — no peace treaty. Both sides don't recognize each other. Nuclear-armed standoff.",
+      "border_length_km":250,
+      "color":"#f97316"
+    },
+    "geometry":{"type":"LineString","coordinates":[[126.0,38.3],[127.0,38.2],[128.0,38.3],[129.0,38.0]]}
+  },
+  {
+    "type":"Feature",
+    "properties":{
+      "id":"india-pakistan-loc",
+      "name":"India — Pakistan (Line of Control, Kashmir)",
+      "threat_level":"ACTIVE SKIRMISH",
+      "threat_score":88,
+      "conflict_type":"Nuclear-armed Border War",
+      "warfare_types":["Conventional","Asymmetric","Nuclear","Cyber"],
+      "dominant_warfare":"Asymmetric + Conventional + Nuclear Deterrence",
+      "status":"ESCALATED — Operation Sindoor May 2025; ceasefire fragile",
+      "casualties_estimate":"Operation Sindoor 2025: 26 civilians killed (Pahalgam); cross-border strikes exchanged",
+      "nuclear_risk":"CRITICAL — Two nuclear states, geographic proximity, no stable second-strike doctrine",
+      "active_since":"1947",
+      "summary":"Most militarized nuclear border. 1947 partition created Line of Control in Kashmir. Operation Sindoor May 2025: India struck Pakistan after militant attack. Visible from orbit at night. Repeated wars.",
+      "border_length_km":3323,
+      "color":"#ef4444"
+    },
+    "geometry":{"type":"LineString","coordinates":[[74.0,33.5],[74.5,34.0],[75.0,34.5],[74.5,35.5],[73.0,36.5],[72.0,37.0]]}
+  },
+  {
+    "type":"Feature",
+    "properties":{
+      "id":"sudan-chad",
+      "name":"Sudan — Chad (Darfur Corridor)",
+      "threat_level":"ACTIVE WAR",
+      "threat_score":91,
+      "conflict_type":"Civil War Spillover + Mass Atrocities",
+      "warfare_types":["Asymmetric","Conventional","Proxy"],
+      "dominant_warfare":"Asymmetric + Militia + Mass Atrocity",
+      "status":"ACTIVE — Sudan civil war Apr 2023; 10M+ displaced",
+      "casualties_estimate":"100,000+ killed since Apr 2023; one of world's deadliest current conflicts",
+      "nuclear_risk":"LOW",
+      "active_since":"2023",
+      "summary":"Sudan civil war since April 2023 between Sudanese Armed Forces and RSF paramilitary. Largest displacement corridor on earth — 10M+ across Chad border. Mass atrocities near Darfur. Aid routes targeted.",
+      "border_length_km":1360,
+      "color":"#ef4444"
+    },
+    "geometry":{"type":"LineString","coordinates":[[22.0,15.0],[23.0,14.0],[23.5,13.0],[23.0,11.5],[22.5,10.5]]}
+  },
+  {
+    "type":"Feature",
+    "properties":{
+      "id":"afghanistan-pakistan",
+      "name":"Afghanistan — Pakistan (Durand Line)",
+      "threat_level":"HIGH TENSION",
+      "threat_score":79,
+      "conflict_type":"Disputed Border + Militant Corridor",
+      "warfare_types":["Asymmetric","Conventional","Proxy"],
+      "dominant_warfare":"Asymmetric + Insurgency + Cross-border Strikes",
+      "status":"VOLATILE — Taliban-Pakistan clashes; Torkham crossing closures",
+      "casualties_estimate":"Ongoing TTP attacks; Afghan cross-border airstrikes into Pakistan 2023-2025",
+      "nuclear_risk":"LOW-MEDIUM — Pakistan nuclear state; risk of escalation",
+      "active_since":"1893",
+      "summary":"Durand Line 1893 — Afghanistan never recognized it. Taliban retook Afghanistan 2021. Relations with Pakistan soured: cross-border clashes, airstrikes, Torkham crossing closures. Militant corridor for smuggling and sudden firefights.",
+      "border_length_km":2640,
+      "color":"#f97316"
+    },
+    "geometry":{"type":"LineString","coordinates":[[62.5,35.5],[64.5,35.0],[66.5,34.5],[68.5,34.0],[70.0,33.5],[71.5,34.0]]}
+  },
+  {
+    "type":"Feature",
+    "properties":{
+      "id":"yemen-saudi",
+      "name":"Yemen — Saudi Arabia",
+      "threat_level":"ACTIVE TENSION",
+      "threat_score":75,
+      "conflict_type":"Proxy War / Houthi Insurgency",
+      "warfare_types":["Asymmetric","Conventional","Proxy","Economic"],
+      "dominant_warfare":"Proxy + Drone + Missile + Asymmetric",
+      "status":"FRAGILE TRUCE — 2022 UN truce holds; Houthis still control north Yemen",
+      "casualties_estimate":"377,000+ total Yemen war deaths (UNDP 2021); ongoing Houthi missile/drone attacks",
+      "nuclear_risk":"LOW",
+      "active_since":"2015",
+      "summary":"Saudi Arabia entered Yemen civil war 2015. Houthi movement controls north. 1100-mile mountainous border. UN truce 2022 reduced heaviest fighting but fragile. Houthis extend operations to Red Sea cable cutting and commercial shipping attacks.",
+      "border_length_km":1800,
+      "color":"#f97316"
+    },
+    "geometry":{"type":"LineString","coordinates":[[42.5,17.0],[44.0,18.0],[46.0,18.5],[48.0,18.0],[50.0,18.5]]}
+  },
+  {
+    "type":"Feature",
+    "properties":{
+      "id":"mexico-usa",
+      "name":"Mexico — United States",
+      "threat_level":"CARTEL VIOLENCE",
+      "threat_score":68,
+      "conflict_type":"Transnational Crime / Drug War",
+      "warfare_types":["Asymmetric","Economic","Hybrid"],
+      "dominant_warfare":"Cartel Asymmetric + Smuggling + Economic",
+      "status":"ONGOING — Cartel wars; US security priority 2026",
+      "casualties_estimate":"Migrants die from heat/exposure; cartel turf wars make border cities among hemisphere's most violent",
+      "nuclear_risk":"NONE",
+      "active_since":"1994",
+      "summary":"Nearly 2,000 miles; most legal crossings globally. Danger = lethal human smuggling, drug trafficking, cartel violence. Remote desert crossings kill migrants. Cartel turf wars on Mexican side. US renewed security focus 2026.",
+      "border_length_km":3145,
+      "color":"#f5a623"
+    },
+    "geometry":{"type":"LineString","coordinates":[[-117.0,32.5],[-111.0,31.5],[-106.5,31.8],[-104.0,29.5],[-100.0,28.0],[-97.0,25.8]]}
+  },
+  {
+    "type":"Feature",
+    "properties":{
+      "id":"india-bangladesh",
+      "name":"India — Bangladesh",
+      "threat_level":"STRUCTURAL RISK",
+      "threat_score":61,
+      "conflict_type":"Border Violence / Migration",
+      "warfare_types":["Asymmetric","Economic","Hybrid"],
+      "dominant_warfare":"Border Force Violence + Smuggling + Migration",
+      "status":"ONGOING — Routine killings; undocumented migration; smuggling",
+      "casualties_estimate":"Hundreds killed by India BSF annually; one of world's most porous borders",
+      "nuclear_risk":"LOW",
+      "active_since":"1971",
+      "summary":"2,500 miles — one of world's longest. Threads through villages, rivers, farmland. Major smuggling/migration route. India BSF criticized for killings of crossers. Porousness + routine violence = structural danger.",
+      "border_length_km":4156,
+      "color":"#f5a623"
+    },
+    "geometry":{"type":"LineString","coordinates":[[88.0,26.5],[89.0,25.5],[90.5,24.5],[91.5,23.5],[92.0,22.0],[92.5,23.5]]}
+  },
+  {
+    "type":"Feature",
+    "properties":{
+      "id":"armenia-azerbaijan",
+      "name":"Armenia — Azerbaijan (Nagorno-Karabakh)",
+      "threat_level":"POST-WAR FRAGILE",
+      "threat_score":58,
+      "conflict_type":"Post-Ethnic War / Peace Process",
+      "warfare_types":["Conventional","Asymmetric","Hybrid"],
+      "dominant_warfare":"Drone Warfare + Conventional Blitz (historical)",
+      "status":"CAUTIOUSLY COOLING — White House peace initialed Aug 2025; unsigned as of 2026",
+      "casualties_estimate":"2020 war: 6,000+ killed. 2023: Azerbaijan retook Karabakh; 100,000 Armenians fled",
+      "nuclear_risk":"LOW",
+      "active_since":"1994",
+      "summary":"Three decades of violent conflict. 2020 war + 2023 offensive: Azerbaijan retook Nagorno-Karabakh, 100,000 ethnic Armenians fled. Aug 2025 White House peace initialed. Unsigned, fragile — but rare border on this list potentially cooling.",
+      "border_length_km":1007,
+      "color":"#22d3ee"
+    },
+    "geometry":{"type":"LineString","coordinates":[[45.0,39.5],[46.0,40.0],[46.5,40.5],[47.5,41.0],[48.5,40.5]]}
+  }
+]}
