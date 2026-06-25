@@ -1,1 +1,99 @@
-{"country": "Burkina Faso", "wound_vulnerability_index": 43, "escalation_risk": "MODERATE", "historical_timeline": [{"Year": 1985, "Interstate armed conflict": 100.0}, {"Year": 1987, "Internal armed conflict": 100.0}, {"Year": 2016, "One-Sided Violence": 41.0}, {"Year": 2017, "One-Sided Violence": 33.0}, {"Year": 2018, "One-Sided Violence": 132.0, "Internationalized internal armed conflict": 100.0}, {"Year": 2019, "One-Sided Violence": 898.0, "Internationalized internal armed conflict": 200.0}, {"Year": 2020, "One-Sided Violence": 358.0, "Internationalized internal armed conflict": 200.0}, {"Year": 2021, "One-Sided Violence": 295.0, "Internationalized internal armed conflict": 200.0}, {"Year": 2022, "Internationalized internal armed conflict": 1100.0}, {"Year": 2023, "Internationalized internal armed conflict": 1000.0, "Internal armed conflict": 100.0}, {"Year": 2024, "Internationalized internal armed conflict": 1100.0}, {"Year": 2025, "Internationalized internal armed conflict": 1100.0}], "predicted_conflict_vectors": [{"type": "Border Skirmish", "probability": 79}, {"type": "Proxy / Grey-Zone", "probability": 41}, {"type": "Naval Blockade", "probability": 40}, {"type": "Cyber / Digital", "probability": 17}, {"type": "Algorithmic / AI Strike", "probability": 8}, {"type": "Full Conventional", "probability": 19}], "ml_forecast_volume": 5}
+{
+  "country": "Burkina Faso",
+  "forecast": {
+    "wvi": 30,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1900,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 549,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1920,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1940,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1960,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1980,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2000,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1257,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2010,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1690,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2015,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 759,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2020,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1419,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Non-State (Cartel/Militia)": 0.2732,
+    "Border Skirmish": 0.2069,
+    "Proxy / Grey-Zone": 0.1567,
+    "Intra-State (Civil War)": 0.2444,
+    "Cyber / Digital": 0.1187
+  },
+  "future_hotspots": [],
+  "raw_schemas": {}
+}
