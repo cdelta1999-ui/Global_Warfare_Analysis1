@@ -26,73 +26,95 @@ const wviLayer: Omit<FillLayer, 'source'> = {
   }
 };
 
+// Shipping routes: wide blurred glow halo + crisp top line
+const shippingRouteGlowLayer: Omit<LineLayer, 'source'> = {
+  id: 'shipping-routes-glow', type: 'line',
+  paint: {
+    'line-color': ['interpolate', ['linear'], ['get', 'volume'], 0, '#1d4ed8', 60, '#38bdf8', 100, '#7dd3fc'],
+    'line-width': ['interpolate', ['linear'], ['get', 'volume'], 0, 10, 60, 16, 100, 22],
+    'line-opacity': 0.10, 'line-blur': 8,
+  }
+};
 const shippingRouteLayer: Omit<LineLayer, 'source'> = {
   id: 'shipping-routes', type: 'line',
-  paint: { 
-    'line-color': [
-      'interpolate', ['linear'], ['get', 'volume'],
-      0, '#60a5fa', 
-      50, '#3b82f6', 
-      80, '#2563eb', 
-      100, '#1e3a8a' 
-    ], 
-    'line-width': ['interpolate', ['linear'], ['get', 'volume'], 0, 1.5, 50, 3, 100, 5], 
-    'line-opacity': 0.8, 
-    'line-dasharray': [2, 1] 
+  paint: {
+    'line-color': ['interpolate', ['linear'], ['get', 'volume'], 0, '#93c5fd', 60, '#38bdf8', 100, '#e0f2fe'],
+    'line-width': ['interpolate', ['linear'], ['get', 'volume'], 0, 1.2, 60, 2.2, 100, 3.5],
+    'line-opacity': 0.92,
   }
 };
 
+const navalPatrolGlowLayer: Omit<CircleLayer, 'source'> = {
+  id: 'naval-patrols-glow', type: 'circle',
+  paint: { 'circle-radius': 14, 'circle-color': ['get', 'color'], 'circle-opacity': 0.12, 'circle-blur': 1.5, 'circle-stroke-width': 0 }
+};
 const navalPatrolLayer: Omit<CircleLayer, 'source'> = {
   id: 'naval-patrols', type: 'circle',
-  paint: { 'circle-radius': 5, 'circle-color': ['get', 'color'], 'circle-stroke-width': 1.5, 'circle-stroke-color': 'rgba(255,255,255,0.6)' }
+  paint: { 'circle-radius': 6, 'circle-color': ['get', 'color'], 'circle-opacity': 1, 'circle-stroke-width': 1.5, 'circle-stroke-color': 'rgba(255,255,255,0.7)' }
 };
 
+const chokePointPulseLayer: Omit<CircleLayer, 'source'> = {
+  id: 'choke-points-pulse', type: 'circle',
+  paint: {
+    'circle-radius': ['interpolate', ['linear'], ['get', 'risk'], 0, 14, 50, 20, 100, 28],
+    'circle-color': ['interpolate', ['linear'], ['get', 'risk'], 0, '#fbbf24', 60, '#f97316', 100, '#ef4444'],
+    'circle-opacity': 0.15, 'circle-blur': 1.2,
+  }
+};
 const chokePointLayer: Omit<CircleLayer, 'source'> = {
   id: 'choke-points', type: 'circle',
-  paint: { 'circle-radius': 10, 'circle-color': '#ff4b4b', 'circle-opacity': 0.6, 'circle-stroke-width': 2, 'circle-stroke-color': 'rgba(255,75,75,0.4)' }
+  paint: {
+    'circle-radius': ['interpolate', ['linear'], ['get', 'risk'], 0, 7, 60, 10, 100, 14],
+    'circle-color': ['interpolate', ['linear'], ['get', 'risk'], 0, '#fbbf24', 60, '#f97316', 100, '#ef4444'],
+    'circle-opacity': 0.95, 'circle-stroke-width': 2, 'circle-stroke-color': 'rgba(255,255,255,0.4)',
+  }
 };
 
+const CABLE_COLOR_EXPR: any = ['match', ['get', 'status'],
+  'CRITICAL', '#ef4444', 'VULNERABLE', '#f97316', 'MONITORED', '#a78bfa', '#8b5cf6'];
+const digitalLifelineGlowLayer: Omit<LineLayer, 'source'> = {
+  id: 'digital-lifelines-glow', type: 'line',
+  filter: ['==', '$type', 'LineString'],
+  paint: { 'line-color': CABLE_COLOR_EXPR, 'line-width': 14, 'line-opacity': 0.10, 'line-blur': 6 }
+};
 const digitalLifelineLineLayer: Omit<LineLayer, 'source'> = {
   id: 'digital-lifelines-lines', type: 'line',
   filter: ['==', '$type', 'LineString'],
-  paint: { 
-    'line-color': [
-      'interpolate', ['linear'], ['get', 'capacity'],
-      0, '#c4b5fd', 
-      50, '#8b5cf6', 
-      100, '#6d28d9'
-    ], 
-    'line-width': ['interpolate', ['linear'], ['get', 'capacity'], 0, 2, 100, 6], 
-    'line-opacity': 0.8, 
-    'line-blur': 1 
-  }
+  paint: { 'line-color': CABLE_COLOR_EXPR, 'line-width': 2, 'line-opacity': 0.9 }
 };
-
 const digitalLifelinePointLayer: Omit<CircleLayer, 'source'> = {
   id: 'digital-lifelines-points', type: 'circle',
   filter: ['==', '$type', 'Point'],
-  paint: { 'circle-radius': 8, 'circle-color': '#a78bfa', 'circle-stroke-width': 2, 'circle-stroke-color': 'rgba(167,139,250,0.5)' }
+  paint: { 'circle-radius': 7, 'circle-color': CABLE_COLOR_EXPR, 'circle-stroke-width': 2, 'circle-stroke-color': 'rgba(255,255,255,0.5)', 'circle-opacity': 1 }
 };
 
+const strategicResourceGlowLayer: Omit<CircleLayer, 'source'> = {
+  id: 'strategic-resources-glow', type: 'circle',
+  paint: { 'circle-radius': 18, 'circle-color': '#34d399', 'circle-opacity': 0.12, 'circle-blur': 1.5, 'circle-stroke-width': 0 }
+};
 const strategicResourceLayer: Omit<CircleLayer, 'source'> = {
   id: 'strategic-resources', type: 'circle',
-  paint: { 'circle-radius': 9, 'circle-color': '#34d399', 'circle-stroke-width': 2, 'circle-stroke-color': 'rgba(52,211,153,0.5)' }
+  paint: { 'circle-radius': 8, 'circle-color': '#34d399', 'circle-opacity': 1, 'circle-stroke-width': 2, 'circle-stroke-color': 'rgba(52,211,153,0.6)' }
 };
 
+const asymmetricGlowLayer: Omit<CircleLayer, 'source'> = {
+  id: 'asymmetric-vulnerabilities-glow', type: 'circle',
+  paint: { 'circle-radius': 18, 'circle-color': '#f97316', 'circle-opacity': 0.12, 'circle-blur': 1.5, 'circle-stroke-width': 0 }
+};
 const asymmetricLayer: Omit<CircleLayer, 'source'> = {
   id: 'asymmetric-vulnerabilities', type: 'circle',
-  paint: { 'circle-radius': 9, 'circle-color': '#f5a623', 'circle-stroke-width': 2, 'circle-stroke-color': 'rgba(245,166,35,0.5)' }
+  paint: { 'circle-radius': 8, 'circle-color': '#f97316', 'circle-opacity': 1, 'circle-stroke-width': 2, 'circle-stroke-color': 'rgba(249,115,22,0.6)' }
 };
 
 const activeHotspotLayer: Omit<CircleLayer, 'source'> = {
   id: 'active-hotspots-layer', type: 'circle',
   paint: {
-    'circle-radius': 12,
+    'circle-radius': 13,
     'circle-color': '#ff4b4b',
-    'circle-opacity': 0.85,
-    'circle-stroke-width': 4,
-    'circle-stroke-color': 'rgba(255,75,75,0.4)',
-    'circle-blur': 0.2
+    'circle-opacity': 0.9,
+    'circle-stroke-width': 3,
+    'circle-stroke-color': 'rgba(255,75,75,0.45)',
+    'circle-blur': 0.15
   }
 };
 
@@ -156,6 +178,22 @@ const WVIRing = ({ score, color }: { score: number; color: string }) => {
   );
 };
 
+const brainPredictionGlowLayer: Omit<CircleLayer, 'source'> = {
+  id: 'brain-predictions-glow', type: 'circle',
+  paint: { 'circle-radius': 28, 'circle-color': '#f97316', 'circle-opacity': 0.10, 'circle-blur': 1.8, 'circle-stroke-width': 0 }
+};
+const brainPredictionLayer: Omit<CircleLayer, 'source'> = {
+  id: 'brain-predictions-layer', type: 'circle',
+  paint: {
+    'circle-radius': 11,
+    'circle-color': '#f97316',
+    'circle-opacity': 0.9,
+    'circle-stroke-width': 2.5,
+    'circle-stroke-color': 'rgba(251,191,36,0.7)',
+    'circle-blur': 0.1
+  }
+};
+
 const conflictRegionFillLayer: Omit<FillLayer, 'source'> = {
   id: 'conflict-regions-fill', type: 'fill',
   paint: {
@@ -163,13 +201,22 @@ const conflictRegionFillLayer: Omit<FillLayer, 'source'> = {
     'fill-opacity': ['interpolate', ['linear'], ['get', 'prediction_score'], 49, 0.08, 70, 0.14, 91, 0.22]
   }
 };
+const conflictRegionGlowLayer: Omit<LineLayer, 'source'> = {
+  id: 'conflict-regions-glow', type: 'line',
+  paint: {
+    'line-color': ['get', 'color'],
+    'line-width': ['interpolate', ['linear'], ['get', 'prediction_score'], 49, 10, 91, 20],
+    'line-opacity': 0.08, 'line-blur': 8,
+  }
+};
 const conflictRegionLineLayer: Omit<LineLayer, 'source'> = {
   id: 'conflict-regions-line', type: 'line',
   paint: {
     'line-color': ['get', 'color'],
     'line-width': ['interpolate', ['linear'], ['get', 'prediction_score'], 49, 1.5, 91, 3],
-    'line-opacity': 0.75,
-    'line-dasharray': [4, 2]
+    'line-opacity': 0.88,
+    'line-dasharray': [6, 3],
+    'line-blur': 0.3,
   }
 };
 
@@ -178,11 +225,12 @@ interface MapViewProps {
   showShipping: boolean; showPatrols: boolean; showChokePoints: boolean; showDigital: boolean; showStrategic: boolean; showAsymmetric: boolean;
   showConflictRegions: boolean; conflictRegionsGeoJson: any;
   activeHotspotGeoJson: any; selectedCountry: string | null;
+  showBrainPredictions: boolean; brainPredictionsGeoJson: any;
   onHoverChange: (info: any) => void; onCountryClick: (c: string, lng: number, lat: number) => void; onInfraClick: (i: any) => void; onClear: () => void;
   mapRef: React.RefObject<MapRef>;
 }
 
-const MapView = memo(({ worldGeoJson, flowMaps, chokePoints, digitalLifelines, strategicResources, asymmetricVuln, showShipping, showPatrols, showChokePoints, showDigital, showStrategic, showAsymmetric, showConflictRegions, conflictRegionsGeoJson, activeHotspotGeoJson, selectedCountry, onHoverChange, onCountryClick, onInfraClick, onClear, mapRef }: MapViewProps) => {
+const MapView = memo(({ worldGeoJson, flowMaps, chokePoints, digitalLifelines, strategicResources, asymmetricVuln, showShipping, showPatrols, showChokePoints, showDigital, showStrategic, showAsymmetric, showConflictRegions, conflictRegionsGeoJson, activeHotspotGeoJson, selectedCountry, showBrainPredictions, brainPredictionsGeoJson, onHoverChange, onCountryClick, onInfraClick, onClear, mapRef }: MapViewProps) => {
   const [cursor, setCursor] = useState('grab');
 
   const handleMouseMove = useCallback((event: MapLayerMouseEvent) => {
@@ -207,29 +255,63 @@ const MapView = memo(({ worldGeoJson, flowMaps, chokePoints, digitalLifelines, s
       mapStyle="mapbox://styles/mapbox/dark-v11" mapboxAccessToken={MAPBOX_TOKEN}
       projection={{ name: 'globe' } as any}
       fog={{ color: '#080c18', 'high-color': '#1a2a6c', 'horizon-blend': 0.04, 'space-color': '#000005', 'star-intensity': 0.25 } as any}
-      interactiveLayerIds={['data', 'choke-points', 'naval-patrols', 'digital-lifelines-lines', 'digital-lifelines-points', 'strategic-resources', 'asymmetric-vulnerabilities', 'shipping-routes', 'active-hotspots-layer', 'conflict-regions-fill']}
+      interactiveLayerIds={['data', 'choke-points', 'naval-patrols', 'digital-lifelines-lines', 'digital-lifelines-points', 'strategic-resources', 'asymmetric-vulnerabilities', 'shipping-routes', 'active-hotspots-layer', 'conflict-regions-fill', 'brain-predictions-layer']}
       onMouseMove={handleMouseMove} onClick={handleClick} cursor={cursor}
     >
       {worldGeoJson && <Source id="data" type="geojson" data={worldGeoJson}><Layer {...wviLayer} /></Source>}
       {showConflictRegions && conflictRegionsGeoJson && (
         <Source id="conflict-regions" type="geojson" data={conflictRegionsGeoJson}>
           <Layer {...conflictRegionFillLayer} />
+          <Layer {...conflictRegionGlowLayer} />
           <Layer {...conflictRegionLineLayer} />
         </Source>
       )}
-      {showShipping && flowMaps?.shipping_routes && <Source id="shipping" type="geojson" data={flowMaps.shipping_routes}><Layer {...shippingRouteLayer} /></Source>}
-      {showPatrols && flowMaps?.naval_patrols && <Source id="patrols" type="geojson" data={flowMaps.naval_patrols}><Layer {...navalPatrolLayer} /></Source>}
-      {showChokePoints && chokePoints && <Source id="chokepoints" type="geojson" data={chokePoints}><Layer {...chokePointLayer} /></Source>}
-      {showDigital && digitalLifelines && (
-        <Source id="digital" type="geojson" data={digitalLifelines}>
-          <Layer {...digitalLifelineLineLayer} /><Layer {...digitalLifelinePointLayer} />
+      {showShipping && flowMaps?.shipping_routes && (
+        <Source id="shipping" type="geojson" data={flowMaps.shipping_routes}>
+          <Layer {...shippingRouteGlowLayer} />
+          <Layer {...shippingRouteLayer} />
         </Source>
       )}
-      {showStrategic && strategicResources && <Source id="strategic" type="geojson" data={strategicResources}><Layer {...strategicResourceLayer} /></Source>}
-      {showAsymmetric && asymmetricVuln && <Source id="asymmetric" type="geojson" data={asymmetricVuln}><Layer {...asymmetricLayer} /></Source>}
+      {showPatrols && flowMaps?.naval_patrols && (
+        <Source id="patrols" type="geojson" data={flowMaps.naval_patrols}>
+          <Layer {...navalPatrolGlowLayer} />
+          <Layer {...navalPatrolLayer} />
+        </Source>
+      )}
+      {showChokePoints && chokePoints && (
+        <Source id="chokepoints" type="geojson" data={chokePoints}>
+          <Layer {...chokePointPulseLayer} />
+          <Layer {...chokePointLayer} />
+        </Source>
+      )}
+      {showDigital && digitalLifelines && (
+        <Source id="digital" type="geojson" data={digitalLifelines}>
+          <Layer {...digitalLifelineGlowLayer} />
+          <Layer {...digitalLifelineLineLayer} />
+          <Layer {...digitalLifelinePointLayer} />
+        </Source>
+      )}
+      {showStrategic && strategicResources && (
+        <Source id="strategic" type="geojson" data={strategicResources}>
+          <Layer {...strategicResourceGlowLayer} />
+          <Layer {...strategicResourceLayer} />
+        </Source>
+      )}
+      {showAsymmetric && asymmetricVuln && (
+        <Source id="asymmetric" type="geojson" data={asymmetricVuln}>
+          <Layer {...asymmetricGlowLayer} />
+          <Layer {...asymmetricLayer} />
+        </Source>
+      )}
       {selectedCountry && activeHotspotGeoJson && (
         <Source id="active-hotspots-source" type="geojson" data={activeHotspotGeoJson}>
           <Layer {...activeHotspotLayer} />
+        </Source>
+      )}
+      {showBrainPredictions && brainPredictionsGeoJson && (
+        <Source id="brain-predictions" type="geojson" data={brainPredictionsGeoJson}>
+          <Layer {...brainPredictionGlowLayer} />
+          <Layer {...brainPredictionLayer} />
         </Source>
       )}
     </Map>
@@ -241,7 +323,8 @@ const MapView = memo(({ worldGeoJson, flowMaps, chokePoints, digitalLifelines, s
   p.showChokePoints === n.showChokePoints && p.showDigital === n.showDigital && p.showStrategic === n.showStrategic &&
   p.showAsymmetric === n.showAsymmetric && p.showConflictRegions === n.showConflictRegions &&
   p.conflictRegionsGeoJson === n.conflictRegionsGeoJson && p.activeHotspotGeoJson === n.activeHotspotGeoJson &&
-  p.selectedCountry === n.selectedCountry && p.onHoverChange === n.onHoverChange &&
+  p.selectedCountry === n.selectedCountry && p.showBrainPredictions === n.showBrainPredictions &&
+  p.brainPredictionsGeoJson === n.brainPredictionsGeoJson && p.onHoverChange === n.onHoverChange &&
   p.onCountryClick === n.onCountryClick && p.onInfraClick === n.onInfraClick && p.onClear === n.onClear
 );
 
@@ -283,6 +366,9 @@ export default function App() {
   const [expandedRegion, setExpandedRegion] = useState<number | null>(null);
   const [showGuide, setShowGuide] = useState(false);
   const [guideTab, setGuideTab] = useState<'quickstart' | 'wvi' | 'hven' | 'conflict' | 'overlays'>('quickstart');
+  const [showBrainPredictions, setShowBrainPredictions] = useState(true);
+  const [brainPredictionsData, setBrainPredictionsData] = useState<any>(null);
+  const [showBrainPanel, setShowBrainPanel] = useState(false);
 
   // Lazy-load timeline: show last 10 years first, then full history
   useEffect(() => {
@@ -327,6 +413,7 @@ export default function App() {
 
     fetch(API_BASE + `api/war_prediction${EXT}`).then(r => r.json()).then(setWarPredictionData).catch(console.error);
     fetch(API_BASE + `api/conflict_regions${EXT}`).then(r => r.json()).then(setConflictRegionsGeoJson).catch(console.error);
+    fetch(API_BASE + `api/brain_predictions${EXT}`).then(r => r.json()).then(setBrainPredictionsData).catch(console.error);
 
     return () => clearInterval(interval);
   }, []);
@@ -419,6 +506,11 @@ export default function App() {
     };
   }, [forecastData]);
 
+  const brainPredictionsGeoJson = useMemo(() => {
+    if (!brainPredictionsData?.predicted_chokepoints) return null;
+    return brainPredictionsData.predicted_chokepoints;
+  }, [brainPredictionsData]);
+
   const wviColor = reactiveWVI > 75 ? '#ff4b4b' : reactiveWVI > 50 ? '#f5a623' : '#34d399';
 
   return (
@@ -433,6 +525,7 @@ export default function App() {
         showDigital={showDigital} showStrategic={showStrategic} showAsymmetric={showAsymmetric}
         showConflictRegions={showConflictRegions} conflictRegionsGeoJson={conflictRegionsGeoJson}
         activeHotspotGeoJson={activeHotspotGeoJson} selectedCountry={selectedCountry}
+        showBrainPredictions={showBrainPredictions} brainPredictionsGeoJson={brainPredictionsGeoJson}
         onHoverChange={onHoverChange} onCountryClick={onCountryClick} onInfraClick={onInfraClick} onClear={onClear}
       />
 
@@ -460,6 +553,10 @@ export default function App() {
           <button className="toolbar-btn cyan" onClick={() => setShowGuide(true)}>
             <Info size={14} style={{ color: '#00f2fe', flexShrink: 0 }} />
             <span>Metrics Guide</span>
+          </button>
+          <button className="toolbar-btn" style={{ borderColor: 'rgba(249,115,22,0.3)' }} onClick={() => setShowBrainPanel(true)}>
+            <Zap size={14} style={{ color: '#f97316', flexShrink: 0 }} />
+            <span style={{ color: '#f97316' }}>Data Brain</span>
           </button>
           {(selectedCountry || selectedRegion || selectedInfra) && (
             <button className="toolbar-btn" onClick={resetGlobe} style={{ borderColor: 'rgba(255,255,255,0.15)', marginTop: 4 }}>
@@ -878,6 +975,138 @@ export default function App() {
         );
       })()}
 
+      {/* ─── Data Brain Modal ─── */}
+      {showBrainPanel && brainPredictionsData && (
+        <>
+          <div className="doctrine-backdrop" onClick={() => setShowBrainPanel(false)} />
+          <div className="glass-panel doctrine-modal fade-in" style={{ width: '90vw', maxWidth: 1100, height: '88vh' }}>
+            {/* Header */}
+            <div style={{ padding: '20px 24px', borderBottom: '1px solid rgba(249,115,22,0.15)', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexShrink: 0 }}>
+              <div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                  <Zap size={20} style={{ color: '#f97316' }} />
+                  <h2 style={{ margin: 0, fontSize: '1.2rem', color: '#f97316' }}>Data Brain · Predictive Threat Intelligence</h2>
+                </div>
+                <p style={{ margin: '6px 0 0', fontSize: '0.72rem', color: 'var(--text-secondary)', letterSpacing: '0.08em' }}>
+                  {brainPredictionsData.synthesis?.model_version} · Global Threat Score: {brainPredictionsData.synthesis?.global_threat_score}/100 · Trajectory: {brainPredictionsData.synthesis?.trajectory}
+                </p>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                <div style={{ textAlign: 'center', background: 'rgba(249,115,22,0.08)', border: '1px solid rgba(249,115,22,0.25)', borderRadius: 10, padding: '8px 16px' }}>
+                  <div style={{ fontSize: '1.6rem', fontWeight: 900, color: '#f97316', fontFamily: "'JetBrains Mono', monospace" }}>{brainPredictionsData.synthesis?.global_threat_score}</div>
+                  <div style={{ fontSize: '0.6rem', color: 'rgba(249,115,22,0.7)', letterSpacing: '0.1em', marginTop: 2 }}>GLOBAL THREAT SCORE</div>
+                  <div style={{ fontSize: '0.62rem', color: '#ff4b4b', marginTop: 2, fontWeight: 700 }}>{brainPredictionsData.synthesis?.trajectory}</div>
+                </div>
+                <button onClick={() => setShowBrainPanel(false)} style={{ background: 'none', border: 'none', color: 'var(--text-secondary)', cursor: 'pointer', padding: 4 }}><X size={20} /></button>
+              </div>
+            </div>
+
+            <div style={{ display: 'flex', flex: 1, overflow: 'hidden' }}>
+              {/* Left: Synthesis + Key Findings */}
+              <div style={{ flex: 1, overflowY: 'auto', padding: '16px 20px', display: 'flex', flexDirection: 'column', gap: 14 }}>
+                {/* Narrative */}
+                <div style={{ background: 'rgba(249,115,22,0.05)', border: '1px solid rgba(249,115,22,0.15)', borderRadius: 10, padding: '14px 16px' }}>
+                  <div style={{ fontSize: '0.65rem', color: 'rgba(249,115,22,0.7)', letterSpacing: '0.12em', fontWeight: 700, marginBottom: 8 }}>STRATEGIC SYNTHESIS</div>
+                  <p style={{ margin: 0, fontSize: '0.76rem', color: 'rgba(255,255,255,0.72)', lineHeight: 1.75 }}>{brainPredictionsData.synthesis?.analysis_narrative}</p>
+                </div>
+
+                {/* Key findings */}
+                <div>
+                  <div style={{ fontSize: '0.65rem', color: 'rgba(249,115,22,0.7)', letterSpacing: '0.12em', fontWeight: 700, marginBottom: 8 }}>KEY FINDINGS</div>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+                    {brainPredictionsData.synthesis?.key_findings?.map((finding: string, i: number) => (
+                      <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 8, background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: 8, padding: '8px 12px' }}>
+                        <div style={{ width: 5, height: 5, borderRadius: '50%', background: '#f97316', flexShrink: 0, marginTop: 6 }} />
+                        <span style={{ fontSize: '0.72rem', color: 'rgba(255,255,255,0.72)', lineHeight: 1.6 }}>{finding}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Threat Vectors */}
+                <div>
+                  <div style={{ fontSize: '0.65rem', color: 'rgba(249,115,22,0.7)', letterSpacing: '0.12em', fontWeight: 700, marginBottom: 8 }}>PREDICTED ATTACK VECTORS</div>
+                  {brainPredictionsData.threat_vectors?.map((tv: any, i: number) => {
+                    const conf = tv.confidence;
+                    const confColor = conf >= 85 ? '#ff4b4b' : conf >= 70 ? '#f97316' : '#f5a623';
+                    return (
+                      <div key={i} style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: 10, padding: '12px 14px', marginBottom: 8 }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 6 }}>
+                          <span style={{ fontWeight: 700, fontSize: '0.82rem', color: confColor }}>{tv.vector}</span>
+                          <div style={{ display: 'flex', gap: 8, alignItems: 'center', flexShrink: 0 }}>
+                            <span style={{ fontSize: '0.62rem', color: confColor, background: `${confColor}15`, padding: '1px 7px', borderRadius: 4 }}>{tv.escalation_risk}</span>
+                            <div style={{ textAlign: 'center' }}>
+                              <div style={{ fontSize: '1rem', fontWeight: 900, color: confColor, fontFamily: "'JetBrains Mono', monospace" }}>{conf}%</div>
+                              <div style={{ fontSize: '0.5rem', color: 'var(--text-dim)' }}>CONF</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div style={{ fontSize: '0.65rem', color: 'rgba(249,115,22,0.7)', marginBottom: 4 }}>{tv.timeframe}</div>
+                        <p style={{ margin: '0 0 8px', fontSize: '0.7rem', color: 'rgba(255,255,255,0.6)', lineHeight: 1.6 }}>{tv.description}</p>
+                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4 }}>
+                          {tv.primary_actors?.map((a: string, j: number) => (
+                            <span key={j} style={{ fontSize: '0.58rem', background: 'rgba(239,68,68,0.1)', border: '1px solid rgba(239,68,68,0.2)', borderRadius: 3, padding: '1px 6px', color: 'rgba(239,68,68,0.8)' }}>{a}</span>
+                          ))}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Right: Predicted Chokepoints + Cable Risk */}
+              <div style={{ width: 360, flexShrink: 0, borderLeft: '1px solid rgba(249,115,22,0.1)', overflowY: 'auto', padding: '16px 16px', display: 'flex', flexDirection: 'column', gap: 14 }}>
+                {/* Predicted chokepoints */}
+                <div>
+                  <div style={{ fontSize: '0.65rem', color: 'rgba(249,115,22,0.7)', letterSpacing: '0.12em', fontWeight: 700, marginBottom: 8 }}>PREDICTED EMERGING CHOKEPOINTS</div>
+                  {brainPredictionsData.predicted_chokepoints?.features?.map((f: any, i: number) => {
+                    const p = f.properties;
+                    const conf = p.prediction_confidence;
+                    const confColor = conf >= 80 ? '#ff4b4b' : conf >= 65 ? '#f97316' : '#f5a623';
+                    return (
+                      <div key={i}
+                        onClick={() => { setShowBrainPanel(false); onInfraClick({ source: 'brain-predictions', properties: p, lng: f.geometry.coordinates[0], lat: f.geometry.coordinates[1] }); }}
+                        style={{ background: 'rgba(249,115,22,0.04)', border: '1px solid rgba(249,115,22,0.15)', borderRadius: 10, padding: '10px 12px', marginBottom: 6, cursor: 'pointer' }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 4 }}>
+                          <span style={{ fontWeight: 700, fontSize: '0.78rem', color: '#f97316' }}>{p.name}</span>
+                          <div style={{ fontSize: '0.9rem', fontWeight: 900, color: confColor, fontFamily: "'JetBrains Mono', monospace" }}>{conf}%</div>
+                        </div>
+                        <div style={{ fontSize: '0.62rem', color: 'rgba(255,180,80,0.7)', marginBottom: 3 }}>{p.type}</div>
+                        <div style={{ fontSize: '0.6rem', color: 'rgba(255,255,255,0.4)' }}>{p.timeframe}</div>
+                        <div style={{ fontSize: '0.62rem', color: 'rgba(255,255,255,0.5)', marginTop: 4, lineHeight: 1.5 }}>{p.strategic_impact?.slice(0, 120)}...</div>
+                      </div>
+                    );
+                  })}
+                </div>
+
+                {/* Cable risk matrix */}
+                <div>
+                  <div style={{ fontSize: '0.65rem', color: 'rgba(167,139,250,0.8)', letterSpacing: '0.12em', fontWeight: 700, marginBottom: 8 }}>CABLE RISK MATRIX</div>
+                  {brainPredictionsData.cable_risk_matrix?.map((cable: any, i: number) => {
+                    const riskColor = cable.risk_score >= 90 ? '#ff4b4b' : cable.risk_score >= 80 ? '#f97316' : '#f5a623';
+                    return (
+                      <div key={i} style={{ background: 'rgba(167,139,250,0.03)', border: '1px solid rgba(167,139,250,0.12)', borderRadius: 8, padding: '10px 12px', marginBottom: 6 }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 4 }}>
+                          <span style={{ fontWeight: 700, fontSize: '0.78rem', color: '#a78bfa' }}>{cable.cable}</span>
+                          <div style={{ textAlign: 'center' }}>
+                            <div style={{ fontSize: '0.95rem', fontWeight: 900, color: riskColor, fontFamily: "'JetBrains Mono', monospace" }}>{cable.risk_score}</div>
+                          </div>
+                        </div>
+                        <div style={{ display: 'flex', gap: 8, marginBottom: 4 }}>
+                          <span style={{ fontSize: '0.58rem', background: 'rgba(0,242,254,0.08)', border: '1px solid rgba(0,242,254,0.15)', borderRadius: 3, padding: '1px 6px', color: '#00f2fe' }}>{cable.data_share_pct}% internet</span>
+                          <span style={{ fontSize: '0.58rem', background: 'rgba(255,75,75,0.08)', border: '1px solid rgba(255,75,75,0.15)', borderRadius: 3, padding: '1px 6px', color: '#ff4b4b' }}>{cable.repair_time_days}d repair</span>
+                        </div>
+                        <div style={{ fontSize: '0.62rem', color: 'rgba(255,255,255,0.45)', lineHeight: 1.5 }}>{cable.critical_vulnerability?.slice(0, 120)}</div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          </div>
+        </>
+      )}
+
       {/* ─── Metrics Guide Modal ─── */}
       {showGuide && (
         <>
@@ -1190,6 +1419,7 @@ export default function App() {
                   {selectedInfra.source === 'strategic' && <><Gem size={12} style={{ display: 'inline', marginRight: 4 }} /> Strategic Resource</>}
                   {selectedInfra.source === 'asymmetric' && <><Rocket size={12} style={{ display: 'inline', marginRight: 4 }} /> Asymmetric Vuln</>}
                   {selectedInfra.source === 'chokepoints' && <><ShieldAlert size={12} style={{ display: 'inline', marginRight: 4 }} /> Choke Point</>}
+                  {selectedInfra.source === 'brain-predictions' && <><Zap size={12} style={{ display: 'inline', marginRight: 4, color: '#f97316' }} /> Predicted Threat</>}
                 </div>
                 <h2 style={{ margin: 0, fontSize: '1.1rem', color: 'var(--text-primary)' }}>{selectedInfra.properties.name}</h2>
               </div>
@@ -1244,6 +1474,7 @@ export default function App() {
               { show: showShipping,  set: setShowShipping,  icon: <Anchor size={13} />,       color: '#00f2fe', label: 'Maritime Routes' },
               { show: showPatrols,   set: setShowPatrols,   icon: <Ship size={13} />,         color: '#60a5fa', label: 'Naval Patrols' },
               { show: showChokePoints,set:setShowChokePoints,icon:<ShieldAlert size={13} />,  color: '#ff4b4b', label: 'Choke Points' },
+              { show: showBrainPredictions, set: setShowBrainPredictions, icon: <Zap size={13} />, color: '#f97316', label: 'Predicted Threats' },
             ].map(({ show, set, icon, color, label }) => (
               <button key={label} onClick={() => set(!show)} style={{
                 display: 'flex', alignItems: 'center', gap: 8, background: show ? `${color}14` : 'transparent',
@@ -1349,6 +1580,24 @@ export default function App() {
               <div className="metric-value" style={{ color: '#ff4b4b', fontSize: '0.8rem', marginTop: 3 }}>{hoverInfo.feature.properties.threat}</div>
             </>
           )}
+          {hoverInfo.feature.source === 'brain-predictions' && (() => {
+            const p = hoverInfo.feature.properties;
+            return (
+              <>
+                <div style={{ fontWeight: 700, display: 'flex', alignItems: 'center', gap: 5 }}>
+                  <Zap size={13} style={{ color: '#f97316' }} />
+                  <span style={{ color: '#f97316' }}>{p.name}</span>
+                </div>
+                <div style={{ fontSize: '0.68rem', color: 'rgba(255,180,80,0.8)', marginTop: 2 }}>{p.type}</div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginTop: 5 }}>
+                  <div style={{ fontSize: '1rem', fontWeight: 900, color: '#f97316', fontFamily: "'JetBrains Mono', monospace" }}>{p.prediction_confidence}%</div>
+                  <div style={{ fontSize: '0.6rem', color: 'rgba(255,255,255,0.4)' }}>CONFIDENCE</div>
+                </div>
+                <div style={{ fontSize: '0.65rem', color: 'rgba(255,255,255,0.55)', marginTop: 3 }}>{p.timeframe}</div>
+                <div style={{ fontSize: '0.62rem', color: 'var(--text-dim)', marginTop: 3 }}>Click for full analysis</div>
+              </>
+            );
+          })()}
         </div>
       )}
 
