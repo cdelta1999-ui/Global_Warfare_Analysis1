@@ -1,0 +1,92 @@
+{
+  "country": "Philippines",
+  "computed_wvi": 58,
+  "pillars": {
+    "cyber": {
+      "overall_score": 55,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 60,
+          "metric": "66 events (YTD)",
+          "raw_value": 66,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 45,
+          "metric": "2 campaigns",
+          "raw_value": 2,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 50,
+          "metric": "Active tracking",
+          "raw_value": 50,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 62,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 62,
+          "metric": "Dependency: 49%",
+          "raw_value": 49,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 54,
+          "metric": "Sanctions Exposure: 54/100",
+          "raw_value": 54,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 50,
+          "metric": "Trade Concentration: 50/100",
+          "raw_value": 50,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 65,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 65,
+          "metric": "520 events/yr",
+          "raw_value": 520,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 60,
+          "metric": "Fatalities: 7800/yr",
+          "raw_value": 7800,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 68,
+          "metric": "Military spend: 19.5% GDP",
+          "raw_value": 19.5,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 39,
+      "primary_drivers": [
+        "NPA Communist Insurgency",
+        "Abu Sayyaf",
+        "South China Sea Confrontations"
+      ]
+    }
+  }
+}
