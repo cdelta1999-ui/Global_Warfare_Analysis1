@@ -40,13 +40,14 @@ const wviLayer: Omit<FillLayer, 'source'> = {
   paint: {
     'fill-color': ['interpolate', ['linear'], ['get', 'WVI'],
       0,  'rgba(0,0,0,0)',
-      20, '#0ea5e9',
-      40, '#22d3ee',
-      55, '#f5a623',
-      70, '#ef4444',
-      85, '#b91c1c',
-      100,'#7f1d1d'],
-    'fill-opacity': 0.72
+      15, '#0f2812',
+      30, '#1e5422',
+      45, '#4e5200',
+      58, '#7d4200',
+      72, '#8c2000',
+      87, '#850000',
+      100,'#4d0000'],
+    'fill-opacity': 0.86
   }
 };
 
@@ -746,15 +747,50 @@ function AppInner() {
   // Loading screen while core geo + map_data fetch
   if (!coreLoaded) {
     return (
-      <div style={{ width: '100vw', height: '100vh', background: '#060810', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 20 }}>
-        <div style={{ fontSize: '1.5rem', fontWeight: 900, color: '#00f2fe', letterSpacing: '0.05em', fontFamily: "'JetBrains Mono', monospace" }}>BLEED, DON'T BREAK</div>
-        <div style={{ display: 'flex', gap: 6 }}>
+      <div style={{ width: '100vw', height: '100vh', background: '#030508', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 20 }}>
+        {/* Radar graphic */}
+        <div style={{ position: 'relative', width: 130, height: 130 }}>
+          <svg width="130" height="130" viewBox="0 0 130 130" style={{ position: 'absolute', inset: 0 }}>
+            <circle cx="65" cy="65" r="62" stroke="rgba(0,242,254,0.10)" strokeWidth="1" fill="none"/>
+            <circle cx="65" cy="65" r="46" stroke="rgba(0,242,254,0.07)" strokeWidth="1" fill="none"/>
+            <circle cx="65" cy="65" r="30" stroke="rgba(0,242,254,0.07)" strokeWidth="1" fill="none"/>
+            <circle cx="65" cy="65" r="14" stroke="rgba(0,242,254,0.10)" strokeWidth="1" fill="none"/>
+            <line x1="65" y1="3" x2="65" y2="127" stroke="rgba(0,242,254,0.06)" strokeWidth="0.5"/>
+            <line x1="3" y1="65" x2="127" y2="65" stroke="rgba(0,242,254,0.06)" strokeWidth="0.5"/>
+            <line x1="21" y1="21" x2="109" y2="109" stroke="rgba(0,242,254,0.04)" strokeWidth="0.5"/>
+            <line x1="109" y1="21" x2="21" y2="109" stroke="rgba(0,242,254,0.04)" strokeWidth="0.5"/>
+            {/* Tick marks */}
+            {[0,45,90,135,180,225,270,315].map(deg => {
+              const rad = (deg * Math.PI) / 180;
+              const x1 = 65 + 60 * Math.cos(rad); const y1 = 65 + 60 * Math.sin(rad);
+              const x2 = 65 + 55 * Math.cos(rad); const y2 = 65 + 55 * Math.sin(rad);
+              return <line key={deg} x1={x1} y1={y1} x2={x2} y2={y2} stroke="rgba(0,242,254,0.15)" strokeWidth="1"/>;
+            })}
+          </svg>
+          {/* Sweep arm */}
+          <div style={{ position: 'absolute', top: '50%', left: '50%', width: '46%', height: '1.5px', transformOrigin: 'left center', marginTop: '-0.75px', marginLeft: 0, background: 'linear-gradient(90deg, rgba(0,242,254,0.8), rgba(0,242,254,0))', animation: 'radarRotate 2.4s linear infinite' }}/>
+          {/* Sweep glow arc — fake with a second arm at offset */}
+          <div style={{ position: 'absolute', top: '50%', left: '50%', width: '44%', height: '1px', transformOrigin: 'left center', marginTop: '-0.5px', marginLeft: 0, background: 'linear-gradient(90deg, rgba(0,242,254,0.35), rgba(0,242,254,0))', animation: 'radarRotate 2.4s linear infinite', animationDelay: '-0.1s' }}/>
+          {/* Center dot */}
+          <div style={{ position: 'absolute', top: '50%', left: '50%', width: 8, height: 8, borderRadius: '50%', background: '#00f2fe', transform: 'translate(-50%,-50%)', boxShadow: '0 0 12px #00f2fe, 0 0 24px rgba(0,242,254,0.5)' }}/>
+          {/* Blip dots */}
+          <div style={{ position: 'absolute', top: '30%', left: '68%', width: 4, height: 4, borderRadius: '50%', background: '#ef4444', boxShadow: '0 0 6px #ef4444', animation: 'blipPulse 2s ease-in-out infinite' }}/>
+          <div style={{ position: 'absolute', top: '62%', left: '28%', width: 3, height: 3, borderRadius: '50%', background: '#f5a623', boxShadow: '0 0 5px #f5a623', animation: 'blipPulse 2s ease-in-out 0.8s infinite' }}/>
+          <div style={{ position: 'absolute', top: '72%', left: '72%', width: 3, height: 3, borderRadius: '50%', background: '#ef4444', boxShadow: '0 0 5px #ef4444', animation: 'blipPulse 2s ease-in-out 1.4s infinite' }}/>
+        </div>
+        <div style={{ fontSize: '1.45rem', fontWeight: 900, color: '#00f2fe', letterSpacing: '0.08em', fontFamily: "'JetBrains Mono', monospace", textShadow: '0 0 20px rgba(0,242,254,0.4)' }}>BLEED, DON'T BREAK</div>
+        <div style={{ fontSize: '0.58rem', color: 'rgba(0,242,254,0.4)', letterSpacing: '0.28em', fontFamily: "'JetBrains Mono', monospace" }}>INITIALIZING INTELLIGENCE SYSTEMS</div>
+        <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
           {[0,1,2,3].map(i => (
-            <div key={i} style={{ width: 8, height: 8, borderRadius: '50%', background: '#00f2fe', animation: `pulse 1.2s ease-in-out ${i * 0.2}s infinite`, opacity: 0.7 }} />
+            <div key={i} style={{ width: 6, height: 6, borderRadius: '50%', background: '#00f2fe', animation: `pulse 1.2s ease-in-out ${i * 0.22}s infinite`, opacity: 0.7 }} />
           ))}
         </div>
-        <div style={{ fontSize: '0.68rem', color: 'rgba(255,255,255,0.35)', letterSpacing: '0.15em' }}>LOADING INTELLIGENCE DATA</div>
-        <style>{`@keyframes pulse { 0%,80%,100%{transform:scale(0.6);opacity:0.3} 40%{transform:scale(1);opacity:1} }`}</style>
+        <div style={{ fontSize: '0.58rem', color: 'rgba(255,255,255,0.18)', letterSpacing: '0.15em', marginTop: -8 }}>CONNECTING TO GLOBAL THREAT DATABASE</div>
+        <style>{`
+          @keyframes pulse { 0%,80%,100%{transform:scale(0.6);opacity:0.3} 40%{transform:scale(1);opacity:1} }
+          @keyframes radarRotate { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+          @keyframes blipPulse { 0%,100%{opacity:0.3;transform:scale(0.7)} 50%{opacity:1;transform:scale(1.3)} }
+        `}</style>
       </div>
     );
   }
@@ -789,9 +825,35 @@ function AppInner() {
       />
 
       {/* ─── Title ─── */}
-      <div style={{ position: 'absolute', top: 20, left: '50%', transform: 'translateX(-50%)', zIndex: 10, pointerEvents: 'none', textAlign: 'center', whiteSpace: 'nowrap' }}>
-        <h1 className="glow-text top-title" style={{ margin: 0, fontSize: '1.65rem', letterSpacing: '-0.02em' }}>BLEED, DON'T BREAK</h1>
-        <p className="label-text" style={{ marginTop: 5, letterSpacing: '0.18em', fontSize: '0.62rem' }}>PARALYSIS OVER POWER · WOUND VULNERABILITY INDEX</p>
+      <div style={{ position: 'absolute', top: 18, left: '50%', transform: 'translateX(-50%)', zIndex: 10, pointerEvents: 'none', textAlign: 'center', whiteSpace: 'nowrap' }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 14 }}>
+          {/* Left crosshair emblem */}
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" style={{ opacity: 0.7 }}>
+            <circle cx="13" cy="13" r="12" stroke="rgba(0,242,254,0.45)" strokeWidth="0.8"/>
+            <circle cx="13" cy="13" r="7" stroke="rgba(0,242,254,0.3)" strokeWidth="0.8"/>
+            <line x1="13" y1="1" x2="13" y2="5.5" stroke="rgba(0,242,254,0.6)" strokeWidth="1.2"/>
+            <line x1="13" y1="20.5" x2="13" y2="25" stroke="rgba(0,242,254,0.6)" strokeWidth="1.2"/>
+            <line x1="1" y1="13" x2="5.5" y2="13" stroke="rgba(0,242,254,0.6)" strokeWidth="1.2"/>
+            <line x1="20.5" y1="13" x2="25" y2="13" stroke="rgba(0,242,254,0.6)" strokeWidth="1.2"/>
+            <circle cx="13" cy="13" r="1.8" fill="#00f2fe" opacity="0.85"/>
+          </svg>
+          <h1 className="glow-text top-title" style={{ margin: 0, fontSize: '1.65rem', letterSpacing: '-0.01em' }}>BLEED, DON'T BREAK</h1>
+          {/* Right crosshair emblem */}
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" style={{ opacity: 0.7 }}>
+            <circle cx="13" cy="13" r="12" stroke="rgba(0,242,254,0.45)" strokeWidth="0.8"/>
+            <circle cx="13" cy="13" r="7" stroke="rgba(0,242,254,0.3)" strokeWidth="0.8"/>
+            <line x1="13" y1="1" x2="13" y2="5.5" stroke="rgba(0,242,254,0.6)" strokeWidth="1.2"/>
+            <line x1="13" y1="20.5" x2="13" y2="25" stroke="rgba(0,242,254,0.6)" strokeWidth="1.2"/>
+            <line x1="1" y1="13" x2="5.5" y2="13" stroke="rgba(0,242,254,0.6)" strokeWidth="1.2"/>
+            <line x1="20.5" y1="13" x2="25" y2="13" stroke="rgba(0,242,254,0.6)" strokeWidth="1.2"/>
+            <circle cx="13" cy="13" r="1.8" fill="#00f2fe" opacity="0.85"/>
+          </svg>
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10, marginTop: 5 }}>
+          <div style={{ width: 20, height: 1, background: 'linear-gradient(90deg, transparent, rgba(0,242,254,0.35))' }}/>
+          <p className="label-text" style={{ margin: 0, letterSpacing: '0.2em', fontSize: '0.59rem', color: 'rgba(0,242,254,0.45)' }}>PARALYSIS OVER POWER · WOUND VULNERABILITY INDEX</p>
+          <div style={{ width: 20, height: 1, background: 'linear-gradient(270deg, transparent, rgba(0,242,254,0.35))' }}/>
+        </div>
       </div>
 
       {/* ─── Welcome / Onboarding Overlay ─── */}
@@ -899,7 +961,15 @@ function AppInner() {
       {/* ─── Left Toolbar ─── */}
       <div className={`glass-panel left-toolbar${mobilePanelsOpen ? ' mobile-visible' : ''}`}>
         <div className="left-toolbar-header">
-          <Crosshair size={13} style={{ color: 'var(--accent-cyan)', opacity: 0.7 }} />
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" style={{ flexShrink: 0 }}>
+            <circle cx="6.5" cy="6.5" r="6" stroke="rgba(0,242,254,0.5)" strokeWidth="0.8"/>
+            <circle cx="6.5" cy="6.5" r="3" stroke="rgba(0,242,254,0.35)" strokeWidth="0.8"/>
+            <line x1="6.5" y1="0.5" x2="6.5" y2="2.5" stroke="rgba(0,242,254,0.7)" strokeWidth="0.9"/>
+            <line x1="6.5" y1="10.5" x2="6.5" y2="12.5" stroke="rgba(0,242,254,0.7)" strokeWidth="0.9"/>
+            <line x1="0.5" y1="6.5" x2="2.5" y2="6.5" stroke="rgba(0,242,254,0.7)" strokeWidth="0.9"/>
+            <line x1="10.5" y1="6.5" x2="12.5" y2="6.5" stroke="rgba(0,242,254,0.7)" strokeWidth="0.9"/>
+            <circle cx="6.5" cy="6.5" r="1" fill="#00f2fe"/>
+          </svg>
           <span>ANALYSIS</span>
         </div>
         <div className="left-toolbar-btns">
@@ -2110,7 +2180,7 @@ function AppInner() {
             <div className="label-text" style={{ color: 'rgba(255,255,255,0.25)' }}>0 → 100</div>
           </div>
           <div style={{ display: 'flex', height: 8, borderRadius: 4, overflow: 'hidden', gap: 1 }}>
-            {['#0ea5e9','#22d3ee','#f5a623','#ef4444','#b91c1c','#7f1d1d'].map(c => (
+            {['#1e5422','#4e5200','#7d4200','#8c2000','#850000','#4d0000'].map(c => (
               <div key={c} style={{ flex: 1, background: c }} />
             ))}
           </div>
@@ -2119,6 +2189,48 @@ function AppInner() {
           </div>
         </div>
       </div>
+
+      {/* ─── HUD Status Bar ─── */}
+      {!selectedCountry && !selectedInfra && !selectedRegion && !selectedWarRegion && (
+        <div style={{
+          position: 'fixed', bottom: 0, left: 0, right: 0, height: 28, zIndex: 15,
+          background: 'rgba(3,5,8,0.88)', backdropFilter: 'blur(10px)',
+          borderTop: '1px solid rgba(0,242,254,0.08)',
+          display: 'flex', alignItems: 'center', gap: 0, pointerEvents: 'none',
+        }}>
+          {/* Left block */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: 16, paddingLeft: 16, flex: 1 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
+              <div style={{ width: 5, height: 5, borderRadius: '50%', background: '#34d399', boxShadow: '0 0 6px #34d399', animation: 'hudBlink 2s ease-in-out infinite' }}/>
+              <span style={{ fontSize: '0.58rem', color: 'rgba(52,211,153,0.7)', letterSpacing: '0.12em', fontFamily: "'JetBrains Mono', monospace" }}>SYS ONLINE</span>
+            </div>
+            <div style={{ width: 1, height: 14, background: 'rgba(255,255,255,0.07)' }}/>
+            <span style={{ fontSize: '0.58rem', color: 'rgba(255,255,255,0.22)', letterSpacing: '0.1em', fontFamily: "'JetBrains Mono', monospace' " }}>110 COUNTRIES MONITORED</span>
+            <div style={{ width: 1, height: 14, background: 'rgba(255,255,255,0.07)' }}/>
+            <span style={{ fontSize: '0.58rem', color: 'rgba(255,255,255,0.22)', letterSpacing: '0.1em', fontFamily: "'JetBrains Mono', monospace' " }}>44 ACTIVE THREAT SIGNATURES</span>
+          </div>
+          {/* Center */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+              <circle cx="5" cy="5" r="4.5" stroke="rgba(0,242,254,0.3)" strokeWidth="0.6"/>
+              <line x1="5" y1="0.5" x2="5" y2="9.5" stroke="rgba(0,242,254,0.2)" strokeWidth="0.5"/>
+              <line x1="0.5" y1="5" x2="9.5" y2="5" stroke="rgba(0,242,254,0.2)" strokeWidth="0.5"/>
+              <circle cx="5" cy="5" r="1" fill="rgba(0,242,254,0.5)"/>
+            </svg>
+            <span style={{ fontSize: '0.58rem', color: 'rgba(0,242,254,0.3)', letterSpacing: '0.18em', fontFamily: "'JetBrains Mono', monospace" }}>GLOBAL WARFARE ANALYSIS · HVEN-R v2.1</span>
+          </div>
+          {/* Right block */}
+          <div style={{ flex: 1, display: 'flex', justifyContent: 'flex-end', alignItems: 'center', gap: 16, paddingRight: 16 }}>
+            {warPredictionData && (
+              <>
+                <span style={{ fontSize: '0.58rem', color: 'rgba(255,255,255,0.22)', letterSpacing: '0.1em', fontFamily: "'JetBrains Mono', monospace' " }}>GLOBAL RISK INDEX: <span style={{ color: '#ff4b4b', fontWeight: 700 }}>{warPredictionData.global_war_risk_index}</span></span>
+                <div style={{ width: 1, height: 14, background: 'rgba(255,255,255,0.07)' }}/>
+              </>
+            )}
+            <span style={{ fontSize: '0.58rem', color: 'rgba(255,255,255,0.18)', letterSpacing: '0.1em', fontFamily: "'JetBrains Mono', monospace' " }}>CLICK COUNTRY TO ANALYSE</span>
+          </div>
+        </div>
+      )}
 
       {/* ─── Mobile backdrop (tap to close panels) ─── */}
       {mobilePanelsOpen && (
