@@ -790,7 +790,7 @@ function AppInner() {
 
       {/* ─── Title ─── */}
       <div style={{ position: 'absolute', top: 20, left: '50%', transform: 'translateX(-50%)', zIndex: 10, pointerEvents: 'none', textAlign: 'center', whiteSpace: 'nowrap' }}>
-        <h1 className="glow-text" style={{ margin: 0, fontSize: '1.65rem', letterSpacing: '-0.02em' }}>BLEED, DON'T BREAK</h1>
+        <h1 className="glow-text top-title" style={{ margin: 0, fontSize: '1.65rem', letterSpacing: '-0.02em' }}>BLEED, DON'T BREAK</h1>
         <p className="label-text" style={{ marginTop: 5, letterSpacing: '0.18em', fontSize: '0.62rem' }}>PARALYSIS OVER POWER · WOUND VULNERABILITY INDEX</p>
       </div>
 
@@ -1947,27 +1947,114 @@ function AppInner() {
                 </>
               );
             })()}
-            {selectedInfra.source !== 'border-disputes' && selectedInfra.source !== 'critical-minerals' && (
+            {selectedInfra.source === 'brain-predictions' && (() => {
+              const p = selectedInfra.properties;
+              const riskColor = p.risk === 'CRITICAL' ? '#ef4444' : p.risk === 'HIGH' ? '#f97316' : p.risk === 'ELEVATED' ? '#f5a623' : '#22d3ee';
+              const typeColor = p.type === 'NUCLEAR' ? '#fbbf24' : p.type === 'CYBER' ? '#a78bfa' : p.type === 'MARITIME' ? '#38bdf8' : p.type === 'ECONOMIC' ? '#34d399' : '#f97316';
+              const actors = typeof p.actors === 'string' ? (() => { try { return JSON.parse(p.actors); } catch { return {}; } })() : (p.actors || {});
+              const indicators: string[] = typeof p.warning_indicators === 'string' ? (() => { try { return JSON.parse(p.warning_indicators); } catch { return [p.warning_indicators]; } })() : (p.warning_indicators || []);
+              return (
+                <>
+                  {/* Risk + Type badges */}
+                  <div style={{ display: 'flex', gap: 6, marginBottom: 14, flexWrap: 'wrap' }}>
+                    <span style={{ background: `${riskColor}18`, border: `1px solid ${riskColor}50`, borderRadius: 5, padding: '3px 10px', fontSize: '0.68rem', fontWeight: 800, color: riskColor, letterSpacing: '0.08em' }}>{p.risk}</span>
+                    <span style={{ background: `${typeColor}14`, border: `1px solid ${typeColor}40`, borderRadius: 5, padding: '3px 10px', fontSize: '0.68rem', fontWeight: 700, color: typeColor, letterSpacing: '0.06em' }}>{p.type}</span>
+                    {p.confidence && <span style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 5, padding: '3px 10px', fontSize: '0.68rem', color: 'rgba(255,255,255,0.5)' }}>{p.confidence} CONF</span>}
+                    {p.timeframe && <span style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 5, padding: '3px 10px', fontSize: '0.65rem', color: 'rgba(255,255,255,0.4)' }}>{p.timeframe}</span>}
+                  </div>
+
+                  {/* Actors */}
+                  {(actors.primary || actors.secondary) && (
+                    <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 8, padding: '10px 12px', marginBottom: 12 }}>
+                      <div style={{ fontSize: '0.6rem', color: 'rgba(255,255,255,0.35)', letterSpacing: '0.12em', marginBottom: 6 }}>ACTORS</div>
+                      {actors.primary && <div style={{ fontSize: '0.78rem', marginBottom: 3 }}><span style={{ color: 'rgba(255,255,255,0.38)', fontSize: '0.62rem' }}>PRIMARY  </span><span style={{ color: '#f97316', fontWeight: 600 }}>{actors.primary}</span></div>}
+                      {actors.secondary && <div style={{ fontSize: '0.78rem', marginBottom: 3 }}><span style={{ color: 'rgba(255,255,255,0.38)', fontSize: '0.62rem' }}>SECONDARY  </span><span style={{ color: 'rgba(255,255,255,0.7)' }}>{actors.secondary}</span></div>}
+                      {actors.proxy && <div style={{ fontSize: '0.78rem' }}><span style={{ color: 'rgba(255,255,255,0.38)', fontSize: '0.62rem' }}>PROXY  </span><span style={{ color: 'rgba(255,255,255,0.5)', fontStyle: 'italic' }}>{actors.proxy}</span></div>}
+                    </div>
+                  )}
+
+                  {/* Trigger */}
+                  {p.trigger && (
+                    <div style={{ marginBottom: 10 }}>
+                      <div style={{ fontSize: '0.6rem', color: 'rgba(255,255,255,0.35)', letterSpacing: '0.12em', marginBottom: 4 }}>TRIGGER SCENARIO</div>
+                      <p style={{ margin: 0, fontSize: '0.78rem', color: 'rgba(255,255,255,0.72)', lineHeight: 1.55 }}>{p.trigger}</p>
+                    </div>
+                  )}
+
+                  {/* Impact */}
+                  {p.impact && (
+                    <div style={{ background: `${riskColor}0c`, border: `1px solid ${riskColor}25`, borderRadius: 7, padding: '8px 10px', marginBottom: 10 }}>
+                      <div style={{ fontSize: '0.6rem', color: riskColor, letterSpacing: '0.12em', marginBottom: 3, opacity: 0.7 }}>IMMEDIATE IMPACT</div>
+                      <p style={{ margin: 0, fontSize: '0.78rem', color: 'rgba(255,255,255,0.75)', lineHeight: 1.55 }}>{p.impact}</p>
+                    </div>
+                  )}
+
+                  {/* Cascade */}
+                  {p.cascade && (
+                    <div style={{ marginBottom: 10 }}>
+                      <div style={{ fontSize: '0.6rem', color: 'rgba(255,255,255,0.35)', letterSpacing: '0.12em', marginBottom: 4 }}>CASCADE EFFECTS</div>
+                      <p style={{ margin: 0, fontSize: '0.75rem', color: 'rgba(255,255,255,0.58)', lineHeight: 1.5 }}>{p.cascade}</p>
+                    </div>
+                  )}
+
+                  {/* Warning indicators */}
+                  {indicators.length > 0 && (
+                    <div style={{ marginBottom: 10 }}>
+                      <div style={{ fontSize: '0.6rem', color: 'rgba(255,255,255,0.35)', letterSpacing: '0.12em', marginBottom: 6 }}>WATCH INDICATORS</div>
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+                        {indicators.map((ind: string, i: number) => (
+                          <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 6, fontSize: '0.72rem', color: 'rgba(255,255,255,0.6)' }}>
+                            <span style={{ color: riskColor, flexShrink: 0, marginTop: 2 }}>▸</span>
+                            <span>{ind}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Doctrine */}
+                  {p.doctrine && (
+                    <div style={{ background: 'rgba(167,139,250,0.06)', border: '1px solid rgba(167,139,250,0.18)', borderRadius: 7, padding: '8px 10px', marginBottom: 10 }}>
+                      <div style={{ fontSize: '0.6rem', color: '#a78bfa', letterSpacing: '0.12em', marginBottom: 3, opacity: 0.8 }}>DOCTRINE</div>
+                      <p style={{ margin: 0, fontSize: '0.75rem', color: 'rgba(200,180,255,0.8)', lineHeight: 1.5, fontStyle: 'italic' }}>{p.doctrine}</p>
+                    </div>
+                  )}
+
+                  {/* Wounding strategy */}
+                  {p.wounding_strategy && (
+                    <div>
+                      <div style={{ fontSize: '0.6rem', color: '#ef4444', letterSpacing: '0.12em', marginBottom: 4, display: 'flex', alignItems: 'center', gap: 4 }}><AlertTriangle size={10} /> STRATEGIC ANALYSIS</div>
+                      <p style={{ margin: 0, fontSize: '0.76rem', color: 'rgba(255,255,255,0.65)', lineHeight: 1.6 }}>{p.wounding_strategy}</p>
+                    </div>
+                  )}
+                </>
+              );
+            })()}
+
+            {selectedInfra.source !== 'border-disputes' && selectedInfra.source !== 'critical-minerals' && selectedInfra.source !== 'brain-predictions' && (
               <>
-                {selectedInfra.properties.wounding_strategy ? (
+                {selectedInfra.properties.wounding_strategy && (
                   <>
                     <h4 style={{ margin: '0 0 10px 0', color: 'var(--accent-red)', display: 'flex', alignItems: 'center', gap: 6 }}>
                       <AlertTriangle size={14} /> Wounding Strategy
                     </h4>
-                    <p>{selectedInfra.properties.wounding_strategy}</p>
+                    <p style={{ fontSize: '0.8rem', lineHeight: 1.6, color: 'rgba(255,255,255,0.7)', margin: 0 }}>{selectedInfra.properties.wounding_strategy}</p>
                   </>
-                ) : (
-                  <p>Detailed strategic intelligence is currently classified or syncing.</p>
                 )}
-                <div style={{ marginTop: 24 }}>
-                  <h4 style={{ margin: '0 0 10px 0', color: 'var(--text-primary)' }}>Node Metadata</h4>
-                  <ul style={{ paddingLeft: 16, margin: 0, color: 'var(--text-dim)' }}>
+                {Object.entries(selectedInfra.properties).filter(([k]) => !['name','wounding_strategy','color','icon'].includes(k)).length > 0 && (
+                  <div style={{ marginTop: 16 }}>
                     {Object.entries(selectedInfra.properties).map(([k, v]) => {
-                      if (k === 'name' || k === 'wounding_strategy') return null;
-                      return <li key={k} style={{ marginBottom: 6 }}><strong style={{ color: 'var(--text-secondary)', textTransform: 'capitalize' }}>{k}:</strong> {v as any}</li>;
+                      if (['name','wounding_strategy','color','icon'].includes(k)) return null;
+                      const val = typeof v === 'object' ? JSON.stringify(v) : String(v);
+                      return (
+                        <div key={k} style={{ marginBottom: 8 }}>
+                          <div style={{ fontSize: '0.58rem', color: 'rgba(255,255,255,0.3)', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: 2 }}>{k.replace(/_/g,' ')}</div>
+                          <div style={{ fontSize: '0.76rem', color: 'rgba(255,255,255,0.65)', lineHeight: 1.5 }}>{val}</div>
+                        </div>
+                      );
                     })}
-                  </ul>
-                </div>
+                  </div>
+                )}
               </>
             )}
           </div>
@@ -2033,7 +2120,16 @@ function AppInner() {
         </div>
       </div>
 
-      {/* ─── Mobile FAB (three dots) ─── */}
+      {/* ─── Mobile backdrop (tap to close panels) ─── */}
+      {mobilePanelsOpen && (
+        <div
+          onClick={() => setMobilePanelsOpen(false)}
+          style={{ position: 'fixed', inset: 0, zIndex: 54, background: 'rgba(0,0,0,0.45)', backdropFilter: 'blur(2px)', display: 'none' }}
+          className="mobile-backdrop"
+        />
+      )}
+
+      {/* ─── Mobile FAB (three dots / X) ─── */}
       <button
         className="mobile-fab"
         onClick={() => setMobilePanelsOpen(v => !v)}
