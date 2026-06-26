@@ -710,3 +710,112 @@ input[type="range"]::-moz-range-thumb {
   background: rgba(52,211,153,0.05);
 }
 
+/* ─── Mobile FAB ─── */
+.mobile-fab {
+  display: none;
+  position: fixed;
+  bottom: 24px;
+  right: 20px;
+  z-index: 50;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(10,14,28,0.92);
+  border: 1px solid rgba(0,242,254,0.35);
+  color: rgba(0,242,254,0.9);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5), 0 0 12px rgba(0,242,254,0.15);
+  backdrop-filter: blur(12px);
+  transition: all 0.2s;
+}
+.mobile-fab:hover {
+  background: rgba(0,242,254,0.12);
+  border-color: rgba(0,242,254,0.6);
+  transform: scale(1.06);
+}
+
+/* ─── Mobile Responsive ─── */
+@media (max-width: 768px) {
+  .mobile-fab {
+    display: flex;
+  }
+
+  /* Hide panels by default on mobile */
+  .left-toolbar,
+  .right-panel {
+    transform: translateX(-120%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.28s cubic-bezier(0.16,1,0.3,1), opacity 0.22s;
+  }
+
+  .right-panel {
+    transform: translateX(120%);
+  }
+
+  /* Show when mobile-visible class added */
+  .left-toolbar.mobile-visible,
+  .right-panel.mobile-visible {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Compact sizing on mobile */
+  .left-toolbar {
+    top: 16px;
+    left: 12px;
+    width: 170px;
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+
+  .right-panel {
+    top: 16px;
+    right: 12px;
+    width: 195px;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  /* Modals full-screen on mobile */
+  .doctrine-modal {
+    width: 96vw !important;
+    max-width: 96vw !important;
+    height: 90vh !important;
+    border-radius: 14px !important;
+  }
+
+  /* Country detail panel at bottom */
+  .glass-panel.slide-in-bottom {
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    border-radius: 16px 16px 0 0;
+    height: 52vh !important;
+    flex-direction: column !important;
+  }
+
+  /* Pipeline and dossier sidebars */
+  .pipeline-sidebar,
+  .dossier-panel {
+    left: 0 !important;
+    right: 0;
+    width: 100% !important;
+    top: auto !important;
+    bottom: 0;
+    border-radius: 16px 16px 0 0;
+    max-height: 55vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .left-toolbar {
+    width: 155px;
+  }
+  .right-panel {
+    width: 175px;
+  }
+}

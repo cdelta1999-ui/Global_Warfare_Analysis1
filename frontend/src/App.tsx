@@ -205,16 +205,20 @@ const WVIRing = ({ score, color }: { score: number; color: string }) => {
 
 const brainPredictionGlowLayer: Omit<CircleLayer, 'source'> = {
   id: 'brain-predictions-glow', type: 'circle',
-  paint: { 'circle-radius': 28, 'circle-color': '#f97316', 'circle-opacity': 0.10, 'circle-blur': 1.8, 'circle-stroke-width': 0, 'circle-pitch-alignment': 'map' }
+  paint: {
+    'circle-radius': 30,
+    'circle-color': ['match', ['get', 'risk'], 'CRITICAL', '#ef4444', 'HIGH', '#f97316', 'ELEVATED', '#f5a623', '#22d3ee'],
+    'circle-opacity': 0.12, 'circle-blur': 2.0, 'circle-stroke-width': 0, 'circle-pitch-alignment': 'map'
+  }
 };
 const brainPredictionLayer: Omit<CircleLayer, 'source'> = {
   id: 'brain-predictions-layer', type: 'circle',
   paint: {
-    'circle-radius': 11,
-    'circle-color': '#f97316',
-    'circle-opacity': 0.9,
+    'circle-radius': ['match', ['get', 'risk'], 'CRITICAL', 13, 'HIGH', 11, 9],
+    'circle-color': ['match', ['get', 'risk'], 'CRITICAL', '#ef4444', 'HIGH', '#f97316', 'ELEVATED', '#f5a623', '#22d3ee'],
+    'circle-opacity': 0.92,
     'circle-stroke-width': 2.5,
-    'circle-stroke-color': 'rgba(251,191,36,0.7)',
+    'circle-stroke-color': ['match', ['get', 'risk'], 'CRITICAL', 'rgba(255,100,100,0.8)', 'rgba(251,191,36,0.7)'],
     'circle-blur': 0.1,
     'circle-pitch-alignment': 'map',
   }
@@ -485,6 +489,7 @@ function AppInner() {
   const [showWarRegions, setShowWarRegions] = useState(false);
   const [selectedWarRegion, setSelectedWarRegion] = useState<any>(null);
   const [showWelcome, setShowWelcome] = useState(true);
+  const [mobilePanelsOpen, setMobilePanelsOpen] = useState(false);
 
   // Lazy-load timeline: show last 10 years first, then full history
   useEffect(() => {
@@ -892,7 +897,7 @@ function AppInner() {
       )}
 
       {/* ─── Left Toolbar ─── */}
-      <div className="glass-panel left-toolbar">
+      <div className={`glass-panel left-toolbar${mobilePanelsOpen ? ' mobile-visible' : ''}`}>
         <div className="left-toolbar-header">
           <Crosshair size={13} style={{ color: 'var(--accent-cyan)', opacity: 0.7 }} />
           <span>ANALYSIS</span>
@@ -1970,7 +1975,7 @@ function AppInner() {
       )}
 
       {/* ─── Right Panel: Live Status + Overlays + Legend ─── */}
-      <div className="glass-panel right-panel">
+      <div className={`glass-panel right-panel${mobilePanelsOpen ? ' mobile-visible' : ''}`}>
         {/* Live DB header */}
         <div className="right-panel-header" onClick={() => setShowPipeline(!showPipeline)} style={{ cursor: 'pointer' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
@@ -2027,6 +2032,15 @@ function AppInner() {
           </div>
         </div>
       </div>
+
+      {/* ─── Mobile FAB (three dots) ─── */}
+      <button
+        className="mobile-fab"
+        onClick={() => setMobilePanelsOpen(v => !v)}
+        aria-label={mobilePanelsOpen ? 'Close panels' : 'Open panels'}
+      >
+        {mobilePanelsOpen ? <X size={18} /> : <span style={{ fontSize: '1.3rem', lineHeight: 1 }}>⋯</span>}
+      </button>
 
       {/* ─── Hover Tooltip ─── */}
       {hoverInfo && (
