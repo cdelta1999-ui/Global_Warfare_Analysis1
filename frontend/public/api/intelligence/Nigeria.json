@@ -1,1 +1,91 @@
-{"country": "Nigeria", "pillars": {"cyber": {"overall_score": 49, "sources": [{"name": "CFR Cyber Tracker", "metric": "Incidents (YTD)", "raw_value": 73, "unit": "events", "score": 49}, {"name": "EuRepoC", "metric": "Active Campaigns", "raw_value": 2, "unit": "campaigns", "score": 49}, {"name": "Carnegie Spyware", "metric": "Proliferation", "raw_value": 4.9, "unit": "index", "score": 49}]}, "economic": {"overall_score": 56, "sources": [{"name": "UN Comtrade", "metric": "Critical Import Dep.", "raw_value": "$56B", "unit": "USD", "score": 56}, {"name": "IMF DOTS", "metric": "Trade Imbalance", "raw_value": "-$67B", "unit": "USD", "score": 56}, {"name": "World Bank", "metric": "Tariff Barrier", "raw_value": "11.2%", "unit": "rate", "score": 56}]}, "kinetic": {"overall_score": 22, "sources": [{"name": "ACLED", "metric": "Instability Velocity", "raw_value": 0.0, "unit": "std_dev", "score": 0}, {"name": "SIPRI", "metric": "EMA Fatalities", "raw_value": 1107, "unit": "deaths/yr", "score": 22}, {"name": "AIS Marine", "metric": "Choke Point Flow", "raw_value": 107, "unit": "vessels/day", "score": 22}]}}}
+{
+  "country": "Nigeria",
+  "computed_wvi": 64,
+  "pillars": {
+    "cyber": {
+      "overall_score": 45,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 50,
+          "metric": "54 events (YTD)",
+          "raw_value": 54,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 35,
+          "metric": "2 campaigns",
+          "raw_value": 2,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 40,
+          "metric": "Active tracking",
+          "raw_value": 40,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 72,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 72,
+          "metric": "Dependency: 57%",
+          "raw_value": 57,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 64,
+          "metric": "Sanctions Exposure: 64/100",
+          "raw_value": 64,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 60,
+          "metric": "Trade Concentration: 60/100",
+          "raw_value": 60,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 80,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 80,
+          "metric": "640 events/yr",
+          "raw_value": 640,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 75,
+          "metric": "Fatalities: 9600/yr",
+          "raw_value": 9600,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 83,
+          "metric": "Military spend: 24.0% GDP",
+          "raw_value": 24.0,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 47,
+      "primary_drivers": [
+        "Boko Haram/ISWAP Insurgency",
+        "Fulani-Mossi Communal Violence"
+      ]
+    }
+  }
+}

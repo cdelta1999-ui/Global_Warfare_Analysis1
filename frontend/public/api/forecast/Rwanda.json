@@ -1,1 +1,99 @@
-{"forecast": {"predicted_attack_type": "Internal armed conflict", "predictability_score": "75.69999694824219%", "danger_risk_status": "STABLE: Baseline Activity", "forecasted_event_volume": 2}, "timeline": [{"Year": 1963, "Intra-State (Civil War)": 1000.0}, {"Year": 1990, "One-Sided Violence": 1518.0, "Internationalized internal armed conflict": 1000.0}, {"Year": 1991, "One-Sided Violence": 932.0, "Internal armed conflict": 100.0}, {"Year": 1992, "One-Sided Violence": 557.0, "Internal armed conflict": 100.0}, {"Year": 1993, "One-Sided Violence": 607.0, "Internal armed conflict": 100.0}, {"Year": 1994, "Intra-State (Civil War)": -18.0, "Internal armed conflict": 1000.0}, {"Year": 1996, "Internal armed conflict": 100.0}, {"Year": 1997, "Intra-State (Civil War)": 3300.0, "One-Sided Violence": 3426.0, "Internal armed conflict": 1000.0}, {"Year": 1998, "Internal armed conflict": 1000.0}, {"Year": 1999, "Internal armed conflict": 100.0}, {"Year": 2000, "Internal armed conflict": 100.0}, {"Year": 2001, "Intra-State (Civil War)": 1791.0, "Internal armed conflict": 1000.0}, {"Year": 2002, "Internal armed conflict": 100.0}, {"Year": 2009, "Internationalized internal armed conflict": 1000.0}, {"Year": 2010, "Internationalized internal armed conflict": 100.0}, {"Year": 2011, "Internationalized internal armed conflict": 100.0}, {"Year": 2012, "Internationalized internal armed conflict": 100.0}, {"Year": 2016, "One-Sided Violence": 27.0, "Internationalized internal armed conflict": 100.0}, {"Year": 2019, "Internationalized internal armed conflict": 100.0}, {"Year": 2020, "Internationalized internal armed conflict": 100.0}, {"Year": 2022, "Internal armed conflict": 100.0}, {"Year": 2023, "Internal armed conflict": 100.0}, {"Year": 2024, "Internal armed conflict": 100.0}, {"Year": 2025, "Internal armed conflict": 100.0}], "raw_schemas": {"kinetic": {"normalized_score": 38, "source": "ACLED DB"}, "cyber": {"normalized_score": 89, "source": "CFR_Cyber_Tracker DB"}, "economic": {"normalized_score": 25, "source": "UN_Comtrade_IMF DB"}}, "war_type_probabilities": {"Proxy / Grey-Zone": 0.41, "Cyber / Digital": 0.17, "Naval Blockade": 0.25, "Border Skirmish": 0.13, "Full Conventional": 0.04}, "future_hotspots": [{"region": "National Digital Infrastructure", "lat": null, "lng": null, "threat": "Cyber Severance", "probability": 0.87}, {"region": "Financial Sector Gateway", "lat": null, "lng": null, "threat": "Financial Paralysis", "probability": 0.63}, {"region": "Border / Periphery Zones", "lat": null, "lng": null, "threat": "Proxy / Grey-Zone", "probability": 0.64}]}
+{
+  "country": "Rwanda",
+  "forecast": {
+    "wvi": 30,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1900,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1920,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1940,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1960,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1980,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2000,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2010,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 107,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2015,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1099,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2020,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 561,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Non-State (Cartel/Militia)": 0.2732,
+    "Border Skirmish": 0.2069,
+    "Proxy / Grey-Zone": 0.1567,
+    "Intra-State (Civil War)": 0.2444,
+    "Cyber / Digital": 0.1187
+  },
+  "future_hotspots": [],
+  "raw_schemas": {}
+}

@@ -1,1 +1,75 @@
-{"forecast": {"predicted_attack_type": "Extra-State", "predictability_score": "44.0%", "danger_risk_status": "STABLE: Baseline Activity", "forecasted_event_volume": 2}, "timeline": [{"Year": 1828, "Intra-State (Civil War)": 20000.0}, {"Year": 1835, "Intra-State (Civil War)": 42.0}, {"Year": 1888, "Extra-State": 5991.0}, {"Year": 1895, "Extra-State": 2050.0}, {"Year": 1902, "Extra-State": 3982.0}, {"Year": 1907, "Extra-State": 5100.0}, {"Year": 1916, "Inter-State (Conventional)": 7222.0}, {"Year": 1961, "Extra-State": 29000.0}, {"Year": 1964, "Extra-State": 13500.0}], "raw_schemas": {"kinetic": {"normalized_score": 5, "source": "ACLED DB"}, "cyber": {"normalized_score": 60, "source": "CFR_Cyber_Tracker DB"}, "economic": {"normalized_score": 81, "source": "UN_Comtrade_IMF DB"}}, "war_type_probabilities": {"Proxy / Grey-Zone": 0.12, "Cyber / Digital": 0.38, "Naval Blockade": 0.13, "Border Skirmish": 0.25, "Full Conventional": 0.12}, "future_hotspots": [{"region": "National Digital Infrastructure", "lat": null, "lng": null, "threat": "Cyber Severance", "probability": 0.79}, {"region": "Financial Sector Gateway", "lat": null, "lng": null, "threat": "Financial Paralysis", "probability": 0.69}, {"region": "Border / Periphery Zones", "lat": null, "lng": null, "threat": "Proxy / Grey-Zone", "probability": 0.51}]}
+{
+  "country": "Portugal",
+  "forecast": {
+    "wvi": 30,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1888,
+      "Inter-State (Conventional)": 1,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1893,
+      "Inter-State (Conventional)": 50,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1898,
+      "Inter-State (Conventional)": 2001,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1903,
+      "Inter-State (Conventional)": 100,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1961,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 4000,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1964,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 3500,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Non-State (Cartel/Militia)": 0.2732,
+    "Border Skirmish": 0.2069,
+    "Proxy / Grey-Zone": 0.1567,
+    "Intra-State (Civil War)": 0.2444,
+    "Cyber / Digital": 0.1187
+  },
+  "future_hotspots": [],
+  "raw_schemas": {}
+}

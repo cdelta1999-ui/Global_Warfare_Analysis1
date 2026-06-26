@@ -1,0 +1,1507 @@
+{
+  "data": [
+    {
+      "Country": "Afghanistan",
+      "WVI": 65,
+      "TopThreat": "Intra-State (Civil War)",
+      "Cyber": 20,
+      "Economic": 88,
+      "Kinetic": 85,
+      "Fragmentation": 52
+    },
+    {
+      "Country": "Albania",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Algeria",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Angola",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Argentina",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Armenia",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Australia",
+      "WVI": 49,
+      "TopThreat": "Cyber / Digital",
+      "Cyber": 75,
+      "Economic": 50,
+      "Kinetic": 45,
+      "Fragmentation": 9
+    },
+    {
+      "Country": "Austria",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Azerbaijan",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Bangladesh",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Belarus",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Belgium",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Belize",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Benin",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Bhutan",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Bolivia",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Bosnia and Herzegovina",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Botswana",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Brazil",
+      "WVI": 59,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 60,
+      "Economic": 68,
+      "Kinetic": 58,
+      "Fragmentation": 39
+    },
+    {
+      "Country": "Brunei",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Bulgaria",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Burkina Faso",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Burundi",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Cambodia",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Cameroon",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Canada",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Central African Republic",
+      "WVI": 62,
+      "TopThreat": "Intra-State (Civil War)",
+      "Cyber": 15,
+      "Economic": 88,
+      "Kinetic": 80,
+      "Fragmentation": 53
+    },
+    {
+      "Country": "Chad",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Chile",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "China",
+      "WVI": 71,
+      "TopThreat": "Cyber / Digital",
+      "Cyber": 88,
+      "Economic": 75,
+      "Kinetic": 78,
+      "Fragmentation": 18
+    },
+    {
+      "Country": "Colombia",
+      "WVI": 60,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 50,
+      "Economic": 65,
+      "Kinetic": 70,
+      "Fragmentation": 44
+    },
+    {
+      "Country": "Costa Rica",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Croatia",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Cuba",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Cyprus",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Czech Republic",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Democratic Republic of the Congo",
+      "WVI": 63,
+      "TopThreat": "Intra-State (Civil War)",
+      "Cyber": 20,
+      "Economic": 85,
+      "Kinetic": 82,
+      "Fragmentation": 54
+    },
+    {
+      "Country": "Denmark",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Djibouti",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Dominican Republic",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "East Timor",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Ecuador",
+      "WVI": 59,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 40,
+      "Economic": 75,
+      "Kinetic": 65,
+      "Fragmentation": 47
+    },
+    {
+      "Country": "Egypt",
+      "WVI": 57,
+      "TopThreat": "Border Skirmish",
+      "Cyber": 58,
+      "Economic": 65,
+      "Kinetic": 62,
+      "Fragmentation": 30
+    },
+    {
+      "Country": "El Salvador",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Equatorial Guinea",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Eritrea",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Estonia",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Ethiopia",
+      "WVI": 63,
+      "TopThreat": "Intra-State (Civil War)",
+      "Cyber": 35,
+      "Economic": 75,
+      "Kinetic": 82,
+      "Fragmentation": 49
+    },
+    {
+      "Country": "Fiji",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Finland",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "France",
+      "WVI": 52,
+      "TopThreat": "Cyber / Digital",
+      "Cyber": 78,
+      "Economic": 52,
+      "Kinetic": 48,
+      "Fragmentation": 18
+    },
+    {
+      "Country": "Gabon",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Ghana",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Greece",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Guatemala",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Guinea",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Guinea-Bissau",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Guyana",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Haiti",
+      "WVI": 62,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 15,
+      "Economic": 95,
+      "Kinetic": 72,
+      "Fragmentation": 55
+    },
+    {
+      "Country": "Honduras",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Hungary",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Iceland",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "India",
+      "WVI": 67,
+      "TopThreat": "Border Skirmish",
+      "Cyber": 72,
+      "Economic": 68,
+      "Kinetic": 80,
+      "Fragmentation": 33
+    },
+    {
+      "Country": "Indonesia",
+      "WVI": 53,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 55,
+      "Economic": 58,
+      "Kinetic": 55,
+      "Fragmentation": 33
+    },
+    {
+      "Country": "Iran",
+      "WVI": 69,
+      "TopThreat": "Proxy / Grey-Zone",
+      "Cyber": 75,
+      "Economic": 80,
+      "Kinetic": 72,
+      "Fragmentation": 30
+    },
+    {
+      "Country": "Iraq",
+      "WVI": 62,
+      "TopThreat": "Intra-State (Civil War)",
+      "Cyber": 30,
+      "Economic": 80,
+      "Kinetic": 78,
+      "Fragmentation": 44
+    },
+    {
+      "Country": "Ireland",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Israel",
+      "WVI": 74,
+      "TopThreat": "Border Skirmish",
+      "Cyber": 85,
+      "Economic": 65,
+      "Kinetic": 88,
+      "Fragmentation": 48
+    },
+    {
+      "Country": "Italy",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Jamaica",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Japan",
+      "WVI": 50,
+      "TopThreat": "Cyber / Digital",
+      "Cyber": 78,
+      "Economic": 52,
+      "Kinetic": 45,
+      "Fragmentation": 9
+    },
+    {
+      "Country": "Jordan",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Kazakhstan",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Kenya",
+      "WVI": 51,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 42,
+      "Economic": 60,
+      "Kinetic": 55,
+      "Fragmentation": 39
+    },
+    {
+      "Country": "Kosovo",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Kuwait",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Kyrgyzstan",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Laos",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Latvia",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Lebanon",
+      "WVI": 63,
+      "TopThreat": "Proxy / Grey-Zone",
+      "Cyber": 42,
+      "Economic": 82,
+      "Kinetic": 72,
+      "Fragmentation": 44
+    },
+    {
+      "Country": "Liberia",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Libya",
+      "WVI": 63,
+      "TopThreat": "Intra-State (Civil War)",
+      "Cyber": 28,
+      "Economic": 82,
+      "Kinetic": 80,
+      "Fragmentation": 49
+    },
+    {
+      "Country": "Lithuania",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Luxembourg",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Macedonia",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Madagascar",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Malawi",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Malaysia",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Mali",
+      "WVI": 59,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 78,
+      "Kinetic": 75,
+      "Fragmentation": 50
+    },
+    {
+      "Country": "Malta",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Mauritania",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Mexico",
+      "WVI": 64,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 55,
+      "Economic": 70,
+      "Kinetic": 72,
+      "Fragmentation": 48
+    },
+    {
+      "Country": "Moldova",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Mongolia",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Montenegro",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Morocco",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Mozambique",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Myanmar",
+      "WVI": 61,
+      "TopThreat": "Intra-State (Civil War)",
+      "Cyber": 25,
+      "Economic": 72,
+      "Kinetic": 85,
+      "Fragmentation": 54
+    },
+    {
+      "Country": "Namibia",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Nepal",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Netherlands",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "New Zealand",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Nicaragua",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Niger",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Nigeria",
+      "WVI": 64,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 45,
+      "Economic": 72,
+      "Kinetic": 80,
+      "Fragmentation": 47
+    },
+    {
+      "Country": "North Korea",
+      "WVI": 76,
+      "TopThreat": "Cyber / Digital",
+      "Cyber": 80,
+      "Economic": 90,
+      "Kinetic": 85,
+      "Fragmentation": 24
+    },
+    {
+      "Country": "Northern Cyprus",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Norway",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Oman",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Pakistan",
+      "WVI": 68,
+      "TopThreat": "Border Skirmish",
+      "Cyber": 55,
+      "Economic": 78,
+      "Kinetic": 82,
+      "Fragmentation": 42
+    },
+    {
+      "Country": "Panama",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Papua New Guinea",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Paraguay",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Peru",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Philippines",
+      "WVI": 58,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 55,
+      "Economic": 62,
+      "Kinetic": 65,
+      "Fragmentation": 39
+    },
+    {
+      "Country": "Poland",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Portugal",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Qatar",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Romania",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Russia",
+      "WVI": 79,
+      "TopThreat": "Full Conventional",
+      "Cyber": 90,
+      "Economic": 82,
+      "Kinetic": 88,
+      "Fragmentation": 36
+    },
+    {
+      "Country": "Rwanda",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Saudi Arabia",
+      "WVI": 55,
+      "TopThreat": "Proxy / Grey-Zone",
+      "Cyber": 65,
+      "Economic": 55,
+      "Kinetic": 62,
+      "Fragmentation": 27
+    },
+    {
+      "Country": "Senegal",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Serbia",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Sierra Leone",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Slovakia",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Slovenia",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Solomon Islands",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Somalia",
+      "WVI": 65,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 18,
+      "Economic": 92,
+      "Kinetic": 82,
+      "Fragmentation": 56
+    },
+    {
+      "Country": "Somaliland",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "South Africa",
+      "WVI": 52,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 48,
+      "Economic": 65,
+      "Kinetic": 50,
+      "Fragmentation": 36
+    },
+    {
+      "Country": "South Korea",
+      "WVI": 56,
+      "TopThreat": "Cyber / Digital",
+      "Cyber": 75,
+      "Economic": 55,
+      "Kinetic": 60,
+      "Fragmentation": 18
+    },
+    {
+      "Country": "South Sudan",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Spain",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Sri Lanka",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Sudan",
+      "WVI": 67,
+      "TopThreat": "Intra-State (Civil War)",
+      "Cyber": 30,
+      "Economic": 85,
+      "Kinetic": 88,
+      "Fragmentation": 52
+    },
+    {
+      "Country": "Swaziland",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Sweden",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Switzerland",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Syria",
+      "WVI": 73,
+      "TopThreat": "Intra-State (Civil War)",
+      "Cyber": 40,
+      "Economic": 90,
+      "Kinetic": 92,
+      "Fragmentation": 54
+    },
+    {
+      "Country": "Taiwan",
+      "WVI": 65,
+      "TopThreat": "Naval Blockade",
+      "Cyber": 80,
+      "Economic": 65,
+      "Kinetic": 72,
+      "Fragmentation": 23
+    },
+    {
+      "Country": "Tajikistan",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Tanzania",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Thailand",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "The Bahamas",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Timor-Leste",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Togo",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Trinidad and Tobago",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Tunisia",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Turkey",
+      "WVI": 64,
+      "TopThreat": "Border Skirmish",
+      "Cyber": 65,
+      "Economic": 70,
+      "Kinetic": 72,
+      "Fragmentation": 33
+    },
+    {
+      "Country": "Turkmenistan",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Uganda",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Ukraine",
+      "WVI": 81,
+      "TopThreat": "Full Conventional",
+      "Cyber": 70,
+      "Economic": 90,
+      "Kinetic": 95,
+      "Fragmentation": 55
+    },
+    {
+      "Country": "United Arab Emirates",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "United Kingdom",
+      "WVI": 53,
+      "TopThreat": "Cyber / Digital",
+      "Cyber": 80,
+      "Economic": 55,
+      "Kinetic": 50,
+      "Fragmentation": 13
+    },
+    {
+      "Country": "United Republic of Tanzania",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "United States of America",
+      "WVI": 56,
+      "TopThreat": "Cyber / Digital",
+      "Cyber": 85,
+      "Economic": 60,
+      "Kinetic": 50,
+      "Fragmentation": 15
+    },
+    {
+      "Country": "Uruguay",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Uzbekistan",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Vanuatu",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Venezuela",
+      "WVI": 60,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 40,
+      "Economic": 90,
+      "Kinetic": 55,
+      "Fragmentation": 40
+    },
+    {
+      "Country": "Vietnam",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "West Bank",
+      "WVI": 79,
+      "TopThreat": "Full Conventional",
+      "Cyber": 55,
+      "Economic": 92,
+      "Kinetic": 95,
+      "Fragmentation": 59
+    },
+    {
+      "Country": "Western Sahara",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Yemen",
+      "WVI": 69,
+      "TopThreat": "Intra-State (Civil War)",
+      "Cyber": 20,
+      "Economic": 95,
+      "Kinetic": 90,
+      "Fragmentation": 54
+    },
+    {
+      "Country": "Zambia",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    },
+    {
+      "Country": "Zimbabwe",
+      "WVI": 30,
+      "TopThreat": "Non-State (Cartel/Militia)",
+      "Cyber": 22,
+      "Economic": 42,
+      "Kinetic": 30,
+      "Fragmentation": 17
+    }
+  ]
+}

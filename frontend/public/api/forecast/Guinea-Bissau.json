@@ -1,1 +1,99 @@
-{"forecast": {"predicted_attack_type": "One-Sided Violence", "predictability_score": "42.79999923706055%", "danger_risk_status": "STABLE: Baseline Activity", "forecasted_event_volume": 3}, "timeline": [{"Year": 1963, "Extrasystemic armed conflict": 100.0}, {"Year": 1964, "Extrasystemic armed conflict": 100.0}, {"Year": 1965, "Extrasystemic armed conflict": 100.0}, {"Year": 1966, "Extrasystemic armed conflict": 100.0}, {"Year": 1967, "Extrasystemic armed conflict": 100.0}, {"Year": 1968, "Extrasystemic armed conflict": 100.0}, {"Year": 1969, "Extrasystemic armed conflict": 100.0}, {"Year": 1970, "Extrasystemic armed conflict": 100.0}, {"Year": 1971, "Extrasystemic armed conflict": 100.0}, {"Year": 1972, "Extrasystemic armed conflict": 100.0}, {"Year": 1973, "Extrasystemic armed conflict": 100.0}, {"Year": 1998, "Intra-State (Civil War)": -18.0, "Internationalized internal armed conflict": 100.0}, {"Year": 1999, "Internationalized internal armed conflict": 100.0}], "raw_schemas": {"kinetic": {"normalized_score": 7, "source": "ACLED DB"}, "cyber": {"normalized_score": 25, "source": "CFR_Cyber_Tracker DB"}, "economic": {"normalized_score": 19, "source": "UN_Comtrade_IMF DB"}}, "war_type_probabilities": {"Proxy / Grey-Zone": 0.23, "Cyber / Digital": 0.37, "Naval Blockade": 0.24, "Border Skirmish": 0.1, "Full Conventional": 0.08}, "future_hotspots": [{"region": "National Digital Infrastructure", "lat": null, "lng": null, "threat": "Cyber Severance", "probability": 0.79}, {"region": "Financial Sector Gateway", "lat": null, "lng": null, "threat": "Financial Paralysis", "probability": 0.8}, {"region": "Border / Periphery Zones", "lat": null, "lng": null, "threat": "Proxy / Grey-Zone", "probability": 0.5}]}
+{
+  "country": "Guinea-Bissau",
+  "forecast": {
+    "wvi": 30,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1900,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1920,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1027,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1940,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1960,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1980,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1536,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2000,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2010,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 251,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2015,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2020,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 762,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Non-State (Cartel/Militia)": 0.2732,
+    "Border Skirmish": 0.2069,
+    "Proxy / Grey-Zone": 0.1567,
+    "Intra-State (Civil War)": 0.2444,
+    "Cyber / Digital": 0.1187
+  },
+  "future_hotspots": [],
+  "raw_schemas": {}
+}

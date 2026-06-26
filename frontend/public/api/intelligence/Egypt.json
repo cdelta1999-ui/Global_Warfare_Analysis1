@@ -1,1 +1,92 @@
-{"country": "Egypt", "pillars": {"cyber": {"overall_score": 73, "sources": [{"name": "CFR Cyber Tracker", "metric": "Incidents (YTD)", "raw_value": 109, "unit": "events", "score": 73}, {"name": "EuRepoC", "metric": "Active Campaigns", "raw_value": 3, "unit": "campaigns", "score": 73}, {"name": "Carnegie Spyware", "metric": "Proliferation", "raw_value": 7.3, "unit": "index", "score": 73}]}, "economic": {"overall_score": 71, "sources": [{"name": "UN Comtrade", "metric": "Critical Import Dep.", "raw_value": "$71B", "unit": "USD", "score": 71}, {"name": "IMF DOTS", "metric": "Trade Imbalance", "raw_value": "-$85B", "unit": "USD", "score": 71}, {"name": "World Bank", "metric": "Tariff Barrier", "raw_value": "14.2%", "unit": "rate", "score": 71}]}, "kinetic": {"overall_score": 4, "sources": [{"name": "ACLED", "metric": "Instability Velocity", "raw_value": 0.0, "unit": "std_dev", "score": 0}, {"name": "SIPRI", "metric": "EMA Fatalities", "raw_value": 243, "unit": "deaths/yr", "score": 4}, {"name": "AIS Marine", "metric": "Choke Point Flow", "raw_value": 243, "unit": "vessels/day", "score": 4}]}}}
+{
+  "country": "Egypt",
+  "computed_wvi": 57,
+  "pillars": {
+    "cyber": {
+      "overall_score": 58,
+      "sources": [
+        {
+          "name": "CFR Cyber Tracker",
+          "score": 63,
+          "metric": "69 events (YTD)",
+          "raw_value": 69,
+          "unit": "events"
+        },
+        {
+          "name": "EuRepoC",
+          "score": 48,
+          "metric": "2 campaigns",
+          "raw_value": 2,
+          "unit": "campaigns"
+        },
+        {
+          "name": "Carnegie Spyware",
+          "score": 53,
+          "metric": "Active tracking",
+          "raw_value": 53,
+          "unit": "score"
+        }
+      ]
+    },
+    "economic": {
+      "overall_score": 65,
+      "sources": [
+        {
+          "name": "UN Comtrade",
+          "score": 65,
+          "metric": "Dependency: 52%",
+          "raw_value": 52,
+          "unit": "%"
+        },
+        {
+          "name": "IMF DOTS",
+          "score": 57,
+          "metric": "Sanctions Exposure: 57/100",
+          "raw_value": 57,
+          "unit": "score"
+        },
+        {
+          "name": "World Bank WITS",
+          "score": 53,
+          "metric": "Trade Concentration: 53/100",
+          "raw_value": 53,
+          "unit": "score"
+        }
+      ]
+    },
+    "kinetic": {
+      "overall_score": 62,
+      "sources": [
+        {
+          "name": "ACLED",
+          "score": 62,
+          "metric": "496 events/yr",
+          "raw_value": 496,
+          "unit": "events/yr"
+        },
+        {
+          "name": "UCDP",
+          "score": 57,
+          "metric": "Fatalities: 7440/yr",
+          "raw_value": 7440,
+          "unit": "fatalities/yr"
+        },
+        {
+          "name": "SIPRI",
+          "score": 65,
+          "metric": "Military spend: 18.6% GDP",
+          "raw_value": 18.6,
+          "unit": "% GDP"
+        }
+      ]
+    },
+    "fragmentation": {
+      "score": 30,
+      "primary_drivers": [
+        "Sinai Insurgency",
+        "Libya Border Instability",
+        "Ethiopia Dam Dispute"
+      ]
+    }
+  }
+}

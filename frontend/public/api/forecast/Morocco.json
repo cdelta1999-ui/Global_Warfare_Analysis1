@@ -1,1 +1,35 @@
-{"forecast": {"predicted_attack_type": "One-Sided Violence", "predictability_score": "50.0%", "danger_risk_status": "STABLE: Baseline Activity", "forecasted_event_volume": 2}, "timeline": [{"Year": 1859, "Inter-State (Conventional)": 6000.0}, {"Year": 1907, "Intra-State (Civil War)": 1200.0}, {"Year": 1909, "Inter-State (Conventional)": 8000.0}, {"Year": 1953, "Extrasystemic armed conflict": 100.0}, {"Year": 1954, "Extrasystemic armed conflict": 100.0}, {"Year": 1955, "Extrasystemic armed conflict": 100.0}, {"Year": 1956, "Extrasystemic armed conflict": 100.0}, {"Year": 1957, "Inter-State (Conventional)": 1000.0}, {"Year": 1971, "Internal armed conflict": 100.0}, {"Year": 1975, "Extra-State": 13500.0, "Internal armed conflict": 100.0}, {"Year": 1976, "Internationalized internal armed conflict": 100.0}, {"Year": 1977, "Internal armed conflict": 100.0}, {"Year": 1978, "Internal armed conflict": 100.0}, {"Year": 1979, "Internal armed conflict": 1000.0}, {"Year": 1980, "Internal armed conflict": 1000.0}, {"Year": 1981, "Internal armed conflict": 100.0}, {"Year": 1982, "Internal armed conflict": 100.0}, {"Year": 1983, "Internal armed conflict": 100.0}, {"Year": 1984, "Internal armed conflict": 100.0}, {"Year": 1985, "Internal armed conflict": 100.0}, {"Year": 1986, "Internal armed conflict": 100.0}, {"Year": 1987, "Internal armed conflict": 100.0}, {"Year": 1988, "Internal armed conflict": 100.0}, {"Year": 1989, "Internal armed conflict": 100.0}, {"Year": 1991, "Inter-State (Conventional)": 0.0}, {"Year": 2003, "One-Sided Violence": 34.0}], "raw_schemas": {"kinetic": {"normalized_score": 13, "source": "ACLED DB"}, "cyber": {"normalized_score": 58, "source": "CFR_Cyber_Tracker DB"}, "economic": {"normalized_score": 39, "source": "UN_Comtrade_IMF DB"}}, "war_type_probabilities": {"Proxy / Grey-Zone": 0.16, "Cyber / Digital": 0.33, "Naval Blockade": 0.16, "Border Skirmish": 0.3, "Full Conventional": 0.05}, "future_hotspots": [{"region": "Boucraa Phosphate Reserve", "lat": 26.3, "lng": -12.8, "threat": "Global Agricultural Choke", "probability": 0.92}]}
+{
+  "country": "Morocco",
+  "forecast": {
+    "wvi": 30,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1975,
+      "Inter-State (Conventional)": 9500,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Non-State (Cartel/Militia)": 0.2732,
+    "Border Skirmish": 0.2069,
+    "Proxy / Grey-Zone": 0.1567,
+    "Intra-State (Civil War)": 0.2444,
+    "Cyber / Digital": 0.1187
+  },
+  "future_hotspots": [],
+  "raw_schemas": {}
+}

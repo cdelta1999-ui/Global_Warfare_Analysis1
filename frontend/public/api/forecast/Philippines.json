@@ -1,1 +1,115 @@
-{"forecast": {"predicted_attack_type": "Internal armed conflict", "predictability_score": "95.5%", "danger_risk_status": "STABLE: Baseline Activity", "forecasted_event_volume": 4}, "timeline": [{"Year": 1946, "Internal armed conflict": 1000.0}, {"Year": 1947, "Internal armed conflict": 1000.0}, {"Year": 1948, "Internal armed conflict": 1000.0}, {"Year": 1949, "Internal armed conflict": 1000.0}, {"Year": 1950, "Inter-State (Conventional)": 92.0, "Intra-State (Civil War)": 11300.0, "Internal armed conflict": 1000.0}, {"Year": 1951, "Internal armed conflict": 1000.0}, {"Year": 1952, "Internal armed conflict": 1000.0}, {"Year": 1953, "Internal armed conflict": 1000.0}, {"Year": 1954, "Internal armed conflict": 1000.0}, {"Year": 1966, "Inter-State (Conventional)": 1000.0}, {"Year": 1969, "Internal armed conflict": 100.0}, {"Year": 1970, "Internal armed conflict": 200.0}, {"Year": 1971, "Internal armed conflict": 200.0}, {"Year": 1972, "Intra-State (Civil War)": 61000.0, "Internal armed conflict": 200.0}, {"Year": 1973, "Internal armed conflict": 200.0}, {"Year": 1974, "Internal armed conflict": 200.0}, {"Year": 1975, "Internal armed conflict": 200.0}, {"Year": 1976, "Internal armed conflict": 200.0}, {"Year": 1977, "Internal armed conflict": 200.0}, {"Year": 1978, "Internal armed conflict": 1100.0}, {"Year": 1979, "Internal armed conflict": 200.0}, {"Year": 1980, "Internal armed conflict": 200.0}, {"Year": 1981, "Internal armed conflict": 1100.0}, {"Year": 1982, "Internal armed conflict": 1100.0}, {"Year": 1983, "Internal armed conflict": 1100.0}, {"Year": 1984, "Internal armed conflict": 1100.0}, {"Year": 1985, "Internal armed conflict": 1100.0}, {"Year": 1986, "Internal armed conflict": 1100.0}, {"Year": 1987, "Internal armed conflict": 1100.0}, {"Year": 1988, "Internal armed conflict": 200.0}, {"Year": 1989, "Internal armed conflict": 200.0}, {"Year": 1990, "One-Sided Violence": 35.0, "Internal armed conflict": 1100.0}, {"Year": 1991, "One-Sided Violence": 30.0, "Internal armed conflict": 1000.0}, {"Year": 1992, "Internal armed conflict": 100.0}, {"Year": 1993, "Internal armed conflict": 200.0}, {"Year": 1994, "Internal armed conflict": 200.0}, {"Year": 1995, "One-Sided Violence": 25.0, "Internal armed conflict": 200.0}, {"Year": 1996, "Internal armed conflict": 100.0}, {"Year": 1997, "Internal armed conflict": 200.0}, {"Year": 1998, "Internal armed conflict": 100.0}, {"Year": 1999, "Internal armed conflict": 200.0}, {"Year": 2000, "Intra-State (Civil War)": -18.0, "One-Sided Violence": 172.0, "Internal armed conflict": 1100.0}, {"Year": 2001, "One-Sided Violence": 33.0, "Internal armed conflict": 200.0}, {"Year": 2002, "One-Sided Violence": 38.0, "Internal armed conflict": 200.0}, {"Year": 2003, "One-Sided Violence": 75.0, "Internal armed conflict": 200.0}, {"Year": 2004, "One-Sided Violence": 122.0, "Internal armed conflict": 200.0}, {"Year": 2005, "Internal armed conflict": 200.0}, {"Year": 2006, "Internal armed conflict": 200.0}, {"Year": 2007, "One-Sided Violence": 31.0, "Internal armed conflict": 200.0}, {"Year": 2008, "One-Sided Violence": 39.0, "Internal armed conflict": 200.0}, {"Year": 2009, "One-Sided Violence": 57.0, "Internal armed conflict": 200.0}, {"Year": 2010, "One-Sided Violence": 25.0, "Internal armed conflict": 200.0}, {"Year": 2011, "Internal armed conflict": 200.0}, {"Year": 2012, "Internal armed conflict": 200.0}, {"Year": 2013, "Internal armed conflict": 200.0}, {"Year": 2014, "Internal armed conflict": 200.0}, {"Year": 2015, "One-Sided Violence": 34.0, "Internal armed conflict": 200.0}, {"Year": 2016, "One-Sided Violence": 32.0, "Internal armed conflict": 300.0}, {"Year": 2017, "Internal armed conflict": 1100.0, "Internationalized internal armed conflict": 100.0}, {"Year": 2018, "Internal armed conflict": 300.0}, {"Year": 2019, "Internal armed conflict": 300.0}, {"Year": 2020, "One-Sided Violence": 25.0, "Internal armed conflict": 300.0}, {"Year": 2021, "Internal armed conflict": 200.0}, {"Year": 2022, "Internal armed conflict": 200.0}, {"Year": 2023, "Internal armed conflict": 200.0}, {"Year": 2024, "Internal armed conflict": 200.0}, {"Year": 2025, "Internal armed conflict": 100.0}], "raw_schemas": {"kinetic": {"normalized_score": 100, "source": "ACLED DB"}, "cyber": {"normalized_score": 85, "source": "CFR_Cyber_Tracker DB"}, "economic": {"normalized_score": 12, "source": "UN_Comtrade_IMF DB"}}, "war_type_probabilities": {"Proxy / Grey-Zone": 0.43, "Cyber / Digital": 0.26, "Naval Blockade": 0.15, "Border Skirmish": 0.13, "Full Conventional": 0.03}, "future_hotspots": [{"region": "National Digital Infrastructure", "lat": null, "lng": null, "threat": "Cyber Severance", "probability": 0.79}, {"region": "Financial Sector Gateway", "lat": null, "lng": null, "threat": "Financial Paralysis", "probability": 0.61}, {"region": "Border / Periphery Zones", "lat": null, "lng": null, "threat": "Proxy / Grey-Zone", "probability": 0.67}]}
+{
+  "country": "Philippines",
+  "forecast": {
+    "wvi": 58,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1819,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 2,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1824,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 31001,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1829,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 2,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1834,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1839,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1844,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1849,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 2001,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1854,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 4,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1944,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 4002,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1975,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 3000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Non-State (Cartel/Militia)": 0.3114,
+    "Intra-State (Civil War)": 0.1997,
+    "Naval Blockade": 0.1512,
+    "Border Skirmish": 0.2231,
+    "Proxy / Grey-Zone": 0.1146
+  },
+  "future_hotspots": [
+    {
+      "region": "Philippines - Border Flashpoint",
+      "threat": "Intra-State (Civil War)",
+      "probability": 0.223,
+      "lat": null,
+      "lng": null
+    }
+  ],
+  "raw_schemas": {}
+}

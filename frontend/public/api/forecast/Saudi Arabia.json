@@ -1,1 +1,75 @@
-{"forecast": {"predicted_attack_type": "One-Sided Violence", "predictability_score": "65.80000305175781%", "danger_risk_status": "STABLE: Baseline Activity", "forecasted_event_volume": 2}, "timeline": [{"Year": 1929, "Intra-State (Civil War)": 5500.0}, {"Year": 1934, "Inter-State (Conventional)": 100.0}, {"Year": 1973, "Inter-State (Conventional)": 100.0}, {"Year": 1979, "Internal armed conflict": 100.0}, {"Year": 1991, "Inter-State (Conventional)": 44.0}, {"Year": 2003, "One-Sided Violence": 70.0}, {"Year": 2004, "One-Sided Violence": 33.0}], "raw_schemas": {"kinetic": {"normalized_score": 3, "source": "ACLED DB"}, "cyber": {"normalized_score": 47, "source": "CFR_Cyber_Tracker DB"}, "economic": {"normalized_score": 40, "source": "UN_Comtrade_IMF DB"}}, "war_type_probabilities": {"Proxy / Grey-Zone": 0.36, "Cyber / Digital": 0.23, "Naval Blockade": 0.3, "Border Skirmish": 0.09, "Full Conventional": 0.02}, "future_hotspots": [{"region": "National Digital Infrastructure", "lat": null, "lng": null, "threat": "Cyber Severance", "probability": 0.8}, {"region": "Financial Sector Gateway", "lat": null, "lng": null, "threat": "Financial Paralysis", "probability": 0.61}, {"region": "Border / Periphery Zones", "lat": null, "lng": null, "threat": "Proxy / Grey-Zone", "probability": 0.71}]}
+{
+  "country": "Saudi Arabia",
+  "forecast": {
+    "wvi": 55,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1883,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1918,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1923,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1943,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1886,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1968,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 5000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Proxy / Grey-Zone": 0.4311,
+    "Naval Blockade": 0.2473,
+    "Border Skirmish": 0.1075,
+    "Cyber / Digital": 0.1873,
+    "Full Conventional": 0.0268
+  },
+  "future_hotspots": [
+    {
+      "region": "Saudi Arabia - Border Flashpoint",
+      "threat": "Naval Blockade",
+      "probability": 0.247,
+      "lat": null,
+      "lng": null
+    }
+  ],
+  "raw_schemas": {}
+}

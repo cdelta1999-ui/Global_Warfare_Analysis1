@@ -1,1 +1,99 @@
-{"forecast": {"predicted_attack_type": "One-Sided Violence", "predictability_score": "61.099998474121094%", "danger_risk_status": "STABLE: Baseline Activity", "forecasted_event_volume": 2}, "timeline": [{"Year": 1825, "Non-State (Cartel/Militia)": 3000.0}, {"Year": 1832, "Intra-State (Civil War)": -18.0}, {"Year": 1835, "Intra-State (Civil War)": 2200.0}, {"Year": 1841, "Intra-State (Civil War)": -18.0}, {"Year": 1846, "Inter-State (Conventional)": 6000.0}, {"Year": 1848, "Intra-State (Civil War)": -18.0}, {"Year": 1855, "Intra-State (Civil War)": 3600.0}, {"Year": 1858, "Intra-State (Civil War)": -18.0}, {"Year": 1862, "Inter-State (Conventional)": 12000.0}, {"Year": 1867, "Intra-State (Civil War)": 2500.0}, {"Year": 1876, "Intra-State (Civil War)": 1891.0}, {"Year": 1899, "Intra-State (Civil War)": 1600.0}, {"Year": 1910, "Intra-State (Civil War)": 93750.0}, {"Year": 1914, "Intra-State (Civil War)": 31250.0}, {"Year": 1923, "Intra-State (Civil War)": -18.0}, {"Year": 1926, "Intra-State (Civil War)": 10000.0}, {"Year": 1929, "Intra-State (Civil War)": 2000.0}, {"Year": 1994, "Internal armed conflict": 100.0}, {"Year": 1996, "Internal armed conflict": 100.0}, {"Year": 1997, "One-Sided Violence": 45.0}, {"Year": 2010, "One-Sided Violence": 81.0}, {"Year": 2014, "One-Sided Violence": 32.0}, {"Year": 2021, "One-Sided Violence": 26.0}], "raw_schemas": {"kinetic": {"normalized_score": 15, "source": "ACLED DB"}, "cyber": {"normalized_score": 57, "source": "CFR_Cyber_Tracker DB"}, "economic": {"normalized_score": 16, "source": "UN_Comtrade_IMF DB"}}, "war_type_probabilities": {"Proxy / Grey-Zone": 0.23, "Cyber / Digital": 0.31, "Naval Blockade": 0.21, "Border Skirmish": 0.23, "Full Conventional": 0.03}, "future_hotspots": [{"region": "National Digital Infrastructure", "lat": null, "lng": null, "threat": "Cyber Severance", "probability": 0.9}, {"region": "Financial Sector Gateway", "lat": null, "lng": null, "threat": "Financial Paralysis", "probability": 0.69}, {"region": "Border / Periphery Zones", "lat": null, "lng": null, "threat": "Proxy / Grey-Zone", "probability": 0.51}]}
+{
+  "country": "Mexico",
+  "forecast": {
+    "wvi": 64,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1820,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1825,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 10301,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1830,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1835,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 9601,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1840,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1855,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 7701,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1860,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1870,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 3000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Non-State (Cartel/Militia)": 0.7055,
+    "Proxy / Grey-Zone": 0.1574,
+    "Border Skirmish": 0.0684,
+    "Cyber / Digital": 0.0612,
+    "Full Conventional": 0.0074
+  },
+  "future_hotspots": [
+    {
+      "region": "Mexico - Border Flashpoint",
+      "threat": "Proxy / Grey-Zone",
+      "probability": 0.157,
+      "lat": null,
+      "lng": null
+    }
+  ],
+  "raw_schemas": {}
+}

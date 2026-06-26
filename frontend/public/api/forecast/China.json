@@ -1,1 +1,162 @@
-{"forecast": {"predicted_attack_type": "Internal armed conflict", "predictability_score": "43.29999923706055%", "danger_risk_status": "STABLE: Baseline Activity", "forecasted_event_volume": 3}, "timeline": [{"Year": 1825, "Non-State (Cartel/Militia)": -9.0}, {"Year": 1830, "Non-State (Cartel/Militia)": -9.0}, {"Year": 1860, "Intra-State (Civil War)": 110946.0}, {"Year": 1862, "Intra-State (Civil War)": -18.0}, {"Year": 1864, "Intra-State (Civil War)": -18.0}, {"Year": 1866, "Intra-State (Civil War)": -18.0}, {"Year": 1876, "Intra-State (Civil War)": -18.0}, {"Year": 1884, "Inter-State (Conventional)": 10000.0}, {"Year": 1891, "Intra-State (Civil War)": 10500.0}, {"Year": 1894, "Inter-State (Conventional)": 10000.0}, {"Year": 1895, "Intra-State (Civil War)": -18.0}, {"Year": 1900, "Inter-State (Conventional)": 5758.0}, {"Year": 1911, "Intra-State (Civil War)": 1000.0}, {"Year": 1912, "Extra-State": 1991.0}, {"Year": 1913, "Intra-State (Civil War)": -18.0}, {"Year": 1914, "Intra-State (Civil War)": -18.0}, {"Year": 1916, "Intra-State (Civil War)": -18.0}, {"Year": 1918, "Extra-State": 1500.0}, {"Year": 1920, "Extra-State": 5000.0}, {"Year": 1928, "Intra-State (Civil War)": -18.0}, {"Year": 1929, "Inter-State (Conventional)": 3000.0, "Intra-State (Civil War)": -18.0}, {"Year": 1930, "Intra-State (Civil War)": 500000.0}, {"Year": 1931, "Inter-State (Conventional)": 50000.0, "Intra-State (Civil War)": 20000.0}, {"Year": 1934, "Intra-State (Civil War)": -18.0}, {"Year": 1937, "Inter-State (Conventional)": 750000.0}, {"Year": 1941, "Inter-State (Conventional)": 1350000.0}, {"Year": 1946, "Intra-State (Civil War)": 1200000.0, "Internal armed conflict": 1000.0}, {"Year": 1947, "Intra-State (Civil War)": 1250.0, "Internal armed conflict": 2000.0}, {"Year": 1948, "Internal armed conflict": 1000.0}, {"Year": 1949, "Internal armed conflict": 1000.0, "Interstate armed conflict": 1000.0}, {"Year": 1950, "Inter-State (Conventional)": 422612.0, "Extra-State": 13200.0, "Interstate armed conflict": 100.0, "Internal armed conflict": 100.0}, {"Year": 1954, "Inter-State (Conventional)": 1003.0, "Interstate armed conflict": 1000.0}, {"Year": 1956, "Intra-State (Civil War)": 16000.0, "Internal armed conflict": 1000.0}, {"Year": 1958, "Interstate armed conflict": 1000.0}, {"Year": 1959, "Internal armed conflict": 1000.0}, {"Year": 1962, "Interstate armed conflict": 1000.0}, {"Year": 1967, "Intra-State (Civil War)": -18.0, "Interstate armed conflict": 100.0}, {"Year": 1969, "Interstate armed conflict": 200.0}, {"Year": 1974, "Interstate armed conflict": 100.0}, {"Year": 1978, "Interstate armed conflict": 100.0}, {"Year": 1979, "Inter-State (Conventional)": 13000.0, "Interstate armed conflict": 1000.0}, {"Year": 1980, "Interstate armed conflict": 100.0}, {"Year": 1981, "Interstate armed conflict": 100.0}, {"Year": 1983, "Interstate armed conflict": 100.0}, {"Year": 1984, "Interstate armed conflict": 100.0}, {"Year": 1986, "Interstate armed conflict": 100.0}, {"Year": 1987, "Inter-State (Conventional)": 1800.0, "Interstate armed conflict": 100.0}, {"Year": 1988, "Interstate armed conflict": 100.0}, {"Year": 1989, "One-Sided Violence": 2600.0}, {"Year": 2008, "One-Sided Violence": 51.0, "Internal armed conflict": 100.0}, {"Year": 2020, "Interstate armed conflict": 100.0}], "raw_schemas": {"kinetic": {"normalized_score": 37, "source": "ACLED DB"}, "cyber": {"normalized_score": 96, "source": "CFR_Cyber_Tracker DB"}, "economic": {"normalized_score": 27, "source": "UN_Comtrade_IMF DB"}}, "war_type_probabilities": {"Cyber / Digital": 0.3, "Naval Blockade": 0.28, "Proxy / Grey-Zone": 0.22, "Border Skirmish": 0.15, "Full Conventional": 0.05}, "future_hotspots": [{"region": "Bayan Obo Rare Earth Mine", "lat": 41.76, "lng": 109.97, "threat": "Economic Coercion Target", "probability": 0.95}, {"region": "Zangmu Mega-Dam (Tibet)", "lat": 29.2, "lng": 92.65, "threat": "Environmental Hostage-Taking", "probability": 0.85}, {"region": "Taiwan Strait Landing Nodes", "lat": 24.5, "lng": 118.5, "threat": "Naval Blockade", "probability": 0.78}]}
+{
+  "country": "China",
+  "forecast": {
+    "wvi": 71,
+    "trend": "Rising",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1819,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 2,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1824,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 31001,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1829,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 2,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1834,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1839,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1844,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1849,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 2001,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1854,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 4,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1879,
+      "Inter-State (Conventional)": 1000,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1909,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 2000,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1914,
+      "Inter-State (Conventional)": 1000,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1919,
+      "Inter-State (Conventional)": 4000,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1944,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 4002,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1949,
+      "Inter-State (Conventional)": 10000,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1975,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 3000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Proxy / Grey-Zone": 0.2092,
+    "Naval Blockade": 0.2762,
+    "Border Skirmish": 0.12,
+    "Cyber / Digital": 0.3646,
+    "Full Conventional": 0.0299
+  },
+  "future_hotspots": [
+    {
+      "region": "China - High-Risk Zone",
+      "threat": "Proxy / Grey-Zone",
+      "probability": 0.365,
+      "lat": null,
+      "lng": null
+    },
+    {
+      "region": "China - Border Flashpoint",
+      "threat": "Naval Blockade",
+      "probability": 0.276,
+      "lat": null,
+      "lng": null
+    }
+  ],
+  "raw_schemas": {}
+}

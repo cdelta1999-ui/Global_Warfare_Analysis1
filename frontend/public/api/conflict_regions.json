@@ -1,0 +1,844 @@
+{
+  "type": "FeatureCollection",
+  "generated_at": "2026-06-25T00:00:00Z",
+  "model": "HVEN-R v2.1 + Historical Conflict Density Analysis",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "middle-east",
+        "rank": 1,
+        "name": "Middle East",
+        "subtitle": "Gaza \u00b7 Lebanon \u00b7 Iran Axis",
+        "color": "#ef4444",
+        "center_lng": 44,
+        "center_lat": 27,
+        "fly_zoom": 3.8,
+        "prediction_score": 91,
+        "confidence": "VERY HIGH",
+        "trajectory": "CRITICAL / ESCALATING",
+        "timeframe": "0\u201318 months",
+        "key_countries": [
+          "Israel",
+          "Iran",
+          "Lebanon",
+          "Syria",
+          "Yemen"
+        ],
+        "avg_wvi": 79,
+        "historical_conflicts": 28,
+        "current_active_wars": 4,
+        "top_conflict_type": "Full Conventional + Proxy",
+        "primary_threat": "Iran nuclear escalation; Hezbollah-Hamas proxy network activation",
+        "escalation_pathway": "Iranian nuclear threshold breach \u2192 Israeli preemptive strike \u2192 Hezbollah full activation \u2192 regional war",
+        "conflict_cycle_years": 12.4,
+        "war_theory_class": "Proxy War / Limited War / Asymmetric",
+        "primary_causes": [
+          "Religious",
+          "Territorial",
+          "Resource",
+          "Ideological"
+        ],
+        "technology_era": "Contemporary / Hybrid",
+        "conduct_modes": [
+          "Conventional",
+          "Cyber",
+          "Irregular",
+          "Naval"
+        ],
+        "prediction_summary": "Highest-risk region globally. Four simultaneous active conflicts with direct superpower involvement. Iran's nuclear program approaching weapons-grade threshold while proxy networks in Gaza, Lebanon, Yemen, and Iraq are fully activated. Historical conflict density (28 recorded major wars) combined with current active states indicates near-term escalation probability above 90%.",
+        "warfare_types": [
+          "Conventional",
+          "Asymmetric",
+          "Proxy",
+          "Cyber",
+          "Economic"
+        ],
+        "dominant_warfare": "Proxy + Asymmetric + Precision Strikes",
+        "warfare_description": "Multi-front asymmetric warfare with proxy actors (Hezbollah, Houthi, Hamas) backed by Iran. Precision air campaigns by Israel and US. Cyber operations against critical infrastructure. Economic warfare via oil leverage and sanctions.",
+        "mineral_targets": [
+          "Oil (Gulf states)",
+          "Phosphate (Morocco/Western Sahara)"
+        ],
+        "border_skirmishes": [
+          "Israel-Lebanon",
+          "Israel-Gaza",
+          "Israel-Syria",
+          "Yemen-Saudi Arabia"
+        ],
+        "geopolitical_role": "Regional power competition: Iran vs Saudi/Israel/USA. Russia backing Assad-era remnants. China buying oil influence."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              24,
+              11
+            ],
+            [
+              65,
+              11
+            ],
+            [
+              65,
+              43
+            ],
+            [
+              24,
+              43
+            ],
+            [
+              24,
+              11
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "eastern-europe",
+        "rank": 2,
+        "name": "Eastern Europe",
+        "subtitle": "Russia\u2013Ukraine \u00b7 Baltic \u00b7 Black Sea",
+        "color": "#f97316",
+        "center_lng": 37,
+        "center_lat": 52,
+        "fly_zoom": 3.6,
+        "prediction_score": 84,
+        "confidence": "HIGH",
+        "trajectory": "ACTIVE / DETERIORATING",
+        "timeframe": "Active + 12\u201336 months",
+        "key_countries": [
+          "Russia",
+          "Ukraine",
+          "Belarus",
+          "Moldova",
+          "Estonia",
+          "Latvia",
+          "Lithuania"
+        ],
+        "avg_wvi": 68,
+        "historical_conflicts": 22,
+        "current_active_wars": 2,
+        "top_conflict_type": "Full Conventional + Hybrid Warfare",
+        "primary_threat": "Russia-Ukraine escalation to NATO Article 5; Baltic state destabilization",
+        "escalation_pathway": "Ukrainian collapse \u2192 Russian advance to NATO border \u2192 Article 5 invocation \u2192 NATO-Russia direct conflict",
+        "conflict_cycle_years": 8.1,
+        "war_theory_class": "Total War / Interstate / Hybrid",
+        "primary_causes": [
+          "Territorial",
+          "Ideological",
+          "Political",
+          "Economic"
+        ],
+        "technology_era": "Contemporary / Industrial",
+        "conduct_modes": [
+          "Conventional",
+          "Cyber",
+          "Electronic Warfare",
+          "Naval",
+          "Air"
+        ],
+        "prediction_summary": "Ongoing full-scale conventional war since 2022 \u2014 largest European conflict since WWII. Historical pattern shows 22 major conflicts in region over 600 years with average cycle of 8.1 years. Current Russian military doctrine, demographic pressure, and NATO eastern expansion create conditions for prolonged conflict or dangerous escalation. Baltic states face hybrid warfare threat regardless of Ukrainian outcome.",
+        "warfare_types": [
+          "Conventional",
+          "Cyber",
+          "Hybrid",
+          "Economic",
+          "Drone"
+        ],
+        "dominant_warfare": "Conventional + Drone + Cyber + Economic",
+        "warfare_description": "Russia-Ukraine: largest European conventional war since WWII. Drone swarms replacing artillery. Cyber attacks on power grids (Sandworm APT). Economic warfare via gas cutoffs and sanctions. Hybrid: disinformation + election interference across EU.",
+        "mineral_targets": [
+          "Uranium (Ukraine)",
+          "Titanium (Ukraine)",
+          "Rare earths (Ukraine/Russia)"
+        ],
+        "border_skirmishes": [
+          "Russia-Ukraine front line (2,295km)",
+          "Belarus-Poland migration weapon"
+        ],
+        "geopolitical_role": "NATO-Russia existential contest. Nuclear deterrence active. China watching Taiwan precedent."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20,
+              43
+            ],
+            [
+              55,
+              43
+            ],
+            [
+              55,
+              62
+            ],
+            [
+              20,
+              62
+            ],
+            [
+              20,
+              43
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "south-asia",
+        "rank": 3,
+        "name": "South Asia",
+        "subtitle": "India\u2013Pakistan \u00b7 Kashmir \u00b7 Nuclear Flashpoint",
+        "color": "#f59e0b",
+        "center_lng": 78,
+        "center_lat": 22,
+        "fly_zoom": 3.5,
+        "prediction_score": 76,
+        "confidence": "HIGH",
+        "trajectory": "ELEVATED / VOLATILE",
+        "timeframe": "12\u201348 months",
+        "key_countries": [
+          "India",
+          "Pakistan",
+          "Afghanistan",
+          "Bangladesh"
+        ],
+        "avg_wvi": 62,
+        "historical_conflicts": 14,
+        "current_active_wars": 1,
+        "top_conflict_type": "Nuclear-Armed Border Conflict + Insurgency",
+        "primary_threat": "India-Pakistan nuclear exchange over Kashmir; Afghan Taliban destabilization",
+        "escalation_pathway": "Cross-border terrorist attack \u2192 Indian military response \u2192 Pakistani nuclear signaling \u2192 crisis escalation",
+        "conflict_cycle_years": 15.2,
+        "war_theory_class": "Limited War / Deterrence / Nuclear",
+        "primary_causes": [
+          "Territorial",
+          "Religious",
+          "Ethnic",
+          "Resource"
+        ],
+        "technology_era": "Contemporary / Nuclear Age",
+        "conduct_modes": [
+          "Conventional",
+          "Irregular",
+          "Nuclear Deterrence",
+          "Cyber"
+        ],
+        "prediction_summary": "World's most dangerous nuclear standoff. India and Pakistan have fought 4 wars since 1947 with the most recent near-miss in 2019 (Balakot airstrikes). Both nations maintain first-use doctrines under certain conditions. Climate stress (Indus water shortages), demographic pressure, and nationalist governments increase risk. Historical analysis shows 14 major conflicts with a 15-year average cycle \u2014 current cycle is overdue.",
+        "warfare_types": [
+          "Conventional",
+          "Asymmetric",
+          "Nuclear",
+          "Cyber",
+          "Proxy"
+        ],
+        "dominant_warfare": "Nuclear-Armed Conventional + Asymmetric Insurgency",
+        "warfare_description": "India-Pakistan nuclear standoff with conventional skirmish history. Operation Sindoor May 2025: airstrikes exchanged. Taliban Afghanistan enables TTP cross-border insurgency into Pakistan. Maoist/Naxalite insurgency in India (30+ years). Nuclear doctrine: Pakistan first-use tactical, India massive retaliation.",
+        "mineral_targets": [
+          "Lithium (Afghanistan/Pakistan)",
+          "Uranium (India)",
+          "Copper"
+        ],
+        "border_skirmishes": [
+          "India-Pakistan LoC (Kashmir)",
+          "Afghanistan-Pakistan Durand Line"
+        ],
+        "geopolitical_role": "China-India-Pakistan triangle. CPEC (China-Pakistan Economic Corridor) encircling India. Nuclear proliferation risk highest globally."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              60,
+              5
+            ],
+            [
+              97,
+              5
+            ],
+            [
+              97,
+              38
+            ],
+            [
+              60,
+              38
+            ],
+            [
+              60,
+              5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "east-asia",
+        "rank": 4,
+        "name": "East Asia",
+        "subtitle": "Taiwan Strait \u00b7 South China Sea \u00b7 Korea",
+        "color": "#eab308",
+        "center_lng": 122,
+        "center_lat": 25,
+        "fly_zoom": 3.4,
+        "prediction_score": 72,
+        "confidence": "MEDIUM-HIGH",
+        "trajectory": "ELEVATED / BUILDING",
+        "timeframe": "24\u201360 months",
+        "key_countries": [
+          "China",
+          "Taiwan",
+          "USA",
+          "Japan",
+          "South Korea",
+          "North Korea"
+        ],
+        "avg_wvi": 58,
+        "historical_conflicts": 11,
+        "current_active_wars": 1,
+        "top_conflict_type": "Naval Blockade + Conventional + Nuclear",
+        "primary_threat": "Chinese invasion/blockade of Taiwan; North Korean nuclear provocation",
+        "escalation_pathway": "Chinese naval blockade of Taiwan \u2192 US carrier group response \u2192 miscalculation \u2192 naval engagement \u2192 escalation ladder",
+        "conflict_cycle_years": 9.3,
+        "war_theory_class": "Interstate / Naval / Grey-Zone",
+        "primary_causes": [
+          "Territorial",
+          "Political",
+          "Economic",
+          "Ideological"
+        ],
+        "technology_era": "Contemporary / Information Age",
+        "conduct_modes": [
+          "Naval",
+          "Air",
+          "Cyber",
+          "Space",
+          "Economic Coercion"
+        ],
+        "prediction_summary": "Taiwan Strait represents the most consequential potential conflict for global stability. Chinese military modernization targets 2027 capability threshold for Taiwan operations. South China Sea territorial disputes involve simultaneous claims by 6 nations. North Korea's expanding nuclear-ICBM arsenal creates independent escalation risk. Historical conflict density analysis shows increasing regional militarization since 2015.",
+        "warfare_types": [
+          "Conventional",
+          "Cyber",
+          "Economic",
+          "Naval",
+          "Nuclear"
+        ],
+        "dominant_warfare": "Gray-zone + Naval Blockade + Cyber",
+        "warfare_description": "Taiwan Strait: China PLA Navy blockade exercises vs US carrier groups. South China Sea island militarization. North Korea nuclear/ICBM tests. Japan remilitarization. Gray-zone tactics: cable cutting, fishing fleet harassment, cyber espionage at scale.",
+        "mineral_targets": [
+          "Rare Earth (China 60%+)",
+          "Nickel (Indonesia)",
+          "Lithium (Australia)",
+          "Semiconductor materials (Taiwan)"
+        ],
+        "border_skirmishes": [
+          "North Korea-South Korea DMZ",
+          "Taiwan Strait",
+          "South China Sea (multiple claimants)"
+        ],
+        "geopolitical_role": "Thucydides Trap: US vs China. Taiwan = trigger point. Semiconductor supply chain = economic warfare terrain."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              100,
+              5
+            ],
+            [
+              145,
+              5
+            ],
+            [
+              145,
+              45
+            ],
+            [
+              100,
+              45
+            ],
+            [
+              100,
+              5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sahel-africa",
+        "rank": 5,
+        "name": "Sahel & West Africa",
+        "subtitle": "Mali \u00b7 Burkina Faso \u00b7 Niger \u00b7 Nigeria",
+        "color": "#a78bfa",
+        "center_lng": 3,
+        "center_lat": 14,
+        "fly_zoom": 3.5,
+        "prediction_score": 68,
+        "confidence": "MEDIUM-HIGH",
+        "trajectory": "DETERIORATING / SPREADING",
+        "timeframe": "0\u201324 months",
+        "key_countries": [
+          "Mali",
+          "Burkina Faso",
+          "Niger",
+          "Nigeria",
+          "Chad",
+          "Cameroon"
+        ],
+        "avg_wvi": 71,
+        "historical_conflicts": 18,
+        "current_active_wars": 3,
+        "top_conflict_type": "Insurgency + Terrorism + State Fragility",
+        "primary_threat": "Jihadist corridor from Sahel to coastal West Africa; coup contagion",
+        "escalation_pathway": "Junta governments expel Western forces \u2192 Russian Wagner expansion \u2192 jihadist territorial gains \u2192 coastal state destabilization",
+        "conflict_cycle_years": 6.8,
+        "war_theory_class": "Insurgency / Guerrilla / Non-State",
+        "primary_causes": [
+          "Ideological",
+          "Resource",
+          "Economic",
+          "Ethnic"
+        ],
+        "technology_era": "Contemporary / Low-Technology",
+        "conduct_modes": [
+          "Guerrilla",
+          "Terrorism",
+          "Irregular",
+          "Drone"
+        ],
+        "prediction_summary": "Fastest-deteriorating conflict zone globally. Three military coups in 18 months (Mali 2021, Burkina Faso 2022, Niger 2023) have dismantled Western counter-terrorism frameworks. JNIM and ISGS jihadist groups now control territory larger than France combined. Russia's Wagner PMC (now Africa Corps) has replaced French forces, accelerating instability. Historical analysis shows shortest conflict cycles globally at 6.8 years average.",
+        "warfare_types": [
+          "Asymmetric",
+          "Insurgency",
+          "Proxy",
+          "Economic"
+        ],
+        "dominant_warfare": "Insurgency + Asymmetric + Non-state Actor Warfare",
+        "warfare_description": "IS-Sahel, JNIM (al-Qaeda affiliate), Boko Haram operating across Mali, Niger, Burkina Faso, Nigeria north. Wagner Group (now Africa Corps) presence in Mali/Niger after military coups. French/UN forces expelled. Guerrilla tactics: IEDs, village massacres, ambushes. Non-state conflict deaths near 14,000 in 2017 \u2014 trending up.",
+        "mineral_targets": [
+          "Gold (Mali, Burkina Faso)",
+          "Uranium (Niger \u2014 French dependency)",
+          "Cobalt/DRC access corridor"
+        ],
+        "border_skirmishes": [
+          "Niger-Mali jihadi corridor",
+          "Chad-Sudan spillover",
+          "Nigeria-Cameroon (Boko Haram)"
+        ],
+        "geopolitical_role": "Post-colonial power vacuum. France expelled. Russia Wagner filling void. China resource acquisition. IS wave 3 expansion per Cederman-Pengl 2019 model."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -18,
+              3
+            ],
+            [
+              25,
+              3
+            ],
+            [
+              25,
+              25
+            ],
+            [
+              -18,
+              25
+            ],
+            [
+              -18,
+              3
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "horn-of-africa",
+        "rank": 6,
+        "name": "Horn of Africa",
+        "subtitle": "Ethiopia \u00b7 Somalia \u00b7 Sudan \u00b7 Red Sea",
+        "color": "#06b6d4",
+        "center_lng": 42,
+        "center_lat": 8,
+        "fly_zoom": 3.6,
+        "prediction_score": 63,
+        "confidence": "MEDIUM",
+        "trajectory": "VOLATILE / FRAGMENTED",
+        "timeframe": "6\u201330 months",
+        "key_countries": [
+          "Ethiopia",
+          "Somalia",
+          "Sudan",
+          "Eritrea",
+          "Djibouti"
+        ],
+        "avg_wvi": 67,
+        "historical_conflicts": 9,
+        "current_active_wars": 1,
+        "top_conflict_type": "Civil War + Naval Interdiction",
+        "primary_threat": "Ethiopian federal fragmentation; Somali Al-Shabaab expansion; Houthi Red Sea threat",
+        "escalation_pathway": "Ethiopian civil war reignition \u2192 Eritrean involvement \u2192 regional fragmentation \u2192 Horn-wide conflict",
+        "conflict_cycle_years": 11.5,
+        "war_theory_class": "Civil War / Irregular / Non-State",
+        "primary_causes": [
+          "Ethnic",
+          "Political",
+          "Resource",
+          "Territorial"
+        ],
+        "technology_era": "Contemporary / Mixed",
+        "conduct_modes": [
+          "Conventional",
+          "Guerrilla",
+          "Naval Interdiction"
+        ],
+        "prediction_summary": "Post-Tigray Ethiopia remains fragile with Amhara/Oromo tensions unresolved. Sudan's 2023 civil war (SAF vs RSF) has displaced 12 million people \u2014 second largest displacement crisis globally. Houthi attacks on Red Sea shipping directly link Horn dynamics to the Middle East conflict system. Somalia's Al-Shabaab controls significant territory despite 2 decades of international intervention.",
+        "warfare_types": [
+          "Conventional",
+          "Asymmetric",
+          "Proxy",
+          "Naval",
+          "Economic"
+        ],
+        "dominant_warfare": "Civil War + Naval Interdiction + Proxy",
+        "warfare_description": "Sudan civil war (SAF vs RSF) since 2023: 100,000+ killed. Somalia: al-Shabaab insurgency (UCDP 32,033 cumulative deaths). Houthi Red Sea attacks from Yemen extend threat. Eritrea-Ethiopia border: post-2020 war. Ethiopia-Tigray war concluded but fragile. Naval threat: Bab-el-Mandeb controlled by Iran-backed Houthis.",
+        "mineral_targets": [
+          "Oil (South Sudan)",
+          "Gold (Sudan/Ethiopia)",
+          "Coffee (Ethiopia)",
+          "Red Sea cable routes"
+        ],
+        "border_skirmishes": [
+          "Sudan-Chad Darfur corridor",
+          "Eritrea-Ethiopia",
+          "Somalia-Ethiopia",
+          "Yemen-Djibouti maritime"
+        ],
+        "geopolitical_role": "UAE, Saudi Arabia, Turkey, China, US all competing for Horn naval bases. Chokepoint for Red Sea-Suez shipping corridor."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              32,
+              -5
+            ],
+            [
+              52,
+              -5
+            ],
+            [
+              52,
+              20
+            ],
+            [
+              32,
+              20
+            ],
+            [
+              32,
+              -5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "north-africa",
+        "rank": 7,
+        "name": "North Africa",
+        "subtitle": "Libya \u00b7 Sudan \u00b7 Algeria \u00b7 Sahara",
+        "color": "#34d399",
+        "center_lng": 16,
+        "center_lat": 28,
+        "fly_zoom": 3.4,
+        "prediction_score": 58,
+        "confidence": "MEDIUM",
+        "trajectory": "STABLE-LOW / PROXY RISK",
+        "timeframe": "12\u201348 months",
+        "key_countries": [
+          "Libya",
+          "Sudan",
+          "Algeria",
+          "Egypt",
+          "Tunisia"
+        ],
+        "avg_wvi": 56,
+        "historical_conflicts": 12,
+        "current_active_wars": 2,
+        "top_conflict_type": "Proxy War + Civil Fragmentation",
+        "primary_threat": "Libyan proxy competition (Turkey/UAE/Russia); Sudan spillover; Sahel corridor",
+        "escalation_pathway": "Libyan eastern-western faction clash \u2192 Turkey-UAE direct proxy conflict \u2192 Egyptian involvement \u2192 North African regional war",
+        "conflict_cycle_years": 7.2,
+        "war_theory_class": "Proxy War / Civil War / Post-Colonial",
+        "primary_causes": [
+          "Political",
+          "Resource",
+          "Economic",
+          "Territorial"
+        ],
+        "technology_era": "Contemporary / Mixed",
+        "conduct_modes": [
+          "Conventional",
+          "Proxy",
+          "Irregular",
+          "Air"
+        ],
+        "prediction_summary": "Libya remains the key battleground for Turkish-UAE-Russian proxy competition, serving as a gateway between the Sahel and the Mediterranean. Sudan's humanitarian collapse is spreading instability to Egypt and Chad. Algeria's energy dependence and succession uncertainty present longer-term risk. Historical conflict density shows 12 major wars with significant colonial-era legacy shaping current power vacuums.",
+        "warfare_types": [
+          "Asymmetric",
+          "Proxy",
+          "Economic",
+          "Cyber"
+        ],
+        "dominant_warfare": "Proxy Civil War + Asymmetric + Disinformation",
+        "warfare_description": "Libya: ongoing civil war between Tripoli-based GNU and Haftar LNA in east. Foreign forces: Russia (Wagner/Africa Corps), Turkey, UAE backing different sides. Algeria-Morocco proxy competition. Egypt counterterrorism in Sinai. IS North Africa franchise active.",
+        "mineral_targets": [
+          "Oil (Libya, Algeria)",
+          "Phosphate (Morocco/Western Sahara \u2014 72% global reserves)",
+          "Gas (Algeria to Europe)"
+        ],
+        "border_skirmishes": [
+          "Libya-Sudan militant corridor",
+          "Morocco-Algeria (Western Sahara)"
+        ],
+        "geopolitical_role": "Europe dependency on Algerian gas. Mediterranean migration pressure on EU. Sahel instability spillover."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -5,
+              20
+            ],
+            [
+              37,
+              20
+            ],
+            [
+              37,
+              37
+            ],
+            [
+              -5,
+              37
+            ],
+            [
+              -5,
+              20
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "southeast-asia",
+        "rank": 8,
+        "name": "Southeast Asia",
+        "subtitle": "Myanmar \u00b7 South China Sea \u00b7 Mekong",
+        "color": "#3b82f6",
+        "center_lng": 115,
+        "center_lat": 9,
+        "fly_zoom": 3.5,
+        "prediction_score": 54,
+        "confidence": "MEDIUM",
+        "trajectory": "MODERATE / COMPOUND",
+        "timeframe": "12\u201360 months",
+        "key_countries": [
+          "Myanmar",
+          "Philippines",
+          "Vietnam",
+          "Malaysia",
+          "Thailand"
+        ],
+        "avg_wvi": 51,
+        "historical_conflicts": 16,
+        "current_active_wars": 1,
+        "top_conflict_type": "Civil War + Maritime Dispute",
+        "primary_threat": "Myanmar junta collapse \u2192 regional refugee crisis; South China Sea Chinese assertiveness",
+        "escalation_pathway": "Myanmar state collapse \u2192 regional refugee crisis \u2192 Thai/Indian border tensions \u2192 Chinese intervention",
+        "conflict_cycle_years": 18.7,
+        "war_theory_class": "Civil War / Maritime / Insurgency",
+        "primary_causes": [
+          "Political",
+          "Territorial",
+          "Economic",
+          "Ethnic"
+        ],
+        "technology_era": "Contemporary / Mixed",
+        "conduct_modes": [
+          "Conventional",
+          "Naval",
+          "Guerrilla",
+          "Cyber"
+        ],
+        "prediction_summary": "Myanmar's civil war entered a critical junta-losing phase in 2024 as resistance forces captured multiple regional capitals. Chinese assertiveness in the South China Sea \u2014 particularly around Scarborough Shoal and Second Thomas Shoal \u2014 creates repeated Philippines-China naval confrontations. The region's long conflict cycles (18.7 year average) suggest structural resilience, but compound pressures from climate change, supply chain competition, and Chinese expansion are building.",
+        "warfare_types": [
+          "Asymmetric",
+          "Conventional",
+          "Cyber",
+          "Economic",
+          "Naval"
+        ],
+        "dominant_warfare": "Asymmetric + Maritime Gray-zone + Economic Coercion",
+        "warfare_description": "Myanmar: military coup 2021; civil war (junta vs resistance). South China Sea: China coast guard ramming Philippine vessels 2023-2025. Indonesia-China standoff over Natuna Sea. Maute-IS Philippines active. ASEAN ineffective at collective defense. Chinese economic dependency across region.",
+        "mineral_targets": [
+          "Nickel (Indonesia 48% global)",
+          "Tin (Myanmar/Indonesia)",
+          "Cobalt processing (China plants in Indonesia)"
+        ],
+        "border_skirmishes": [
+          "Myanmar-Thailand refugee corridor",
+          "South China Sea (Philippines, Vietnam, Malaysia vs China)",
+          "Indonesia-China Natuna Sea"
+        ],
+        "geopolitical_role": "China coercive expansion into ASEAN maritime zones. US pivot to Indo-Pacific (AUKUS, Quad). Semiconductor supply chain through this region."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              92,
+              -10
+            ],
+            [
+              140,
+              -10
+            ],
+            [
+              140,
+              28
+            ],
+            [
+              92,
+              28
+            ],
+            [
+              92,
+              -10
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "central-asia",
+        "rank": 9,
+        "name": "Central Asia",
+        "subtitle": "Afghanistan \u00b7 Caucasus \u00b7 Steppe",
+        "color": "#818cf8",
+        "center_lng": 68,
+        "center_lat": 42,
+        "fly_zoom": 3.5,
+        "prediction_score": 49,
+        "confidence": "MEDIUM-LOW",
+        "trajectory": "WATCHLIST / LATENT",
+        "timeframe": "24\u201372 months",
+        "key_countries": [
+          "Afghanistan",
+          "Tajikistan",
+          "Uzbekistan",
+          "Kyrgyzstan",
+          "Azerbaijan",
+          "Georgia"
+        ],
+        "avg_wvi": 53,
+        "historical_conflicts": 10,
+        "current_active_wars": 0,
+        "top_conflict_type": "State Fragility + Border Disputes",
+        "primary_threat": "Afghan Taliban instability spillover; Tajik-Kyrgyz border disputes",
+        "escalation_pathway": "Afghan economic collapse \u2192 refugee/militant spillover into Central Asian states \u2192 regional destabilization",
+        "conflict_cycle_years": 14.3,
+        "war_theory_class": "Insurgency / Interstate / Guerrilla",
+        "primary_causes": [
+          "Territorial",
+          "Ethnic",
+          "Resource",
+          "Political"
+        ],
+        "technology_era": "Contemporary / Low-Technology",
+        "conduct_modes": [
+          "Irregular",
+          "Conventional",
+          "Guerrilla"
+        ],
+        "prediction_summary": "Post-2021 Afghanistan under Taliban rule faces economic collapse (80% GDP drop) creating conditions for renewed insurgency or state failure. Tajikistan-Kyrgyzstan border clashes escalated to full combat in 2022. Historical analysis of 10 major conflicts shows the region has served as a battleground for external power competition (Russia, China, USA) across 2,000 years, a pattern that continues with China's BRI corridor politics.",
+        "warfare_types": [
+          "Asymmetric",
+          "Proxy",
+          "Economic",
+          "Conventional"
+        ],
+        "dominant_warfare": "Border Disputes + Economic Coercion + Proxy Influence",
+        "warfare_description": "Tajikistan-Kyrgyzstan border war 2022 (most serious since independence). Kazakhstan political instability (CSTO intervention 2022). Afghanistan Taliban spillover through Uzbekistan border. Russia economic coercion via Eurasian Economic Union. China BRI penetration across all five states.",
+        "mineral_targets": [
+          "Uranium (Kazakhstan \u2014 45% global production)",
+          "Gas (Turkmenistan to China pipeline)",
+          "Rare earths (Kazakhstan/Kyrgyzstan)"
+        ],
+        "border_skirmishes": [
+          "Tajikistan-Kyrgyzstan (Batken 2022)",
+          "Afghanistan-Uzbekistan/Tajikistan Taliban infiltration"
+        ],
+        "geopolitical_role": "Russia vs China vs West triangular competition. Kazakhstan uranium critical for Western nuclear energy. Taliban Afghanistan destabilizing border regions."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              52,
+              30
+            ],
+            [
+              88,
+              30
+            ],
+            [
+              88,
+              55
+            ],
+            [
+              52,
+              55
+            ],
+            [
+              52,
+              30
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

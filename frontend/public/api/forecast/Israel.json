@@ -1,1 +1,90 @@
-{"forecast": {"predicted_attack_type": "One-Sided Violence", "predictability_score": "52.900001525878906%", "danger_risk_status": "STABLE: Baseline Activity", "forecasted_event_volume": 6}, "timeline": [{"Year": 1946, "Extrasystemic armed conflict": 100.0}, {"Year": 1948, "Inter-State (Conventional)": 3000.0}, {"Year": 1949, "Internal armed conflict": 100.0}, {"Year": 1950, "Internal armed conflict": 100.0}, {"Year": 1951, "Internal armed conflict": 100.0}, {"Year": 1952, "Internal armed conflict": 100.0}, {"Year": 1953, "Internal armed conflict": 100.0}, {"Year": 1954, "Internal armed conflict": 100.0}, {"Year": 1955, "Internal armed conflict": 100.0}, {"Year": 1956, "Inter-State (Conventional)": 189.0, "Internal armed conflict": 100.0}, {"Year": 1957, "Internal armed conflict": 100.0}, {"Year": 1958, "Internal armed conflict": 100.0}, {"Year": 1959, "Internal armed conflict": 100.0}, {"Year": 1960, "Internal armed conflict": 100.0}, {"Year": 1961, "Internal armed conflict": 100.0}, {"Year": 1962, "Internal armed conflict": 100.0}, {"Year": 1963, "Internal armed conflict": 100.0}, {"Year": 1964, "Internal armed conflict": 100.0}, {"Year": 1965, "Internal armed conflict": 100.0}, {"Year": 1966, "Internal armed conflict": 100.0}, {"Year": 1967, "Inter-State (Conventional)": 1000.0, "Internal armed conflict": 100.0, "Interstate armed conflict": 2000.0}, {"Year": 1968, "Internal armed conflict": 100.0}, {"Year": 1969, "Inter-State (Conventional)": 368.0, "Internal armed conflict": 100.0}, {"Year": 1970, "Internal armed conflict": 100.0}, {"Year": 1971, "Internal armed conflict": 100.0}, {"Year": 1972, "Internal armed conflict": 100.0}, {"Year": 1973, "Inter-State (Conventional)": 2838.0, "Internal armed conflict": 100.0, "Interstate armed conflict": 1000.0}, {"Year": 1974, "Internal armed conflict": 100.0}, {"Year": 1975, "Internal armed conflict": 100.0}, {"Year": 1976, "Internal armed conflict": 100.0}, {"Year": 1977, "Internal armed conflict": 100.0}, {"Year": 1978, "Intra-State (Civil War)": -17.0, "Internal armed conflict": 100.0}, {"Year": 1979, "Internal armed conflict": 100.0}, {"Year": 1980, "Internal armed conflict": 100.0}, {"Year": 1981, "Internal armed conflict": 100.0}, {"Year": 1982, "Inter-State (Conventional)": 455.0, "Internationalized internal armed conflict": 1000.0}, {"Year": 1983, "Internal armed conflict": 100.0}, {"Year": 1984, "Internal armed conflict": 100.0}, {"Year": 1985, "Internal armed conflict": 100.0}, {"Year": 1986, "Internal armed conflict": 100.0}, {"Year": 1987, "Internal armed conflict": 100.0}, {"Year": 1988, "Internal armed conflict": 100.0}, {"Year": 1989, "One-Sided Violence": 62.0, "Internal armed conflict": 100.0}, {"Year": 1990, "Internal armed conflict": 200.0}, {"Year": 1991, "Internal armed conflict": 200.0}, {"Year": 1992, "Internal armed conflict": 200.0}, {"Year": 1993, "Internal armed conflict": 200.0}, {"Year": 1994, "One-Sided Violence": 54.0, "Internal armed conflict": 200.0}, {"Year": 1995, "Internal armed conflict": 200.0}, {"Year": 1996, "One-Sided Violence": 44.0, "Internal armed conflict": 200.0}, {"Year": 1997, "Internal armed conflict": 100.0}, {"Year": 1998, "Internal armed conflict": 100.0}, {"Year": 1999, "Internal armed conflict": 100.0}, {"Year": 2000, "Extra-State": 4300.0, "Internal armed conflict": 200.0}, {"Year": 2001, "One-Sided Violence": 92.0, "Internal armed conflict": 100.0}, {"Year": 2002, "One-Sided Violence": 252.0, "Internal armed conflict": 100.0}, {"Year": 2003, "One-Sided Violence": 120.0, "Internal armed conflict": 100.0}, {"Year": 2004, "One-Sided Violence": 66.0, "Internal armed conflict": 100.0}, {"Year": 2005, "One-Sided Violence": 57.0, "Internal armed conflict": 100.0}, {"Year": 2006, "One-Sided Violence": 182.0, "Internal armed conflict": 1100.0}, {"Year": 2007, "Internal armed conflict": 100.0}, {"Year": 2008, "Internal armed conflict": 100.0}, {"Year": 2009, "Internal armed conflict": 100.0}, {"Year": 2010, "Internal armed conflict": 100.0}, {"Year": 2011, "Internal armed conflict": 100.0}, {"Year": 2012, "Internal armed conflict": 100.0}, {"Year": 2014, "Internal armed conflict": 1000.0}, {"Year": 2018, "Internal armed conflict": 100.0}, {"Year": 2019, "Internal armed conflict": 100.0}, {"Year": 2021, "Internal armed conflict": 100.0}, {"Year": 2022, "Internal armed conflict": 100.0}, {"Year": 2023, "Internationalized internal armed conflict": 1000.0, "Internal armed conflict": 100.0}, {"Year": 2024, "Internationalized internal armed conflict": 1000.0, "Internal armed conflict": 1000.0}, {"Year": 2025, "Internal armed conflict": 1100.0, "Interstate armed conflict": 200.0}], "raw_schemas": {"kinetic": {"normalized_score": 86, "source": "ACLED DB"}, "cyber": {"normalized_score": 15, "source": "CFR_Cyber_Tracker DB"}, "economic": {"normalized_score": 46, "source": "UN_Comtrade_IMF DB"}}, "war_type_probabilities": {"Proxy / Grey-Zone": 0.37, "Cyber / Digital": 0.29, "Naval Blockade": 0.07, "Border Skirmish": 0.22, "Full Conventional": 0.06}, "future_hotspots": [{"region": "Leviathan Gas Field", "lat": 33.0, "lng": 34.0, "threat": "Economic Coercion Target", "probability": 0.85}, {"region": "Haifa Port Complex", "lat": 32.8, "lng": 35.0, "threat": "Cyber Severance", "probability": 0.81}, {"region": "Golan Heights", "lat": 33.1, "lng": 35.7, "threat": "Border Skirmish", "probability": 0.9}]}
+{
+  "country": "Israel",
+  "forecast": {
+    "wvi": 74,
+    "trend": "Rising",
+    "confidence": 0.82
+  },
+  "timeline": [
+    {
+      "Year": 1883,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1918,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1923,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1943,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 1886,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 1968,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 5000,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2000,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 900,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    },
+    {
+      "Year": 2025,
+      "Inter-State (Conventional)": 0,
+      "Intra-State (Civil War)": 0,
+      "Non-State (Cartel/Militia)": 0,
+      "One-Sided Violence": 0,
+      "Terrorism / Extremism": 0
+    }
+  ],
+  "war_type_probabilities": {
+    "Full Conventional": 0.2638,
+    "Border Skirmish": 0.3295,
+    "Cyber / Digital": 0.2233,
+    "Proxy / Grey-Zone": 0.1514,
+    "Naval Blockade": 0.032
+  },
+  "future_hotspots": [
+    {
+      "region": "Israel - High-Risk Zone",
+      "threat": "Full Conventional",
+      "probability": 0.33,
+      "lat": null,
+      "lng": null
+    },
+    {
+      "region": "Israel - Border Flashpoint",
+      "threat": "Border Skirmish",
+      "probability": 0.264,
+      "lat": null,
+      "lng": null
+    }
+  ],
+  "raw_schemas": {}
+}

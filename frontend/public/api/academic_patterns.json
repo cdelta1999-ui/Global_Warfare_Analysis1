@@ -1,0 +1,208 @@
+{
+  "source": "Cederman & Pengl, ETH Zürich (2019). Global Conflict Trends and their Consequences.",
+  "dataset": "Uppsala Conflict Data Program (UCDP), Ethnic Power Relations (EPR)",
+  "last_updated": "2026-06-25",
+  "version": "1.0",
+  "conflict_wave_model": {
+    "description": "Three historical waves of civil conflict since WWII (Walter 2017 / Cederman-Pengl synthesis)",
+    "waves": [
+      {
+        "id": "wave_1_ideological",
+        "period": "1946–1991",
+        "label": "Cold War Ideological Wave",
+        "driver": "Superpower proxy funding of ideological insurgencies (Marxist vs capitalist)",
+        "peak_year": 1989,
+        "dominant_regions": ["Asia", "Latin America", "Africa"],
+        "conflict_type": "ethnic + ideological intrastate",
+        "prediction_signal": "Decline after Soviet collapse; replaced by ethnic mobilization"
+      },
+      {
+        "id": "wave_2_ethnic",
+        "period": "1991–2005",
+        "label": "Post-Cold War Ethnic Wave",
+        "driver": "Ethnic group exclusion, power vacuum after Soviet dissolution, decolonization legacies",
+        "peak_year": 1994,
+        "dominant_regions": ["Africa", "Balkans", "Former Soviet space"],
+        "conflict_type": "ethnic intrastate (government control + territorial)",
+        "prediction_signal": "Declined via Gurr accommodation regime: inclusion, autonomy, power sharing, UN peacekeeping"
+      },
+      {
+        "id": "wave_3_islamist",
+        "period": "2010–present",
+        "label": "Islamist Transnational Wave",
+        "driver": "Authoritarian exclusion, failed Arab nationalism, social media radicalization, Saudi Salafist funding",
+        "peak_year": 2015,
+        "dominant_regions": ["MENA", "Sub-Saharan Africa (Sahel)"],
+        "conflict_type": "non-ethnic intrastate + non-state conflict",
+        "prediction_signal": "IS caliphate collapse 2019 may reduce peak; but ideology diffuses transnationally"
+      }
+    ]
+  },
+  "driver_patterns": [
+    {
+      "id": "ethnic_exclusion",
+      "name": "Ethnic Group Political Exclusion",
+      "mechanism": "Ethnic groups excluded from executive power are 2–4x more likely to rebel (EPR dataset, Cederman 2013)",
+      "indicators": ["% population in discriminated groups > 20%", "No power-sharing arrangements", "Centralized executive"],
+      "high_risk_regions": ["MENA (<70% inclusion)", "Sub-Saharan Africa", "South/Southeast Asia"],
+      "sdg_link": "SDG 10 (Reduced Inequalities) → SDG 16 (Peace)",
+      "prevention": "Regional autonomy, power-sharing coalitions, end of formal discrimination"
+    },
+    {
+      "id": "authoritarian_repression",
+      "name": "Authoritarian Repression of Non-violent Opposition",
+      "mechanism": "States blocking peaceful participation leave populations with 'no other way out' (Goodwin 2001). Creates grievance base for extremist recruitment.",
+      "indicators": ["Polity IV < 0", "Jailed opposition leaders", "Violent crackdown on protests"],
+      "high_risk_regions": ["MENA", "Central Asia", "East Africa"],
+      "prevention": "External pressure for inclusive governance, conditional aid"
+    },
+    {
+      "id": "social_media_radicalization",
+      "name": "Digital Radicalization & Transnational Recruitment",
+      "mechanism": "Social media platforms enable extremist ideology diffusion across borders. Islamophobic content increases pro-ISIS sentiment (Mitts 2019). Islamic State exploited these platforms for transnational recruitment.",
+      "indicators": ["High social media penetration in conflict zones", "State censorship attempts with low efficacy", "Diaspora radicalization"],
+      "high_risk_regions": ["MENA", "Western Europe (diaspora)", "Sahel"],
+      "prevention": "Platform content moderation, counter-narrative campaigns, reducing anti-Muslim discrimination"
+    },
+    {
+      "id": "economic_grievance",
+      "name": "Economic Inequality & Conflict Trap",
+      "mechanism": "Civil war reduces GDP per capita by 2.2%/year (Collier 1999). 15-year conflict → 30% income loss. Creates poverty trap that increases conflict recurrence probability.",
+      "indicators": ["GDP per capita decline >10%", "Youth unemployment >30%", "Military spending >30% above baseline"],
+      "high_risk_regions": ["Sub-Saharan Africa", "MENA", "South Asia"],
+      "prevention": "SDG 8 (economic growth), post-conflict reconstruction investment, SDG 1 (poverty)"
+    },
+    {
+      "id": "resource_competition",
+      "name": "Strategic Resource Competition",
+      "mechanism": "Control over critical resources (oil, minerals, water) provides both motive and funding for armed groups. Resource curse amplifies corruption and ethnic patronage systems.",
+      "indicators": ["Primary commodity exports >25% GDP", "Disputed resource-rich territories", "External power interest in resources"],
+      "high_risk_regions": ["DRC/Great Lakes (cobalt, coltan)", "Sahel (uranium, gold)", "South Sudan (oil)", "MENA (oil)"],
+      "prevention": "Revenue transparency, Extractive Industries Transparency Initiative (EITI)"
+    },
+    {
+      "id": "nuclear_proliferation_risk",
+      "name": "Nuclear Proliferation & Arms Race Risk",
+      "mechanism": "NPT erosion increases first-use risk. India-Pakistan geographic proximity undermines nuclear crisis stability. Iran/North Korea arsenals create preemptive action incentives for regional powers.",
+      "indicators": ["NPT withdrawal/non-compliance", "Intermediate nuclear forces treaty breakdown", "Regional power missile tests"],
+      "high_risk_dyads": ["India–Pakistan", "USA–Russia (Europe)", "Israel–Iran", "North Korea–USA/Japan/South Korea"],
+      "prevention": "Arms control treaties, diplomatic de-escalation, nuclear-free zones"
+    }
+  ],
+  "regional_risk_profiles": [
+    {
+      "region": "MENA",
+      "conflict_intensity_trend": "HIGH — peaked 2015-2016, declining but above pre-2011 baseline",
+      "primary_driver": "Authoritarian exclusion + ethnic/sectarian fragmentation + external meddling",
+      "inclusion_rate": "<70% (lowest globally)",
+      "future_scenario": "Negative equilibrium trap: inequality + conflict + poor economic growth + external powers supporting incumbents",
+      "watchlist_states": ["Syria", "Yemen", "Libya", "Iraq", "Lebanon"],
+      "risk_score": 87
+    },
+    {
+      "region": "Sub-Saharan Africa (Sahel)",
+      "conflict_intensity_trend": "RISING — IS/AQ affiliates expanding post-caliphate collapse",
+      "primary_driver": "Non-state conflict surge + IS/al-Qaeda franchise expansion + ethnic communal violence",
+      "battle_deaths_non_state_2017": "~14000 (non-state conflict)",
+      "future_scenario": "Sahel ungoverned space expands; Boko Haram, JNIM, IS-Sahel threaten Nigeria, Niger, Mali, Cameroon",
+      "watchlist_states": ["Mali", "Niger", "Burkina Faso", "Nigeria (North)", "Cameroon (North)"],
+      "risk_score": 79
+    },
+    {
+      "region": "South Asia",
+      "conflict_intensity_trend": "ELEVATED — nuclear-armed rivalry + ongoing insurgencies",
+      "primary_driver": "India-Pakistan nuclear risk + Afghanistan post-NATO instability + religious nationalism",
+      "future_scenario": "Pakistan-India conventional escalation risk; Afghanistan Taliban consolidation enables IS-K expansion",
+      "watchlist_states": ["Pakistan", "Afghanistan", "India (Kashmir)"],
+      "risk_score": 74
+    },
+    {
+      "region": "East/Central Africa (Great Lakes)",
+      "conflict_intensity_trend": "PERSISTENT — DRC conflict trap; resource conflict",
+      "primary_driver": "Ethnic fractionalization + resource competition (cobalt, coltan) + weak state capacity",
+      "cumulative_deaths_since_1964": 18888,
+      "future_scenario": "Cobalt demand for EV transition escalates resource conflict; militia proliferation continues",
+      "watchlist_states": ["DRC", "Sudan", "South Sudan", "CAR"],
+      "risk_score": 72
+    },
+    {
+      "region": "Eastern Europe / Former Soviet Space",
+      "conflict_intensity_trend": "RISING SHARPLY — Ukraine war resurgence 2022+",
+      "primary_driver": "Territorial revisionism + nuclear doctrine shift + populist ethno-nationalism",
+      "future_scenario": "NPT norm erosion; populist accommodation regime erosion in EU threatens minority rights",
+      "watchlist_states": ["Ukraine", "Moldova", "Georgia", "Belarus"],
+      "risk_score": 82
+    },
+    {
+      "region": "Indo-Pacific",
+      "conflict_intensity_trend": "ELEVATED TENSION — great power competition",
+      "primary_driver": "US-China trade war + South China Sea territorial competition + Taiwan strait",
+      "future_scenario": "Gray-zone operations (cable cutting, cyber, economic coercion) below threshold of armed conflict",
+      "watchlist_states": ["Taiwan", "South China Sea claimants", "North Korea"],
+      "risk_score": 71
+    }
+  ],
+  "conflict_prevention_framework": {
+    "name": "Gurr Accommodation Regime (updated Cederman 2017)",
+    "components": [
+      {"lever": "End ethnic discrimination", "conflict_reduction_estimate": "High — most significant single factor"},
+      {"lever": "Power-sharing arrangements", "conflict_reduction_estimate": "High — reduces onset and duration"},
+      {"lever": "Regional autonomy grants", "conflict_reduction_estimate": "Medium-High — reduces territorial conflict"},
+      {"lever": "Democratization", "conflict_reduction_estimate": "Medium — stabilizes if inclusive"},
+      {"lever": "UN peacekeeping deployment", "conflict_reduction_estimate": "Medium — effective in post-conflict stabilization"},
+      {"lever": "Economic development (SDG 8)", "conflict_reduction_estimate": "Medium — necessary but insufficient alone"}
+    ],
+    "sdg_pathway": "SDG 10 (Inequality) → SDG 16 (Peace & Justice) → SDG 1/2/3/4 (Development outcomes)",
+    "warning": "Post-2015 populist ethno-nationalism in Europe/USA threatens this regime — could trigger ethnic conflict resurgence"
+  },
+  "top_conflict_dyads_historical": [
+    {"conflict": "Syria (all factions)", "cumulative_deaths": 270272, "period": "1966-2017", "type": "intrastate"},
+    {"conflict": "Afghanistan", "cumulative_deaths": 178131, "period": "1978-2017", "type": "intrastate"},
+    {"conflict": "Iraq", "cumulative_deaths": 72216, "period": "1958-2017", "type": "intrastate"},
+    {"conflict": "Sudan/South Sudan", "cumulative_deaths": 49039, "period": "1971-2017", "type": "intrastate"},
+    {"conflict": "Somalia", "cumulative_deaths": 32033, "period": "1982-2017", "type": "intrastate"},
+    {"conflict": "Turkey-PKK", "cumulative_deaths": 29217, "period": "1984-2017", "type": "intrastate"},
+    {"conflict": "Colombia-FARC", "cumulative_deaths": 19543, "period": "1964-2016", "type": "intrastate"},
+    {"conflict": "DRC (Zaire)", "cumulative_deaths": 18888, "period": "1964-2017", "type": "intrastate"},
+    {"conflict": "Rwanda", "cumulative_deaths": 9528, "period": "1990-2016", "type": "intrastate + genocide"},
+    {"conflict": "Eritrea-Ethiopia", "cumulative_deaths": 98217, "period": "1998-2016", "type": "interstate"}
+  ],
+  "predictive_rules": [
+    {
+      "rule_id": "R1",
+      "name": "Ethnic Exclusion → Conflict Onset",
+      "logic": "IF ethnic group population share > 15% AND political exclusion status = 'Discriminated' OR 'Powerless' THEN conflict_onset_probability += 35%",
+      "evidence": "EPR dataset 1946-2017, Cederman et al. 2013"
+    },
+    {
+      "rule_id": "R2",
+      "name": "Authoritarian + High Youth Unemployment → Islamist Recruitment",
+      "logic": "IF Polity IV < -3 AND youth unemployment > 25% AND Muslim majority country THEN non-state_conflict_risk += 40%",
+      "evidence": "Gleditsch & Rudolfsen 2016; Walter 2017"
+    },
+    {
+      "rule_id": "R3",
+      "name": "Post-Conflict Poverty Trap",
+      "logic": "IF conflict_duration > 5 years AND GDP_loss > 20% THEN conflict_recurrence_within_10yr = 45%",
+      "evidence": "Gates, Hegre & Nygård 2012; Collier 1999"
+    },
+    {
+      "rule_id": "R4",
+      "name": "Resource Curse Amplification",
+      "logic": "IF primary commodity exports > 25% GDP AND ethnic fractionalization > 0.5 THEN conflict_intensity_multiplier = 1.8x",
+      "evidence": "Costalli, Moretti & Pischedda 2017"
+    },
+    {
+      "rule_id": "R5",
+      "name": "Nuclear Instability Trigger",
+      "logic": "IF nuclear_state AND conventional_military_loss_imminent THEN first_use_consideration_risk = HIGH",
+      "evidence": "Cederman & Pengl 2019 scenario analysis; India-Pakistan geographic proximity"
+    },
+    {
+      "rule_id": "R6",
+      "name": "Accommodation Regime Erosion",
+      "logic": "IF populist_ethno-nationalist government = TRUE AND minority rights protections declining = TRUE THEN ethnic_conflict_recurrence_risk += 25%",
+      "evidence": "Cederman & Pengl 2019 policy conclusions; democratic backsliding post-2015"
+    }
+  ]
+}
