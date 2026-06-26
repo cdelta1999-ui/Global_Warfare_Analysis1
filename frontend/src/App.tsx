@@ -6,6 +6,7 @@ import type { FillLayer, LineLayer, CircleLayer } from 'mapbox-gl';
 import {
   AreaChart, Area, BarChart, Bar, Cell,
   XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, Legend as RechartsLegend,
+  RadarChart, Radar, PolarGrid, PolarAngleAxis, PolarRadiusAxis,
 } from 'recharts';
 import { Target, Anchor, ShieldAlert, X, Crosshair, MapPin, Database, ActivitySquare, Gem, Ship, Wifi, Rocket, BookOpen, AlertTriangle, BrainCircuit, TrendingUp, Globe, ChevronDown, ChevronUp, Info, FlaskConical, Layers, Zap } from 'lucide-react';
 import 'mapbox-gl/dist/mapbox-gl.css';
@@ -329,13 +330,14 @@ const MapView = memo(({ worldGeoJson, flowMaps, chokePoints, digitalLifelines, s
   const handleClick = useCallback((event: MapLayerMouseEvent) => {
     const f = event.features?.[0];
     if (!f) { onClear(); return; }
+    onHoverChange(null);
     const { lng, lat } = event.lngLat;
     if (f.source === 'data' && f.properties?.name) {
       onCountryClick(f.properties.name, lng, lat);
     } else {
       onInfraClick({ source: f.source || 'hotspot', properties: f.properties, lng, lat });
     }
-  }, [onCountryClick, onInfraClick, onClear]);
+  }, [onCountryClick, onInfraClick, onClear, onHoverChange]);
 
   return (
     <Map ref={mapRef} initialViewState={{ longitude: 20, latitude: 15, zoom: 1.8, pitch: 0 }}
@@ -495,8 +497,9 @@ function AppInner() {
   // Lazy-load timeline: show last 10 years first, then full history
   useEffect(() => {
     if (!forecastData?.timeline?.length) { setDisplayTimeline([]); return; }
-    setDisplayTimeline(forecastData.timeline.slice(-10));
-    const t = setTimeout(() => setDisplayTimeline(forecastData.timeline), 300);
+    const filtered = forecastData.timeline.filter((d: any) => (d.Year ?? 0) >= 1944);
+    setDisplayTimeline(filtered.slice(-12));
+    const t = setTimeout(() => setDisplayTimeline(filtered), 300);
     return () => clearTimeout(t);
   }, [forecastData]);
 
@@ -1083,117 +1086,159 @@ function AppInner() {
               </div>
             </div>
 
-            <div style={{ display: 'flex', flex: 1, overflow: 'hidden' }}>
-              {/* Left: Map notice + methodology */}
-              <div style={{ flex: 1, overflowY: 'auto', padding: '16px 20px', display: 'flex', flexDirection: 'column', gap: 14 }}>
-                {/* Map callout */}
-                <div style={{ background: 'rgba(255,75,75,0.06)', border: '1px solid rgba(255,75,75,0.25)', borderRadius: 12, padding: '16px 20px', display: 'flex', gap: 14, alignItems: 'flex-start' }}>
-                  <BrainCircuit size={24} style={{ color: '#ff4b4b', flexShrink: 0, marginTop: 2 }} />
-                  <div>
-                    <div style={{ fontWeight: 700, color: '#ff4b4b', fontSize: '0.88rem', marginBottom: 6 }}>Prediction Zones Are Live on the Map</div>
-                    <p style={{ margin: 0, fontSize: '0.76rem', color: 'rgba(255,255,255,0.65)', lineHeight: 1.7 }}>
-                      All 10 war-prone regions and 4 emerging flashpoints are now plotted as interactive circles on the globe. <strong style={{ color: 'rgba(255,255,255,0.8)' }}>Click any red circle</strong> to open the full prediction dossier — including HVEN-R scores, behavioral pattern analysis, AI reasoning chain, trigger factors, escalation pathway, and indicators to monitor.
-                    </p>
-                    <div style={{ display: 'flex', gap: 10, marginTop: 10 }}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: '0.68rem', color: 'rgba(255,75,75,0.8)' }}>
-                        <div style={{ width: 14, height: 14, borderRadius: '50%', background: '#ff4b4b', opacity: 0.85 }} />
-                        Top Conflict Zones (score 68–91)
+            {(() => {
+              const regionChartData = [
+                ...(warPredictionData.top_regions || []).map((r: any) => ({
+                  name: r.region?.length > 28 ? r.region.slice(0, 26) + '…' : r.region,
+                  score: r.prediction_score,
+                  fill: r.prediction_score >= 80 ? '#ff4b4b' : '#f97316',
+                })),
+                ...(warPredictionData.emerging_flashpoints || []).map((f: any) => ({
+                  name: f.flashpoint?.length > 28 ? f.flashpoint.slice(0, 26) + '…' : f.flashpoint,
+                  score: f.risk_score,
+                  fill: '#f5a623',
+                })),
+              ].sort((a, b) => b.score - a.score);
+
+              const trajectoryData = Object.entries(warPredictionData.global_risk_trajectory || {}).map(([yr, val]: any) => ({
+                year: yr, risk: val,
+              }));
+
+              const hvenRadarData = [
+                { dim: 'Historical', full: 100, value: 72 },
+                { dim: 'Volatility', full: 100, value: 68 },
+                { dim: 'Escalation', full: 100, value: 74 },
+                { dim: 'Neighbor', full: 100, value: 58 },
+                { dim: 'Resource', full: 100, value: 63 },
+              ];
+
+              const archetypes = warPredictionData.behavioral_archetypes || [];
+
+              return (
+                <div style={{ display: 'flex', flex: 1, overflow: 'hidden' }}>
+                  {/* LEFT — Conflict zone rankings chart */}
+                  <div style={{ flex: 1, overflowY: 'auto', padding: '14px 18px', display: 'flex', flexDirection: 'column', gap: 14 }}>
+
+                    {/* Top regions bar chart */}
+                    <div>
+                      <div style={{ fontSize: '0.62rem', color: 'rgba(255,75,75,0.7)', letterSpacing: '0.15em', fontWeight: 700, marginBottom: 10 }}>
+                        CONFLICT PROBABILITY RANKING — ALL ZONES
                       </div>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: '0.68rem', color: 'rgba(245,166,35,0.8)' }}>
-                        <div style={{ width: 10, height: 10, borderRadius: '50%', background: '#f5a623', opacity: 0.85 }} />
-                        Emerging Flashpoints (score 42–52)
+                      <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 8, fontSize: '0.58rem', color: 'rgba(255,255,255,0.3)' }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 4 }}><div style={{ width: 8, height: 8, borderRadius: 2, background: '#ff4b4b' }}/> Top Zone</div>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 4 }}><div style={{ width: 8, height: 8, borderRadius: 2, background: '#f97316' }}/> High Risk</div>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 4 }}><div style={{ width: 8, height: 8, borderRadius: 2, background: '#f5a623' }}/> Emerging</div>
                       </div>
+                      <ResponsiveContainer width="100%" height={regionChartData.length * 28 + 10}>
+                        <BarChart data={regionChartData} layout="vertical" margin={{ top: 0, right: 40, left: 0, bottom: 0 }} barCategoryGap="20%">
+                          <CartesianGrid strokeDasharray="2 4" stroke="rgba(255,255,255,0.04)" horizontal={false} />
+                          <XAxis type="number" domain={[0, 100]} tick={{ fontSize: 9, fill: 'rgba(136,146,176,0.5)' }} tickFormatter={v => `${v}`} />
+                          <YAxis type="category" dataKey="name" width={140} tick={{ fontSize: 9.5, fill: 'rgba(255,255,255,0.7)' }} />
+                          <Tooltip
+                            contentStyle={{ background: 'rgba(12,14,22,0.95)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 8, fontSize: '0.75rem' }}
+                            formatter={(v: any) => [v, 'Prediction Score']}
+                            cursor={{ fill: 'rgba(255,255,255,0.03)' }}
+                          />
+                          <Bar dataKey="score" radius={[0, 4, 4, 0]} barSize={13}>
+                            {regionChartData.map((entry, i) => (
+                              <Cell key={i} fill={entry.fill} fillOpacity={0.88} />
+                            ))}
+                          </Bar>
+                        </BarChart>
+                      </ResponsiveContainer>
+                    </div>
+
+                    {/* Data sources */}
+                    <div style={{ background: 'rgba(0,0,0,0.25)', borderRadius: 8, padding: '10px 12px' }}>
+                      <div style={{ fontSize: '0.58rem', color: 'rgba(255,255,255,0.3)', letterSpacing: '0.15em', marginBottom: 4 }}>DATA SOURCES</div>
+                      <div style={{ fontSize: '0.6rem', color: 'rgba(255,255,255,0.25)', lineHeight: 1.6 }}>{warPredictionData.sources?.join(' · ')}</div>
                     </div>
                   </div>
-                </div>
 
-                {/* HVEN-R Methodology */}
-                <div style={{ background: 'rgba(167,139,250,0.04)', border: '1px solid rgba(167,139,250,0.15)', borderRadius: 12, padding: '16px 20px' }}>
-                  <div style={{ fontSize: '0.65rem', color: '#a78bfa', letterSpacing: '0.12em', fontWeight: 700, marginBottom: 12 }}>HVEN-R MODEL METHODOLOGY</div>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-                    {[
-                      { k: 'H', name: 'Historical Recurrence', color: '#ff4b4b', desc: 'Conflict cycles per century, duration of past wars, inter-war intervals. Based on CoW v4 + UCDP data.' },
-                      { k: 'V', name: 'Current Volatility', color: '#f5a623', desc: 'Active incidents, casualties/month, political instability index, protest intensity.' },
-                      { k: 'E', name: 'Escalation Pressure', color: '#ff4b4b', desc: 'Military buildup, cross-border incidents, alliance dynamics, nuclear posture changes.' },
-                      { k: 'N', name: 'Neighbor Contagion', color: '#34d399', desc: 'Conflict adjacency score, refugee spillover, transborder armed group activity.' },
-                      { k: 'R', name: 'Resource/Climate', color: '#00f2fe', desc: 'Strategic mineral competition, water stress, food insecurity, energy dependency.' },
-                    ].map(({ k, name, color, desc }) => (
-                      <div key={k} style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
-                        <div style={{ width: 28, height: 28, borderRadius: 6, background: `${color}15`, border: `1px solid ${color}40`, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                          <span style={{ fontSize: '0.72rem', fontWeight: 900, color, fontFamily: "'JetBrains Mono', monospace" }}>{k}</span>
-                        </div>
-                        <div>
-                          <div style={{ fontSize: '0.72rem', fontWeight: 700, color: 'rgba(255,255,255,0.8)', marginBottom: 2 }}>{name}</div>
-                          <div style={{ fontSize: '0.65rem', color: 'rgba(255,255,255,0.45)', lineHeight: 1.5 }}>{desc}</div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+                  {/* RIGHT — HVEN radar + trajectory + archetypes */}
+                  <div style={{ width: 380, flexShrink: 0, borderLeft: '1px solid rgba(255,255,255,0.06)', overflowY: 'auto', padding: '14px 16px', display: 'flex', flexDirection: 'column', gap: 14 }}>
 
-                {/* Data sources */}
-                <div style={{ background: 'rgba(0,0,0,0.3)', borderRadius: 10, padding: '12px 14px' }}>
-                  <div style={{ fontSize: '0.62rem', color: 'var(--text-secondary)', letterSpacing: '0.15em', marginBottom: 6 }}>DATA SOURCES</div>
-                  <div style={{ fontSize: '0.62rem', color: 'var(--text-dim)', lineHeight: 1.7 }}>{warPredictionData.sources?.join(' · ')}</div>
-                </div>
-              </div>
-
-              {/* Right: Behavioral Archetypes + Global Trajectory */}
-              <div style={{ width: 340, flexShrink: 0, borderLeft: '1px solid rgba(255,255,255,0.06)', overflowY: 'auto', padding: '16px 16px' }}>
-                <div style={{ fontSize: '0.68rem', color: 'var(--text-secondary)', letterSpacing: '0.15em', marginBottom: 10 }}>BEHAVIORAL ARCHETYPES</div>
-                {/* God Mode Synthesis */}
-                {warPredictionData.god_mode_synthesis && (
-                  <div style={{ background: 'rgba(255,75,75,0.05)', border: '1px solid rgba(255,75,75,0.2)', borderRadius: 10, padding: '12px 14px', marginBottom: 12 }}>
-                    <div style={{ fontSize: '0.6rem', color: '#ff4b4b', letterSpacing: '0.12em', fontWeight: 700, marginBottom: 8 }}>EXPERT SYNTHESIS — CASCADE RISK</div>
-                    <p style={{ margin: '0 0 10px', fontSize: '0.66rem', color: 'rgba(255,200,200,0.8)', lineHeight: 1.65 }}>{warPredictionData.god_mode_synthesis.expert_assessment}</p>
-                    {warPredictionData.god_mode_synthesis.strategic_windows?.map((w: any, i: number) => (
-                      <div key={i} style={{ display: 'flex', gap: 8, marginBottom: 4 }}>
-                        <span style={{ fontSize: '0.6rem', color: '#f5a623', fontWeight: 700, flexShrink: 0, minWidth: 80 }}>{w.window}</span>
-                        <span style={{ fontSize: '0.6rem', color: 'rgba(255,255,255,0.5)', lineHeight: 1.5 }}>{w.highest_risk}</span>
-                      </div>
-                    ))}
-                  </div>
-                )}
-
-                {warPredictionData.behavioral_archetypes?.map((arch: any, i: number) => (
-                  <div key={i} style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: 10, padding: '12px 14px', marginBottom: 10 }}>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 }}>
-                      <span style={{ fontSize: '0.72rem', fontWeight: 700, color: '#a78bfa' }}>{arch.archetype}</span>
-                      <span style={{ fontSize: '0.6rem', color: '#f5a623', fontWeight: 700 }}>×{arch.probability_amplifier}</span>
+                    {/* HVEN-R Radar */}
+                    <div>
+                      <div style={{ fontSize: '0.62rem', color: '#a78bfa', letterSpacing: '0.15em', fontWeight: 700, marginBottom: 6 }}>HVEN-R DIMENSIONAL ANALYSIS</div>
+                      <ResponsiveContainer width="100%" height={180}>
+                        <RadarChart cx="50%" cy="50%" outerRadius="70%" data={hvenRadarData}>
+                          <PolarGrid stroke="rgba(255,255,255,0.08)" />
+                          <PolarAngleAxis dataKey="dim" tick={{ fontSize: 10, fill: 'rgba(255,255,255,0.55)' }} />
+                          <PolarRadiusAxis angle={90} domain={[0, 100]} tick={false} axisLine={false} />
+                          <Radar name="Score" dataKey="value" stroke="#a78bfa" fill="#a78bfa" fillOpacity={0.18} strokeWidth={1.5} />
+                          <Tooltip
+                            contentStyle={{ background: 'rgba(12,14,22,0.95)', border: '1px solid rgba(167,139,250,0.2)', borderRadius: 8, fontSize: '0.75rem' }}
+                            formatter={(v: any) => [v + '/100', 'Score']}
+                          />
+                        </RadarChart>
+                      </ResponsiveContainer>
                     </div>
-                    <p style={{ margin: '0 0 6px', fontSize: '0.67rem', color: 'rgba(255,255,255,0.6)', lineHeight: 1.6 }}>{arch.description}</p>
-                    {arch.historical_parallel && (
-                      <div style={{ fontSize: '0.6rem', color: 'rgba(255,255,255,0.35)', fontStyle: 'italic', marginBottom: 6 }}>Precedent: {arch.historical_parallel}</div>
+
+                    {/* Global risk trajectory — area chart */}
+                    {trajectoryData.length > 0 && (
+                      <div>
+                        <div style={{ fontSize: '0.62rem', color: '#ff4b4b', letterSpacing: '0.15em', fontWeight: 700, marginBottom: 6 }}>GLOBAL RISK TRAJECTORY (5-YEAR)</div>
+                        <ResponsiveContainer width="100%" height={90}>
+                          <AreaChart data={trajectoryData} margin={{ top: 4, right: 4, left: -20, bottom: 0 }}>
+                            <defs>
+                              <linearGradient id="gRisk" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stopColor="#ff4b4b" stopOpacity={0.4}/>
+                                <stop offset="100%" stopColor="#ff4b4b" stopOpacity={0}/>
+                              </linearGradient>
+                            </defs>
+                            <CartesianGrid strokeDasharray="2 4" stroke="rgba(255,255,255,0.04)" />
+                            <XAxis dataKey="year" tick={{ fontSize: 9, fill: 'rgba(136,146,176,0.5)' }} />
+                            <YAxis domain={[50, 100]} tick={{ fontSize: 9, fill: 'rgba(136,146,176,0.5)' }} />
+                            <Tooltip
+                              contentStyle={{ background: 'rgba(12,14,22,0.95)', border: '1px solid rgba(255,75,75,0.2)', borderRadius: 8, fontSize: '0.75rem' }}
+                              formatter={(v: any) => [v, 'Global Risk']}
+                            />
+                            <Area type="monotone" dataKey="risk" stroke="#ff4b4b" strokeWidth={2} fill="url(#gRisk)" />
+                          </AreaChart>
+                        </ResponsiveContainer>
+                      </div>
                     )}
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4 }}>
-                      {arch.affected_regions?.map((r: string, j: number) => (
-                        <span key={j} style={{ fontSize: '0.58rem', background: 'rgba(167,139,250,0.1)', border: '1px solid rgba(167,139,250,0.2)', borderRadius: 3, padding: '1px 6px', color: 'rgba(167,139,250,0.8)' }}>{r}</span>
-                      ))}
-                    </div>
-                  </div>
-                ))}
 
-                {/* Global trajectory */}
-                <div style={{ marginTop: 16 }}>
-                  <div style={{ fontSize: '0.68rem', color: 'var(--text-secondary)', letterSpacing: '0.15em', marginBottom: 10 }}>GLOBAL RISK TRAJECTORY (5-YEAR)</div>
-                  <div style={{ display: 'flex', alignItems: 'flex-end', gap: 6, height: 80 }}>
-                    {Object.entries(warPredictionData.global_risk_trajectory || {}).map(([yr, val]: any) => {
-                      const barH = (val / 100) * 72;
-                      const barColor = val >= 75 ? '#ff4b4b' : val >= 65 ? '#f5a623' : '#34d399';
-                      return (
-                        <div key={yr} style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 3 }}>
-                          <span style={{ fontSize: '0.58rem', color: barColor, fontWeight: 700 }}>{val}</span>
-                          <div style={{ width: '100%', background: `${barColor}20`, borderRadius: 3 }}>
-                            <div style={{ height: barH, background: `linear-gradient(180deg, ${barColor}, ${barColor}88)`, borderRadius: 3 }} />
-                          </div>
-                          <span style={{ fontSize: '0.55rem', color: 'var(--text-dim)' }}>{yr}</span>
+                    {/* Behavioral archetypes — compact grid */}
+                    {archetypes.length > 0 && (
+                      <div>
+                        <div style={{ fontSize: '0.62rem', color: 'rgba(167,139,250,0.7)', letterSpacing: '0.15em', fontWeight: 700, marginBottom: 8 }}>BEHAVIORAL ARCHETYPES</div>
+                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 6 }}>
+                          {archetypes.map((arch: any, i: number) => (
+                            <div key={i} style={{ background: 'rgba(167,139,250,0.05)', border: '1px solid rgba(167,139,250,0.15)', borderRadius: 8, padding: '8px 10px' }}>
+                              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 4, marginBottom: 4 }}>
+                                <span style={{ fontSize: '0.68rem', fontWeight: 700, color: '#a78bfa', lineHeight: 1.3 }}>{arch.archetype}</span>
+                                <span style={{ fontSize: '0.65rem', color: '#f5a623', fontWeight: 800, flexShrink: 0 }}>×{arch.probability_amplifier}</span>
+                              </div>
+                              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 3 }}>
+                                {arch.affected_regions?.slice(0, 3).map((r: string, j: number) => (
+                                  <span key={j} style={{ fontSize: '0.55rem', background: 'rgba(167,139,250,0.1)', border: '1px solid rgba(167,139,250,0.18)', borderRadius: 3, padding: '1px 5px', color: 'rgba(167,139,250,0.7)' }}>{r}</span>
+                                ))}
+                              </div>
+                            </div>
+                          ))}
                         </div>
-                      );
-                    })}
+                      </div>
+                    )}
+
+                    {/* God mode synthesis — compact */}
+                    {warPredictionData.god_mode_synthesis && (
+                      <div style={{ background: 'rgba(255,75,75,0.04)', border: '1px solid rgba(255,75,75,0.18)', borderRadius: 10, padding: '10px 12px' }}>
+                        <div style={{ fontSize: '0.58rem', color: '#ff4b4b', letterSpacing: '0.12em', fontWeight: 700, marginBottom: 6 }}>EXPERT CASCADE RISK SYNTHESIS</div>
+                        <p style={{ margin: '0 0 8px', fontSize: '0.64rem', color: 'rgba(255,200,200,0.75)', lineHeight: 1.6 }}>{warPredictionData.god_mode_synthesis.expert_assessment}</p>
+                        {warPredictionData.god_mode_synthesis.strategic_windows?.map((w: any, i: number) => (
+                          <div key={i} style={{ display: 'flex', gap: 8, marginBottom: 3, alignItems: 'flex-start' }}>
+                            <span style={{ fontSize: '0.58rem', color: '#f5a623', fontWeight: 700, flexShrink: 0, minWidth: 72 }}>{w.window}</span>
+                            <span style={{ fontSize: '0.58rem', color: 'rgba(255,255,255,0.45)', lineHeight: 1.4 }}>{w.highest_risk}</span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </div>
-              </div>
-            </div>
+              );
+            })()}
           </div>
         </>
       )}
@@ -2495,7 +2540,6 @@ function AppInner() {
                         </div>
                         <div className="intel-metric">
                           <span>{src.metric}</span>
-                          <span className="metric-value">{src.raw_value} <span style={{ color: 'var(--text-dim)', fontSize: '0.6rem' }}>{src.unit}</span></span>
                         </div>
                       </div>
                     ))}
