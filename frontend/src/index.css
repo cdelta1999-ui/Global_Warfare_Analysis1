@@ -45,18 +45,22 @@ body {
 /* ─── Glassmorphism System ─── */
 
 .glass-panel {
-  background: rgba(8, 10, 18, 0.52);
-  backdrop-filter: blur(32px) saturate(1.5);
-  -webkit-backdrop-filter: blur(32px) saturate(1.5);
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  background: linear-gradient(145deg, rgba(10, 13, 28, 0.78) 0%, rgba(5, 7, 16, 0.62) 100%);
+  backdrop-filter: blur(40px) saturate(1.8) brightness(1.05);
+  -webkit-backdrop-filter: blur(40px) saturate(1.8) brightness(1.05);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 16px;
   box-shadow:
-    0 0 0 1px rgba(255, 255, 255, 0.02) inset,
-    0 1px 0 0 rgba(255, 255, 255, 0.07) inset,
-    0 0 0 0.5px rgba(0, 242, 254, 0.04) inset,
-    0 24px 80px -12px rgba(0, 0, 0, 0.85),
-    0 4px 24px rgba(0, 0, 0, 0.5),
-    0 0 40px rgba(0, 0, 0, 0.3);
+    0 0 0 1px rgba(255, 255, 255, 0.03) inset,
+    0 1px 0 0 rgba(255, 255, 255, 0.1) inset,
+    0 0 0 0.5px rgba(0, 242, 254, 0.06) inset,
+    0 24px 80px -12px rgba(0, 0, 0, 0.9),
+    0 8px 32px rgba(0, 0, 0, 0.6),
+    0 0 60px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
 }
 
 /* Scanline overlay on glass panels — subtle depth texture */
@@ -82,9 +86,19 @@ body {
   z-index: 1;
 }
 
+.glass-panel::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.18) 40%, rgba(0,242,254,0.12) 60%, transparent 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
 .glass-panel-inner {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 12px;
   padding: 16px;
 }
@@ -123,11 +137,12 @@ body {
 /* ─── Animations ─── */
 
 .slide-in-bottom {
-  animation: slideInBottom 0.55s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: slideInBottom 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
 @keyframes slideInBottom {
-  0% { opacity: 0; transform: translateY(30px) scale(0.98); }
+  0%  { opacity: 0; transform: translateY(40px) scale(0.96); }
+  60% { opacity: 1; transform: translateY(-4px) scale(1.005); }
   100% { opacity: 1; transform: translateY(0) scale(1); }
 }
 
@@ -174,6 +189,23 @@ body {
   50%       { border-color: rgba(0, 242, 254, 0.28); }
 }
 
+@keyframes modalZoomIn {
+  0%   { opacity: 0; transform: translate(-50%, -50%) scale(0.92); }
+  60%  { opacity: 1; transform: translate(-50%, -50%) scale(1.015); }
+  100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+
+@keyframes panelShimmer {
+  0%   { transform: translateX(-100%) skewX(-12deg); }
+  100% { transform: translateX(400%) skewX(-12deg); }
+}
+
+@keyframes gradientBorder {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 /* ─── Controls ─── */
 
 .control-btn {
@@ -204,8 +236,10 @@ body {
 }
 
 .control-btn.active {
-  background: rgba(0, 242, 254, 0.12);
-  border-color: rgba(0, 242, 254, 0.35);
+  background: linear-gradient(135deg, rgba(0, 242, 254, 0.18) 0%, rgba(79, 172, 254, 0.1) 100%);
+  border-color: rgba(0, 242, 254, 0.5);
+  box-shadow: 0 0 20px rgba(0, 242, 254, 0.2), 0 0 40px rgba(0, 242, 254, 0.08);
+  color: #fff;
 }
 
 /* ─── Range Sliders ─── */
@@ -269,12 +303,12 @@ input[type="range"]::-moz-range-thumb {
 .progress-fill::after {
   content: '';
   position: absolute;
-  right: 0;
-  top: 0;
-  width: 20px;
+  top: 0; left: 0;
+  width: 40px;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3));
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
   border-radius: 5px;
+  animation: panelShimmer 2s ease-in-out infinite;
 }
 
 /* ─── WVI Score Ring ─── */
@@ -320,10 +354,10 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .essay-card:hover {
-  transform: translateY(-2px);
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(0, 242, 254, 0.15);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  transform: translateY(-3px) scale(1.01);
+  background: linear-gradient(135deg, rgba(0, 242, 254, 0.05) 0%, rgba(255, 255, 255, 0.03) 100%);
+  border-color: rgba(0, 242, 254, 0.2);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 24px rgba(0, 242, 254, 0.08);
 }
 
 .essay-card h3 {
@@ -381,12 +415,12 @@ input[type="range"]::-moz-range-thumb {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.1);
+  background: linear-gradient(180deg, rgba(0, 242, 254, 0.25), rgba(79, 172, 254, 0.15));
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: linear-gradient(180deg, rgba(0, 242, 254, 0.45), rgba(79, 172, 254, 0.3));
 }
 
 /* ─── Mapbox Overrides ─── */
@@ -420,13 +454,20 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .pipeline-card {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.04);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.015) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   padding: 12px 14px;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
   gap: 6px;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pipeline-card:hover {
+  background: linear-gradient(135deg, rgba(0, 242, 254, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border-color: rgba(0, 242, 254, 0.15);
+  transform: translateX(3px);
 }
 
 .pipeline-header {
@@ -495,11 +536,20 @@ input[type="range"]::-moz-range-thumb {
 
 /* ─── Intelligence Cards ─── */
 .intel-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.07);
   border-radius: 8px;
   padding: 10px 12px;
   margin-bottom: 8px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: default;
+}
+
+.intel-card:hover {
+  transform: scale(1.025) translateY(-2px);
+  background: linear-gradient(135deg, rgba(0, 242, 254, 0.06) 0%, rgba(255, 255, 255, 0.03) 100%);
+  border-color: rgba(0, 242, 254, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 242, 254, 0.08);
 }
 
 .intel-header {
@@ -561,8 +611,8 @@ input[type="range"]::-moz-range-thumb {
 
 .dossier-header {
   padding: 20px;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-  background: rgba(0,0,0,0.2);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  background: linear-gradient(135deg, rgba(167,139,250,0.08) 0%, rgba(0,0,0,0.25) 100%);
 }
 
 .dossier-body {
@@ -630,6 +680,10 @@ input[type="range"]::-moz-range-thumb {
   flex-direction: column;
 }
 
+.doctrine-modal.fade-in {
+  animation: modalZoomIn 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
 .doctrine-backdrop {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -692,12 +746,13 @@ input[type="range"]::-moz-range-thumb {
   align-items: center;
   gap: 7px;
   padding: 10px 14px;
-  border-bottom: 1px solid rgba(0,242,254,0.08);
+  border-bottom: 1px solid rgba(0,242,254,0.10);
   font-size: 0.59rem;
   font-weight: 700;
   letter-spacing: 0.18em;
-  color: rgba(0,242,254,0.45);
-  background: rgba(0,242,254,0.02);
+  color: rgba(0,242,254,0.6);
+  background: linear-gradient(135deg, rgba(0,242,254,0.06) 0%, rgba(0,242,254,0.02) 100%);
+  text-shadow: 0 0 12px rgba(0,242,254,0.3);
 }
 
 .left-toolbar-btns {
